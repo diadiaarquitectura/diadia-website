@@ -1,0 +1,27 @@
+backend:
+  name: git-gateway
+  branch: master
+display_url: https://diadiaarquitectura.com
+logo_url: assets/img/diadia-logo.svg
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+collections:
+  - label: Administrador - DiaDia
+    name: administrador
+    delete: false
+    create: false
+    format: json
+    files:
+      - label: Proyectos
+        name: proyectos
+        file: content/proyectos.json
+        fields:
+          - label: Proyectos
+            name: proyectos
+            widget: list
+            fields:
+              - { label: Imagen, name: url, widget: image, required: false, allow_multiple: false }
+              - label: Nombre
+                name: nombre
+                required: true
+                widget: text
