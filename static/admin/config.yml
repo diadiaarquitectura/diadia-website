@@ -1,6 +1,6 @@
 backend:
-  name: github
-  repo: diadia-website
+  name: git-gateway
+  branch: master
 display_url: https://diadiaarquitectura.com
 logo_url: /images/diadia-logo.svg
 media_folder: "static/images/uploads"
