@@ -61,7 +61,9 @@ collections:
       - label: Estudio
         name: estudio
         file: content/estudio.json
+        fields:
 
       - label: Contacto
         name: contacto
         file: content/contacto.json
+        fields:
