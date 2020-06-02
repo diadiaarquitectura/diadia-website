@@ -50,6 +50,10 @@ collections:
         name: bases
         file: content/bases.json
         fields:
-          - { label: Imagen, name: url, widget: image, required: true, allow_multiple: false }
-          - { label: Enlace Externo, name: enlace, required: false, widget: text }
-          - { label: Enlace de Eescarga, name: descarga, required: false, widget: text }
+          - label: Bases
+          - name: bases
+          - widget: list
+          - fields:
+            - { label: Imagen, name: url, widget: image, required: true, allow_multiple: false }
+            - { label: Enlace Externo, name: enlace, required: false, widget: text }
+            - { label: Enlace de Eescarga, name: descarga, required: false, widget: text }
