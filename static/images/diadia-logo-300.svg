@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -9,34 +7,35 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="170"
-   height="43"
-   viewBox="0 0 44.979166 11.377084"
-   version="1.1"
+   sodipodi:docname="diadia-logo-300.svg"
+   inkscape:version="1.0 (6e3e5246a0, 2020-05-07)"
    id="svg3895"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"
-   sodipodi:docname="diadia-logo.svg">
+   version="1.1"
+   viewBox="0 0 79.374999 26.458334"
+   height="100"
+   width="300">
   <defs
      id="defs3889" />
   <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="3.959798"
-     inkscape:cx="73.178135"
-     inkscape:cy="30.697731"
-     inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
-     showgrid="false"
-     units="px"
-     inkscape:window-width="1920"
-     inkscape:window-height="1026"
+     inkscape:document-rotation="0"
+     inkscape:window-maximized="1"
+     inkscape:window-y="0"
      inkscape:window-x="0"
-     inkscape:window-y="28"
-     inkscape:window-maximized="1" />
+     inkscape:window-height="1043"
+     inkscape:window-width="1920"
+     units="px"
+     showgrid="false"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="mm"
+     inkscape:cy="22.012879"
+     inkscape:cx="383.11355"
+     inkscape:zoom="1.6070797"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
   <metadata
      id="metadata3892">
     <rdf:RDF>
@@ -50,108 +49,108 @@
     </rdf:RDF>
   </metadata>
   <g
-     inkscape:label="Capa 1"
-     inkscape:groupmode="layer"
+     transform="translate(0,-285.6229)"
      id="layer1"
-     transform="translate(0,-285.6229)">
+     inkscape:groupmode="layer"
+     inkscape:label="Capa 1">
     <g
-       transform="matrix(0.35277777,0,0,-0.35277777,-203.41134,539.97306)"
-       id="g3857">
+       id="g3857"
+       transform="matrix(0.6236376,0,0,-0.6236376,-359.5648,738.30317)">
       <g
-         transform="translate(608.6377,720.7231)"
-         id="g12">
+         id="g12"
+         transform="translate(608.6377,720.7231)">
         <path
-           inkscape:connector-curvature="0"
+           d="M 0,0 V -31.711 L 11.892,0 Z"
+           style="fill:#020202;fill-opacity:1;fill-rule:nonzero;stroke:none"
            id="path14"
-           style="fill:#020202;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           d="M 0,0 V -31.711 L 11.892,0 Z" />
+           inkscape:connector-curvature="0" />
       </g>
       <g
-         transform="translate(584.8545,689.0122)"
-         id="g24">
+         id="g24"
+         transform="translate(584.8545,689.0122)">
         <path
-           inkscape:connector-curvature="0"
+           d="M 0,0 H 15.855 V 15.855 C 15.855,7.099 8.757,0 0,0"
+           style="fill:#020202;fill-opacity:1;fill-rule:nonzero;stroke:none"
            id="path26"
-           style="fill:#020202;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           d="M 0,0 H 15.855 V 15.855 C 15.855,7.099 8.757,0 0,0" />
+           inkscape:connector-curvature="0" />
       </g>
       <g
-         transform="translate(628.457,720.7231)"
-         id="g28">
+         id="g28"
+         transform="translate(628.457,720.7231)">
         <path
-           inkscape:connector-curvature="0"
+           d="M 0,0 11.892,-31.711 V 0 Z"
+           style="fill:#020202;fill-opacity:1;fill-rule:nonzero;stroke:none"
            id="path30"
-           style="fill:#020202;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           d="M 0,0 11.892,-31.711 V 0 Z" />
+           inkscape:connector-curvature="0" />
       </g>
       <g
-         transform="translate(584.8545,720.7231)"
-         id="g32">
+         id="g32"
+         transform="translate(584.8545,720.7231)">
         <path
-           inkscape:connector-curvature="0"
+           d="M 0,0 C 8.757,0 15.855,-7.099 15.855,-15.855 V 0 Z"
+           style="fill:#020202;fill-opacity:1;fill-rule:nonzero;stroke:none"
            id="path34"
-           style="fill:#020202;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           d="M 0,0 C 8.757,0 15.855,-7.099 15.855,-15.855 V 0 Z" />
+           inkscape:connector-curvature="0" />
       </g>
       <g
-         transform="translate(656.2041,689.0122)"
-         id="g36">
+         id="g36"
+         transform="translate(656.2041,689.0122)">
         <path
-           inkscape:connector-curvature="0"
-           id="path38"
+           d="M 0,0 H 15.855 V 15.855 C 15.855,7.099 8.757,0 0,0"
            style="fill:#020202;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           d="M 0,0 H 15.855 V 15.855 C 15.855,7.099 8.757,0 0,0" />
+           id="path38"
+           inkscape:connector-curvature="0" />
       </g>
       <path
-         inkscape:connector-curvature="0"
-         id="path42"
-         style="fill:#020202;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         transform="translate(679.9873,720.7231)"
          d="M 0,0 V -31.711 L 11.893,0 Z"
-         transform="translate(679.9873,720.7231)" />
+         style="fill:#020202;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path42"
+         inkscape:connector-curvature="0" />
       <g
-         transform="translate(656.2041,720.7231)"
-         id="g44">
+         id="g44"
+         transform="translate(656.2041,720.7231)">
         <path
-           inkscape:connector-curvature="0"
+           d="M 0,0 C 8.757,0 15.855,-7.099 15.855,-15.855 V 0 Z"
+           style="fill:#020202;fill-opacity:1;fill-rule:nonzero;stroke:none"
            id="path46"
-           style="fill:#020202;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           d="M 0,0 C 8.757,0 15.855,-7.099 15.855,-15.855 V 0 Z" />
+           inkscape:connector-curvature="0" />
       </g>
       <g
-         transform="translate(584.8545,712.7954)"
-         id="g48">
+         id="g48"
+         transform="translate(584.8545,712.7954)">
         <path
-           inkscape:connector-curvature="0"
+           d="M 0,0 H -7.928 V -15.855 H 0 c 4.379,0 7.928,3.549 7.928,7.927 C 7.928,-3.549 4.379,0 0,0"
+           style="fill:#020202;fill-opacity:1;fill-rule:nonzero;stroke:none"
            id="path50"
-           style="fill:#020202;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           d="M 0,0 H -7.928 V -15.855 H 0 c 4.379,0 7.928,3.549 7.928,7.927 C 7.928,-3.549 4.379,0 0,0" />
+           inkscape:connector-curvature="0" />
       </g>
       <g
-         transform="translate(656.2041,712.7954)"
-         id="g52">
+         id="g52"
+         transform="translate(656.2041,712.7954)">
         <path
-           inkscape:connector-curvature="0"
+           d="M 0,0 H -7.928 V -15.855 H 0 c 4.379,0 7.928,3.549 7.928,7.927 C 7.928,-3.549 4.379,0 0,0"
+           style="fill:#020202;fill-opacity:1;fill-rule:nonzero;stroke:none"
            id="path54"
-           style="fill:#020202;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           d="M 0,0 H -7.928 V -15.855 H 0 c 4.379,0 7.928,3.549 7.928,7.927 C 7.928,-3.549 4.379,0 0,0" />
+           inkscape:connector-curvature="0" />
       </g>
       <g
-         transform="translate(619.2051,696.9399)"
-         id="g56">
+         id="g56"
+         transform="translate(619.2051,696.9399)">
         <path
-           inkscape:connector-curvature="0"
+           d="M 0,0 -2.64,-7.912 13.216,-7.927 10.573,0 Z"
+           style="fill:#020202;fill-opacity:1;fill-rule:nonzero;stroke:none"
            id="path58"
-           style="fill:#020202;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           d="M 0,0 -2.64,-7.912 13.216,-7.927 10.573,0 Z" />
+           inkscape:connector-curvature="0" />
       </g>
       <g
-         transform="translate(690.5547,696.9399)"
-         id="g60">
+         id="g60"
+         transform="translate(690.5547,696.9399)">
         <path
-           inkscape:connector-curvature="0"
-           id="path62"
+           d="M 0,0 -2.64,-7.912 13.217,-7.927 10.574,0 Z"
            style="fill:#020202;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           d="M 0,0 -2.64,-7.912 13.217,-7.927 10.574,0 Z" />
+           id="path62"
+           inkscape:connector-curvature="0" />
       </g>
     </g>
   </g>
