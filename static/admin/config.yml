@@ -57,3 +57,11 @@ collections:
             - { label: Imagen, name: url, widget: image, required: true, allow_multiple: false }
             - { label: Enlace Externo, name: enlace, required: false, widget: text }
             - { label: Enlace de Eescarga, name: descarga, required: false, widget: text }
+
+      - label: Estudio
+        name: estudio
+        file: content/estudio.json
+
+      - label: Contacto
+        name: contacto
+        file: content/contacto.json
