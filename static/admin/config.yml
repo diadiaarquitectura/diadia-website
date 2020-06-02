@@ -50,7 +50,7 @@ collections:
         name: bases
         file: content/bases.json
         fields:
-        - label: Bases
+          - label: Bases
           - name: bases
           - widget: list
           - fields:
