@@ -62,8 +62,12 @@ collections:
         name: estudio
         file: content/estudio.json
         fields:
-
+          - { label: Descripción, name: descripcion, required: false, widget: text }
+          - { label: Imagen 1, name: imagen1, required: false, widget: image }
+          - { label: Imagen 2, name: imagen2, required: false, widget: image }
       - label: Contacto
         name: contacto
         file: content/contacto.json
         fields:
+          - { label: Dirección, name: direccion, required: false, widget: text }
+          - { label: Teléfono, name: telefono, required: false, widget: text }
