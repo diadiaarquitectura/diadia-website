@@ -33,6 +33,38 @@
           "tipo": "representacion"
         }
       ]
+    },
+    {
+      "fecha": "01 01 2016",
+      "nombre": "Casa AO",
+      "tipologia": "vivienda",
+      "ubicacion": "Lima, Perú",
+      "galería": [
+        {
+          "url": "/images/uploads/001-casa-ao-2-.jpg",
+          "tipo": "maqueta"
+        },
+        {
+          "url": "/images/uploads/001-casa-ao-3-.jpg",
+          "tipo": "obra"
+        },
+        {
+          "url": "/images/uploads/001-casa-ao-7-.jpg",
+          "tipo": "obra"
+        },
+        {
+          "url": "/images/uploads/casa-ao-planta.png",
+          "tipo": "representacion"
+        },
+        {
+          "url": "/images/uploads/casa-ao-corte.png",
+          "tipo": "representacion"
+        },
+        {
+          "url": "/images/uploads/casa-ao-iso.png",
+          "tipo": "representacion"
+        }
+      ]
     }
   ]
 }
