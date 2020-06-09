@@ -7,7 +7,36 @@
       "tipologia": "vivienda",
       "ubicacion": "Villa Rica, Cerro de Pasco, Perú",
       "involucrados": "Persona 1, Persona 2",
-      "galería": []
+      "galería": [
+        {
+          "url": "/images/uploads/002-atiycuy-1-.jpg",
+          "tipo": "representacion"
+        },
+        {
+          "url": "/images/uploads/002-atiycuy-2-.jpg",
+          "tipo": "obra"
+        },
+        {
+          "url": "/images/uploads/002-atiycuy-3-.jpg",
+          "tipo": "obra"
+        },
+        {
+          "url": "",
+          "tipo": "representacion"
+        },
+        {
+          "url": "/images/uploads/casa-atícuy-comunicación-01.png",
+          "tipo": "representacion"
+        },
+        {
+          "url": "/images/uploads/casa-atícuy-comunicación-06.png",
+          "tipo": "representacion"
+        },
+        {
+          "url": "/images/uploads/casa-atícuy-comunicación-05.png",
+          "tipo": "representacion"
+        }
+      ]
     }
   ]
 }
