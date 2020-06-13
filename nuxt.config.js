@@ -12,6 +12,9 @@ export default {
 			{ name: 'apple-mobile-web-app-status-bar-style', content: 'black' },
 			{ hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
 		],
+		script: [
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js' }
+    ],
 		link: [
 			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
 			{

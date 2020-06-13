@@ -7,7 +7,7 @@
 
 body,
 html {
-  font-family: 'Futura';
+  font-family: 'Futura', Arial, Helvetica, sans-serif;
   font-size: 14px;
   width: 100%;
   overflow: hidden;
