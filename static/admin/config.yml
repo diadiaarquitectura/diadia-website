@@ -14,7 +14,7 @@ collections:
     files:
       - label: Proyectos
         name: proyectos
-        file: content/proyectos.json
+        file: static/content/proyectos.json
         fields:
           - label: Proyectos
             name: proyectos 
@@ -48,7 +48,7 @@ collections:
                       - { label: Maqueta, value: maqueta }
       - label: Bases
         name: bases
-        file: content/bases.json
+        file: static/content/bases.json
         fields:
           - label: Bases
             name: bases
@@ -60,14 +60,14 @@ collections:
 
       - label: Estudio
         name: estudio
-        file: content/estudio.json
+        file: static/content/estudio.json
         fields:
           - { label: Descripción, name: descripcion, required: false, widget: text }
           - { label: Imagen 1, name: imagen1, required: false, widget: image }
           - { label: Imagen 2, name: imagen2, required: false, widget: image }
       - label: Contacto
         name: contacto
-        file: content/contacto.json
+        file: static/content/contacto.json
         fields:
           - { label: Dirección, name: direccion, required: false, widget: text }
           - { label: Teléfono, name: telefono, required: false, widget: text }

@@ -1,38 +1,45 @@
 <template lang="pug">
 #main.noselect
-	#home
-		logo
+	home
+	gallery
 </template>
 
 <script>
-import Logo from '../components/Logo'
+import Home from '../components/Home'
+import Gallery from '../components/Gallery'
 import axios from 'axios'
-import { mapMutations } from 'vuex'
+import gsap from 'gsap'
 
 export default {
-	components: { Logo },
-	mounted() {
-		this.isLoadingComplete = true
-	},
+  components: { Home, Gallery },
 
-	methods: {
-		...mapMutations({
-			setProjects: 'setProjects'
+  mounted() {
+    window.addEventListener('resize', this.onWindowResize)
+		window.addEventListener('wheel', this.onMouseWheel)
+		
+		axios.get('../content/proyectos.json').then((response) => {
+			console.log(response)
 		})
-	},
+  },
 
-	data() {
-		return {}
-	}
+  methods: {
+    onMouseWheel() {
+      let height = window.innerHeight
+      gsap.to('#main', { top: -height, duration: 0.7, ease: 'power2.out' })
+    },
+
+    onWindowResize() {
+      this.onMouseWheel()
+    }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
 #main {
-	height: 100%;
-	#home {
-		width: 100%;
-		margin-bottom: 120px;
-	}
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
 }
 </style>
