@@ -4,7 +4,12 @@
 	#logo
 		img.logo(src="~/assets/img/logo-diadia.svg")
 		img.sublogo(src="~/assets/img/logo-arquitectura.svg")
-	#text Diseñamos espacios cotidianos para la convivencia, el encuentro, el aprendizaje, la crianza y el diálogo.
+	#text 
+		| Diseñamos espacios cotidianos para
+		br
+		| la convivencia, el encuentro, 
+		br
+		| el aprendizaje, la crianza y el diálogo.
 	#arrow-down
 		a(href="#" @click="gotoProjects()")
 			img(src="~/assets/img/arrow-down.svg")
@@ -16,18 +21,31 @@ import gsap from 'gsap'
 
 export default {
   mounted() {
+		gsap.to('#home', { opacity: 1, duration: 2 })
+		gsap.to('#text', { left: '10%', opacity: 1, duration: 1.5 })
+
 		let sketch = p => {
+			let circlePosition
+			let position
+
 			p.setup = () => {
 				p.createCanvas(p.windowWidth, p.windowHeight)
-				console.log('holasss')
+				
 			}
 
 			p.draw = () => {
+				circlePosition = p.createVector(p.width * 0.75, 0)
+
+				// let mousePosition = p.createVector(p.mouseX, p.mouseY)
+				// let direction = mousePosition.sub(circlePosition).normalize()
+				// let futurePosition = circlePosition.copy().add(direction.mult(-40))
+
+				
+
 				p.background('white')
 				p.noStroke()
 				p.fill('black')
-				p.circle(p.width * 0.75, 0, p.width * 0.35)
-
+				p.circle(circlePosition.x, circlePosition.y, p.width * 0.35)
 				p.triangle(p.width, p.height / 2, p.width, p.height, p.width * 0.85, p.height)
 			}
 
@@ -51,6 +69,7 @@ export default {
 <style lang="scss" scoped>
 #home {
 	position: relative;
+	opacity: 0;
   width: 100vw;
   height: 100vh;
   background-color: white;
@@ -78,9 +97,10 @@ export default {
 
 	#text {
 		position: absolute;
+		opacity: 0;
 		top: 42%;
-		left: 10%;
-		width: 50%;
+		left: -5%;
+		width: 60%;
 		font-size: 2.8vw;
 	}
 
@@ -97,7 +117,6 @@ export default {
 		0% { bottom: 20px }
 		50% { bottom: 30px }
 		100% { bottom: 20px }
-		
 	}
 }
 </style>

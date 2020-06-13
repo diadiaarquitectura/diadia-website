@@ -6,7 +6,8 @@
   "private": true,
   "scripts": {
     "start": "node_modules/.bin/nuxt",
-    "generate": "node_modules/.bin/nuxt generate"
+    "generate": "node_modules/.bin/nuxt generate",
+    "deploy": "surge dist --domain=diadia.surge.sh"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",

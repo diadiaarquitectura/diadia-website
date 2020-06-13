@@ -13,6 +13,7 @@ import Gallery from '../components/Gallery'
 import axios from 'axios'
 import gsap from 'gsap'
 import { mapMutations } from 'vuex'
+import ImagePreloader from 'image-preloader'
 
 export default {
   components: { Home, Gallery },
@@ -23,9 +24,32 @@ export default {
 
     axios.get('content/proyectos.json').then(response => {
       this.setProjects(response.data.proyectos)
-      setTimeout(() => {
-        this.isDataLoaded = true
-      }, 1000)
+
+      // response.data.proyectos.forEach(project => {
+      //   project.galería.forEach(imagen => {
+      //     this.addPreloadUrl('https://diadiaarquitectura.netlify.app/' + imagen.url)
+      //   })
+      // })
+
+      // let args = Array.prototype.slice.call(this.preloadImages)
+
+      // const preloader = new ImagePreloader()
+      // preloader.preload(args).then(status => {
+      //   this.isDataLoaded = true
+      // })
+
+			// let counter = 0
+      // preloader.onProgress = info => {
+      //   counter++
+      //   let w = (90 * counter) / this.totalPreloadImages
+			// 	this.percentage = parseInt((100 * counter) / this.totalPreloadImages)
+			// 	console.log('holaalalal')
+			// 	document.getElementById('loader').style.width = (100 * this.percentage | 0) + 'px'
+			// }
+			
+			setTimeout(() => {
+				this.isDataLoaded = true
+			}, 2000)
     })
   },
 
@@ -34,10 +58,15 @@ export default {
       setProjects: 'setProjects'
     }),
 
+    addPreloadUrl(url) {
+      this.preloadImages.push(url)
+      this.totalPreloadImages++
+    },
+
     onMouseWheel() {
       if (!this.isDataLoaded) return
       let height = window.innerHeight
-			gsap.to('#main', { top: -height, duration: 1, ease: 'power2.out' })
+      gsap.to('#main', { top: -height, duration: 1, ease: 'power2.out' })
     },
 
     onWindowResize() {
@@ -48,7 +77,10 @@ export default {
 
   data() {
     return {
-      isDataLoaded: false
+			percentage: 0,
+      isDataLoaded: false,
+      totalPreloadImages: 0,
+      preloadImages: []
     }
   }
 }
@@ -67,6 +99,16 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+		opacity: 0;
+		animation-name: sine;
+		animation-duration: 1.5s;
+		animation-iteration-count: infinite;
   }
+
+	@keyframes sine {
+		0% { opacity: 0; }
+		50% { opacity: 1; }
+		100% { opacity: 0; }
+	}
 }
 </style>

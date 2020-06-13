@@ -34,8 +34,7 @@ import gsap from 'gsap'
 export default {
   methods: {
     gotoHome() {
-      // let height = window.innerHeight
-			gsap.to('#main', { top: 0, duration: 0.6, ease: 'power2.out' })
+      gsap.to('#main', { top: 0, duration: 0.8, ease: 'power2.out' })
     }
   }
 }
@@ -49,14 +48,14 @@ export default {
 
   #logo {
     position: absolute;
-		top: 40px;
+    top: 30px;
     left: 50px;
     width: 170px;
   }
 
   #filters {
     position: absolute;
-    top: 35px;
+    top: 27px;
     text-align: center;
     width: 200px;
     left: calc(50% - 100px);
@@ -76,7 +75,13 @@ export default {
       }
 
       img {
-        width: 22px;
+        width: 20px;
+        transition: all 0.2s;
+
+        &:hover {
+          transform: scale(1.1);
+          transition: all 0.2s;
+        }
       }
     }
   }
@@ -84,7 +89,7 @@ export default {
   #menu {
     position: absolute;
     right: 50px;
-    top: 50px;
+    top: 43px;
 
     ul {
       list-style: none;
@@ -93,9 +98,9 @@ export default {
 
       li {
         display: inline-block;
-        padding-left: 20px;
+        padding-left: 40px;
         letter-spacing: 1px;
-        font-size: 0.95rem;
+        font-size: 0.90rem;
 
         a {
           color: black;
