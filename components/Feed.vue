@@ -24,6 +24,7 @@
 import Project from '../components/Project'
 import { mapGetters } from 'vuex'
 import { mapMutations } from 'vuex'
+
 import gsap from 'gsap'
 
 export default {

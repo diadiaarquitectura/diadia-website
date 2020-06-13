@@ -25,11 +25,11 @@ export default {
     axios.get('content/proyectos.json').then(response => {
       this.setProjects(response.data.proyectos)
 
-      // response.data.proyectos.forEach(project => {
-      //   project.galería.forEach(imagen => {
-      //     this.addPreloadUrl('https://diadiaarquitectura.netlify.app/' + imagen.url)
-      //   })
-      // })
+      response.data.proyectos.forEach(project => {
+        project.galería.forEach(imagen => {
+          this.addPreloadUrl(imagen.url)
+        })
+      })
 
       // let args = Array.prototype.slice.call(this.preloadImages)
 
@@ -37,15 +37,6 @@ export default {
       // preloader.preload(args).then(status => {
       //   this.isDataLoaded = true
       // })
-
-			// let counter = 0
-      // preloader.onProgress = info => {
-      //   counter++
-      //   let w = (90 * counter) / this.totalPreloadImages
-			// 	this.percentage = parseInt((100 * counter) / this.totalPreloadImages)
-			// 	console.log('holaalalal')
-			// 	document.getElementById('loader').style.width = (100 * this.percentage | 0) + 'px'
-			// }
 			
 			setTimeout(() => {
 				this.isDataLoaded = true
