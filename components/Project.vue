@@ -3,8 +3,7 @@
 	#project-inner
 		#name {{ projects[currentProject].nombre.toUpperCase() }}
 		#image
-			//- #loading cargando...
-			img(:src="projects[currentProject].galería[currentImage].url" height="100%" loading="lazy")
+			img
 		#footer 
 			.left {{ (currentImage + 1) + '/' + (projects[currentProject].galería.length) }}
 			.right
@@ -32,30 +31,40 @@ import { mapGetters } from 'vuex'
 
 export default {
   mounted() {
-    // document.querySelector('#image img').addEventListener('load', () => {
-    //   document.querySelector('#image img').style.width = 'auto'
-    // })
+    let image = document.querySelector('#image img')
+    image.style.opacity = 1
+    image.src = this.projects[this.currentProject].galería[0].url
   },
 
   methods: {
     prevImage() {
-      // let prevWidth = document.querySelector('#image img').clientWidth
-      // document.querySelector('#image img').src = ''
-      // document.querySelector('#image img').src = '~/assets/img/arrow-left.svg'
-      // document.querySelector('#image img').style.width = prevWidth + 'px'
       this.currentImage--
-      if (this.currentImage < 0) this.currentImage = 0
+      if (this.currentImage < 0) {
+        this.currentImage = 0
+      }
+      this.currentUrl = this.projects[this.currentProject].galería[this.currentImage].url
+      this.loadImage()
     },
 
     nextImage() {
-      // let prevWidth = document.querySelector('#image img').clientWidth
-      // document.querySelector('#image img').src = ''
-      // document.querySelector('#image img').src = '~/assets/img/arrow-left.svg'
-      // document.querySelector('#image img').style.width = prevWidth + 'px'
       this.currentImage++
       if (this.currentImage > this.projects[this.currentProject].galería.length - 1) {
         this.currentImage = this.projects[this.currentProject].galería.length - 1
       }
+      this.currentUrl = this.projects[this.currentProject].galería[this.currentImage].url
+      this.loadImage()
+    },
+
+    loadImage() {
+      let image = document.querySelector('#image img')
+      image.style.opacity = 0.3
+
+      let timer = setTimeout(() => {
+        image.src = this.currentUrl
+        image.onload = () => {
+          image.style.opacity = 1
+        }
+      }, 200)
     },
 
     closeProject() {
@@ -78,6 +87,7 @@ export default {
   data() {
     return {
       currentImage: 0,
+      currentUrl: '',
       isText: false
     }
   }
@@ -115,20 +125,12 @@ export default {
     #image {
       position: relative;
       height: 100%;
-      transition: all 0.2s;
-
-      #loading {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, 0);
-      }
 
       img {
         top: 0;
         left: 0;
+        height: 100%;
         transition: all 0.2s;
-        z-index: 10;
       }
     }
 

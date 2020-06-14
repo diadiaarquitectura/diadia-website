@@ -1,5 +1,5 @@
 <template lang="pug">
-#feed
+#gallery-time
 	#images(v-for="(project, i) in projects")
 		.image-container
 			img(:src="project.galería[0].url")
@@ -31,7 +31,7 @@ export default {
   components: { Project },
 
   mounted() {
-    document.getElementById('gallery').addEventListener('wheel', this.onMouseWheel)
+    document.getElementById('home').addEventListener('wheel', this.onMouseWheel)
 
     this.$nuxt.$on('showProject', () => {
       this.isShowingProject = true
@@ -40,6 +40,10 @@ export default {
     this.$nuxt.$on('closeProject', () => {
       this.isShowingProject = false
     })
+  },
+
+  beforeDestroy() {
+    document.getElementById('home').removeEventListener('wheel', this.onMouseWheel)
   },
 
   computed: {
@@ -52,19 +56,19 @@ export default {
     onMouseWheel(e) {
       if (this.isShowingProject) return
 
-      let top = document.getElementById('feed').offsetTop
-      let height = 15 + document.getElementById('feed').clientHeight - window.innerHeight
+      let top = document.getElementById('gallery-time').offsetTop
+      let height = 15 + document.getElementById('gallery-time').clientHeight - window.innerHeight
       let topTo
-      gsap.killTweensOf('#feed')
+      gsap.killTweensOf('#gallery-time')
 
       if (e.deltaY > 0) {
         topTo = top - 250
         if (topTo < -height) topTo = -height
-        gsap.to('#feed', { top: topTo, duration: 0.3, ease: 'power1.inout' })
+        gsap.to('#gallery-time', { top: topTo, duration: 0.3, ease: 'power1.inout' })
       } else {
         topTo = top + 250
         if (topTo > 100) topTo = 100
-        gsap.to('#feed', { top: topTo, duration: 0.3, ease: 'power1.inout' })
+        gsap.to('#gallery-time', { top: topTo, duration: 0.3, ease: 'power1.inout' })
       }
     },
 
@@ -87,11 +91,12 @@ export default {
 .fade-leave-active {
   transition: opacity 0.3s;
 }
-.fade-enter, .fade-leave-to {
+.fade-enter,
+.fade-leave-to {
   opacity: 0;
 }
 
-#feed {
+#gallery-time {
   position: absolute;
   top: 100px;
   padding: 0 50px;
@@ -118,7 +123,7 @@ export default {
       top: 0;
       left: 0;
       font-size: 0.9rem;
-			letter-spacing: 1px;
+      letter-spacing: 1px;
       display: flex;
       justify-content: center;
       align-items: center;

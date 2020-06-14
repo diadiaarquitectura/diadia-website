@@ -3,39 +3,47 @@
 	#logo
 		a(href="#" @click="gotoHome()") 
 			img(src="~/assets/img/logo-diadia.svg" alt="diadia" width="100%")
-	#filters
+	#filters(:style="{opacity : currentSection.includes('gallery') ? 1 : 0 }")
 		.filter
-			a(href="#")
-				.label tiempo
+			a(href="#" @click="setCurrentSection('gallery-time')")
+				.label(:style="{ opacity: currentSection == 'gallery-time' ? 1 : 0 }") tiempo
 				img(src="~/assets/img/icons/icon-tiempo.svg" alt="tiempo" width="100%")
 		.filter
-			a(href="#") 
-				.label uso
+			a(href="#" @click="setCurrentSection('gallery-use')") 
+				.label(:style="{ opacity: currentSection == 'gallery-use' ? 1 : 0 }") uso
 				img(src="~/assets/img/icons/icon-uso.svg" alt="uso" width="100%")
 		.filter
-			a(href="#") 
-				.label archivo
+			a(href="#" @click="setCurrentSection('gallery-archive')") 
+				.label(:style="{ opacity: currentSection == 'gallery-archive' ? 1 : 0 }") archivo
 				img(src="~/assets/img/icons/icon-archivo.svg" alt="archivo" width="100%")
 	#menu
 		ul
-			li.bold 
-				a(href="#") PROYECTOS
-			li 
-				a(href="#") BASES
-			li 
-				a(href="#") ESTUDIO
-			li 
-				a(href="#") CONTACTO
+			li(:class="{ bold: currentSection.includes('gallery') }")
+				a(href="#" @click="setCurrentSection('gallery-time')") PROYECTOS
+			li(:class="{ bold: currentSection == 'bases' }")
+				a(href="#" @click="setCurrentSection('bases')") BASES
+			li(:class="{ bold: currentSection == 'studio' }")
+				a(href="#" @click="setCurrentSection('studio')") ESTUDIO
+			li(:class="{ bold: currentSection == 'contact' }")
+				a(href="#" @click="setCurrentSection('contact')") CONTACTO
 </template>
 
 <script>
 import gsap from 'gsap'
+import { mapGetters } from 'vuex'
+import { mapMutations } from 'vuex'
 
 export default {
   methods: {
+    ...mapMutations({ setCurrentSection: 'setCurrentSection' }),
+
     gotoHome() {
       gsap.to('#main', { top: 0, duration: 0.8, ease: 'power2.out' })
     }
+  },
+
+  computed: {
+    ...mapGetters({ currentSection: 'getCurrentSection' })
   }
 }
 </script>
@@ -59,6 +67,7 @@ export default {
     text-align: center;
     width: 200px;
     left: calc(50% - 100px);
+    transition: all 0.2s;
 
     .filter {
       display: inline-block;
@@ -72,6 +81,7 @@ export default {
       .label {
         font-size: 0.85rem;
         margin-bottom: 5px;
+        transition: all 0.2s;
       }
 
       img {
@@ -99,8 +109,8 @@ export default {
       li {
         display: inline-block;
         padding-left: 40px;
-        letter-spacing: 1px;
-        font-size: 0.90rem;
+        letter-spacing: 1.5px;
+        font-size: 0.9rem;
 
         a {
           color: black;

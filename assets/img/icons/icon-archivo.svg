@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -14,8 +12,8 @@
    viewBox="0 0 6.0854165 6.0854168"
    version="1.1"
    id="svg282"
-   sodipodi:docname="icon-4.svg"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+   sodipodi:docname="icon-archivo.svg"
+   inkscape:version="1.0 (6e3e5246a0, 2020-05-07)">
   <defs
      id="defs276" />
   <sodipodi:namedview
@@ -25,18 +23,19 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.2"
-     inkscape:cx="12.318082"
-     inkscape:cy="4.0335645"
+     inkscape:zoom="24.835577"
+     inkscape:cx="10.562095"
+     inkscape:cy="10.472647"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="px"
-     inkscape:window-width="920"
-     inkscape:window-height="899"
-     inkscape:window-x="988"
-     inkscape:window-y="131"
-     inkscape:window-maximized="0" />
+     inkscape:window-width="1920"
+     inkscape:window-height="1043"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:document-rotation="0" />
   <metadata
      id="metadata279">
     <rdf:RDF>
@@ -45,7 +44,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -55,26 +54,23 @@
      id="layer1"
      transform="translate(0,-290.91457)">
     <g
-       id="g4223"
-       transform="translate(-0.54806551,2.9576653)">
-      <g
-         transform="matrix(0.35277777,0,0,-0.35277777,0.7654123,290.99903)"
-         id="g102">
-        <path
-           inkscape:connector-curvature="0"
-           id="path104"
-           style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-           d="m 0,0 c 0,4.423 3.585,8.009 8.009,8.009 4.423,0 8.009,-3.586 8.009,-8.009" />
-      </g>
-      <g
-         transform="matrix(0.35277777,0,0,-0.35277777,6.4126076,291.00196)"
-         id="g106">
-        <path
-           inkscape:connector-curvature="0"
-           id="path108"
-           style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-           d="m 0,0 c 0,-4.421 -3.583,-8.004 -8.004,-8.004 -4.421,0 -8.004,3.583 -8.004,8.004" />
-      </g>
+       id="g102"
+       transform="matrix(0.35277777,0,0,-0.35277777,0.21734679,293.9567)"
+       style="fill:#ffffff">
+      <path
+         d="m 0,0 c 0,4.423 3.585,8.009 8.009,8.009 4.423,0 8.009,-3.586 8.009,-8.009"
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         id="path104"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       id="g106"
+       transform="matrix(0.35277777,0,0,-0.35277777,5.8645421,293.95963)">
+      <path
+         d="m 0,0 c 0,-4.421 -3.583,-8.004 -8.004,-8.004 -4.421,0 -8.004,3.583 -8.004,8.004"
+         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         id="path108"
+         inkscape:connector-curvature="0" />
     </g>
   </g>
 </svg>

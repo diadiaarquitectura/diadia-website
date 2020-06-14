@@ -3,20 +3,19 @@
 	#loading(v-if="!isDataLoaded")
 		p cargando...
 	#content.noselect(v-else)
+		hero
 		home
-		gallery
 </template>
 
 <script>
+import Hero from '../components/Hero'
 import Home from '../components/Home'
-import Gallery from '../components/Gallery'
 import axios from 'axios'
 import gsap from 'gsap'
 import { mapMutations } from 'vuex'
-import ImagePreloader from 'image-preloader'
 
 export default {
-  components: { Home, Gallery },
+  components: { Hero, Home },
 
   mounted() {
     window.addEventListener('resize', this.onWindowResize)
@@ -25,22 +24,9 @@ export default {
     axios.get('content/proyectos.json').then(response => {
       this.setProjects(response.data.proyectos)
 
-      response.data.proyectos.forEach(project => {
-        project.galería.forEach(imagen => {
-          this.addPreloadUrl(imagen.url)
-        })
-      })
-
-      // let args = Array.prototype.slice.call(this.preloadImages)
-
-      // const preloader = new ImagePreloader()
-      // preloader.preload(args).then(status => {
-      //   this.isDataLoaded = true
-      // })
-			
-			setTimeout(() => {
-				this.isDataLoaded = true
-			}, 2000)
+      setTimeout(() => {
+        this.isDataLoaded = true
+      }, 2000)
     })
   },
 
@@ -68,7 +54,7 @@ export default {
 
   data() {
     return {
-			percentage: 0,
+      percentage: 0,
       isDataLoaded: false,
       totalPreloadImages: 0,
       preloadImages: []
@@ -90,16 +76,22 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-		opacity: 0;
-		animation-name: sine;
-		animation-duration: 1.5s;
-		animation-iteration-count: infinite;
+    opacity: 0;
+    animation-name: sine;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
   }
 
-	@keyframes sine {
-		0% { opacity: 0; }
-		50% { opacity: 1; }
-		100% { opacity: 0; }
-	}
+  @keyframes sine {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
 }
 </style>

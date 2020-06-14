@@ -1,122 +1,55 @@
 <template lang="pug">
 #home
-	#canvas
-	#logo
-		img.logo(src="~/assets/img/logo-diadia.svg")
-		img.sublogo(src="~/assets/img/logo-arquitectura.svg")
-	#text 
-		| Diseñamos espacios cotidianos para
-		br
-		| la convivencia, el encuentro, 
-		br
-		| el aprendizaje, la crianza y el diálogo.
-	#arrow-down
-		a(href="#" @click="gotoProjects()")
-			img(src="~/assets/img/arrow-down.svg")
-
+	transition(name="fade")
+		gallery-time(v-if="currentSection=='gallery-time'")
+	transition(name="fade")
+		gallery-use(v-if="currentSection=='gallery-use'")
+	transition(name="fade")
+		gallery-archive(v-if="currentSection=='gallery-archive'")
+	transition(name="fade")
+		bases(v-if="currentSection=='bases'")
+	transition(name="fade")
+		studio(v-if="currentSection=='studio'")
+	transition(name="fade")
+		contact(v-if="currentSection=='contact'")
+	top-bar
 </template>
 
 <script>
-import gsap from 'gsap'
+import TopBar from '~/components/TopBar'
+import GalleryTime from '~/components/GalleryTime'
+import GalleryUse from '~/components/GalleryUse'
+import GalleryArchive from '~/components/GalleryArchive'
+import Bases from '~/components/Bases'
+import Studio from '~/components/Studio'
+import Contact from '~/components/Contact'
+import { mapGetters } from 'vuex'
 
 export default {
-  mounted() {
-		gsap.to('#home', { opacity: 1, duration: 2 })
-		gsap.to('#text', { left: '10%', opacity: 1, duration: 1.5 })
+  components: { TopBar, GalleryTime, GalleryUse, GalleryArchive, Bases, Studio, Contact },
 
-		let sketch = p => {
-			let circlePosition
-			let position
-
-			p.setup = () => {
-				p.createCanvas(p.windowWidth, p.windowHeight)
-				
-			}
-
-			p.draw = () => {
-				circlePosition = p.createVector(p.width * 0.75, 0)
-
-				// let mousePosition = p.createVector(p.mouseX, p.mouseY)
-				// let direction = mousePosition.sub(circlePosition).normalize()
-				// let futurePosition = circlePosition.copy().add(direction.mult(-40))
-
-				
-
-				p.background('white')
-				p.noStroke()
-				p.fill('black')
-				p.circle(circlePosition.x, circlePosition.y, p.width * 0.35)
-				p.triangle(p.width, p.height / 2, p.width, p.height, p.width * 0.85, p.height)
-			}
-
-			p.windowResized = () => {
-				p.resizeCanvas(p.windowWidth, p.windowHeight)
-			}
-		}
-
-		new p5(sketch, window.document.getElementById('canvas'))
-	},
-	
-	methods: {
-		gotoProjects() {
-			let height = window.innerHeight
-			gsap.to('#main', { top: -height, duration: 1, ease: 'power2.out' })
-		}
-	}
+  computed: {
+    ...mapGetters({ currentSection: 'getCurrentSection' })
+  }
 }
 </script>
 
 <style lang="scss" scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.2s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+	transform: scale(0.95);
+}
+
 #home {
-	position: relative;
-	opacity: 0;
+  position: relative;
   width: 100vw;
   height: 100vh;
   background-color: white;
-	overflow: hidden;
-
-	#canvas {
-		width: 100vw;
-		height: 100vh;
-	}
-
-	#logo {
-		position: absolute;
-		top: 35px;
-		left: 35px;
-
-		.logo {
-			position: absolute;
-		}
-
-		.sublogo {
-			position: absolute;
-			top: 50px;
-		}
-	}
-
-	#text {
-		position: absolute;
-		opacity: 0;
-		top: 42%;
-		left: -5%;
-		width: 60%;
-		font-size: 2.8vw;
-	}
-
-	#arrow-down {
-		position: absolute;
-		bottom: 25px;
-		left: calc(50% - 28px);
-		animation-name: sine;
-		animation-duration: 1.5s;
-		animation-iteration-count: infinite;
-	}
-
-	@keyframes sine {
-		0% { bottom: 20px }
-		50% { bottom: 30px }
-		100% { bottom: 20px }
-	}
+  overflow: hidden;
 }
 </style>

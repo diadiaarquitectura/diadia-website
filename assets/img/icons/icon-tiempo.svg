@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -9,34 +7,35 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="23"
-   height="23"
-   viewBox="0 0 6.0854165 6.0854168"
-   version="1.1"
+   inkscape:version="1.0 (6e3e5246a0, 2020-05-07)"
+   sodipodi:docname="icon-tiempo.svg"
    id="svg282"
-   sodipodi:docname="icon-6.svg"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+   version="1.1"
+   viewBox="0 0 6.0854165 6.0854168"
+   height="23"
+   width="23">
   <defs
      id="defs276" />
   <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="6.3585693"
-     inkscape:cx="12.193026"
-     inkscape:cy="10.296693"
-     inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
-     showgrid="false"
+     inkscape:document-rotation="0"
+     inkscape:window-maximized="1"
+     inkscape:window-y="0"
+     inkscape:window-x="1920"
+     inkscape:window-height="1043"
+     inkscape:window-width="1920"
      units="px"
-     inkscape:window-width="960"
-     inkscape:window-height="1026"
-     inkscape:window-x="960"
-     inkscape:window-y="28"
-     inkscape:window-maximized="0" />
+     showgrid="false"
+     inkscape:current-layer="g51"
+     inkscape:document-units="mm"
+     inkscape:cy="10.3913"
+     inkscape:cx="16.710494"
+     inkscape:zoom="29.196364"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
   <metadata
      id="metadata279">
     <rdf:RDF>
@@ -45,35 +44,36 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
-     inkscape:label="Capa 1"
-     inkscape:groupmode="layer"
+     transform="translate(0,-290.91457)"
      id="layer1"
-     transform="translate(0,-290.91457)">
+     inkscape:groupmode="layer"
+     inkscape:label="Capa 1">
     <g
-       id="g51"
-       transform="translate(0.25480399,-0.17158451)">
+       transform="translate(0.25480399,-0.17158451)"
+       id="g51">
       <g
-         transform="matrix(0.35277777,0,0,-0.35277777,2.7870621,296.95426)"
-         id="g102">
+         style="fill:#ffffff"
+         id="g102"
+         transform="matrix(0.35277777,0,0,-0.35277777,2.7870621,296.95426)">
         <path
-           inkscape:connector-curvature="0"
+           d="m 0,0 c -4.423,0 -8.009,3.586 -8.009,8.009 0,4.423 3.586,8.009 8.009,8.009"
+           style="fill:#ffffff;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
            id="path104"
-           style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-           d="m 0,0 c -4.423,0 -8.009,3.586 -8.009,8.009 0,4.423 3.586,8.009 8.009,8.009" />
+           inkscape:connector-curvature="0" />
       </g>
       <g
-         transform="matrix(0.35277777,0,0,-0.35277777,2.7901577,291.30689)"
-         id="g106">
+         id="g106"
+         transform="matrix(0.35277777,0,0,-0.35277777,2.7901577,291.30689)">
         <path
-           inkscape:connector-curvature="0"
-           id="path108"
+           d="m 0,0 c 4.421,0 8.005,-3.583 8.005,-8.004 0,-4.421 -3.584,-8.004 -8.005,-8.004"
            style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-           d="m 0,0 c 4.421,0 8.005,-3.583 8.005,-8.004 0,-4.421 -3.584,-8.004 -8.005,-8.004" />
+           id="path108"
+           inkscape:connector-curvature="0" />
       </g>
     </g>
   </g>
