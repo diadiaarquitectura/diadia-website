@@ -3,7 +3,7 @@
 </template>
 
 <style>
-@import url(//db.onlinewebfonts.com/c/0f56c874ba695191e7f4cab237447698?family=Futura);
+@import url(https://db.onlinewebfonts.com/c/0f56c874ba695191e7f4cab237447698?family=Futura);
 
 body,
 html {

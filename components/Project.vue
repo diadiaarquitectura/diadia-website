@@ -32,26 +32,26 @@ import { mapGetters } from 'vuex'
 
 export default {
   mounted() {
-    document.querySelector('#image img').addEventListener('load', () => {
-      document.querySelector('#image img').style.width = 'auto'
-    })
+    // document.querySelector('#image img').addEventListener('load', () => {
+    //   document.querySelector('#image img').style.width = 'auto'
+    // })
   },
 
   methods: {
     prevImage() {
-      let prevWidth = document.querySelector('#image img').clientWidth
-      document.querySelector('#image img').src = ''
-      document.querySelector('#image img').src = '~/assets/img/arrow-left.svg'
-      document.querySelector('#image img').style.width = prevWidth + 'px'
+      // let prevWidth = document.querySelector('#image img').clientWidth
+      // document.querySelector('#image img').src = ''
+      // document.querySelector('#image img').src = '~/assets/img/arrow-left.svg'
+      // document.querySelector('#image img').style.width = prevWidth + 'px'
       this.currentImage--
       if (this.currentImage < 0) this.currentImage = 0
     },
 
     nextImage() {
-      let prevWidth = document.querySelector('#image img').clientWidth
-      document.querySelector('#image img').src = ''
-      document.querySelector('#image img').src = '~/assets/img/arrow-left.svg'
-      document.querySelector('#image img').style.width = prevWidth + 'px'
+      // let prevWidth = document.querySelector('#image img').clientWidth
+      // document.querySelector('#image img').src = ''
+      // document.querySelector('#image img').src = '~/assets/img/arrow-left.svg'
+      // document.querySelector('#image img').style.width = prevWidth + 'px'
       this.currentImage++
       if (this.currentImage > this.projects[this.currentProject].galería.length - 1) {
         this.currentImage = this.projects[this.currentProject].galería.length - 1
