@@ -131,6 +131,39 @@
           "tipo": "representacion"
         }
       ]
+    },
+    {
+      "fecha": "01 11 2019",
+      "nombre": "Patio 4 Patios",
+      "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "tipologia": "educación",
+      "ubicacion": "Lima, Perú",
+      "galería": [
+        {
+          "url": "/images/uploads/047-patio-inicial-3-.jpg",
+          "tipo": "obra"
+        },
+        {
+          "url": "/images/uploads/047-patio-inicial-1-.jpg",
+          "tipo": "representacion"
+        },
+        {
+          "url": "/images/uploads/047-patio-inicial-2-.jpg",
+          "tipo": "obra"
+        },
+        {
+          "url": "/images/uploads/patio-4-patios-planta.png",
+          "tipo": "representacion"
+        },
+        {
+          "url": "/images/uploads/patio-4-patios-iso-cortada.png",
+          "tipo": "representacion"
+        },
+        {
+          "url": "/images/uploads/patio-4-patios-detalle.png",
+          "tipo": "representacion"
+        }
+      ]
     }
   ]
 }
