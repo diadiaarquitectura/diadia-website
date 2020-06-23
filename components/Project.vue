@@ -102,14 +102,10 @@ export default {
   z-index: 10;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 1);
   display: flex;
   justify-content: center;
   align-items: center;
-
-  .loading {
-    background-color: red;
-  }
 
   #project-inner {
     position: relative;

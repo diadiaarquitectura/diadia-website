@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node_modules/.bin/nuxt",
     "generate": "node_modules/.bin/nuxt generate",
-    "deploy": "surge dist --domain=diadia.surge.sh"
+    "deploy": "yarn generate; surge dist --domain=diadia.surge.sh"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
@@ -22,7 +22,8 @@
     "node-sass": "^4.13.0",
     "pug": "^2.0.4",
     "pug-plain-loader": "^1.0.0",
-    "sass-loader": "^8.0.0"
+    "sass-loader": "^8.0.0",
+    "vue-masonry-wall": "^0.2.5"
   },
   "devDependencies": {
     "netlify-cli": "^2.52.0",

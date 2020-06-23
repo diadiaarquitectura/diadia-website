@@ -6,17 +6,17 @@
 	#filters(:style="{opacity : currentSection.includes('gallery') ? 1 : 0 }")
 		.filter
 			a(href="#" @click="setCurrentSection('gallery-time')")
-				.label(:style="{ opacity: currentSection == 'gallery-time' ? 1 : 0 }") tiempo
+				.label(:style="{ opacity: currentSection == 'gallery-time' ? 1 : 0.35 }") tiempo
 				img(src="~/assets/img/icons/icon-tiempo.svg" alt="tiempo" width="100%")
 		.filter
 			a(href="#" @click="setCurrentSection('gallery-use')") 
-				.label(:style="{ opacity: currentSection == 'gallery-use' ? 1 : 0 }") uso
+				.label(:style="{ opacity: currentSection == 'gallery-use' ? 1 : 0.35 }") uso
 				img(src="~/assets/img/icons/icon-uso.svg" alt="uso" width="100%")
 		.filter
 			a(href="#" @click="setCurrentSection('gallery-archive')") 
-				.label(:style="{ opacity: currentSection == 'gallery-archive' ? 1 : 0 }") archivo
+				.label(:style="{ opacity: currentSection == 'gallery-archive' ? 1 : 0.35 }") archivo
 				img(src="~/assets/img/icons/icon-archivo.svg" alt="archivo" width="100%")
-	#menu
+	#menu-desktop
 		ul
 			li(:class="{ bold: currentSection.includes('gallery') }")
 				a(href="#" @click="setCurrentSection('gallery-time')") PROYECTOS
@@ -25,7 +25,7 @@
 			li(:class="{ bold: currentSection == 'studio' }")
 				a(href="#" @click="setCurrentSection('studio')") ESTUDIO
 			li(:class="{ bold: currentSection == 'contact' }")
-				a(href="#" @click="setCurrentSection('contact')") CONTACTO
+				a(href="#" @click="setCurrentSection('contact')") CONTACTO        
 </template>
 
 <script>
@@ -49,7 +49,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 #topbar {
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 100px;
   background-color: white;
@@ -57,7 +57,6 @@ export default {
   #logo {
     position: absolute;
     top: 30px;
-    left: 50px;
     width: 170px;
   }
 
@@ -96,9 +95,9 @@ export default {
     }
   }
 
-  #menu {
+  #menu-desktop {
     position: absolute;
-    right: 50px;
+    right: 0px;
     top: 43px;
 
     ul {
@@ -115,6 +114,10 @@ export default {
         a {
           color: black;
           text-decoration: none;
+        }
+
+        &:hover {
+          filter: brightness(2);
         }
       }
 

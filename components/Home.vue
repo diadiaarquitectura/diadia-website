@@ -1,18 +1,19 @@
 <template lang="pug">
 #home
-	transition(name="fade")
-		gallery-time(v-if="currentSection=='gallery-time'")
-	transition(name="fade")
-		gallery-use(v-if="currentSection=='gallery-use'")
-	transition(name="fade")
-		gallery-archive(v-if="currentSection=='gallery-archive'")
-	transition(name="fade")
-		bases(v-if="currentSection=='bases'")
-	transition(name="fade")
-		studio(v-if="currentSection=='studio'")
-	transition(name="fade")
-		contact(v-if="currentSection=='contact'")
-	top-bar
+  #home-inner
+    transition(name="fade")
+      gallery-time(v-if="currentSection=='gallery-time'")
+    transition(name="fade")
+      gallery-use(v-if="currentSection=='gallery-use'")
+    transition(name="fade")
+      gallery-archive(v-if="currentSection=='gallery-archive'")
+    transition(name="fade")
+      bases(v-if="currentSection=='bases'")
+    transition(name="fade")
+      studio(v-if="currentSection=='studio'")
+    transition(name="fade")
+      contact(v-if="currentSection=='contact'")
+    top-bar
 </template>
 
 <script>
@@ -42,14 +43,22 @@ export default {
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
-	transform: scale(0.95);
+  transform: scale(0.95);
 }
 
 #home {
   position: relative;
-  width: 100vw;
   height: 100vh;
   background-color: white;
-  overflow: hidden;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 50px;
+
+  #home-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
 }
 </style>

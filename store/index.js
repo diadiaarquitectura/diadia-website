@@ -28,6 +28,16 @@ export const getters = {
 		return state.projects
 	},
 
+	// getProjectsOrderedByDate(state) {
+	// 	let sortedProjects = state.projects.sort((a, b) => {
+  //       let dateA = new Date(a.fecha)
+  //       let dateB = new Date(b.fecha)
+  //       return dateB - dateA
+  //     })
+      
+  //     return sortedProjects
+	// },
+
 	getCurrentProject(state) {
 		return state.currentProject
 	},

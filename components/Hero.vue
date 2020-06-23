@@ -1,6 +1,6 @@
 <template lang="pug">
 #hero
-	#canvas
+	#canvas-background
 	#logo
 		img.logo(src="~/assets/img/logo-diadia.svg")
 		img.sublogo(src="~/assets/img/logo-arquitectura.svg")
@@ -11,7 +11,7 @@
 		br
 		| el aprendizaje, la crianza y el diálogo.
 	#arrow-down
-		a(href="#" @click="gotoProjects()")
+		a(href="#" @click="gotoHome()")
 			img(src="~/assets/img/arrow-down.svg")
 
 </template>
@@ -33,6 +33,7 @@ export default {
 			}
 
 			p.draw = () => {
+				p.resizeCanvas(p.windowWidth, p.windowHeight)
 				circlePosition = p.createVector(p.width * 0.75, 0)
 				p.background('white')
 				p.noStroke()
@@ -46,12 +47,12 @@ export default {
 			}
 		}
 
-		new p5(sketch, window.document.getElementById('canvas'))
+		new p5(sketch, 'canvas-background')
 	},
 	
 	methods: {
-		gotoProjects() {
-			let height = window.innerHeight
+		gotoHome() {
+			let height = document.getElementById('home').offsetTop
 			gsap.to('#main', { top: -height, duration: 1, ease: 'power2.out' })
 		}
 	}
@@ -67,9 +68,8 @@ export default {
   background-color: white;
 	overflow: hidden;
 
-	#canvas {
-		width: 100vw;
-		height: 100vh;
+	#canvas-background {
+		background: white;
 	}
 
 	#logo {
@@ -97,8 +97,8 @@ export default {
 	}
 
 	#arrow-down {
-		position: absolute;
-		bottom: 25px;
+		position: fixed;
+		top: calc(100% - 75px);
 		left: calc(50% - 28px);
 		animation-name: sine;
 		animation-duration: 1.5s;
