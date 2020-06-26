@@ -114,7 +114,7 @@ export default {
     #name {
       position: absolute;
       left: 0;
-      top: -15px;
+      top: -25px;
       letter-spacing: 1px;
     }
 
@@ -132,7 +132,7 @@ export default {
 
     #footer {
       position: relative;
-      top: 15px;
+      top: 8px;
 
       .left {
         float: left;
@@ -145,6 +145,7 @@ export default {
           transform: translate(0, -10px);
           width: 20px;
           margin-left: 7px;
+          margin-top: 9px;
           transition: all 0.2s;
 
           &:hover {

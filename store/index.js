@@ -1,8 +1,8 @@
 export const state = () => ({
 	projects: null,
 	currentProject: 0,
-	currentSection: 'gallery-time',
-	filter: 'use'
+	currentSection: 'gallery-custom', // time, use, archive, custom
+	filter: 'custom'
 })
 
 export const mutations = {
@@ -27,16 +27,6 @@ export const getters = {
 	getProjects(state) {
 		return state.projects
 	},
-
-	// getProjectsOrderedByDate(state) {
-	// 	let sortedProjects = state.projects.sort((a, b) => {
-  //       let dateA = new Date(a.fecha)
-  //       let dateB = new Date(b.fecha)
-  //       return dateB - dateA
-  //     })
-      
-  //     return sortedProjects
-	// },
 
 	getCurrentProject(state) {
 		return state.currentProject

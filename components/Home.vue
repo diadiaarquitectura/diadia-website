@@ -2,6 +2,8 @@
 #home
   #home-inner
     transition(name="fade")
+      gallery-custom(v-if="currentSection=='gallery-custom'")
+    transition(name="fade")
       gallery-time(v-if="currentSection=='gallery-time'")
     transition(name="fade")
       gallery-use(v-if="currentSection=='gallery-use'")
@@ -18,6 +20,7 @@
 
 <script>
 import TopBar from '~/components/TopBar'
+import GalleryCustom from '~/components/GalleryCustom'
 import GalleryTime from '~/components/GalleryTime'
 import GalleryUse from '~/components/GalleryUse'
 import GalleryArchive from '~/components/GalleryArchive'
@@ -27,7 +30,7 @@ import Contact from '~/components/Contact'
 import { mapGetters } from 'vuex'
 
 export default {
-  components: { TopBar, GalleryTime, GalleryUse, GalleryArchive, Bases, Studio, Contact },
+  components: { TopBar, GalleryCustom, GalleryTime, GalleryUse, GalleryArchive, Bases, Studio, Contact },
 
   computed: {
     ...mapGetters({ currentSection: 'getCurrentSection' })
@@ -38,12 +41,12 @@ export default {
 <style lang="scss" scoped>
 .fade-enter-active,
 .fade-leave-active {
-  transition: all 0.2s;
+  transition: all 0.5s;
 }
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
-  transform: scale(0.95);
+  transform: scale(0.9);
 }
 
 #home {
