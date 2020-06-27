@@ -1,9 +1,9 @@
 <template lang="pug">
 #gallery-archive
   .grid
-    .grid-item(v-for="(project, i) in orderedProjects")
-      img.image(:src="project.galería[0].url")
-      .hover(@click="showProject(i)") {{ project.nombre.toUpperCase() }}
+    .grid-item(v-for="(image, i) in orderedImages")
+      img.image(:src="image.url")
+      .hover(@click="showProject(image.indiceProyecto)") {{ image.nombreProyecto.toUpperCase() }}
   transition(name="fade")
     project(v-if="isShowingProject")
 </template>
@@ -36,7 +36,6 @@ export default {
 
       let loaded = imagesLoaded('#gallery-archive .grid')
       loaded.on('progress', image => {
-        // this.masonry.reloadItems()
         this.masonry.layout()
       })
     }, 50)
@@ -50,9 +49,25 @@ export default {
   computed: {
     ...mapGetters({ projects: 'getProjects', currentSection: 'getCurrentSection' }),
 
-    orderedProjects: {
+    orderedImages: {
       get() {
-        return []
+        let images = []
+        this.projects.forEach((project, index) => {
+          project.galería.forEach(image => {
+            image.nombreProyecto = project.nombre
+            image.indiceProyecto = index
+            images.push(image)
+          })
+        })
+
+        images = images.sort((a, b) => {
+          if (a.tipo > b.tipo) return 1
+          if (a.tipo < b.tipo) return -1
+          return 0
+        })
+
+        console.log(images)
+        return images
       }
     }
   },

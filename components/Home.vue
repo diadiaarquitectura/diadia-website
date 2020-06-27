@@ -54,7 +54,7 @@ export default {
   height: 100vh;
   background-color: white;
   width: 100%;
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 50px;
 
