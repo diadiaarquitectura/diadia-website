@@ -94,106 +94,96 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-#project {
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 10;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(255, 255, 255, 1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+<style lang="sass" scoped>
+#project
+  position: fixed
+  left: 0
+  top: 0
+  z-index: 10
+  width: 100vw
+  height: 100vh
+  background-color: rgba(255, 255, 255, 1)
+  display: flex
+  justify-content: center
+  align-items: center
 
-  #project-inner {
-    position: relative;
-    height: 70%;
+  #project-inner
+    position: relative
+    height: 70%
 
-    #name {
-      position: absolute;
-      left: 0;
-      top: -25px;
-      letter-spacing: 1px;
-    }
+    #name
+      position: absolute
+      left: 0
+      top: -25px
+      letter-spacing: 1px
 
-    #image {
-      position: relative;
-      height: 100%;
+    #image
+      position: relative
+      height: 100%
 
-      img {
-        top: 0;
-        left: 0;
-        height: 100%;
-        transition: all 0.2s;
-      }
-    }
+      img
+        top: 0
+        left: 0
+        height: 100%
+        transition: all 0.2s
 
-    #footer {
-      position: relative;
-      top: 8px;
+    #footer
+      position: relative
+      top: 8px
 
-      .left {
-        float: left;
-      }
+      .left
+        float: left
 
-      .right {
-        float: right;
+      .right
+        float: right
 
-        img {
-          transform: translate(0, -10px);
-          width: 20px;
-          margin-left: 7px;
-          margin-top: 9px;
-          transition: all 0.2s;
+        img
+          transform: translate(0, -10px)
+          width: 20px
+          margin-left: 7px
+          margin-top: 9px
+          transition: all 0.2s
 
-          &:hover {
-            transform: translate(0, -10px) scale(1.1);
-            transition: all 0.2s;
-          }
-        }
-      }
-    }
-  }
+          &:hover
+            transform: translate(0, -10px) scale(1.1)
+            transition: all 0.2s
 
-  #arrow-left {
-    position: fixed;
-    left: 10px;
-    top: calc(50% - 35px);
-    transform: scale(1.3);
-    transition: all 0.2s;
+  #arrow-left
+    position: fixed
+    left: 10px
+    top: calc(50% - 35px)
+    transform: scale(1.3)
+    transition: all 0.2s
+    
+    img
+      width: 50px
 
-    &:hover {
-      transform: scale(1.5);
-      transition: all 0.2s;
-    }
-  }
+    &:hover
+      transform: scale(1.5)
+      transition: all 0.2s
 
-  #arrow-right {
-    position: fixed;
-    right: 10px;
-    top: calc(50% - 35px);
-    transform: scale(1.3);
-    transition: all 0.2s;
+  #arrow-right
+    position: fixed
+    right: 10px
+    top: calc(50% - 35px)
+    transform: scale(1.3)
+    transition: all 0.2s
 
-    &:hover {
-      transform: scale(1.5);
-      transition: all 0.2s;
-    }
-  }
+    img
+      width: 50px
 
-  #close {
-    position: fixed;
-    right: 20px;
-    top: 20px;
-    transform: scale(0.9);
-    transition: all 0.2s;
+    &:hover
+      transform: scale(1.5)
+      transition: all 0.2s
 
-    &:hover {
-      transform: scale(1);
-      transition: all 0.2s;
-    }
-  }
-}
+  #close
+    position: fixed
+    right: 20px
+    top: 20px
+    transform: scale(0.9)
+    transition: all 0.2s
+
+    &:hover
+      transform: scale(1)
+      transition: all 0.2s
 </style>

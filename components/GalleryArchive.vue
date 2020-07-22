@@ -61,8 +61,8 @@ export default {
         })
 
         images = images.sort((a, b) => {
-          if (a.tipo > b.tipo) return 1
-          if (a.tipo < b.tipo) return -1
+          if (a.tipo > b.tipo) return -1
+          if (a.tipo < b.tipo) return 1
           return 0
         })
 

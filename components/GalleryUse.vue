@@ -1,9 +1,9 @@
 <template lang="pug">
 #gallery-use
   .grid
-    .grid-item(v-for="(project, i) in orderedProjects")
+    .grid-item(v-for="project in orderedProjects")
       img.image(:src="project.galería[0].url")
-      .hover(@click="showProject(i)") {{ project.nombre.toUpperCase() }}
+      .hover(@click="showProject(project.nombre)") {{ project.nombre.toUpperCase() }}
   transition(name="fade")
     project(v-if="isShowingProject")
 </template>
@@ -52,9 +52,11 @@ export default {
 
     orderedProjects: {
       get() {
-        return [...this.projects].sort((a, b) => {
-          return new Date(a.tipologia) - new Date(b.tipologia)
-        }).reverse()
+        return [...this.projects]
+          .sort((a, b) => {
+            return new Date(a.tipologia) - new Date(b.tipologia)
+          })
+          .reverse()
       }
     }
   },
@@ -62,9 +64,14 @@ export default {
   methods: {
     ...mapMutations({ setProjects: 'setProjects', setCurrentProject: 'setCurrentProject' }),
 
-    showProject(i) {
+    showProject(name) {
       this.$nuxt.$emit('showProject')
-      this.setCurrentProject(i)
+      this.projects.forEach((project, i) => {
+        if (project.nombre == name) {
+          this.setCurrentProject(i)
+          return
+        }
+      })
     }
   },
 

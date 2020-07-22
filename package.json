@@ -1,13 +1,13 @@
 {
   "name": "diadia-website",
   "version": "1.0.0",
-  "description": "My remarkable Nuxt.js project",
+  "description": "",
   "author": "Jerson La Torre",
   "private": true,
   "scripts": {
     "start": "node_modules/.bin/nuxt",
     "generate": "node_modules/.bin/nuxt generate",
-    "deploy": "yarn generate; surge dist --domain=diadia.surge.sh"
+    "deploy": "yarn generate; surge dist --domain=http://diadia.surge.sh"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
