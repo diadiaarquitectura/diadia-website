@@ -1,11 +1,11 @@
 <template lang="pug">
 #gallery-custom
   .grid
-    .grid-item(v-for="(project, i) in orderedProjects")
-      img.image(:src="project.galería[0].url")
-      .hover(@click="showProject(i)") {{ project.nombre.toUpperCase() }}
-  transition(name="fade")
-    project(v-if="isShowingProject")
+    .grid-item(v-for='(project, i) in orderedProjects')
+      img.image(:src='project.galería[0].url')
+      .hover(@click='showProject(i)') {{ project.nombre.toUpperCase() }}
+  transition(name='fade')
+    project(v-if='isShowingProject')
 </template>
 
 <script>
@@ -31,11 +31,11 @@ export default {
       this.masonry = new Masonry('#gallery-custom .grid', {
         itemSelector: '#gallery-custom .grid-item',
         horizontalOrder: true,
-        gutter: 12
+        gutter: 12,
       })
 
       let loaded = imagesLoaded('#gallery-custom .grid')
-      loaded.on('progress', image => {
+      loaded.on('progress', (image) => {
         this.masonry.layout()
       })
     }, 50)
@@ -51,8 +51,8 @@ export default {
     orderedProjects: {
       get() {
         return this.projects
-      }
-    }
+      },
+    },
   },
 
   methods: {
@@ -61,16 +61,16 @@ export default {
     showProject(i) {
       this.$nuxt.$emit('showProject')
       this.setCurrentProject(i)
-    }
+    },
   },
 
   data() {
     return {
       isShowingProject: false,
       timer: 0,
-      masonry: null
+      masonry: null,
     }
-  }
+  },
 }
 </script>
 
@@ -149,6 +149,19 @@ export default {
     .grid {
       .grid-item {
         width: 100%;
+
+        .hover {
+          position: relative;
+          background-color: white;
+          color: black;
+          display: inline-block;
+          padding: 7px 0;
+          text-align: left;
+
+          &:hover {
+            background-color: white;
+          }
+        }
       }
     }
   }

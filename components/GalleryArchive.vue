@@ -165,6 +165,19 @@ export default {
     .grid {
       .grid-item {
         width: 100%;
+
+        .hover {
+          position: relative;
+          background-color: white;
+          color: black;
+          display: inline-block;
+          padding: 7px 0;
+          text-align: left;
+
+          &:hover {
+            background-color: white;
+          }
+        }
       }
     }
   }

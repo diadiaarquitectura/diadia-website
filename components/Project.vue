@@ -186,4 +186,8 @@ export default {
     &:hover
       transform: scale(1)
       transition: all 0.2s
+
+@media (max-width: 768px)
+  #project
+    
 </style>

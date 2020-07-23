@@ -1,11 +1,11 @@
 <template lang="pug">
 #gallery-use
   .grid
-    .grid-item(v-for="project in orderedProjects")
-      img.image(:src="project.galería[0].url")
-      .hover(@click="showProject(project.nombre)") {{ project.nombre.toUpperCase() }}
-  transition(name="fade")
-    project(v-if="isShowingProject")
+    .grid-item(v-for='project in orderedProjects')
+      img.image(:src='project.galería[0].url')
+      .hover(@click='showProject(project.nombre)') {{ project.nombre.toUpperCase() }}
+  transition(name='fade')
+    project(v-if='isShowingProject')
 </template>
 
 <script>
@@ -31,11 +31,11 @@ export default {
       this.masonry = new Masonry('#gallery-use .grid', {
         itemSelector: '#gallery-use .grid-item',
         horizontalOrder: true,
-        gutter: 12
+        gutter: 12,
       })
 
       let loaded = imagesLoaded('#gallery-use .grid')
-      loaded.on('progress', image => {
+      loaded.on('progress', (image) => {
         this.masonry.layout()
       })
     }, 50)
@@ -55,8 +55,8 @@ export default {
             return new Date(a.tipologia) - new Date(b.tipologia)
           })
           .reverse()
-      }
-    }
+      },
+    },
   },
 
   methods: {
@@ -70,16 +70,16 @@ export default {
           return
         }
       })
-    }
+    },
   },
 
   data() {
     return {
       isShowingProject: false,
       timer: 0,
-      masonry: null
+      masonry: null,
     }
-  }
+  },
 }
 </script>
 
@@ -158,6 +158,19 @@ export default {
     .grid {
       .grid-item {
         width: 100%;
+
+        .hover {
+          position: relative;
+          background-color: white;
+          color: black;
+          display: inline-block;
+          padding: 7px 0;
+          text-align: left;
+
+          &:hover {
+            background-color: white;
+          }
+        }
       }
     }
   }
