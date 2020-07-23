@@ -1,10 +1,11 @@
 {
-  "direccion": "Calle Italia 105 <br>\nMiraflores, Lima <br>\nPerú",
-  "mensaje": "Nos gustaría saber de ti.",
   "emailMensaje": "Dependiendo de tus consultas e intereses, contáctanos",
-  "emailProyectos": "proyectos@diadia.pe",
   "emailContacto": "contacto@diadia.pe",
+  "direccion": "Calle Italia 105 <br>\nMiraflores, Lima <br>\nPerú",
   "enlaceInstagram": "@diadiaarquitectura",
+  "emailProyectos": "proyectos@diadia.pe",
+  "imagen": "/images/uploads/contacto.jpg",
   "web": "www.diadia.pe",
-  "email": "Dependiendo de tus consultas e intereses, contáctanos<br>\nProyectos proyectos@diadia.pe\nCvs y Proveedores contacto@diadia.pe"
+  "email": "Dependiendo de tus consultas e intereses, contáctanos<br>\nProyectos proyectos@diadia.pe\nCvs y Proveedores contacto@diadia.pe",
+  "mensaje": "Nos gustaría saber de ti."
 }
