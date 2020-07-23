@@ -132,4 +132,27 @@ export default {
     }
   }
 }
+
+@media (max-width: 1200px) {
+  #gallery-custom {
+    top: 180px;
+    height: calc(100% - 200px);
+    .grid {
+      .grid-item {
+        width: calc((100% - 12px) / 2);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #gallery-custom {
+    top: 180px;
+    .grid {
+      .grid-item {
+        width: 100%;
+      }
+    }
+  }
+}
 </style>

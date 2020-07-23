@@ -1,20 +1,20 @@
 <template lang="pug">
 #home
   #home-inner
-    transition(name="fade")
-      gallery-custom(v-if="currentSection=='gallery-custom'")
-    transition(name="fade")
-      gallery-time(v-if="currentSection=='gallery-time'")
-    transition(name="fade")
-      gallery-use(v-if="currentSection=='gallery-use'")
-    transition(name="fade")
-      gallery-archive(v-if="currentSection=='gallery-archive'")
-    transition(name="fade")
-      bases(v-if="currentSection=='bases'")
-    transition(name="fade")
-      studio(v-if="currentSection=='studio'")
-    transition(name="fade")
-      contact(v-if="currentSection=='contact'")
+    transition(name='fade')
+      gallery-custom(v-if='currentSection == "gallery-custom"')
+    transition(name='fade')
+      gallery-time(v-if='currentSection == "gallery-time"')
+    transition(name='fade')
+      gallery-use(v-if='currentSection == "gallery-use"')
+    transition(name='fade')
+      gallery-archive(v-if='currentSection == "gallery-archive"')
+    transition(name='fade')
+      bases(v-if='currentSection == "bases"')
+    transition(name='fade')
+      studio(v-if='currentSection == "studio"')
+    transition(name='fade')
+      contact(v-if='currentSection == "contact"')
     top-bar
 </template>
 
@@ -30,11 +30,20 @@ import Contact from '~/components/Contact'
 import { mapGetters } from 'vuex'
 
 export default {
-  components: { TopBar, GalleryCustom, GalleryTime, GalleryUse, GalleryArchive, Bases, Studio, Contact },
+  components: {
+    TopBar,
+    GalleryCustom,
+    GalleryTime,
+    GalleryUse,
+    GalleryArchive,
+    Bases,
+    Studio,
+    Contact,
+  },
 
   computed: {
-    ...mapGetters({ currentSection: 'getCurrentSection' })
-  }
+    ...mapGetters({ currentSection: 'getCurrentSection' }),
+  },
 }
 </script>
 
@@ -62,6 +71,12 @@ export default {
     position: relative;
     width: 100%;
     height: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  #home {
+    padding: 0 20px;
   }
 }
 </style>

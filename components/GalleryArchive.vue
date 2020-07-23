@@ -1,11 +1,11 @@
 <template lang="pug">
 #gallery-archive
   .grid
-    .grid-item(v-for="(image, i) in orderedImages")
-      img.image(:src="image.url")
-      .hover(@click="showProject(image.indiceProyecto)") {{ image.nombreProyecto.toUpperCase() }}
-  transition(name="fade")
-    project(v-if="isShowingProject")
+    .grid-item(v-for='(image, i) in orderedImages')
+      img.image(:src='image.url')
+      .hover(@click='showProject(image.indiceProyecto)') {{ image.nombreProyecto.toUpperCase() }}
+  transition(name='fade')
+    project(v-if='isShowingProject')
 </template>
 
 <script>
@@ -31,11 +31,11 @@ export default {
       this.masonry = new Masonry('#gallery-archive .grid', {
         itemSelector: '#gallery-archive .grid-item',
         horizontalOrder: true,
-        gutter: 12
+        gutter: 12,
       })
 
       let loaded = imagesLoaded('#gallery-archive .grid')
-      loaded.on('progress', image => {
+      loaded.on('progress', (image) => {
         this.masonry.layout()
       })
     }, 50)
@@ -53,7 +53,7 @@ export default {
       get() {
         let images = []
         this.projects.forEach((project, index) => {
-          project.galería.forEach(image => {
+          project.galería.forEach((image) => {
             image.nombreProyecto = project.nombre
             image.indiceProyecto = index
             images.push(image)
@@ -68,8 +68,8 @@ export default {
 
         console.log(images)
         return images
-      }
-    }
+      },
+    },
   },
 
   methods: {
@@ -78,16 +78,16 @@ export default {
     showProject(i) {
       this.$nuxt.$emit('showProject')
       this.setCurrentProject(i)
-    }
+    },
   },
 
   data() {
     return {
       isShowingProject: false,
       timer: 0,
-      masonry: null
+      masonry: null,
     }
-  }
+  },
 }
 </script>
 
@@ -143,6 +143,29 @@ export default {
       img {
         width: 100% !important;
         height: auto !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  #gallery-archive {
+    height: calc(100% - 200px);
+    top: 180px;
+    .grid {
+      .grid-item {
+        width: calc((100% - 12px) / 2);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #gallery-archive {
+    top: 180px;
+    .grid {
+      .grid-item {
+        width: 100%;
       }
     }
   }
