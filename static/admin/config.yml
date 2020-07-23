@@ -76,6 +76,7 @@ collections:
         name: estudio
         file: static/content/estudio.json
         fields:
+          - { label: Título, name: titulo, required: false, widget: text }
           - { label: Descripción, name: descripcion, required: false, widget: text }
           - { label: Imagen 1, name: imagen1, required: false, widget: image }
           - { label: Imagen 2, name: imagen2, required: false, widget: image }
@@ -85,3 +86,5 @@ collections:
         fields:
           - { label: Dirección, name: direccion, required: false, widget: text }
           - { label: Teléfono, name: telefono, required: false, widget: text }
+          - { label: Email, name: email, required: false, widget: text }
+          - { label: Enlace Instagram, name: instagram, required: false, widget: text }
