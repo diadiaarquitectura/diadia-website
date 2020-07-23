@@ -84,7 +84,10 @@ collections:
         name: contacto
         file: static/content/contacto.json
         fields:
+          - { label: Mensaje, name: mensaje, required: false, widget: text }
           - { label: Dirección, name: direccion, required: false, widget: text }
-          - { label: Teléfono, name: telefono, required: false, widget: text }
-          - { label: Email, name: email, required: false, widget: text }
-          - { label: Enlace Instagram, name: instagram, required: false, widget: text }
+          - { label: Email Mensaje, name: emailMensaje, required: false, widget: text }
+          - { label: Email Proyectos, name: emailProyectos, required: false, widget: text }
+          - { label: Email Contacto, name: emailContacto, required: false, widget: text }
+          - { label: Enlace Instagram, name: enlaceInstagram, required: false, widget: text }
+          - { label: Web, name: web, required: false, widget: text }

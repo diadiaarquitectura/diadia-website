@@ -1,10 +1,25 @@
 <template lang="pug">
-#contact contacto
+#contact
+  .content
+    .pics
+      img.pic-left(:src='studioInfo.imagen1')
+      img.pic-right(:src='studioInfo.imagen2')
+    .title {{ studioInfo.titulo }}
+    .description {{ studioInfo.descripcion }}
+    img.animation(src='images/animation.gif')
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
-	
+  mounted() {
+    console.log(this.studioInfo)
+  },
+
+  computed: {
+    ...mapGetters({ studioInfo: 'getStudioInfo' }),
+  },
 }
 </script>
 
@@ -12,11 +27,47 @@ export default {
 #contact {
   position: absolute;
   top: 100px;
-	background-color: #eee;
-	width: 100%;
-	height: calc(100% - 130px);
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  width: 100%;
+  height: calc(100%);
+  display: flex;
+  text-align: center;
+  padding-bottom: 100px;
+
+  .content {
+    width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    overflow: scroll;
+    font-size: 1.2rem;
+    padding: 50px 10px 0 10px;
+    overflow-x: hidden;
+
+    .title {
+      font-weight: bold;
+      margin: 40px 0;
+    }
+
+    .description {
+      text-align: justify;
+    }
+
+    .pics {
+      max-width: 600px;
+      width: 100%;
+
+      .pic-left {
+        width: 50%;
+      }
+
+      .pic-right {
+        width: 50%;
+      }
+    }
+
+		.animation {
+			max-width: 600px;
+      width: 100%;
+		}
+  }
 }
 </style>

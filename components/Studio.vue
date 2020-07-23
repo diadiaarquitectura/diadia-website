@@ -6,6 +6,7 @@
       img.pic-right(:src='studioInfo.imagen2')
     .title {{ studioInfo.titulo }}
     .description {{ studioInfo.descripcion }}
+    img.animation(src='images/animation.gif')
 </template>
 
 <script>
@@ -30,21 +31,43 @@ export default {
   height: calc(100%);
   display: flex;
   text-align: center;
+  padding-bottom: 100px;
 
   .content {
-		padding-top: 80px;
     width: 600px;
     margin: 0 auto;
     background-color: white;
     overflow: scroll;
+    font-size: 1.2rem;
+    padding: 50px 10px 0 10px;
+    overflow-x: hidden;
 
-    .pic-left {
-      width: 300px;
+    .title {
+      font-weight: bold;
+      margin: 40px 0;
     }
 
-    .pic-right {
-      width: 300px;
+    .description {
+      text-align: justify;
     }
+
+    .pics {
+      max-width: 600px;
+      width: 100%;
+
+      .pic-left {
+        width: 50%;
+      }
+
+      .pic-right {
+        width: 50%;
+      }
+    }
+
+		.animation {
+			max-width: 600px;
+      width: 100%;
+		}
   }
 }
 </style>
