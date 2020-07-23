@@ -50,25 +50,28 @@ collections:
         name: bases
         file: static/content/bases.json
         fields:
-          - { label: Nombre, name: nombre, required: true, widget: text }
-          - { label: Descripción, name: descripcion, required: false, widget: text }
-          - { label: Enlace De Descarga, name: enlace, required: false, widget: text }
-          - { label: Fecha, name: fecha, widget: date, default: '', format: 'DD MM YYYY' }
-          - label: Galería de Fotos
-            name: galería
-            required: false
-            widget: list
-            fields:
-              - { label: Imagen, name: url, widget: image, required: false, allow_multiple: false }
-              - label: Tipo
-                name: tipo
-                required: true
-                widget: select
-                options:
-                  - { label: Obra, value: obra }
-                  - { label: Representación, value: representacion }
-                  - { label: Maqueta, value: maqueta }
-
+          - label: Bases
+          - name: bases
+          - widget: list
+          - fields:
+            - { label: Nombre, name: nombre, required: true, widget: text }
+            - { label: Descripción, name: descripcion, required: false, widget: text }
+            - { label: Enlace De Descarga, name: enlace, required: false, widget: text }
+            - { label: Fecha, name: fecha, widget: date, default: '', format: 'DD MM YYYY' }
+            - label: Galería de Fotos
+              name: galería
+              required: false
+              widget: list
+              fields:
+                - { label: Imagen, name: url, widget: image, required: false, allow_multiple: false }
+                - label: Tipo
+                  name: tipo
+                  required: true
+                  widget: select
+                  options:
+                    - { label: Obra, value: obra }
+                    - { label: Representación, value: representacion }
+                    - { label: Maqueta, value: maqueta }
       - label: Estudio
         name: estudio
         file: static/content/estudio.json
