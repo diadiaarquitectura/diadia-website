@@ -5,7 +5,7 @@
       img.pic-left(:src='studioInfo.imagen1')
       img.pic-right(:src='studioInfo.imagen2')
     .title {{ studioInfo.titulo }}
-    .description {{ studioInfo.descripcion }}
+    .description(v-html="studioInfo.descripcion")
     img.animation(src='images/animation.gif')
 </template>
 

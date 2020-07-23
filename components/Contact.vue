@@ -1,12 +1,18 @@
 <template lang="pug">
 #contact
   .content
-    .pics
-      img.pic-left(:src='studioInfo.imagen1')
-      img.pic-right(:src='studioInfo.imagen2')
-    .title {{ studioInfo.titulo }}
-    span.description(v-html="studioInfo.descripcion")
-    img.animation(src='images/animation.gif')
+    img.pic(:src='contactInfo.imagen')
+		.column
+			.title Contacto
+			.text {{ contactInfo.mensaje }}
+			.title Estudio
+			.text {{ contactInfo.direccion }}
+			.title Mail
+			.text {{ contactInfo.email }}
+			.title Instagram
+			.text {{ contactInfo.enlaceInstagram }}
+			.title Web
+			.text {{ contactInfo.web }}
 </template>
 
 <script>
@@ -18,7 +24,7 @@ export default {
   },
 
   computed: {
-    ...mapGetters({ studioInfo: 'getStudioInfo' }),
+    ...mapGetters({ contactInfo: 'getContactInfo' }),
   },
 }
 </script>
@@ -64,10 +70,10 @@ export default {
       }
     }
 
-		.animation {
-			max-width: 600px;
+    .animation {
+      max-width: 600px;
       width: 100%;
-		}
+    }
   }
 }
 </style>

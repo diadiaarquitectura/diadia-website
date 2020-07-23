@@ -3,7 +3,9 @@ export const state = () => ({
 	currentProject: 0,
 	currentSection: 'gallery-custom', // time, use, archive, custom
 	filter: 'custom',
-	studioInfo: null
+	studioInfo: null,
+	contactInfo: null,
+	basesInfo: null
 })
 
 export const mutations = {
@@ -25,6 +27,14 @@ export const mutations = {
 
 	setStudioInfo(state, info) {
 		state.studioInfo = info
+	},
+
+	setContactInfo(state, info) {
+		state.contactInfo = info
+	},
+
+	setBasesInfo(state, info) {
+		state.basesInfo = info
 	}
 }
 
@@ -47,5 +57,13 @@ export const getters = {
 
 	getStudioInfo(state) {
 		return state.studioInfo
+	},
+
+	getContactInfo(state) {
+		return state.contactInfo
+	},
+
+	getBasesInfo(state) {
+		return state.basesInfo
 	}
 }

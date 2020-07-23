@@ -33,6 +33,14 @@ export default {
       this.setStudioInfo(response.data)
     })
 
+    axios.get('content/contacto.json').then(response => {
+      this.setContactoInfo(response.data)
+    })
+
+    axios.get('content/bases.json').then(response => {
+      this.setBasesInfo(response.data)
+    })
+
     let sketch = p => {
       let bg
       let msk
@@ -176,7 +184,9 @@ export default {
   methods: {
     ...mapMutations({
       setProjects: 'setProjects',
-      setStudioInfo: 'setStudioInfo'
+      setStudioInfo: 'setStudioInfo',
+      setContactInfo: 'setContactInfo',
+      setBasesInfo: 'setBasesInfo'
     }),
 
     addPreloadUrl(url) {
