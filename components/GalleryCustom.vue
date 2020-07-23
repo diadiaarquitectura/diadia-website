@@ -36,14 +36,12 @@ export default {
 
       let loaded = imagesLoaded('#gallery-custom .grid')
       loaded.on('progress', image => {
-        // this.masonry.reloadItems()
         this.masonry.layout()
       })
     }, 50)
   },
 
   beforeDestroy() {
-    document.getElementById('home').removeEventListener('wheel', this.onMouseWheel)
     clearInterval(this.timer)
   },
 

@@ -29,6 +29,10 @@ export default {
       this.setProjects(response.data.proyectos)
     })
 
+    axios.get('content/estudio.json').then(response => {
+      this.setStudioInfo(response.data)
+    })
+
     let sketch = p => {
       let bg
       let msk
@@ -171,7 +175,8 @@ export default {
 
   methods: {
     ...mapMutations({
-      setProjects: 'setProjects'
+      setProjects: 'setProjects',
+      setStudioInfo: 'setStudioInfo'
     }),
 
     addPreloadUrl(url) {

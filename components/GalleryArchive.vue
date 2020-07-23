@@ -42,7 +42,6 @@ export default {
   },
 
   beforeDestroy() {
-    document.getElementById('home').removeEventListener('wheel', this.onMouseWheel)
     clearInterval(this.timer)
   },
 
