@@ -1,7 +1,7 @@
 <template lang="pug">
 #contact
-  .content
-    img.pic(:src='contactInfo.imagen')
+	.content
+		img.pic(:src='contactInfo.imagen')
 		.column
 			.title Contacto
 			.text {{ contactInfo.mensaje }}

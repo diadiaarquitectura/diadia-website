@@ -34,7 +34,7 @@ export default {
     })
 
     axios.get('content/contacto.json').then(response => {
-      this.setContactoInfo(response.data)
+      this.setContactInfo(response.data)
     })
 
     axios.get('content/bases.json').then(response => {
