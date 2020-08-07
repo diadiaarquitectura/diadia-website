@@ -5,7 +5,7 @@
       img.pic-left(:src='studioInfo.imagen1')
       img.pic-right(:src='studioInfo.imagen2')
     .title {{ studioInfo.titulo }}
-    .description(v-html="studioInfo.descripcion")
+    .description(v-html='studioInfo.descripcion')
     img.animation(src='images/animation.gif')
 </template>
 
@@ -64,10 +64,25 @@ export default {
       }
     }
 
-		.animation {
-			max-width: 600px;
+    .animation {
+      max-width: 600px;
       width: 100%;
-		}
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #studio {
+    .content {
+      padding: 0px 10px 50px 10px;
+      .title {
+        font-size: 0.8rem;
+        margin: 10px 0 30px 0;
+      }
+      .description {
+        font-size: 0.9rem;
+      }
+    }
   }
 }
 </style>
