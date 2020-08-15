@@ -1,7 +1,7 @@
 <template lang="pug">
 #main
-	#loading-canvas(v-if="!isDataLoaded")
-	.noselect(v-else)
+	//- #loading-canvas(v-if="!isDataLoaded")
+	//- .noselect(v-else)
 		hero
 		home
 </template>

@@ -62,8 +62,7 @@ export default {
   position: relative;
   height: 100vh;
   background-color: white;
-  width: 100%;
-  max-width: 1200px;
+  width: 95%;
   margin: 0 auto;
   padding: 0 50px;
 

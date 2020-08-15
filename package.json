@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node_modules/.bin/nuxt",
     "generate": "node_modules/.bin/nuxt generate",
-    "deploy": "yarn generate; surge dist --domain=http://diadia.surge.sh"
+    "deploy": "yarn generate; surge dist http://diadia.surge.sh"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
