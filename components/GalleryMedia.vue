@@ -1,9 +1,9 @@
 <template lang="pug">
 #gallery-media
   .grid
-    .grid-item(v-for='(image, i) in orderedImages')
+    .grid-item(@click='showProject(image.indiceProyecto)' v-for='(image, i) in orderedImages')
       img.image(:src='image.url')
-      .hover(@click='showProject(image.indiceProyecto)') {{ image.nombreProyecto.toUpperCase() }}
+      .hover {{ image.nombreProyecto.toUpperCase() }}
   transition(name='fade')
     project(v-if='isShowingProject')
 </template>
@@ -115,6 +115,7 @@ export default {
       width: calc((100% - 24px) / 3);
       margin-bottom: 12px;
       float: left;
+      cursor: pointer;
 
       .hover {
         position: absolute;
@@ -130,7 +131,6 @@ export default {
         justify-content: center;
         align-items: center;
         transition: all 0.3s;
-        cursor: pointer;
 
         &:hover {
           background-color: rgba(255, 255, 255, 0.85);

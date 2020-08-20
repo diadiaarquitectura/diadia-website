@@ -9,13 +9,13 @@
           .right {{ currentImage + 1 + "/" + projects[currentProject].galería.length }}
     #arrow-left(v-if='currentImage > 0')
       a(href='#')
-        img(src='~/assets/img/arrow-left.svg', @click='prevImage()')
+        img(src='images/arrow-left.svg', @click='prevImage()')
     #arrow-right(v-if='currentImage < projects[currentProject].galería.length - 1')
       a(href='#')
-        img(src='~/assets/img/arrow-right.svg', @click='nextImage()')
+        img(src='images/arrow-right.svg', @click='nextImage()')
     #close
       a(href='#')
-        img(src='~/assets/img/close.svg', @click='closeProject()', width='100%')
+        img(src='images/close.svg', @click='closeProject()', width='100%')
 </template>
 
 <script>

@@ -25,8 +25,18 @@ export default {
       event.preventDefault()
     }
 
-    let urls = ['./_nuxt/img/e6b22c8.svg']
-    this.preloadImages(urls, () => {})
+    let urls = [
+      '/images/icons/icon-uso.svg',
+      '/images/icons/icon-archivo.svg',
+      '/images/icons/icon-tiempo.svg',
+      '/images/arrow-down.svg',
+      '/images/arrow-left.svg',
+      '/images/arrow-right.svg',
+      '/images/close.svg',
+      '/images/diadia-logo-300.svg',
+      '/images/hamburger.svg',
+      '/images/logo-diadia.svg',
+    ]
 
     axios.get('content/proyectos.json').then((response) => {
       this.setProjects(response.data.proyectos)
@@ -47,17 +57,19 @@ export default {
     let sketch = (p) => {
       let bg
       let msk
-      let t = 0
-      let tRadiusInit = 0
-      let tRadiusEnd = 0
       let radius = 0
-      let state = 'init'
-      let counter = 0
 
       p.setup = () => {
         p.createCanvas(50, 50)
         bg = p.createGraphics(50, 50)
         msk = p.createGraphics(50, 50)
+
+        this.preloadImages(urls, () => {
+          setTimeout(() => {
+            this.isDataLoaded = true
+            console.log('fin')
+          }, 1000)
+        })
       }
 
       p.draw = () => {
@@ -65,105 +77,20 @@ export default {
         msk.clear()
         msk.noStroke()
         msk.fill('white')
-        msk.circle(25, 25, radius)
+        msk.circle(25, 25, 25)
 
-        switch (state) {
-          case 'init': {
-            radius = p.lerp(0, 24, easeOutBack(tRadiusInit))
-            tRadiusInit += 0.05
-            if (tRadiusInit > 1) tRadiusInit = 1
+        let h = p.lerp(13, 37, ease(this.t))
 
-            let h = p.lerp(13, 37, ease(t))
-            t += 0.005
-
-            if (t > 1) {
-              t = 0
-              state = 'white'
-              counter++
-            }
-
-            bg.background('white')
-            bg.noStroke()
-            bg.fill('black')
-            bg.rect(0, 0, h, p.height)
-
-            break
-          }
-
-          case 'black': {
-            let h = p.lerp(13, 37, ease(t))
-            t += 0.015
-
-            if (t > 1) {
-              t = 0
-              state = 'white'
-              counter++
-            }
-
-            bg.background('white')
-            bg.noStroke()
-            bg.fill('black')
-            bg.rect(0, p.height, p.width - h, h)
-
-            break
-          }
-
-          case 'white': {
-            let h = p.lerp(13, 37, ease(t))
-            t += 0.015
-
-            if (t > 1) {
-              t = 0
-              state = 'black'
-              counter++
-            }
-
-            bg.background('black')
-            bg.noStroke()
-            bg.fill('white')
-            bg.rect(0, p.height, p.width - h, h)
-
-            break
-          }
-
-          case 'end': {
-            radius = p.lerp(24, 0, ease(tRadiusEnd))
-            tRadiusEnd += 0.025
-            if (tRadiusEnd > 1) {
-              state = 'none'
-              tRadiusEnd = 1
-
-              this.isDataLoaded = true
-              loadingAnimation.remove()
-            }
-
-            let h = p.lerp(13, 37, ease(t))
-            t += 0.015
-
-            if (t > 1) {
-              t = 0
-            }
-
-            bg.background('black')
-            bg.noStroke()
-            bg.fill('white')
-            bg.rect(0, p.height, p.width - h, h)
-
-            break
-          }
-
-          case 'none': {
-            break
-          }
-        }
-
-        if (counter == 1) state = 'end'
+        bg.background('white')
+        bg.noStroke()
+        bg.fill('black')
+        bg.rect(0, 0, h, p.height)
 
         let clone = bg.get()
         clone.mask(msk.get())
         p.image(clone, 0, 0)
         p.noFill()
-        p.circle(25, 25, radius)
+        p.circle(25, 25, 25)
       }
 
       function ease(t) {
@@ -179,7 +106,7 @@ export default {
       }
     }
 
-    let loadingAnimation = new p5(sketch, 'loading-canvas')
+    this.p5 = new p5(sketch, 'loading-canvas')
   },
 
   methods: {
@@ -194,11 +121,13 @@ export default {
       var loadedCounter = 0
       var toBeLoadedNumber = urls.length
       urls.forEach((url) => {
+        // new Image().src = url
         this.preloadImage(url, () => {
           loadedCounter++
-          console.log('Number of loaded images: ' + loadedCounter)
+          this.t = loadedCounter / toBeLoadedNumber
+          console.log('t: ' + this.t)
           if (loadedCounter == toBeLoadedNumber) {
-            // allImagesLoadedCallback()
+            allImagesLoadedCallback()
           }
         })
       })
@@ -226,6 +155,8 @@ export default {
     return {
       percentage: 0,
       isDataLoaded: false,
+      t: 0,
+      p5: null,
     }
   },
 }

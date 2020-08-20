@@ -2,20 +2,20 @@
 #topbar
   #logo
     a(href='#', @click='gotoHome()') 
-      img(src='~/assets/img/logo-diadia.svg', alt='diadia', width='100%')
+      img(src='images/logo-diadia.svg', alt='diadia', width='100%')
   #filters(:style='{ opacity: currentSection.includes("gallery") ? 1 : 0 }')
     .filter
       a(href='#', @click='onGalleryWorkClick()')
         .label(:style='{ opacity: currentSection == "gallery-work" ? 1 : 0 }') obra
-        img(src='~/assets/img/icons/icon-tiempo.svg', alt='tiempo', width='100%')
+        img(src='images/icons/icon-tiempo.svg', alt='tiempo', width='100%')
     .filter
       a(href='#', @click='onGalleryMediaClick()') 
         .label(:style='{ opacity: currentSection == "gallery-media" ? 1 : 0 }') medios
-        img(src='~/assets/img/icons/icon-archivo.svg', alt='uso', width='100%')
+        img(src='images/icons/icon-archivo.svg', alt='uso', width='100%')
     .filter
       a(href='#', @click='onGalleryBasesClick()') 
         .label(:style='{ opacity: currentSection == "gallery-bases" ? 1 : 0 }') bases
-        img(src='~/assets/img/icons/icon-uso.svg', alt='archivo', width='100%')
+        img(src='images/icons/icon-uso.svg', alt='archivo', width='100%')
   #menu-desktop(v-if='!isMobileMenu')
     ul
       li(:class='{ bold: currentSection.includes("gallery") }')
@@ -26,7 +26,7 @@
         a(href='#', @click='setCurrentSection("contact")') CONTACTO
 
   #hamburger(v-if='isMobileMenu', @click='showMobileMenu()')
-    img(src='~/assets/img/hamburger.svg')
+    img(src='images/hamburger.svg')
 
   transition(name='fade')
     #menu-mobile(v-if='isMobileMenuActive' @click="onVeilClick($event)")

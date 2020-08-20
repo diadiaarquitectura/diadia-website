@@ -2,16 +2,16 @@
 #hero
   .content
     .icons
-      img(src='~/assets/img/icons/icon-tiempo.svg')
-      img(src='~/assets/img/icons/icon-archivo.svg')
-      img(src='~/assets/img/icons/icon-uso.svg')
+      img(src='images/icons/icon-tiempo.svg')
+      img(src='images/icons/icon-archivo.svg')
+      img(src='images/icons/icon-uso.svg')
     .title BIENVENIDOS
     .text
       p Somos DIADIA Arquitectura
       p Diseñamos espacios cotidianos para <br> la convivencia, el encuentro, <br> el aprendizaje, la crianza y el diálogo.
   #arrow-down
     a(href='#', @click='gotoHome()')
-      img(src='~/assets/img/arrow-down.svg')
+      img(src='images/arrow-down.svg')
 </template>
 
 <script>
