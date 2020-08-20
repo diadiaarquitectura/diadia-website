@@ -6,15 +6,15 @@
   #filters(:style='{ opacity: currentSection.includes("gallery") ? 1 : 0 }')
     .filter
       a(href='#', @click='onGalleryWorkClick()')
-        .label(:style='{ opacity: currentSection == "gallery-time" ? 1 : 0.35 }') obra
+        .label(:style='{ opacity: currentSection == "gallery-work" ? 1 : 0 }') obra
         img(src='~/assets/img/icons/icon-tiempo.svg', alt='tiempo', width='100%')
     .filter
       a(href='#', @click='onGalleryMediaClick()') 
-        .label(:style='{ opacity: currentSection == "gallery-use" ? 1 : 0.35 }') medios
+        .label(:style='{ opacity: currentSection == "gallery-media" ? 1 : 0 }') medios
         img(src='~/assets/img/icons/icon-archivo.svg', alt='uso', width='100%')
     .filter
       a(href='#', @click='onGalleryBasesClick()') 
-        .label(:style='{ opacity: currentSection == "gallery-archive" ? 1 : 0.35 }') bases
+        .label(:style='{ opacity: currentSection == "gallery-bases" ? 1 : 0 }') bases
         img(src='~/assets/img/icons/icon-uso.svg', alt='archivo', width='100%')
   #menu-desktop(v-if='!isMobileMenu')
     ul
@@ -29,10 +29,8 @@
     img(src='~/assets/img/hamburger.svg')
 
   transition(name='fade')
-    #menu-mobile(v-if='isMobileMenuActive')
+    #menu-mobile(v-if='isMobileMenuActive' @click="onVeilClick($event)")
       .content
-        //- a(href='#', @click='gotoHome()') 
-        //-   img(src='~/assets/img/logo-diadia.svg', alt='diadia', width='100%')
         ul
           li(:class='{ bold: currentSection.includes("gallery") }')
             a(
@@ -66,6 +64,13 @@ export default {
 
     gotoHome() {
       gsap.to('#main', { top: 0, duration: 0.8, ease: 'power2.out' })
+    },
+
+    onVeilClick(e) {
+      console.log(e)
+      if (e.clientX < window.innerWidth - 250) {
+        this.isMobileMenuActive = false
+      }
     },
 
     onProjectsClick() {
@@ -128,12 +133,12 @@ export default {
 
   #logo
     position: absolute
-    top: 30px
+    top: 45px
     width: 170px
 
   #filters
     position: absolute
-    top: 27px
+    top: 45px
     text-align: center
     width: 200px
     left: calc(50% - 100px)
@@ -150,7 +155,7 @@ export default {
       .label
         font-size: 0.85rem
         margin-bottom: 5px
-        transition: all 0.2s
+        transition: all 0.4s
 
       img
         width: 20px
@@ -163,7 +168,7 @@ export default {
   #menu-desktop
     position: absolute
     right: 0px
-    top: 43px
+    top: 70px
 
     ul
       list-style: none
@@ -192,7 +197,7 @@ export default {
     top: 0px
     height: 100vh
     width: 100vw
-    background: rgba(0, 0, 0, 0.5)
+    background: rgba(0, 0, 0, 0.6)
 
     .content
       position: fixed
@@ -242,7 +247,7 @@ export default {
       left: calc(50% - 85px)
 
     #filters
-      top: 110px
+      top: 92px
 
     #hamburger
       top: 27px

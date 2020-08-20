@@ -32,7 +32,7 @@ export default {
 <style lang="scss" scoped>
 #contact {
   position: absolute;
-  top: 100px;
+  top: 130px;
   width: 100%;
   height: calc(100%);
   display: flex;

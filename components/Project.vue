@@ -1,29 +1,21 @@
 <template lang="pug">
 #project
-	#project-inner
-		#name {{ projects[currentProject].nombre.toUpperCase() }}
-		#image
-			img
-		#footer 
-			.left {{ (currentImage + 1) + '/' + (projects[currentProject].galería.length) }}
-			.right
-				a(v-if="isText" href="#")
-					img(src="~/assets/img/icon-off.svg" @click="selectGallery()" width="100%")
-				a(v-else href="#")
-					img(src="~/assets/img/icon-on.svg" @click="selectGallery()" width="100%")
-				a(v-if="isText" href="#")
-					img(src="~/assets/img/icon-on.svg" @click="selectText()" width="100%")
-				a(v-else href="#")
-					img(src="~/assets/img/icon-off.svg" @click="selectText()" width="100%")
-		#arrow-left(v-if="currentImage > 0")
-			a(href="#")
-				img(src="~/assets/img/arrow-left.svg" @click="prevImage()")
-		#arrow-right(v-if="currentImage < projects[currentProject].galería.length - 1")
-			a(href="#")
-				img(src="~/assets/img/arrow-right.svg" @click="nextImage()")
-		#close
-			a(href="#")
-				img(src="~/assets/img/close.svg" @click="closeProject()" width="100%")
+  #project-inner
+    #image
+      .content
+        img
+        #name {{ projects[currentProject].nombre.toUpperCase() }}
+        #footer
+          .right {{ currentImage + 1 + "/" + projects[currentProject].galería.length }}
+    #arrow-left(v-if='currentImage > 0')
+      a(href='#')
+        img(src='~/assets/img/arrow-left.svg', @click='prevImage()')
+    #arrow-right(v-if='currentImage < projects[currentProject].galería.length - 1')
+      a(href='#')
+        img(src='~/assets/img/arrow-right.svg', @click='nextImage()')
+    #close
+      a(href='#')
+        img(src='~/assets/img/close.svg', @click='closeProject()', width='100%')
 </template>
 
 <script>
@@ -77,20 +69,20 @@ export default {
 
     selectText() {
       this.isText = true
-    }
+    },
   },
 
   computed: {
-    ...mapGetters({ projects: 'getProjects', currentProject: 'getCurrentProject' })
+    ...mapGetters({ projects: 'getProjects', currentProject: 'getCurrentProject' }),
   },
 
   data() {
     return {
       currentImage: 0,
       currentUrl: '',
-      isText: false
+      isText: false,
     }
-  }
+  },
 }
 </script>
 
@@ -109,7 +101,9 @@ export default {
 
   #project-inner
     position: relative
-    height: 70%
+    display: flex
+    justify-content: center
+    align-items: center
 
     #name
       position: absolute
@@ -119,20 +113,17 @@ export default {
 
     #image
       position: relative
-      height: 100%
 
       img
         top: 0
         left: 0
-        height: 100%
+        max-height: 65vh
+        max-width: 65vw
         transition: all 0.2s
 
     #footer
       position: relative
       top: 8px
-
-      .left
-        float: left
 
       .right
         float: right
@@ -189,5 +180,15 @@ export default {
 
 @media (max-width: 768px)
   #project
-    
+    #arrow-left
+      left: 5px
+      
+      img
+        width: 40px
+
+    #arrow-right
+      right: 5px
+
+      img
+        width: 40px
 </style>

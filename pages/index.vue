@@ -1,9 +1,10 @@
 <template lang="pug">
 #main
-	#loading-canvas(v-if="!isDataLoaded")
-	.noselect(v-else)
-		hero
-		home
+  #loading-canvas(v-if='!isDataLoaded')
+  transition(name='fade')
+    .noselect(v-if='isDataLoaded')
+      hero
+      home
 </template>
 
 <script>
@@ -19,29 +20,31 @@ export default {
   mounted() {
     window.addEventListener('resize', this.onWindowResize)
     window.addEventListener('onorientationchange', this.onWindowResize)
-    // window.addEventListener('wheel', this.gotoHome)
 
-    document.ontouchmove = function(event) {
+    document.ontouchmove = function (event) {
       event.preventDefault()
     }
 
-    axios.get('content/proyectos.json').then(response => {
+    let urls = ['./_nuxt/img/e6b22c8.svg']
+    this.preloadImages(urls, () => {})
+
+    axios.get('content/proyectos.json').then((response) => {
       this.setProjects(response.data.proyectos)
     })
 
-    axios.get('content/estudio.json').then(response => {
+    axios.get('content/estudio.json').then((response) => {
       this.setStudioInfo(response.data)
     })
 
-    axios.get('content/contacto.json').then(response => {
+    axios.get('content/contacto.json').then((response) => {
       this.setContactInfo(response.data)
     })
 
-    axios.get('content/bases.json').then(response => {
+    axios.get('content/bases.json').then((response) => {
       this.setBasesInfo(response.data)
     })
 
-    let sketch = p => {
+    let sketch = (p) => {
       let bg
       let msk
       let t = 0
@@ -71,7 +74,7 @@ export default {
             if (tRadiusInit > 1) tRadiusInit = 1
 
             let h = p.lerp(13, 37, ease(t))
-            t += 0.015
+            t += 0.005
 
             if (t > 1) {
               t = 0
@@ -82,7 +85,7 @@ export default {
             bg.background('white')
             bg.noStroke()
             bg.fill('black')
-            bg.rect(0, p.height - h, p.width, h)
+            bg.rect(0, 0, h, p.height)
 
             break
           }
@@ -100,7 +103,7 @@ export default {
             bg.background('white')
             bg.noStroke()
             bg.fill('black')
-            bg.rect(0, p.height - h, p.width, h)
+            bg.rect(0, p.height, p.width - h, h)
 
             break
           }
@@ -118,7 +121,7 @@ export default {
             bg.background('black')
             bg.noStroke()
             bg.fill('white')
-            bg.rect(0, p.height - h, p.width, h)
+            bg.rect(0, p.height, p.width - h, h)
 
             break
           }
@@ -144,7 +147,7 @@ export default {
             bg.background('black')
             bg.noStroke()
             bg.fill('white')
-            bg.rect(0, p.height - h, p.width, h)
+            bg.rect(0, p.height, p.width - h, h)
 
             break
           }
@@ -179,19 +182,32 @@ export default {
     let loadingAnimation = new p5(sketch, 'loading-canvas')
   },
 
-  beforeDestroy() {},
-
   methods: {
     ...mapMutations({
       setProjects: 'setProjects',
       setStudioInfo: 'setStudioInfo',
       setContactInfo: 'setContactInfo',
-      setBasesInfo: 'setBasesInfo'
+      setBasesInfo: 'setBasesInfo',
     }),
 
-    addPreloadUrl(url) {
-      this.preloadImages.push(url)
-      this.totalPreloadImages++
+    preloadImages(urls, allImagesLoadedCallback) {
+      var loadedCounter = 0
+      var toBeLoadedNumber = urls.length
+      urls.forEach((url) => {
+        this.preloadImage(url, () => {
+          loadedCounter++
+          console.log('Number of loaded images: ' + loadedCounter)
+          if (loadedCounter == toBeLoadedNumber) {
+            // allImagesLoadedCallback()
+          }
+        })
+      })
+    },
+
+    preloadImage(url, anImageLoadedCallback) {
+      var img = new Image()
+      img.onload = anImageLoadedCallback
+      img.src = url
     },
 
     gotoHome() {
@@ -203,21 +219,28 @@ export default {
     onWindowResize() {
       if (!this.isDataLoaded) return
       this.gotoHome()
-    }
+    },
   },
 
   data() {
     return {
       percentage: 0,
       isDataLoaded: false,
-      totalPreloadImages: 0,
-      preloadImages: []
     }
-  }
+  },
 }
 </script>
 
 <style lang="scss" scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.6s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
 #main {
   position: relative;
   top: 0;

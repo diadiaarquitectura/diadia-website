@@ -102,7 +102,7 @@ export default {
 
 #gallery-media {
   position: absolute;
-  top: 100px;
+  top: 150px;
   height: calc(100% - 130px);
   width: 100%;
   overflow-y: scroll;
@@ -149,22 +149,13 @@ export default {
 
 @media (max-width: 1200px) {
   #gallery-media {
+    top: 162px;
     height: calc(100% - 200px);
-    top: 180px;
     .grid {
-      .grid-item {
-        width: calc((100% - 12px) / 2);
-      }
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  #gallery-media {
-    top: 180px;
-    .grid {
+      
       .grid-item {
         width: 100%;
+        position: relative;
 
         .hover {
           position: relative;
@@ -173,6 +164,8 @@ export default {
           display: inline-block;
           padding: 7px 0;
           text-align: left;
+          top: 0;
+          left: 0;
 
           &:hover {
             background-color: white;

@@ -1,7 +1,7 @@
 export const state = () => ({
 	projects: null,
 	currentProject: 0,
-	currentSection: 'gallery-custom', // time, use, archive, custom
+	currentSection: 'gallery-work',
 	filter: 'custom',
 	studioInfo: null,
 	contactInfo: null,

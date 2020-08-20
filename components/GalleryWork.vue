@@ -1,9 +1,9 @@
 <template lang="pug">
 #gallery-work
   .grid
-    .grid-item(v-for='project in orderedProjects')
+    .grid-item(@click='showProject(project.nombre)' v-for='project in orderedProjects')
       img.image(:src='project.galería[0].url')
-      .hover(@click='showProject(project.nombre)') {{ project.nombre.toUpperCase() }}
+      .hover {{ project.nombre.toUpperCase() }}
   transition(name='fade')
     project(v-if='isShowingProject')
 </template>
@@ -95,7 +95,7 @@ export default {
 
 #gallery-work {
   position: absolute;
-  top: 100px;
+  top: 150px;
   height: calc(100% - 130px);
   width: 100%;
   overflow-y: scroll;
@@ -108,7 +108,8 @@ export default {
       width: calc((100% - 24px) / 3);
       margin-bottom: 12px;
       float: left;
-
+      cursor: pointer;
+      
       .hover {
         position: absolute;
         background-color: rgba(255, 255, 255, 0);
@@ -123,7 +124,6 @@ export default {
         justify-content: center;
         align-items: center;
         transition: all 0.3s;
-        cursor: pointer;
 
         &:hover {
           background-color: rgba(255, 255, 255, 0.85);
@@ -142,22 +142,13 @@ export default {
 
 @media (max-width: 1200px) {
   #gallery-work {
-    top: 180px;
+    top: 162px;
     height: calc(100% - 200px);
     .grid {
-      .grid-item {
-        width: calc((100% - 12px) / 2);
-      }
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  #gallery-work {
-    top: 180px;
-    .grid {
+      
       .grid-item {
         width: 100%;
+        position: relative;
 
         .hover {
           position: relative;
@@ -166,6 +157,8 @@ export default {
           display: inline-block;
           padding: 7px 0;
           text-align: left;
+          top: 0;
+          left: 0;
 
           &:hover {
             background-color: white;

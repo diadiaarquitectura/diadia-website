@@ -75,12 +75,12 @@ export default {
 
 #gallery-bases {
   position: absolute;
-  top: 180px;
-  height: calc(100% - 200px);
+  top: 150px;
+  height: calc(100% - 180px);
   width: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
-  scrollbar-color: #ddd #f0f0f0;
+  scrollbar-color: #ddd;
   scrollbar-width: thin;
 
   .grid {
@@ -93,7 +93,6 @@ export default {
 
       .hover {
         position: absolute;
-        // background-color: rgba(255, 255, 255, 0);
         color: rgba(0, 0, 0, 0.3);
         width: 100%;
         height: 100%;
@@ -106,12 +105,6 @@ export default {
         align-items: center;
         transition: all 0.3s;
         cursor: pointer;
-
-        // &:hover {
-        //   background-color: rgba(255, 255, 255, 0.85);
-        //   color: rgba(0, 0, 0, 1);
-        //   transition: all 0.3s;
-        // }
       }
 
       img {
@@ -124,16 +117,8 @@ export default {
 
 @media (max-width: 1200px) {
   #gallery-bases {
-    .grid {
-      .grid-item {
-        width: calc((100% - 12px) / 2);
-      }
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  #gallery-bases {
+    height: calc(100% - 200px);
+    top: 162px;
     .grid {
       .grid-item {
         width: 100%;
@@ -141,12 +126,11 @@ export default {
         .hover {
           position: relative;
           color: black;
-          // display: inline-block;
           padding: 7px 0;
           text-align: left;
 
           &:hover {
-            background-color: white;
+            background-color: #f9f9f9;
           }
         }
       }
