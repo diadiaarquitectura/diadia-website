@@ -1,5 +1,5 @@
 <template lang="pug">
-#gallery-use
+#gallery-work
   .grid
     .grid-item(v-for='project in orderedProjects')
       img.image(:src='project.galería[0].url')
@@ -28,13 +28,13 @@ export default {
     })
 
     this.timer = setInterval(() => {
-      this.masonry = new Masonry('#gallery-use .grid', {
-        itemSelector: '#gallery-use .grid-item',
+      this.masonry = new Masonry('#gallery-work .grid', {
+        itemSelector: '#gallery-work .grid-item',
         horizontalOrder: true,
         gutter: 12,
       })
 
-      let loaded = imagesLoaded('#gallery-use .grid')
+      let loaded = imagesLoaded('#gallery-work .grid')
       loaded.on('progress', (image) => {
         this.masonry.layout()
       })
@@ -52,7 +52,7 @@ export default {
       get() {
         return [...this.projects]
           .sort((a, b) => {
-            return new Date(a.tipologia) - new Date(b.tipologia)
+            return new Date(a.fecha) - new Date(b.fecha)
           })
           .reverse()
       },
@@ -93,7 +93,7 @@ export default {
   opacity: 0;
 }
 
-#gallery-use {
+#gallery-work {
   position: absolute;
   top: 100px;
   height: calc(100% - 130px);
@@ -141,7 +141,7 @@ export default {
 }
 
 @media (max-width: 1200px) {
-  #gallery-use {
+  #gallery-work {
     top: 180px;
     height: calc(100% - 200px);
     .grid {
@@ -153,7 +153,7 @@ export default {
 }
 
 @media (max-width: 768px) {
-  #gallery-use {
+  #gallery-work {
     top: 180px;
     .grid {
       .grid-item {

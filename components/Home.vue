@@ -2,15 +2,11 @@
 #home
   #home-inner
     transition(name='fade')
-      gallery-custom(v-if='currentSection == "gallery-custom"')
+      gallery-work(v-if='currentSection == "gallery-work"')
     transition(name='fade')
-      gallery-time(v-if='currentSection == "gallery-time"')
+      gallery-media(v-if='currentSection == "gallery-media"')
     transition(name='fade')
-      gallery-use(v-if='currentSection == "gallery-use"')
-    transition(name='fade')
-      gallery-archive(v-if='currentSection == "gallery-archive"')
-    transition(name='fade')
-      bases(v-if='currentSection == "bases"')
+      gallery-bases(v-if='currentSection == "gallery-bases"')
     transition(name='fade')
       studio(v-if='currentSection == "studio"')
     transition(name='fade')
@@ -20,11 +16,9 @@
 
 <script>
 import TopBar from '~/components/TopBar'
-import GalleryCustom from '~/components/GalleryCustom'
-import GalleryTime from '~/components/GalleryTime'
-import GalleryUse from '~/components/GalleryUse'
-import GalleryArchive from '~/components/GalleryArchive'
-import Bases from '~/components/Bases'
+import GalleryWork from '~/components/GalleryWork'
+import GalleryMedia from '~/components/GalleryMedia'
+import GalleryBases from '~/components/GalleryBases'
 import Studio from '~/components/Studio'
 import Contact from '~/components/Contact'
 import { mapGetters } from 'vuex'
@@ -32,11 +26,9 @@ import { mapGetters } from 'vuex'
 export default {
   components: {
     TopBar,
-    GalleryCustom,
-    GalleryTime,
-    GalleryUse,
-    GalleryArchive,
-    Bases,
+    GalleryWork,
+    GalleryMedia,
+    GalleryBases,
     Studio,
     Contact,
   },

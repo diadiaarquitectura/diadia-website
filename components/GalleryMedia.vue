@@ -1,5 +1,5 @@
 <template lang="pug">
-#gallery-archive
+#gallery-media
   .grid
     .grid-item(v-for='(image, i) in orderedImages')
       img.image(:src='image.url')
@@ -28,13 +28,13 @@ export default {
     })
 
     this.timer = setInterval(() => {
-      this.masonry = new Masonry('#gallery-archive .grid', {
-        itemSelector: '#gallery-archive .grid-item',
+      this.masonry = new Masonry('#gallery-media .grid', {
+        itemSelector: '#gallery-media .grid-item',
         horizontalOrder: true,
         gutter: 12,
       })
 
-      let loaded = imagesLoaded('#gallery-archive .grid')
+      let loaded = imagesLoaded('#gallery-media .grid')
       loaded.on('progress', (image) => {
         this.masonry.layout()
       })
@@ -100,7 +100,7 @@ export default {
   opacity: 0;
 }
 
-#gallery-archive {
+#gallery-media {
   position: absolute;
   top: 100px;
   height: calc(100% - 130px);
@@ -148,7 +148,7 @@ export default {
 }
 
 @media (max-width: 1200px) {
-  #gallery-archive {
+  #gallery-media {
     height: calc(100% - 200px);
     top: 180px;
     .grid {
@@ -160,7 +160,7 @@ export default {
 }
 
 @media (max-width: 768px) {
-  #gallery-archive {
+  #gallery-media {
     top: 180px;
     .grid {
       .grid-item {

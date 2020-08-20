@@ -1,11 +1,9 @@
 <template lang="pug">
-#gallery-custom
+#gallery-bases
   .grid
-    .grid-item(v-for='(project, i) in orderedProjects')
-      img.image(:src='project.galería[0].url')
-      .hover(@click='showProject(i)') {{ project.nombre.toUpperCase() }}
-  transition(name='fade')
-    project(v-if='isShowingProject')
+    .grid-item(v-for='(base, i) in bases')
+      .image
+      .hover base
 </template>
 
 <script>
@@ -19,22 +17,14 @@ export default {
   components: { Project },
 
   mounted() {
-    this.$nuxt.$on('showProject', () => {
-      this.isShowingProject = true
-    })
-
-    this.$nuxt.$on('closeProject', () => {
-      this.isShowingProject = false
-    })
-
     this.timer = setInterval(() => {
-      this.masonry = new Masonry('#gallery-custom .grid', {
-        itemSelector: '#gallery-custom .grid-item',
+      this.masonry = new Masonry('#gallery-bases .grid', {
+        itemSelector: '#gallery-bases .grid-item',
         horizontalOrder: true,
         gutter: 12,
       })
 
-      let loaded = imagesLoaded('#gallery-custom .grid')
+      let loaded = imagesLoaded('#gallery-bases .grid')
       loaded.on('progress', (image) => {
         this.masonry.layout()
       })
@@ -46,22 +36,20 @@ export default {
   },
 
   computed: {
-    ...mapGetters({ projects: 'getProjects', currentSection: 'getCurrentSection' }),
-
-    orderedProjects: {
-      get() {
-        return this.projects
-      },
-    },
+    // ...mapGetters({ projects: 'getProjects', currentSection: 'getCurrentSection' }),
+    // orderedProjects: {
+    //   get() {
+    //     return this.projects
+    //   },
+    // },
   },
 
   methods: {
-    ...mapMutations({ setProjects: 'setProjects', setCurrentProject: 'setCurrentProject' }),
-
-    showProject(i) {
-      this.$nuxt.$emit('showProject')
-      this.setCurrentProject(i)
-    },
+    // ...mapMutations({ setProjects: 'setProjects', setCurrentProject: 'setCurrentProject' }),
+    // showProject(i) {
+    //   this.$nuxt.$emit('showProject')
+    //   this.setCurrentProject(i)
+    // },
   },
 
   data() {
@@ -69,6 +57,7 @@ export default {
       isShowingProject: false,
       timer: 0,
       masonry: null,
+      bases: [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}],
     }
   },
 }
@@ -84,10 +73,10 @@ export default {
   opacity: 0;
 }
 
-#gallery-custom {
+#gallery-bases {
   position: absolute;
-  top: 100px;
-  height: calc(100% - 130px);
+  top: 180px;
+  height: calc(100% - 200px);
   width: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -99,11 +88,13 @@ export default {
       width: calc((100% - 24px) / 3);
       margin-bottom: 12px;
       float: left;
+      background-color: #eee;
+      height: 300px;
 
       .hover {
         position: absolute;
-        background-color: rgba(255, 255, 255, 0);
-        color: rgba(0, 0, 0, 0);
+        // background-color: rgba(255, 255, 255, 0);
+        color: rgba(0, 0, 0, 0.3);
         width: 100%;
         height: 100%;
         top: 0;
@@ -116,11 +107,11 @@ export default {
         transition: all 0.3s;
         cursor: pointer;
 
-        &:hover {
-          background-color: rgba(255, 255, 255, 0.85);
-          color: rgba(0, 0, 0, 1);
-          transition: all 0.3s;
-        }
+        // &:hover {
+        //   background-color: rgba(255, 255, 255, 0.85);
+        //   color: rgba(0, 0, 0, 1);
+        //   transition: all 0.3s;
+        // }
       }
 
       img {
@@ -132,9 +123,7 @@ export default {
 }
 
 @media (max-width: 1200px) {
-  #gallery-custom {
-    top: 180px;
-    height: calc(100% - 200px);
+  #gallery-bases {
     .grid {
       .grid-item {
         width: calc((100% - 12px) / 2);
@@ -144,17 +133,15 @@ export default {
 }
 
 @media (max-width: 768px) {
-  #gallery-custom {
-    top: 180px;
+  #gallery-bases {
     .grid {
       .grid-item {
         width: 100%;
 
         .hover {
           position: relative;
-          background-color: white;
           color: black;
-          display: inline-block;
+          // display: inline-block;
           padding: 7px 0;
           text-align: left;
 

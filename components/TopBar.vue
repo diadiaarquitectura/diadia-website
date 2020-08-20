@@ -5,23 +5,21 @@
       img(src='~/assets/img/logo-diadia.svg', alt='diadia', width='100%')
   #filters(:style='{ opacity: currentSection.includes("gallery") ? 1 : 0 }')
     .filter
-      a(href='#', @click='onGalleryTimeClick()')
-        .label(:style='{ opacity: currentSection == "gallery-time" ? 1 : 0.35 }') tiempo
+      a(href='#', @click='onGalleryWorkClick()')
+        .label(:style='{ opacity: currentSection == "gallery-time" ? 1 : 0.35 }') obra
         img(src='~/assets/img/icons/icon-tiempo.svg', alt='tiempo', width='100%')
     .filter
-      a(href='#', @click='onGalleryUseClick()') 
-        .label(:style='{ opacity: currentSection == "gallery-use" ? 1 : 0.35 }') uso
-        img(src='~/assets/img/icons/icon-uso.svg', alt='uso', width='100%')
+      a(href='#', @click='onGalleryMediaClick()') 
+        .label(:style='{ opacity: currentSection == "gallery-use" ? 1 : 0.35 }') medios
+        img(src='~/assets/img/icons/icon-archivo.svg', alt='uso', width='100%')
     .filter
-      a(href='#', @click='onGalleryArchiveClick()') 
-        .label(:style='{ opacity: currentSection == "gallery-archive" ? 1 : 0.35 }') archivo
-        img(src='~/assets/img/icons/icon-archivo.svg', alt='archivo', width='100%')
+      a(href='#', @click='onGalleryBasesClick()') 
+        .label(:style='{ opacity: currentSection == "gallery-archive" ? 1 : 0.35 }') bases
+        img(src='~/assets/img/icons/icon-uso.svg', alt='archivo', width='100%')
   #menu-desktop(v-if='!isMobileMenu')
     ul
       li(:class='{ bold: currentSection.includes("gallery") }')
         a(href='#', @click='setCurrentSection("gallery-time"); onProjectsClick()') PROYECTOS
-      li(:class='{ bold: currentSection == "bases" }')
-        a(href='#', @click='setCurrentSection("bases")') BASES
       li(:class='{ bold: currentSection == "studio" }')
         a(href='#', @click='setCurrentSection("studio")') ESTUDIO
       li(:class='{ bold: currentSection == "contact" }')
@@ -33,16 +31,14 @@
   transition(name='fade')
     #menu-mobile(v-if='isMobileMenuActive')
       .content
-        a(href='#', @click='gotoHome()') 
-          img(src='~/assets/img/logo-diadia.svg', alt='diadia', width='100%')
+        //- a(href='#', @click='gotoHome()') 
+        //-   img(src='~/assets/img/logo-diadia.svg', alt='diadia', width='100%')
         ul
           li(:class='{ bold: currentSection.includes("gallery") }')
             a(
               href='#',
               @click='setCurrentSection("gallery-time"); onProjectsClick(); hideMobileMenu()'
             ) PROYECTOS
-          li(:class='{ bold: currentSection == "bases" }')
-            a(href='#', @click='setCurrentSection("bases"); hideMobileMenu()') BASES
           li(:class='{ bold: currentSection == "studio" }')
             a(href='#', @click='setCurrentSection("studio"); hideMobileMenu()') ESTUDIO
           li(:class='{ bold: currentSection == "contact" }')
@@ -73,19 +69,19 @@ export default {
     },
 
     onProjectsClick() {
-      this.setCurrentSection('gallery-custom')
+      this.setCurrentSection('gallery-work')
     },
 
-    onGalleryTimeClick() {
-      this.setCurrentSection('gallery-time')
+    onGalleryWorkClick() {
+      this.setCurrentSection('gallery-work')
     },
 
-    onGalleryUseClick() {
-      this.setCurrentSection('gallery-use')
+    onGalleryMediaClick() {
+      this.setCurrentSection('gallery-media')
     },
 
-    onGalleryArchiveClick() {
-      this.setCurrentSection('gallery-archive')
+    onGalleryBasesClick() {
+      this.setCurrentSection('gallery-bases')
     },
 
     showMobileMenu() {
@@ -205,6 +201,9 @@ export default {
       height: 100%
       width: 250px
       background: white
+      display: flex
+      justify-content: center
+      align-items: center
 
       img
         width: 180px
@@ -215,11 +214,10 @@ export default {
         list-style: none
         margin: 0
         padding: 0
-        margin-top: 50px
+        // margin-top: 50%
 
         li
           display: block
-          padding-left: 40px
           letter-spacing: 1.5px
           font-size: 0.9rem
           padding-top: 15px
