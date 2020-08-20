@@ -1,3 +1,14 @@
 {
-  "bases": []
+  "bases": [
+    {
+      "nombre": "Base 1",
+      "descargable": "https://diadia.surge.sh/archivos/base.pdf",
+      "galería": [
+        {
+          "url": "/images/uploads/foto-1.png"
+        },
+        {}
+      ]
+    }
+  ]
 }
