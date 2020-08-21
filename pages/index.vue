@@ -95,12 +95,12 @@ export default {
         p.clear()
         msk.clear()
         msk.noStroke()
-        msk.fill('red')
+        msk.fill('white')
         msk.circle(25, 25, 25)
 
         let h = p.lerp(13, 37, ease(this.t))
 
-        bg.background('red')
+        bg.background('white')
         bg.noStroke()
         bg.fill('black')
         bg.rect(0, 0, h, p.height)

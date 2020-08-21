@@ -1,5 +1,5 @@
 <template lang="pug">
-#base
+#base(v-show='isLoaded')
   #base-inner
     #image
       .content
@@ -20,10 +20,15 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import imagesLoaded from 'imagesloaded'
 
 export default {
   mounted() {
-    console.log('holita 2')
+    imagesLoaded('#base-inner', () => {
+      console.log('images loaded')
+      this.isLoaded = true
+    })
+
     let image = document.querySelector('#image img')
     image.style.opacity = 1
     image.src = this.bases[this.currentBase].galería[0].url
@@ -80,6 +85,7 @@ export default {
   data() {
     return {
       currentImage: 0,
+      isLoaded: false,
       currentUrl: '',
       isText: false,
     }
@@ -146,7 +152,7 @@ export default {
     top: calc(50% - 35px)
     transform: scale(1.3)
     transition: all 0.2s
-    
+
     img
       width: 50px
 
@@ -183,7 +189,7 @@ export default {
   #base
     #arrow-left
       left: 5px
-      
+
       img
         width: 40px
 
