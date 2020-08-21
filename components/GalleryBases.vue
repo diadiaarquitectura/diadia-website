@@ -43,6 +43,10 @@ export default {
     loaded.on('progress', (image) => {
       this.masonry.layout()
     })
+
+    loaded.on('always', (image) => {
+      this.masonry.layout()
+    })
     // }, 50)
   },
 
