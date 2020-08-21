@@ -1,22 +1,34 @@
 <template lang="pug">
 #gallery-bases
   .grid
-    .grid-item(v-for='(base, i) in bases')
-      .image
-      .hover base
+    .grid-item(@click='showBase(base.nombre)', v-for='base in bases.bases')
+      img.image(:src='base.galería[0].url')
+      .hover {{ base.nombre.toUpperCase() }}
+  transition(name='fade')
+    bases(v-if='isShowingBase')
 </template>
 
 <script>
-import Project from '../components/Project'
+import Bases from '../components/Base'
 import { mapGetters } from 'vuex'
 import { mapMutations } from 'vuex'
 
 import gsap from 'gsap'
 
 export default {
-  components: { Project },
+  components: { Bases },
 
   mounted() {
+    console.log(this.bases[0])
+
+    this.$nuxt.$on('show-base', () => {
+      this.isShowingBase = true
+    })
+
+    this.$nuxt.$on('close-base', () => {
+      this.isShowingBase = false
+    })
+
     this.timer = setInterval(() => {
       this.masonry = new Masonry('#gallery-bases .grid', {
         itemSelector: '#gallery-bases .grid-item',
@@ -36,28 +48,28 @@ export default {
   },
 
   computed: {
-    // ...mapGetters({ projects: 'getProjects', currentSection: 'getCurrentSection' }),
-    // orderedProjects: {
-    //   get() {
-    //     return this.projects
-    //   },
-    // },
+    ...mapGetters({ bases: 'getBasesInfo', currentSection: 'getCurrentSection' }),
   },
 
   methods: {
-    // ...mapMutations({ setProjects: 'setProjects', setCurrentProject: 'setCurrentProject' }),
-    // showProject(i) {
-    //   this.$nuxt.$emit('showProject')
-    //   this.setCurrentProject(i)
-    // },
+    ...mapMutations({ setCurrentBase: 'setCurrentBase' }),
+
+    showBase(name) {
+      this.$nuxt.$emit('show-base')
+      this.bases.bases.forEach((base, i) => {
+        if (base.nombre == name) {
+          this.setCurrentBase(i)
+          return
+        }
+      })
+    },
   },
 
   data() {
     return {
-      isShowingProject: false,
+      isShowingBase: false,
       timer: 0,
       masonry: null,
-      bases: [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}],
     }
   },
 }
@@ -76,11 +88,11 @@ export default {
 #gallery-bases {
   position: absolute;
   top: 150px;
-  height: calc(100% - 180px);
+  height: calc(100% - 170px);
   width: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
-  scrollbar-color: #ddd;
+  scrollbar-color: #ddd #f0f0f0;
   scrollbar-width: thin;
 
   .grid {
@@ -88,12 +100,12 @@ export default {
       width: calc((100% - 24px) / 3);
       margin-bottom: 12px;
       float: left;
-      background-color: #eee;
-      height: 300px;
+      cursor: pointer;
 
       .hover {
         position: absolute;
-        color: rgba(0, 0, 0, 0.3);
+        background-color: rgba(255, 255, 255, 0);
+        color: rgba(0, 0, 0, 0);
         width: 100%;
         height: 100%;
         top: 0;
@@ -104,7 +116,12 @@ export default {
         justify-content: center;
         align-items: center;
         transition: all 0.3s;
-        cursor: pointer;
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.85);
+          color: rgba(0, 0, 0, 1);
+          transition: all 0.3s;
+        }
       }
 
       img {
@@ -117,20 +134,25 @@ export default {
 
 @media (max-width: 1200px) {
   #gallery-bases {
-    height: calc(100% - 200px);
     top: 162px;
+    height: calc(100% - 200px);
     .grid {
       .grid-item {
         width: 100%;
+        position: relative;
 
         .hover {
           position: relative;
+          background-color: white;
           color: black;
+          display: inline-block;
           padding: 7px 0;
           text-align: left;
+          top: 0;
+          left: 0;
 
           &:hover {
-            background-color: #f9f9f9;
+            background-color: white;
           }
         }
       }
