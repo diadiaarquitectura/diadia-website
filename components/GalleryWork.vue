@@ -96,7 +96,7 @@ export default {
 #gallery-work {
   position: absolute;
   top: 150px;
-  height: calc(100% - 130px);
+  height: calc(100% - 170px);
   width: 100%;
   overflow-y: scroll;
   overflow-x: hidden;

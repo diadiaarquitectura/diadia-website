@@ -50,6 +50,13 @@ export default {
 
     orderedImages: {
       get() {
+        // Sketch
+        // Diagramas
+        // Maquetas
+        // Planimetrías
+        // Vistas 3D
+        // Fotos obra
+        // Fotos uso
         let images = []
         this.projects.forEach((project, index) => {
           project.galería.forEach((image) => {
@@ -103,7 +110,7 @@ export default {
 #gallery-media {
   position: absolute;
   top: 150px;
-  height: calc(100% - 130px);
+  height: calc(100% - 170px);
   width: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
