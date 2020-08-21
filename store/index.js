@@ -1,6 +1,7 @@
 export const state = () => ({
 	projects: null,
 	currentProject: 0,
+	currentBase: 0,
 	currentSection: 'gallery-work',
 	filter: 'custom',
 	studioInfo: null,
@@ -15,6 +16,10 @@ export const mutations = {
 
 	setCurrentProject(state, currentProject) {
 		state.currentProject = currentProject
+	},
+
+	setCurrentBase(state, currentBase) {
+		state.currentBase = currentBase
 	},
 
 	setCurrentSection(state, currentSection) {
@@ -45,6 +50,10 @@ export const getters = {
 
 	getCurrentProject(state) {
 		return state.currentProject
+	},
+
+	getCurrentBase(state) {
+		return state.currentBase
 	},
 
 	getCurrentSection(state) {
