@@ -25,33 +25,52 @@ export default {
       event.preventDefault()
     }
 
-    let urls = [
-      '/images/icons/icon-uso.svg',
-      '/images/icons/icon-archivo.svg',
-      '/images/icons/icon-tiempo.svg',
-      '/images/arrow-down.svg',
-      '/images/arrow-left.svg',
-      '/images/arrow-right.svg',
-      '/images/close.svg',
-      '/images/diadia-logo-300.svg',
-      '/images/hamburger.svg',
-      '/images/logo-diadia.svg',
-    ]
+    let urls
+    let projects, studio, contact, bases
 
     axios.get('content/proyectos.json').then((response) => {
       this.setProjects(response.data.proyectos)
-    })
+      projects = response.data.proyectos
+      axios.get('content/estudio.json').then((response) => {
+        this.setStudioInfo(response.data)
+        studio = response.data
+        axios.get('content/contacto.json').then((response) => {
+          this.setContactInfo(response.data)
+          contact = response.data
+          axios.get('content/bases.json').then((response) => {
+            this.setBasesInfo(response.data.bases)
+            bases = response.data.bases
 
-    axios.get('content/estudio.json').then((response) => {
-      this.setStudioInfo(response.data)
-    })
+            urls = [
+              '/images/icons/icon-uso.svg',
+              '/images/icons/icon-archivo.svg',
+              '/images/icons/icon-tiempo.svg',
+              '/images/arrow-down.svg',
+              '/images/arrow-left.svg',
+              '/images/arrow-right.svg',
+              '/images/close.svg',
+              '/images/diadia-logo-300.svg',
+              '/images/hamburger.svg',
+              '/images/logo-diadia.svg',
+            ]
 
-    axios.get('content/contacto.json').then((response) => {
-      this.setContactInfo(response.data)
-    })
 
-    axios.get('content/bases.json').then((response) => {
-      this.setBasesInfo(response.data)
+            projects.forEach(project => {
+              project.galería.forEach(foto => {
+                // urls.push(foto.url)
+              })
+            })
+
+            bases.forEach(base => {
+              base.galería.forEach(foto => {
+                // urls.push(foto.url)
+              })
+            })
+
+            this.p5 = new p5(sketch, 'loading-canvas')
+          })
+        })
+      })
     })
 
     let sketch = (p) => {
@@ -66,8 +85,8 @@ export default {
 
         this.preloadImages(urls, () => {
           setTimeout(() => {
+            console.log('dkjflksjdlfkjsdlkjl')
             this.isDataLoaded = true
-            console.log('fin')
           }, 1000)
         })
       }
@@ -76,12 +95,12 @@ export default {
         p.clear()
         msk.clear()
         msk.noStroke()
-        msk.fill('white')
+        msk.fill('red')
         msk.circle(25, 25, 25)
 
         let h = p.lerp(13, 37, ease(this.t))
 
-        bg.background('white')
+        bg.background('red')
         bg.noStroke()
         bg.fill('black')
         bg.rect(0, 0, h, p.height)
@@ -105,8 +124,6 @@ export default {
         return 2.70158 * p.pow(t, 3) - 1.70158 * p.pow(t, 2)
       }
     }
-
-    this.p5 = new p5(sketch, 'loading-canvas')
   },
 
   methods: {
@@ -121,7 +138,6 @@ export default {
       var loadedCounter = 0
       var toBeLoadedNumber = urls.length
       urls.forEach((url) => {
-        // new Image().src = url
         this.preloadImage(url, () => {
           loadedCounter++
           this.t = loadedCounter / toBeLoadedNumber

@@ -1,7 +1,7 @@
 <template lang="pug">
 #gallery-bases
-  .grid
-    .grid-item(@click='showBase(base.nombre)', v-for='base in bases.bases')
+  .grid(v-show='isLoaded')
+    .grid-item(@click='showBase(base.nombre)', v-for='base in bases')
       img.image(:src='base.galería[0].url')
       .hover {{ base.nombre.toUpperCase() }}
   transition(name='fade')
@@ -12,14 +12,17 @@
 import Bases from '../components/Base'
 import { mapGetters } from 'vuex'
 import { mapMutations } from 'vuex'
-
+import imagesLoaded from 'imagesloaded'
 import gsap from 'gsap'
 
 export default {
   components: { Bases },
 
   mounted() {
-    console.log(this.bases[0])
+    imagesLoaded('.grid', () => {
+      console.log('images loaded')
+      this.isLoaded = true
+    })
 
     this.$nuxt.$on('show-base', () => {
       this.isShowingBase = true
@@ -29,18 +32,18 @@ export default {
       this.isShowingBase = false
     })
 
-    this.timer = setInterval(() => {
-      this.masonry = new Masonry('#gallery-bases .grid', {
-        itemSelector: '#gallery-bases .grid-item',
-        horizontalOrder: true,
-        gutter: 12,
-      })
+    // this.timer = setInterval(() => {
+    this.masonry = new Masonry('#gallery-bases .grid', {
+      itemSelector: '#gallery-bases .grid-item',
+      horizontalOrder: true,
+      gutter: 12,
+    })
 
-      let loaded = imagesLoaded('#gallery-bases .grid')
-      loaded.on('progress', (image) => {
-        this.masonry.layout()
-      })
-    }, 50)
+    let loaded = imagesLoaded('#gallery-bases .grid')
+    loaded.on('progress', (image) => {
+      this.masonry.layout()
+    })
+    // }, 50)
   },
 
   beforeDestroy() {
@@ -56,7 +59,7 @@ export default {
 
     showBase(name) {
       this.$nuxt.$emit('show-base')
-      this.bases.bases.forEach((base, i) => {
+      this.bases.forEach((base, i) => {
         if (base.nombre == name) {
           this.setCurrentBase(i)
           return
@@ -68,6 +71,7 @@ export default {
   data() {
     return {
       isShowingBase: false,
+      isLoaded: false,
       timer: 0,
       masonry: null,
     }

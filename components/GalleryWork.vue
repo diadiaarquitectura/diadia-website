@@ -1,6 +1,6 @@
 <template lang="pug">
 #gallery-work
-  .grid
+  .grid(v-show="isLoaded")
     .grid-item(@click='showProject(project.nombre)' v-for='project in orderedProjects')
       img.image(:src='project.galería[0].url')
       .hover {{ project.nombre.toUpperCase() }}
@@ -12,13 +12,18 @@
 import Project from '../components/Project'
 import { mapGetters } from 'vuex'
 import { mapMutations } from 'vuex'
-
+import imagesLoaded from 'imagesloaded'
 import gsap from 'gsap'
 
 export default {
   components: { Project },
 
   mounted() {
+    imagesLoaded('.grid', () => {
+      console.log('images loaded')
+      this.isLoaded = true
+    })
+
     this.$nuxt.$on('showProject', () => {
       this.isShowingProject = true
     })
@@ -27,7 +32,7 @@ export default {
       this.isShowingProject = false
     })
 
-    this.timer = setInterval(() => {
+    // this.timer = setInterval(() => {
       this.masonry = new Masonry('#gallery-work .grid', {
         itemSelector: '#gallery-work .grid-item',
         horizontalOrder: true,
@@ -38,7 +43,7 @@ export default {
       loaded.on('progress', (image) => {
         this.masonry.layout()
       })
-    }, 50)
+    // }, 50)
   },
 
   beforeDestroy() {
@@ -76,6 +81,7 @@ export default {
   data() {
     return {
       isShowingProject: false,
+      isLoaded: false,
       timer: 0,
       masonry: null,
     }

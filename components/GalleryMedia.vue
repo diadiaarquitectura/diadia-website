@@ -1,9 +1,10 @@
 <template lang="pug">
 #gallery-media
-  .grid
-    .grid-item(@click='showProject(image.indiceProyecto)' v-for='(image, i) in orderedImages')
-      img.image(:src='image.url')
-      .hover {{ image.nombreProyecto.toUpperCase() }}
+  transition(name='fade')
+    .grid(v-show="isLoaded")
+      .grid-item(@click='showProject(image.indiceProyecto)', v-for='(image, i) in orderedImages')
+        img.image(:src='image.url')
+        .hover {{ image.nombreProyecto.toUpperCase() }}
   transition(name='fade')
     project(v-if='isShowingProject')
 </template>
@@ -12,6 +13,7 @@
 import Project from '../components/Project'
 import { mapGetters } from 'vuex'
 import { mapMutations } from 'vuex'
+import imagesLoaded from 'imagesloaded'
 
 import gsap from 'gsap'
 
@@ -19,6 +21,12 @@ export default {
   components: { Project },
 
   mounted() {
+
+    imagesLoaded('.grid', () => {
+      console.log('images loaded')
+      this.isLoaded = true
+    })
+
     this.$nuxt.$on('showProject', () => {
       this.isShowingProject = true
     })
@@ -27,7 +35,7 @@ export default {
       this.isShowingProject = false
     })
 
-    this.timer = setInterval(() => {
+    // this.timer = setInterval(() => {
       this.masonry = new Masonry('#gallery-media .grid', {
         itemSelector: '#gallery-media .grid-item',
         horizontalOrder: true,
@@ -38,7 +46,7 @@ export default {
       loaded.on('progress', (image) => {
         this.masonry.layout()
       })
-    }, 50)
+    // }, 50)
   },
 
   beforeDestroy() {
@@ -50,13 +58,6 @@ export default {
 
     orderedImages: {
       get() {
-        // Sketch
-        // Diagramas
-        // Maquetas
-        // Planimetrías
-        // Vistas 3D
-        // Fotos obra
-        // Fotos uso
         let images = []
         this.projects.forEach((project, index) => {
           project.galería.forEach((image) => {
@@ -66,13 +67,22 @@ export default {
           })
         })
 
+        let order = {
+          sketch: 0,
+          diagramas: 1,
+          maquetas: 2,
+          planimetrias: 3,
+          vista3d: 4,
+          fotoObra: 5,
+          fotoUso: 6,
+        }
+
         images = images.sort((a, b) => {
-          if (a.tipo > b.tipo) return -1
-          if (a.tipo < b.tipo) return 1
+          if (order[a.tipo] < order[b.tipo]) return -1
+          if (order[a.tipo] > order[b.tipo]) return 1
           return 0
         })
 
-        console.log(images)
         return images
       },
     },
@@ -90,6 +100,7 @@ export default {
   data() {
     return {
       isShowingProject: false,
+      isLoaded: false,
       timer: 0,
       masonry: null,
     }
@@ -159,7 +170,6 @@ export default {
     top: 162px;
     height: calc(100% - 200px);
     .grid {
-      
       .grid-item {
         width: 100%;
         position: relative;

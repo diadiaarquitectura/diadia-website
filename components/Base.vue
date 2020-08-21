@@ -4,13 +4,13 @@
     #image
       .content
         img
-        #name {{ bases.bases[currentBase].nombre.toUpperCase() }}
+        #name {{ bases[currentBase].nombre.toUpperCase() }}
         #footer
-          .right {{ currentImage + 1 + "/" + bases.bases[currentBase].galería.length }}
+          .right {{ currentImage + 1 + "/" + bases[currentBase].galería.length }}
     #arrow-left(v-if='currentImage > 0')
       a(href='#')
         img(src='images/arrow-left.svg', @click='prevImage()')
-    #arrow-right(v-if='currentImage < bases.bases[currentBase].galería.length - 1')
+    #arrow-right(v-if='currentImage < bases[currentBase].galería.length - 1')
       a(href='#')
         img(src='images/arrow-right.svg', @click='nextImage()')
     #close
@@ -26,7 +26,7 @@ export default {
     console.log('holita 2')
     let image = document.querySelector('#image img')
     image.style.opacity = 1
-    image.src = this.bases.bases[this.currentBase].galería[0].url
+    image.src = this.bases[this.currentBase].galería[0].url
   },
 
   methods: {
@@ -35,16 +35,16 @@ export default {
       if (this.currentImage < 0) {
         this.currentImage = 0
       }
-      this.currentUrl = this.bases.bases[this.currentBase].galería[this.currentImage].url
+      this.currentUrl = this.bases[this.currentBase].galería[this.currentImage].url
       this.loadImage()
     },
 
     nextImage() {
       this.currentImage++
-      if (this.currentImage > this.bases.bases[this.currentBase].galería.length - 1) {
-        this.currentImage = this.bases.bases[this.currentBase].galería.length - 1
+      if (this.currentImage > this.bases[this.currentBase].galería.length - 1) {
+        this.currentImage = this.bases[this.currentBase].galería.length - 1
       }
-      this.currentUrl = this.bases.bases[this.currentBase].galería[this.currentImage].url
+      this.currentUrl = this.bases[this.currentBase].galería[this.currentImage].url
       this.loadImage()
     },
 
