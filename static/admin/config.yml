@@ -43,9 +43,13 @@ collections:
                     required: true
                     widget: select
                     options:
-                      - { label: Obra, value: obra }
-                      - { label: Representación, value: representacion }
-                      - { label: Maqueta, value: maqueta }
+                      - { label: Sketch, value: sketch }
+                      - { label: Diagramas, value: diagramas }
+                      - { label: Maquetas, value: maquetas }
+                      - { label: Planimetrías, value: planimetrias }
+                      - { label: Vistas 3D, value: vista3d }
+                      - { label: Foto Obra, value: fotoObra }
+                      - { label: Foto Uso, value: fotoUso }
       - label: Bases
         name: bases
         file: static/content/bases.json
