@@ -85,7 +85,6 @@ export default {
 
         this.preloadImages(urls, () => {
           setTimeout(() => {
-            console.log('dkjflksjdlfkjsdlkjl')
             this.isDataLoaded = true
           }, 1000)
         })
@@ -141,7 +140,7 @@ export default {
         this.preloadImage(url, () => {
           loadedCounter++
           this.t = loadedCounter / toBeLoadedNumber
-          console.log('t: ' + this.t)
+          // console.log('t: ' + this.t)
           if (loadedCounter == toBeLoadedNumber) {
             allImagesLoadedCallback()
           }
