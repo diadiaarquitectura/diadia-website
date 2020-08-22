@@ -49,6 +49,18 @@
       "ubicacion": "Lima, Perú",
       "galería": [
         {
+          "url": "/images/uploads/casa-ao-comunicaión1.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/casa-ao-comunicaión2.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "tipo": "planimetrias",
+          "url": "/images/uploads/casa-ao-comunicaión3.png"
+        },
+        {
           "url": "/images/uploads/001-casa-ao-2-.jpg",
           "tipo": "maquetas"
         },
