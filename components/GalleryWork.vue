@@ -1,7 +1,9 @@
 <template lang="pug">
 #gallery-work
-  .grid(v-show="isLoaded")
-    .grid-item(@click='showProject(project.nombre)' v-for='project in orderedProjects')
+  #loading(v-if='!isLoaded')
+    .text cargando...
+  .grid(v-show='isLoaded')
+    .grid-item(@click='showProject(project.nombre)', v-for='project in orderedProjects')
       img.image(:src='project.galería[0].url')
       .hover {{ project.nombre.toUpperCase() }}
   transition(name='fade')
@@ -32,7 +34,7 @@ export default {
       this.isShowingProject = false
     })
 
-    // this.timer = setInterval(() => {
+    this.timer = setInterval(() => {
       this.masonry = new Masonry('#gallery-work .grid', {
         itemSelector: '#gallery-work .grid-item',
         horizontalOrder: true,
@@ -47,7 +49,7 @@ export default {
       loaded.on('always', (image) => {
         this.masonry.layout()
       })
-    // }, 50)
+    }, 100)
   },
 
   beforeDestroy() {
@@ -113,13 +115,25 @@ export default {
   scrollbar-color: #ddd #f0f0f0;
   scrollbar-width: thin;
 
+  #loading {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .text {
+      color: #ccc;
+    }
+  }
+
   .grid {
     .grid-item {
       width: calc((100% - 24px) / 3);
       margin-bottom: 12px;
       float: left;
       cursor: pointer;
-      
+
       .hover {
         position: absolute;
         background-color: rgba(255, 255, 255, 0);
@@ -155,7 +169,6 @@ export default {
     top: 162px;
     height: calc(100% - 200px);
     .grid {
-      
       .grid-item {
         width: 100%;
         position: relative;

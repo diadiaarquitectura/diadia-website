@@ -1,7 +1,9 @@
 <template lang="pug">
 #gallery-media
+  #loading(v-if='!isLoaded')
+    .text cargando...
   transition(name='fade')
-    .grid(v-show="isLoaded")
+    .grid(v-show='isLoaded')
       .grid-item(@click='showProject(image.indiceProyecto)', v-for='(image, i) in orderedImages')
         img.image(:src='image.url')
         .hover {{ image.nombreProyecto.toUpperCase() }}
@@ -21,7 +23,6 @@ export default {
   components: { Project },
 
   mounted() {
-
     imagesLoaded('.grid', () => {
       console.log('images loaded')
       this.isLoaded = true
@@ -35,7 +36,7 @@ export default {
       this.isShowingProject = false
     })
 
-    // this.timer = setInterval(() => {
+    this.timer = setInterval(() => {
       this.masonry = new Masonry('#gallery-media .grid', {
         itemSelector: '#gallery-media .grid-item',
         horizontalOrder: true,
@@ -43,7 +44,7 @@ export default {
       })
 
       let loaded = imagesLoaded('#gallery-media .grid')
-      
+
       loaded.on('progress', (image) => {
         this.masonry.layout()
       })
@@ -51,7 +52,7 @@ export default {
       loaded.on('always', (image) => {
         this.masonry.layout()
       })
-    // }, 50)
+    }, 100)
   },
 
   beforeDestroy() {
@@ -124,6 +125,18 @@ export default {
 }
 
 #gallery-media {
+  #loading {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .text {
+      color: #ccc;
+    }
+  }
+
   position: absolute;
   top: 150px;
   height: calc(100% - 170px);

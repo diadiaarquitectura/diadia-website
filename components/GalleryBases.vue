@@ -1,9 +1,12 @@
 <template lang="pug">
 #gallery-bases
-  .grid(v-show='isLoaded')
-    .grid-item(@click='showBase(base.nombre)', v-for='base in bases')
-      img.image(:src='base.galería[0].url')
-      .hover {{ base.nombre.toUpperCase() }}
+  #loading(v-if='!isLoaded')
+    .text cargando...
+  transition(name='fade')
+    .grid(v-show='isLoaded')
+      .grid-item(@click='showBase(base.nombre)', v-for='base in bases')
+        img.image(:src='base.galería[0].url')
+        .hover {{ base.nombre.toUpperCase() }}
   transition(name='fade')
     bases(v-if='isShowingBase')
 </template>
@@ -32,22 +35,22 @@ export default {
       this.isShowingBase = false
     })
 
-    // this.timer = setInterval(() => {
-    this.masonry = new Masonry('#gallery-bases .grid', {
-      itemSelector: '#gallery-bases .grid-item',
-      horizontalOrder: true,
-      gutter: 12,
-    })
+    this.timer = setInterval(() => {
+      this.masonry = new Masonry('#gallery-bases .grid', {
+        itemSelector: '#gallery-bases .grid-item',
+        horizontalOrder: true,
+        gutter: 12,
+      })
 
-    let loaded = imagesLoaded('#gallery-bases .grid')
-    loaded.on('progress', (image) => {
-      this.masonry.layout()
-    })
+      let loaded = imagesLoaded('#gallery-bases .grid')
+      loaded.on('progress', (image) => {
+        this.masonry.layout()
+      })
 
-    loaded.on('always', (image) => {
-      this.masonry.layout()
-    })
-    // }, 50)
+      loaded.on('always', (image) => {
+        this.masonry.layout()
+      })
+    }, 100)
   },
 
   beforeDestroy() {
@@ -102,6 +105,18 @@ export default {
   overflow-x: hidden;
   scrollbar-color: #ddd #f0f0f0;
   scrollbar-width: thin;
+
+  #loading {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .text {
+      color: #ccc;
+    }
+  }
 
   .grid {
     .grid-item {
