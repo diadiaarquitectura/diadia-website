@@ -9,6 +9,14 @@
       "involucrados": "Persona 1, Persona 2",
       "galería": [
         {
+          "url": "/images/uploads/casa-atícuy-comunicación-11.jpg",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/casa-atícuy-comunicación-12.jpg",
+          "tipo": "planimetrias"
+        },
+        {
           "url": "/images/uploads/002-atiycuy-1-.jpg",
           "tipo": "planimetrias"
         },
