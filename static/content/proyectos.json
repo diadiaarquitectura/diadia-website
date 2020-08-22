@@ -164,6 +164,27 @@
           "tipo": "diagramas"
         }
       ]
+    },
+    {
+      "fecha": "01 03 2019",
+      "nombre": "Patio Lineal",
+      "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "tipologia": "educación",
+      "ubicacion": "Lima, Perú",
+      "galería": [
+        {
+          "url": "/images/uploads/patio-carabayllo-secundaria-comunicación.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/patio-carabayllo-secundaria-comunicación3.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/patio-carabayllo-secundaria-comunicación2.png",
+          "tipo": "planimetrias"
+        }
+      ]
     }
   ]
 }
