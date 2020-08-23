@@ -93,6 +93,10 @@
       "tipologia": "educación",
       "galería": [
         {
+          "url": "/images/uploads/atelier-cahuide-comunicación.png",
+          "tipo": "planimetrias"
+        },
+        {
           "url": "/images/uploads/cahuide-1.jpg",
           "tipo": "fotoObra"
         },
@@ -127,6 +131,10 @@
       "ubicacion": "Roma, Italia",
       "galería": [
         {
+          "url": "/images/uploads/361gradi-planta.png",
+          "tipo": "diagramas"
+        },
+        {
           "url": "/images/uploads/dsc_0181.jpg",
           "tipo": "fotoUso"
         },
@@ -137,10 +145,6 @@
         {
           "url": "/images/uploads/0001-361gradi-roma-2-.jpg",
           "tipo": "fotoUso"
-        },
-        {
-          "url": "/images/uploads/361gradi-planta.png",
-          "tipo": "diagramas"
         },
         {
           "url": "/images/uploads/361gradi-iso-sin-techo-1.png",
