@@ -1,6 +1,6 @@
 <template lang="pug">
-#web-content
-  #web-content-inner
+#container
+  #container-inner
     transition(name='fade')
       gallery-default(v-if='currentSection == "gallery-default"')
     transition(name='fade')
@@ -54,7 +54,7 @@ export default {
   transform: scale(0.9);
 }
 
-#web-content {
+#container {
   position: relative;
   height: 100vh;
   background-color: white;
@@ -62,7 +62,7 @@ export default {
   margin: 0 auto;
   padding: 0 50px;
 
-  #web-content-inner {
+  #container-inner {
     position: relative;
     width: 100%;
     height: 100%;
@@ -70,7 +70,7 @@ export default {
 }
 
 @media (max-width: 1200px) {
-  #web-content {
+  #container {
     padding: 0 20px;
   }
 }

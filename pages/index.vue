@@ -4,19 +4,19 @@
   transition(name='fade')
     .noselect(v-if='isDataLoaded')
       home
-      web-content
+      container
 </template>
 
 <script>
 import Home from '../components/Home'
-import WebContent from '../components/WebContent'
+import Container from '../components/Container'
 import axios from 'axios'
 import gsap from 'gsap'
 import { mapMutations } from 'vuex'
 import Loader from '../plugins/loader'
 
 export default {
-  components: { Home, WebContent },
+  components: { Home, Container },
 
   mounted() {
     window.addEventListener('resize', this.onWindowResize)
@@ -98,7 +98,7 @@ export default {
 
     gotoHome() {
       if (!this.isDataLoaded) return
-      let height = document.getElementById('web-content').offsetTop
+      let height = document.getElementById('container').offsetTop
       gsap.to('#main', { top: -height, duration: 1, ease: 'power2.out' })
     },
 

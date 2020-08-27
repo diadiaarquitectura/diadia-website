@@ -7,11 +7,11 @@
         img.image(:src='image.url')
         .hover {{ image.nombreProyecto.toUpperCase() }}
   transition(name='fade')
-    project(v-if='isShowingProject')
+    viewer-project(v-if='isShowingProject')
 </template>
 
 <script>
-import Project from '../components/Project'
+import ViewerProject from '../components/ViewerProject'
 import { mapGetters } from 'vuex'
 import { mapMutations } from 'vuex'
 import imagesLoaded from 'imagesloaded'
@@ -19,7 +19,7 @@ import gsap from 'gsap'
 import Loader from '../plugins/loader'
 
 export default {
-  components: { Project },
+  components: { ViewerProject },
 
   mounted() {
     let imagesloaded = imagesLoaded('#gallery-media .grid')

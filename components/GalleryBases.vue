@@ -7,11 +7,11 @@
         img.image(:src='base.galería[0].url')
         .hover {{ base.nombre.toUpperCase() }}
   transition(name='fade')
-    bases(v-if='isShowingBase')
+    viewer-base(v-if='isShowingBase')
 </template>
 
 <script>
-import Bases from '../components/Base'
+import ViewerBase from '../components/ViewerBase'
 import { mapGetters } from 'vuex'
 import { mapMutations } from 'vuex'
 import imagesLoaded from 'imagesloaded'
@@ -19,7 +19,7 @@ import gsap from 'gsap'
 import Loader from '../plugins/loader'
 
 export default {
-  components: { Bases },
+  components: { ViewerBase },
 
   mounted() {
     let imagesloaded = imagesLoaded('#gallery-bases .grid')

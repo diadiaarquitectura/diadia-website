@@ -28,7 +28,7 @@ export default {
 
   methods: {
     gotoHome() {
-      let height = document.getElementById('web-content').offsetTop
+      let height = document.getElementById('container').offsetTop
       gsap.to('#main', { top: -height, duration: 1, ease: 'power2.out' })
     },
   },

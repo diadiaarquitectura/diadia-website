@@ -1,6 +1,6 @@
 <template lang="pug">
-#project
-  #project-inner
+#viewer-project
+  #viewer-project-inner
     #image
       .content
         img
@@ -87,7 +87,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-#project
+#viewer-project
   position: fixed
   left: 0
   top: 0
@@ -99,7 +99,7 @@ export default {
   justify-content: center
   align-items: center
 
-  #project-inner
+  #viewer-project-inner
     position: relative
     display: flex
     justify-content: center
@@ -179,7 +179,7 @@ export default {
       transition: all 0.2s
 
 @media (max-width: 768px)
-  #project
+  #viewer-project
     #arrow-left
       left: 5px
       
