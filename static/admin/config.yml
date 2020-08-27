@@ -12,6 +12,12 @@ collections:
     create: false
     format: json
     files:
+      - label: Home
+        name: home
+        file: static/content/home.json
+        fields:
+          - { label: Título, name: titulo, required: false, widget: text }
+          - { label: Texto, name: texto, required: false, widget: text }
       - label: Proyectos
         name: proyectos
         file: static/content/proyectos.json
