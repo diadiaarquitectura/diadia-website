@@ -6,7 +6,8 @@ export const state = () => ({
 	filter: 'custom',
 	studioInfo: null,
 	contactInfo: null,
-	basesInfo: null
+	basesInfo: null,
+	homeInfo: null
 })
 
 export const mutations = {
@@ -40,6 +41,10 @@ export const mutations = {
 
 	setBasesInfo(state, info) {
 		state.basesInfo = info
+	},
+
+	setHomeInfo(state, info) {
+		state.homeInfo = info
 	}
 }
 
@@ -74,5 +79,9 @@ export const getters = {
 
 	getBasesInfo(state) {
 		return state.basesInfo
+	},
+
+	getHomeInfo(state) {
+		return state.homeInfo
 	}
 }

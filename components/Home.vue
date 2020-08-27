@@ -1,77 +1,106 @@
 <template lang="pug">
-#home
-  #home-inner
-    transition(name='fade')
-      gallery-default(v-if='currentSection == "gallery-default"')
-    transition(name='fade')
-      gallery-work(v-if='currentSection == "gallery-work"')
-    transition(name='fade')
-      gallery-media(v-if='currentSection == "gallery-media"')
-    transition(name='fade')
-      gallery-bases(v-if='currentSection == "gallery-bases"')
-    transition(name='fade')
-      studio(v-if='currentSection == "studio"')
-    transition(name='fade')
-      contact(v-if='currentSection == "contact"')
-    top-bar
+#hero
+  transition(name='fade')
+    .inner(v-if='isLoaded')
+      .content
+        .icons
+          img(src='images/icons/icon-tiempo.svg')
+          img(src='images/icons/icon-archivo.svg')
+          img(src='images/icons/icon-uso.svg')
+        .title(v-html="homeInfo.titulo")
+        .text(v-html="homeInfo.texto")
+      #arrow-down
+        a(href='#', @click='gotoHome()')
+          img(src='images/arrow-down.svg')
 </template>
 
 <script>
-import TopBar from '~/components/TopBar'
-import GalleryDefault from '~/components/GalleryDefault'
-import GalleryWork from '~/components/GalleryWork'
-import GalleryMedia from '~/components/GalleryMedia'
-import GalleryBases from '~/components/GalleryBases'
-import Studio from '~/components/Studio'
-import Contact from '~/components/Contact'
+import gsap from 'gsap'
+import imagesLoaded from 'imagesloaded'
 import { mapGetters } from 'vuex'
 
 export default {
-  components: {
-    TopBar,
-    GalleryDefault,
-    GalleryWork,
-    GalleryMedia,
-    GalleryBases,
-    Studio,
-    Contact,
+  mounted() {
+    imagesLoaded('#hero', () => {
+      this.isLoaded = true
+    })
+  },
+
+  methods: {
+    gotoHome() {
+      let height = document.getElementById('web-content').offsetTop
+      gsap.to('#main', { top: -height, duration: 1, ease: 'power2.out' })
+    },
   },
 
   computed: {
-    ...mapGetters({ currentSection: 'getCurrentSection' }),
+    ...mapGetters({ homeInfo: 'getHomeInfo' }),
+  },
+
+  data() {
+    return {
+      isLoaded: false,
+    }
   },
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="sass" scoped>
+@keyframes sine
+  0%
+    bottom: 30px
+  50%
+    bottom: 36px
+  100%
+    bottom: 30px
+
 .fade-enter-active,
-.fade-leave-active {
-  transition: all 0.5s;
-}
+.fade-leave-active
+  transition: opacity 0.6s
+
 .fade-enter,
-.fade-leave-to {
-  opacity: 0;
-  transform: scale(0.9);
-}
+.fade-leave-to
+  opacity: 0
 
-#home {
-  position: relative;
-  height: 100vh;
-  background-color: white;
-  width: 95%;
-  margin: 0 auto;
-  padding: 0 50px;
+#hero
+  position: relative
+  width: 100%
+  height: 100vh
+  margin: auto
+  background-color: white
+  overflow: hidden
+  display: flex
+  justify-content: center
+  align-items: center
 
-  #home-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-}
+  #arrow-down
+    position: fixed
+    left: calc(50% - 28px)
+    animation-name: sine
+    animation-duration: 1.5s
+    animation-iteration-count: infinite
 
-@media (max-width: 1200px) {
-  #home {
-    padding: 0 20px;
-  }
-}
+  .content
+    text-align: center
+    font-size: 1.6rem
+
+    .icons
+      img
+        margin: 0 20px
+
+    .title
+      margin-top: 50px
+      margin-bottom: 30px
+      letter-spacing: 4px
+
+    .text
+      font-weight: 100
+
+@media (max-width: 640px)
+  #hero
+    width: 250px
+
+    .content
+      text-align: center
+      font-size: 1rem
 </style>

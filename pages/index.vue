@@ -3,20 +3,20 @@
   #loading-canvas(v-if='!isDataLoaded')
   transition(name='fade')
     .noselect(v-if='isDataLoaded')
-      hero
       home
+      web-content
 </template>
 
 <script>
-import Hero from '../components/Hero'
 import Home from '../components/Home'
+import WebContent from '../components/WebContent'
 import axios from 'axios'
 import gsap from 'gsap'
 import { mapMutations } from 'vuex'
 import Loader from '../plugins/loader'
 
 export default {
-  components: { Hero, Home },
+  components: { Home, WebContent },
 
   mounted() {
     window.addEventListener('resize', this.onWindowResize)
@@ -29,34 +29,37 @@ export default {
     let urls
     let projects, studio, contact, bases
 
-    axios.get('content/proyectos.json').then((response) => {
-      this.setProjects(response.data.proyectos)
-      axios.get('content/estudio.json').then((response) => {
-        this.setStudioInfo(response.data)
-        axios.get('content/contacto.json').then((response) => {
-          this.setContactInfo(response.data)
-          axios.get('content/bases.json').then((response) => {
-            this.setBasesInfo(response.data.bases)
+    axios.get('content/home.json').then((response) => {
+      this.setHomeInfo(response.data)
+      axios.get('content/proyectos.json').then((response) => {
+        this.setProjects(response.data.proyectos)
+        axios.get('content/estudio.json').then((response) => {
+          this.setStudioInfo(response.data)
+          axios.get('content/contacto.json').then((response) => {
+            this.setContactInfo(response.data)
+            axios.get('content/bases.json').then((response) => {
+              this.setBasesInfo(response.data.bases)
 
-            urls = [
-              '/images/icons/icon-uso.svg',
-              '/images/icons/icon-archivo.svg',
-              '/images/icons/icon-tiempo.svg',
-              '/images/arrow-down.svg',
-              '/images/arrow-left.svg',
-              '/images/arrow-right.svg',
-              '/images/close.svg',
-              '/images/diadia-logo-300.svg',
-              '/images/hamburger.svg',
-              '/images/logo-diadia.svg',
-            ]
+              urls = [
+                '/images/icons/icon-uso.svg',
+                '/images/icons/icon-archivo.svg',
+                '/images/icons/icon-tiempo.svg',
+                '/images/arrow-down.svg',
+                '/images/arrow-left.svg',
+                '/images/arrow-right.svg',
+                '/images/close.svg',
+                '/images/diadia-logo-300.svg',
+                '/images/hamburger.svg',
+                '/images/logo-diadia.svg',
+              ]
 
-            this.loader = new Loader('loading-canvas')
+              this.loader = new Loader('loading-canvas')
 
-            this.preloadImages(urls, () => {
-              setTimeout(() => {
-                this.isDataLoaded = true
-              }, 1000)
+              this.preloadImages(urls, () => {
+                setTimeout(() => {
+                  this.isDataLoaded = true
+                }, 1000)
+              })
             })
           })
         })
@@ -70,6 +73,7 @@ export default {
       setStudioInfo: 'setStudioInfo',
       setContactInfo: 'setContactInfo',
       setBasesInfo: 'setBasesInfo',
+      setHomeInfo: 'setHomeInfo',
     }),
 
     preloadImages(urls, allImagesLoadedCallback) {
@@ -94,7 +98,7 @@ export default {
 
     gotoHome() {
       if (!this.isDataLoaded) return
-      let height = document.getElementById('home').offsetTop
+      let height = document.getElementById('web-content').offsetTop
       gsap.to('#main', { top: -height, duration: 1, ease: 'power2.out' })
     },
 
