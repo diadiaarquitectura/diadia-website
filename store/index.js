@@ -2,7 +2,7 @@ export const state = () => ({
 	projects: null,
 	currentProject: 0,
 	currentBase: 0,
-	currentSection: 'gallery-work',
+	currentSection: 'gallery-default',
 	filter: 'custom',
 	studioInfo: null,
 	contactInfo: null,
