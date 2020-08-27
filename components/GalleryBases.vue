@@ -1,7 +1,6 @@
 <template lang="pug">
 #gallery-bases
-  #loading(v-if='!isLoaded')
-    .text cargando...
+  #loading-bases(v-if='!isLoaded')
   transition(name='fade')
     .grid(v-show='isLoaded')
       .grid-item(@click='showBase(base.nombre)', v-for='base in bases')
@@ -17,14 +16,22 @@ import { mapGetters } from 'vuex'
 import { mapMutations } from 'vuex'
 import imagesLoaded from 'imagesloaded'
 import gsap from 'gsap'
+import Loader from '../plugins/loader'
 
 export default {
   components: { Bases },
 
   mounted() {
-    imagesLoaded('.grid', () => {
-      console.log('images loaded')
-      this.isLoaded = true
+    let imagesloaded = imagesLoaded('#gallery-bases .grid')
+    let counter = 0
+    let loader = new Loader('loading-bases')
+    
+    imagesloaded.on('progress', (instance, image) => {
+      counter++
+      loader.t = counter / imagesloaded.images.length
+      if (counter == imagesloaded.images.length) {
+        this.isLoaded = true
+      }
     })
 
     this.$nuxt.$on('show-base', () => {
@@ -42,12 +49,11 @@ export default {
         gutter: 12,
       })
 
-      let loaded = imagesLoaded('#gallery-bases .grid')
-      loaded.on('progress', (image) => {
+      imagesloaded.on('progress', (image) => {
         this.masonry.layout()
       })
 
-      loaded.on('always', (image) => {
+      imagesloaded.on('always', (image) => {
         this.masonry.layout()
       })
     }, 100)
@@ -106,7 +112,7 @@ export default {
   scrollbar-color: #ddd #f0f0f0;
   scrollbar-width: thin;
 
-  #loading {
+  #loading-bases {
     width: 100%;
     height: 100%;
     display: flex;

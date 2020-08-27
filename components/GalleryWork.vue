@@ -1,7 +1,6 @@
 <template lang="pug">
 #gallery-work
-  #loading(v-if='!isLoaded')
-    .text cargando...
+  #loading-work(v-if='!isLoaded')
   .grid(v-show='isLoaded')
     .grid-item(@click='showProject(project.nombre)', v-for='project in orderedProjects')
       img.image(:src='project.galería[0].url')
@@ -16,14 +15,24 @@ import { mapGetters } from 'vuex'
 import { mapMutations } from 'vuex'
 import imagesLoaded from 'imagesloaded'
 import gsap from 'gsap'
+import Loader from '../plugins/loader'
 
 export default {
   components: { Project },
 
   mounted() {
-    imagesLoaded('.grid', () => {
-      console.log('images loaded')
-      this.isLoaded = true
+    let imagesloaded = imagesLoaded('#gallery-work .grid')
+    let counter = 0
+    let loader = new Loader('loading-media')
+
+    imagesloaded.on('progress', (instance, image) => {
+      counter++
+      loader.t = counter / imagesloaded.images.length
+      if (counter == imagesloaded.images.length) {
+        console.log(counter, imagesloaded.images.length)
+        this.isLoaded = true
+        console.log('work completed')
+      }
     })
 
     this.$nuxt.$on('showProject', () => {
@@ -41,12 +50,11 @@ export default {
         gutter: 12,
       })
 
-      let loaded = imagesLoaded('#gallery-work .grid')
-      loaded.on('progress', (image) => {
+      imagesloaded.on('progress', (image) => {
         this.masonry.layout()
       })
 
-      loaded.on('always', (image) => {
+      imagesloaded.on('always', (image) => {
         this.masonry.layout()
       })
     }, 100)
@@ -115,7 +123,7 @@ export default {
   scrollbar-color: #ddd #f0f0f0;
   scrollbar-width: thin;
 
-  #loading {
+  #loading-work {
     width: 100%;
     height: 100%;
     display: flex;
