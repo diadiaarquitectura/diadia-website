@@ -2,6 +2,8 @@
 #home
   #home-inner
     transition(name='fade')
+      gallery-default(v-if='currentSection == "gallery-default"')
+    transition(name='fade')
       gallery-work(v-if='currentSection == "gallery-work"')
     transition(name='fade')
       gallery-media(v-if='currentSection == "gallery-media"')
@@ -16,6 +18,7 @@
 
 <script>
 import TopBar from '~/components/TopBar'
+import GalleryDefault from '~/components/GalleryDefault'
 import GalleryWork from '~/components/GalleryWork'
 import GalleryMedia from '~/components/GalleryMedia'
 import GalleryBases from '~/components/GalleryBases'
@@ -26,6 +29,7 @@ import { mapGetters } from 'vuex'
 export default {
   components: {
     TopBar,
+    GalleryDefault,
     GalleryWork,
     GalleryMedia,
     GalleryBases,
