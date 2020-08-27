@@ -7,10 +7,10 @@
         #name {{ projects[currentProject].nombre.toUpperCase() }}
         #footer
           .right {{ currentImage + 1 + "/" + projects[currentProject].galería.length }}
-    #arrow-left(v-if='currentImage > 0')
+    #arrow-left
       a(href='#')
         img(src='images/arrow-left.svg', @click='prevImage()')
-    #arrow-right(v-if='currentImage < projects[currentProject].galería.length - 1')
+    #arrow-right
       a(href='#')
         img(src='images/arrow-right.svg', @click='nextImage()')
     #close
@@ -32,7 +32,7 @@ export default {
     prevImage() {
       this.currentImage--
       if (this.currentImage < 0) {
-        this.currentImage = 0
+        this.currentImage = this.projects[this.currentProject].galería.length - 1
       }
       this.currentUrl = this.projects[this.currentProject].galería[this.currentImage].url
       this.loadImage()
@@ -41,7 +41,7 @@ export default {
     nextImage() {
       this.currentImage++
       if (this.currentImage > this.projects[this.currentProject].galería.length - 1) {
-        this.currentImage = this.projects[this.currentProject].galería.length - 1
+        this.currentImage = 0
       }
       this.currentUrl = this.projects[this.currentProject].galería[this.currentImage].url
       this.loadImage()
