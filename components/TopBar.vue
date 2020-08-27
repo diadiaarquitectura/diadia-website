@@ -43,16 +43,16 @@
   #hamburger(v-if='isMobileMenu', @click='showMobileMenu()')
     img(src='images/hamburger.svg')
 
-  transition(name='fade')
-    #menu-mobile(v-if='isMobileMenuActive', @click='onVeilClick($event)')
-      .content
-        ul
-          li(:class='{ bold: currentSection.includes("gallery") }')
-            a(href='#', @click='onProjectsClick()') PROYECTOS
-          li(:class='{ bold: currentSection == "studio" }')
-            a(href='#', @click='setCurrentSection("studio"); hideMobileMenu()') ESTUDIO
-          li(:class='{ bold: currentSection == "contact" }')
-            a(href='#', @click='setCurrentSection("contact"); hideMobileMenu()') CONTACTO
+  #menu-mobile
+    .veil(@click='onVeilClick($event)')
+    .content
+      ul
+        li(:class='{ bold: currentSection.includes("gallery") }')
+          a(href='#', @click='onProjectsClick()') PROYECTOS
+        li(:class='{ bold: currentSection == "studio" }')
+          a(href='#', @click='setCurrentSection("studio"); hideMobileMenu()') ESTUDIO
+        li(:class='{ bold: currentSection == "contact" }')
+          a(href='#', @click='setCurrentSection("contact"); hideMobileMenu()') CONTACTO
 </template>
 
 <script>
@@ -81,6 +81,7 @@ export default {
     onVeilClick(e) {
       if (e.clientX < window.innerWidth - 250) {
         this.isMobileMenuActive = false
+        this.hideMobileMenu()
       }
     },
 
@@ -103,10 +104,22 @@ export default {
 
     showMobileMenu() {
       this.isMobileMenuActive = true
+      let animation = gsap.timeline()
+      animation
+        .set('#menu-mobile', { display: 'block' })
+        .set('#menu-mobile .veil', { backgroundColor: 'rgba(0, 0, 0, 0)' })
+        .set('#menu-mobile .content', { right: '-250px' })
+        .to('#menu-mobile .veil', { backgroundColor: 'rgba(0, 0, 0, 0.7)', duration: 0.4 }, 0)
+        .to('#menu-mobile .content', { right: '0', duration: 0.4 }, 0)
     },
 
     hideMobileMenu() {
-      this.isMobileMenuActive = false
+      // this.isMobileMenuActive = false
+      let animation = gsap.timeline()
+      animation
+        .to('#menu-mobile .veil', { backgroundColor: 'rgba(0, 0, 0, 0)', duration: 0.2 }, 0)
+        .to('#menu-mobile .content', { right: '-250px', duration: 0.2 }, 0)
+        .set('#menu-mobile', { display: 'none' })
     },
   },
 
@@ -234,12 +247,14 @@ export default {
         font-weight: bold
 
   #menu-mobile
-    position: fixed
-    left: 0px
-    top: 0px
-    height: 100vh
-    width: 100vw
-    background: rgba(0, 0, 0, 0.6)
+    display: none
+    .veil
+      position: fixed
+      left: 0px
+      top: 0px
+      height: 100vh
+      width: 100vw
+      background-color: rgba(0, 0, 0, 0)
 
     .content
       position: fixed
