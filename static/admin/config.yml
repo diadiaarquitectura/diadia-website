@@ -29,6 +29,14 @@ collections:
               - { label: Nombre, name: nombre, required: true, widget: text }
               - { label: Descripción, name: descripcion, required: false, widget: text }
               - { label: Fecha, name: fecha, widget: date, default: '', format: 'DD MM YYYY' }
+              - label: Estado
+                name: estado
+                required: true
+                widget: select
+                default: noRealizado
+                options:
+                  - { label: Realizado, value: realizado }
+                  - { label: No Realizado, value: noRealizado }
               - label: Tipología
                 name: tipologia
                 required: true
