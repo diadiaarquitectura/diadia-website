@@ -29,9 +29,7 @@ export default {
       counter++
       loader.t = counter / imagesloaded.images.length
       if (counter == imagesloaded.images.length) {
-        console.log(counter, imagesloaded.images.length)
         this.isLoaded = true
-        console.log('work completed')
       }
     })
 

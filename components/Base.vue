@@ -23,7 +23,6 @@ import { mapGetters } from 'vuex'
 
 export default {
   mounted() {
-    console.log('holita 2')
     let image = document.querySelector('#image img')
     image.style.opacity = 1
     image.src = this.bases[this.currentBase].galería[0].url

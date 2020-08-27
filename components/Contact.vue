@@ -19,7 +19,6 @@ import { mapGetters } from 'vuex'
 
 export default {
   mounted() {
-    console.log(this.studioInfo)
   },
 
   computed: {

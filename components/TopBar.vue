@@ -79,7 +79,6 @@ export default {
     },
 
     onVeilClick(e) {
-      console.log(e)
       if (e.clientX < window.innerWidth - 250) {
         this.isMobileMenuActive = false
       }
