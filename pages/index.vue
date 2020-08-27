@@ -13,6 +13,7 @@ import Home from '../components/Home'
 import axios from 'axios'
 import gsap from 'gsap'
 import { mapMutations } from 'vuex'
+import Loader from '../plugins/loader'
 
 export default {
   components: { Hero, Home },
@@ -30,16 +31,12 @@ export default {
 
     axios.get('content/proyectos.json').then((response) => {
       this.setProjects(response.data.proyectos)
-      projects = response.data.proyectos
       axios.get('content/estudio.json').then((response) => {
         this.setStudioInfo(response.data)
-        studio = response.data
         axios.get('content/contacto.json').then((response) => {
           this.setContactInfo(response.data)
-          contact = response.data
           axios.get('content/bases.json').then((response) => {
             this.setBasesInfo(response.data.bases)
-            bases = response.data.bases
 
             urls = [
               '/images/icons/icon-uso.svg',
@@ -54,75 +51,17 @@ export default {
               '/images/logo-diadia.svg',
             ]
 
+            this.loader = new Loader('loading-canvas')
 
-            projects.forEach(project => {
-              project.galería.forEach(foto => {
-                // urls.push(foto.url)
-              })
+            this.preloadImages(urls, () => {
+              setTimeout(() => {
+                this.isDataLoaded = true
+              }, 1000)
             })
-
-            bases.forEach(base => {
-              base.galería.forEach(foto => {
-                // urls.push(foto.url)
-              })
-            })
-
-            this.p5 = new p5(sketch, 'loading-canvas')
           })
         })
       })
     })
-
-    let sketch = (p) => {
-      let bg
-      let msk
-      let radius = 0
-
-      p.setup = () => {
-        p.createCanvas(50, 50)
-        bg = p.createGraphics(50, 50)
-        msk = p.createGraphics(50, 50)
-
-        this.preloadImages(urls, () => {
-          setTimeout(() => {
-            this.isDataLoaded = true
-          }, 1000)
-        })
-      }
-
-      p.draw = () => {
-        p.clear()
-        msk.clear()
-        msk.noStroke()
-        msk.fill('white')
-        msk.circle(25, 25, 25)
-
-        let h = p.lerp(13, 37, ease(this.t))
-
-        bg.background('white')
-        bg.noStroke()
-        bg.fill('black')
-        bg.rect(0, 0, h, p.height)
-
-        let clone = bg.get()
-        clone.mask(msk.get())
-        p.image(clone, 0, 0)
-        p.noFill()
-        p.circle(25, 25, 25)
-      }
-
-      function ease(t) {
-        return t < 0.5 ? 4 * p.pow(t, 3) : 1 - p.pow(-2 * t + 2, 3) / 2
-      }
-
-      function easeOutBack(t) {
-        return 1 + 2.70158 * p.pow(t - 1, 3) + 1.70158 * p.pow(t - 1, 2)
-      }
-
-      function easeInBack(t) {
-        return 2.70158 * p.pow(t, 3) - 1.70158 * p.pow(t, 2)
-      }
-    }
   },
 
   methods: {
@@ -139,8 +78,7 @@ export default {
       urls.forEach((url) => {
         this.preloadImage(url, () => {
           loadedCounter++
-          this.t = loadedCounter / toBeLoadedNumber
-          // console.log('t: ' + this.t)
+          this.loader.t = loadedCounter / toBeLoadedNumber
           if (loadedCounter == toBeLoadedNumber) {
             allImagesLoadedCallback()
           }
@@ -170,8 +108,7 @@ export default {
     return {
       percentage: 0,
       isDataLoaded: false,
-      t: 0,
-      p5: null,
+      loader: null,
     }
   },
 }
