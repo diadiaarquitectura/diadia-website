@@ -5,21 +5,36 @@
       img(src='images/logo-diadia.svg', alt='diadia', width='100%')
   #filters(:style='{ opacity: currentSection.includes("gallery") ? 1 : 0 }')
     .filter
-      a(href='#', @click='onGalleryWorkClick()')
-        .label(:style='{ opacity: currentSection == "gallery-work" ? 1 : 0 }') obra
-        img(src='images/icons/icon-tiempo.svg', alt='tiempo', width='100%')
+      a(
+        href='#',
+        @mouseover='isMouseOverBases = true',
+        @mouseleave='isMouseOverBases = false',
+        @click='onGalleryBasesClick()'
+      )
+        .label(:style='{ opacity: galleryBasesOpacity }') bases
+        img(src='images/icons/icon-tiempo.svg', width='100%')
     .filter
-      a(href='#', @click='onGalleryMediaClick()') 
-        .label(:style='{ opacity: currentSection == "gallery-media" ? 1 : 0 }') medios
-        img(src='images/icons/icon-archivo.svg', alt='uso', width='100%')
+      a(
+        href='#',
+        @mouseover='isMouseOverMedia = true',
+        @mouseleave='isMouseOverMedia = false',
+        @click='onGalleryMediaClick()'
+      ) 
+        .label(:style='{ opacity: galleryMediaOpacity }') medios
+        img(src='images/icons/icon-archivo.svg', width='100%')
     .filter
-      a(href='#', @click='onGalleryBasesClick()') 
-        .label(:style='{ opacity: currentSection == "gallery-bases" ? 1 : 0 }') bases
-        img(src='images/icons/icon-uso.svg', alt='archivo', width='100%')
+      a(
+        href='#',
+        @mouseover='isMouseOverWork = true',
+        @mouseleave='isMouseOverWork = false',
+        @click='onGalleryWorkClick()'
+      ) 
+        .label(:style='{ opacity: galleryWorkOpacity }') obra
+        img(src='images/icons/icon-uso.svg', width='100%')
   #menu-desktop(v-if='!isMobileMenu')
     ul
       li(:class='{ bold: currentSection.includes("gallery") }')
-        a(href='#', @click='setCurrentSection("gallery-time"); onProjectsClick()') PROYECTOS
+        a(href='#', @click='onProjectsClick()') PROYECTOS
       li(:class='{ bold: currentSection == "studio" }')
         a(href='#', @click='setCurrentSection("studio")') ESTUDIO
       li(:class='{ bold: currentSection == "contact" }')
@@ -29,14 +44,11 @@
     img(src='images/hamburger.svg')
 
   transition(name='fade')
-    #menu-mobile(v-if='isMobileMenuActive' @click="onVeilClick($event)")
+    #menu-mobile(v-if='isMobileMenuActive', @click='onVeilClick($event)')
       .content
         ul
           li(:class='{ bold: currentSection.includes("gallery") }')
-            a(
-              href='#',
-              @click='setCurrentSection("gallery-time"); onProjectsClick(); hideMobileMenu()'
-            ) PROYECTOS
+            a(href='#', @click='onProjectsClick()') PROYECTOS
           li(:class='{ bold: currentSection == "studio" }')
             a(href='#', @click='setCurrentSection("studio"); hideMobileMenu()') ESTUDIO
           li(:class='{ bold: currentSection == "contact" }')
@@ -74,7 +86,8 @@ export default {
     },
 
     onProjectsClick() {
-      this.setCurrentSection('gallery-work')
+      this.hideMobileMenu()
+      this.setCurrentSection('gallery-default')
     },
 
     onGalleryWorkClick() {
@@ -100,12 +113,42 @@ export default {
 
   computed: {
     ...mapGetters({ currentSection: 'getCurrentSection' }),
+
+    galleryWorkOpacity() {
+      if (this.currentSection == 'gallery-work') {
+        return 1
+      } else {
+        if (this.isMouseOverWork) return 0.4
+        else return 0
+      }
+    },
+
+    galleryMediaOpacity() {
+      if (this.currentSection == 'gallery-media') {
+        return 1
+      } else {
+        if (this.isMouseOverMedia) return 0.4
+        else return 0
+      }
+    },
+
+    galleryBasesOpacity() {
+      if (this.currentSection == 'gallery-bases') {
+        return 1
+      } else {
+        if (this.isMouseOverBases) return 0.4
+        else return 0
+      }
+    },
   },
 
   data() {
     return {
       isMobileMenu: false,
       isMobileMenuActive: false,
+      isMouseOverWork: false,
+      isMouseOverMedia: false,
+      isMouseOverBases: false,
     }
   },
 }
