@@ -1,85 +1,151 @@
 <template lang="pug">
 #studio
-  .content
-    .pics
-      img.pic-left(:src='studioInfo.imagen1')
-      img.pic-right(:src='studioInfo.imagen2')
-    .title {{ studioInfo.titulo }}
-    .description(v-html='studioInfo.descripcion')
-    img.animation(src='images/animation.gif')
+  #loading-bases(v-if='!isLoaded')
+  transition(name='fade')
+    .grid(v-show='isLoaded')
+      .grid-item(v-for='image in studio.galería')
+        img.image(:src='image.url')
+  transition(name='fade')
+    viewer(v-if='isShowingProject')
 </template>
 
 <script>
+import Viewer from '../components/Viewer'
 import { mapGetters } from 'vuex'
+import { mapMutations } from 'vuex'
+import imagesLoaded from 'imagesloaded'
+import gsap from 'gsap'
+import Loader from '../plugins/loader'
 
 export default {
+  components: { Viewer },
+
   mounted() {
+    this.masonry = new Masonry('#studio .grid', {
+      itemSelector: '#studio .grid-item',
+      horizontalOrder: true,
+      gutter: 12,
+    })
+
+    this.timer = setInterval(() => {
+      this.masonry.layout()
+    }, 100)
+
+    let imagesloaded = imagesLoaded('#studio .grid')
+    let counter = 0
+    let loader = new Loader('loading-bases')
+
+    imagesloaded.on('progress', (instance, image) => {
+      counter++
+      loader.t = counter / imagesloaded.images.length
+    })
+
+    imagesloaded.on('done', () => {
+      console.log('complete')
+      this.isLoaded = true
+    })
+
+    this.$nuxt.$on('show-project', () => {
+      this.isShowingProject = true
+    })
+
+    this.$nuxt.$on('close-project', () => {
+      this.isShowingProject = false
+    })
+  },
+
+  beforeDestroy() {
+    clearInterval(this.timer)
   },
 
   computed: {
-    ...mapGetters({ studioInfo: 'getStudioInfo' }),
+    ...mapGetters({ studio: 'getStudioInfo' }),
+  },
+
+  methods: {
+    ...mapMutations({ setCurrentProject: 'setCurrentProject' }),
+  },
+
+  data() {
+    return {
+      isShowingProject: false,
+      isLoaded: false,
+      timer: 0,
+      masonry: null,
+    }
   },
 }
 </script>
 
 <style lang="scss" scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
 #studio {
   position: absolute;
-  top: 130px;
+  top: 150px;
+  height: calc(100% - 170px);
   width: 100%;
-  height: calc(100%);
-  display: flex;
-  text-align: center;
-  padding-bottom: 100px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-color: #ddd #f0f0f0;
+  scrollbar-width: thin;
 
-  .content {
-    width: 600px;
-    margin: 0 auto;
-    background-color: white;
-    overflow: scroll;
-    font-size: 1.2rem;
-    padding: 50px 10px 0 10px;
-    overflow-x: hidden;
+  #loading-bases {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    .title {
-      font-weight: bold;
-      margin: 40px 0;
+    .text {
+      color: #ccc;
     }
+  }
 
-    .description {
-      text-align: justify;
-    }
+  .grid {
+    .grid-item {
+      width: calc((100% - 24px) / 3);
+      margin-bottom: 12px;
+      float: left;
 
-    .pics {
-      max-width: 600px;
-      width: 100%;
-
-      .pic-left {
-        width: 50%;
+      img {
+        width: 100% !important;
+        height: auto !important;
       }
-
-      .pic-right {
-        width: 50%;
-      }
-    }
-
-    .animation {
-      max-width: 600px;
-      width: 100%;
     }
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   #studio {
-    .content {
-      padding: 0px 10px 50px 10px;
-      .title {
-        font-size: 0.8rem;
-        margin: 10px 0 30px 0;
-      }
-      .description {
-        font-size: 0.9rem;
+    top: 162px;
+    height: calc(100% - 200px);
+    .grid {
+      .grid-item {
+        width: 100%;
+        position: relative;
+
+        .hover {
+          position: relative;
+          background-color: white;
+          color: black;
+          display: inline-block;
+          padding: 7px 0;
+          text-align: left;
+          top: 0;
+          left: 0;
+
+          &:hover {
+            background-color: white;
+          }
+        }
       }
     }
   }
