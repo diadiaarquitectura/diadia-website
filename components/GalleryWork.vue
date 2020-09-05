@@ -61,14 +61,30 @@ export default {
   computed: {
     ...mapGetters({ projects: 'getProjects' }),
 
-    orderedProjects: {
-      get() {
-        return [...this.projects]
-          .sort((a, b) => {
-            return new Date(a.fecha) - new Date(b.fecha)
+    orderedProjects() {
+      let items = []
+
+      // agragar proyectos terminados:
+      this.projects.forEach((project) => {
+        if (project.estado == 'realizado') {
+          items.push({
+            nombre: project.nombre,
+            galería: project.galería,
           })
-          .reverse()
-      },
+        }
+      })
+
+      // agragar proyectos no terminados:
+      this.projects.forEach((project) => {
+        if (project.estado == 'noRealizado') {
+          items.push({
+            nombre: project.nombre,
+            galería: project.galería,
+          })
+        }
+      })
+
+      return items
     },
   },
 
