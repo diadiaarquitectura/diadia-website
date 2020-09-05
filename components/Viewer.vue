@@ -56,7 +56,7 @@ export default {
         image.onload = () => {
           image.style.opacity = 1
         }
-      }, 200)
+      }, 100)
     },
 
     closeProject() {

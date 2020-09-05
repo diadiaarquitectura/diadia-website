@@ -85,10 +85,13 @@ collections:
         name: estudio
         file: static/content/estudio.json
         fields:
-          - { label: Título, name: titulo, required: false, widget: text }
-          - { label: Descripción, name: descripcion, required: false, widget: text }
-          - { label: Imagen 1, name: imagen1, required: false, widget: image }
-          - { label: Imagen 2, name: imagen2, required: false, widget: image }
+          - label: Fotos
+            name: galería
+            required: false
+            widget: list
+            fields:
+              - { label: Imagen, name: url, widget: image, required: false, allow_multiple: false }
+            
       - label: Contacto
         name: contacto
         file: static/content/contacto.json

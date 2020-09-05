@@ -22,41 +22,37 @@ export default {
   components: { Viewer },
 
   mounted() {
+    this.masonry = new Masonry('#gallery-media .grid', {
+      itemSelector: '#gallery-media .grid-item',
+      horizontalOrder: true,
+      gutter: 12,
+    })
+
+    this.timer = setInterval(() => {
+      this.masonry.layout()
+    }, 100)
+
     let imagesloaded = imagesLoaded('#gallery-media .grid')
     let counter = 0
     let loader = new Loader('loading-media')
-    
+
     imagesloaded.on('progress', (instance, image) => {
       counter++
       loader.t = counter / imagesloaded.images.length
-      if (counter == imagesloaded.images.length) {
-        this.isLoaded = true
-      }
     })
 
-    this.$nuxt.$on('showProject', () => {
+    imagesloaded.on('done', () => {
+      console.log('complete')
+      this.isLoaded = true
+    })
+
+    this.$nuxt.$on('show-project', () => {
       this.isShowingProject = true
     })
 
     this.$nuxt.$on('close-project', () => {
       this.isShowingProject = false
     })
-
-    this.timer = setInterval(() => {
-      this.masonry = new Masonry('#gallery-media .grid', {
-        itemSelector: '#gallery-media .grid-item',
-        horizontalOrder: true,
-        gutter: 12,
-      })
-
-      imagesloaded.on('progress', (image) => {
-        this.masonry.layout()
-      })
-
-      imagesloaded.on('always', (image) => {
-        this.masonry.layout()
-      })
-    }, 100)
   },
 
   beforeDestroy() {
@@ -102,7 +98,7 @@ export default {
     ...mapMutations({ setProjects: 'setProjects', setCurrentProject: 'setCurrentProject' }),
 
     showProject(i) {
-      this.$nuxt.$emit('showProject')
+      this.$nuxt.$emit('show-project')
       this.setCurrentProject(this.projects[i])
     },
   },
@@ -129,6 +125,15 @@ export default {
 }
 
 #gallery-media {
+  position: absolute;
+  top: 150px;
+  height: calc(100% - 170px);
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-color: #ddd #f0f0f0;
+  scrollbar-width: thin;
+
   #loading-media {
     width: 100%;
     height: 100%;
@@ -140,15 +145,6 @@ export default {
       color: #ccc;
     }
   }
-
-  position: absolute;
-  top: 150px;
-  height: calc(100% - 170px);
-  width: 100%;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  scrollbar-color: #ddd #f0f0f0;
-  scrollbar-width: thin;
 
   .grid {
     .grid-item {

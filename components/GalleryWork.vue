@@ -21,6 +21,16 @@ export default {
   components: { Viewer },
 
   mounted() {
+    this.masonry = new Masonry('#gallery-work .grid', {
+      itemSelector: '#gallery-work .grid-item',
+      horizontalOrder: true,
+      gutter: 12,
+    })
+
+    this.timer = setInterval(() => {
+      this.masonry.layout()
+    }, 100)
+
     let imagesloaded = imagesLoaded('#gallery-work .grid')
     let counter = 0
     let loader = new Loader('loading-media')
@@ -28,34 +38,20 @@ export default {
     imagesloaded.on('progress', (instance, image) => {
       counter++
       loader.t = counter / imagesloaded.images.length
-      if (counter == imagesloaded.images.length) {
-        this.isLoaded = true
-      }
     })
 
-    this.$nuxt.$on('showProject', () => {
+    imagesloaded.on('done', () => {
+      console.log('complete')
+      this.isLoaded = true
+    })
+
+    this.$nuxt.$on('show-project', () => {
       this.isShowingProject = true
     })
 
     this.$nuxt.$on('close-project', () => {
       this.isShowingProject = false
     })
-
-    this.timer = setInterval(() => {
-      this.masonry = new Masonry('#gallery-work .grid', {
-        itemSelector: '#gallery-work .grid-item',
-        horizontalOrder: true,
-        gutter: 12,
-      })
-
-      imagesloaded.on('progress', (image) => {
-        this.masonry.layout()
-      })
-
-      imagesloaded.on('always', (image) => {
-        this.masonry.layout()
-      })
-    }, 100)
   },
 
   beforeDestroy() {
@@ -80,7 +76,7 @@ export default {
     ...mapMutations({ setProjects: 'setProjects', setCurrentProject: 'setCurrentProject' }),
 
     showProject(name) {
-      this.$nuxt.$emit('showProject')
+      this.$nuxt.$emit('show-project')
       this.projects.forEach((project, i) => {
         if (project.nombre == name) {
           this.setCurrentProject(project)
