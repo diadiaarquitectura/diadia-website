@@ -72,6 +72,7 @@ export default {
           items.push({
             nombre: project.nombre,
             galería: project.galería,
+            descargable: project.descargable,
           })
         }
       })
@@ -82,6 +83,7 @@ export default {
           items.push({
             nombre: project.nombre,
             galería: project.galería,
+            descargable: project.descargable,
           })
         }
       })
@@ -91,6 +93,7 @@ export default {
         items.push({
           nombre: base.nombre,
           galería: base.galería,
+          descargable: base.descargable,
         })
       })
 

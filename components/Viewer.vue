@@ -5,6 +5,8 @@
       .content
         img
         #name {{ currentProject.nombre.toUpperCase() }}
+        //- #name(v-if='currentProject.descargable') {{ currentProject.descargable.toUpperCase() }}
+
         #footer
           .right {{ currentImage + 1 + "/" + currentProject.galería.length }}
     #arrow-left
