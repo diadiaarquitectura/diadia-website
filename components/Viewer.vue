@@ -1,12 +1,12 @@
 <template lang="pug">
-#viewer-base
-  #viewer-base-inner
+#viewer
+  #viewer-inner
     #image
       .content
         img
-        #name {{ bases[currentBase].nombre.toUpperCase() }}
+        #name {{ currentProject.nombre.toUpperCase() }}
         #footer
-          .right {{ currentImage + 1 + "/" + bases[currentBase].galería.length }}
+          .right {{ currentImage + 1 + "/" + currentProject.galería.length }}
     #arrow-left
       a(href='#')
         img(src='images/arrow-left.svg', @click='prevImage()')
@@ -15,7 +15,7 @@
         img(src='images/arrow-right.svg', @click='nextImage()')
     #close
       a(href='#')
-        img(src='images/close.svg', @click='closeBase()', width='100%')
+        img(src='images/close.svg', @click='closeProject()', width='100%')
 </template>
 
 <script>
@@ -25,25 +25,25 @@ export default {
   mounted() {
     let image = document.querySelector('#image img')
     image.style.opacity = 1
-    image.src = this.bases[this.currentBase].galería[0].url
+    image.src = this.currentProject.galería[0].url
   },
 
   methods: {
     prevImage() {
       this.currentImage--
       if (this.currentImage < 0) {
-        this.currentImage = this.bases[this.currentBase].galería.length - 1
+        this.currentImage = this.currentProject.galería.length - 1
       }
-      this.currentUrl = this.bases[this.currentBase].galería[this.currentImage].url
+      this.currentUrl = this.currentProject.galería[this.currentImage].url
       this.loadImage()
     },
 
     nextImage() {
       this.currentImage++
-      if (this.currentImage > this.bases[this.currentBase].galería.length - 1) {
+      if (this.currentImage > this.currentProject.galería.length - 1) {
         this.currentImage = 0
       }
-      this.currentUrl = this.bases[this.currentBase].galería[this.currentImage].url
+      this.currentUrl = this.currentProject.galería[this.currentImage].url
       this.loadImage()
     },
 
@@ -59,8 +59,8 @@ export default {
       }, 200)
     },
 
-    closeBase() {
-      this.$nuxt.$emit('close-base')
+    closeProject() {
+      this.$nuxt.$emit('close-project')
     },
 
     selectGallery() {
@@ -73,7 +73,7 @@ export default {
   },
 
   computed: {
-    ...mapGetters({ bases: 'getBasesInfo', currentBase: 'getCurrentBase' }),
+    ...mapGetters({ projects: 'getProjects', currentProject: 'getCurrentProject' }),
   },
 
   data() {
@@ -87,7 +87,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-#viewer-base
+#viewer
   position: fixed
   left: 0
   top: 0
@@ -99,7 +99,7 @@ export default {
   justify-content: center
   align-items: center
 
-  #viewer-base-inner
+  #viewer-inner
     position: relative
     display: flex
     justify-content: center
@@ -145,7 +145,7 @@ export default {
     top: calc(50% - 35px)
     transform: scale(1.3)
     transition: all 0.2s
-    
+
     img
       width: 50px
 
@@ -179,10 +179,10 @@ export default {
       transition: all 0.2s
 
 @media (max-width: 768px)
-  #viewer-base
+  #viewer
     #arrow-left
       left: 5px
-      
+
       img
         width: 40px
 

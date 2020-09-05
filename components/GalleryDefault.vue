@@ -2,15 +2,15 @@
 #gallery-default
   #loading-work(v-if='!isLoaded')
   .grid(v-show='isLoaded')
-    .grid-item(@click='showProject(project.nombre)', v-for='project in projects')
-      img.image(:src='project.galería[0].url')
-      .hover {{ project.nombre.toUpperCase() }}
+    .grid-item(@click='showProject(item.nombre)', v-for='item in allItems')
+      img.image(:src='item.galería[0].url')
+      .hover {{ item.nombre.toUpperCase() }}
   transition(name='fade')
-    viewer-project(v-if='isShowingProject')
+    viewer(v-if='isShowingProject')
 </template>
 
 <script>
-import ViewerProject from '../components/ViewerProject'
+import Viewer from '../components/Viewer'
 import { mapGetters } from 'vuex'
 import { mapMutations } from 'vuex'
 import imagesLoaded from 'imagesloaded'
@@ -18,7 +18,7 @@ import gsap from 'gsap'
 import Loader from '../plugins/loader'
 
 export default {
-  components: { ViewerProject },
+  components: { Viewer },
 
   mounted() {
     let imagesloaded = imagesLoaded('#gallery-default .grid')
@@ -37,7 +37,7 @@ export default {
       this.isShowingProject = true
     })
 
-    this.$nuxt.$on('closeProject', () => {
+    this.$nuxt.$on('close-project', () => {
       this.isShowingProject = false
     })
 
@@ -63,17 +63,44 @@ export default {
   },
 
   computed: {
-    ...mapGetters({ projects: 'getProjects', currentSection: 'getCurrentSection' }),
+    ...mapGetters({
+      projects: 'getProjects',
+      currentSection: 'getCurrentSection',
+      bases: 'getBasesInfo',
+    }),
 
-    // orderedProjects: {
-    //   get() {
-    //     return [...this.projects]
-    //       .sort((a, b) => {
-    //         return new Date(a.fecha) - new Date(b.fecha)
-    //       })
-    //       .reverse()
-    //   },
-    // },
+    allItems() {
+      let items = []
+      // agragar proyectos no terminados:
+      this.projects.forEach((project) => {
+        if (project.estado == 'noRealizado') {
+          items.push({
+            nombre: project.nombre,
+            galería: project.galería,
+          })
+        }
+      })
+
+      // agragar proyectos terminados:
+      this.projects.forEach((project) => {
+        if (project.estado == 'realizado') {
+          items.push({
+            nombre: project.nombre,
+            galería: project.galería,
+          })
+        }
+      })
+
+      // agregar bases
+      this.bases.forEach((base) => {
+        items.push({
+          nombre: base.nombre,
+          galería: base.galería,
+        })
+      })
+
+      return items
+    },
   },
 
   methods: {
@@ -83,7 +110,7 @@ export default {
       this.$nuxt.$emit('showProject')
       this.projects.forEach((project, i) => {
         if (project.nombre == name) {
-          this.setCurrentProject(i)
+          this.setCurrentProject(project)
           return
         }
       })

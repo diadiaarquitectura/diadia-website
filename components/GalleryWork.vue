@@ -6,11 +6,11 @@
       img.image(:src='project.galería[0].url')
       .hover {{ project.nombre.toUpperCase() }}
   transition(name='fade')
-    viewer-project(v-if='isShowingProject')
+    viewer(v-if='isShowingProject')
 </template>
 
 <script>
-import ViewerProject from '../components/ViewerProject'
+import Viewer from '../components/Viewer'
 import { mapGetters } from 'vuex'
 import { mapMutations } from 'vuex'
 import imagesLoaded from 'imagesloaded'
@@ -18,7 +18,7 @@ import gsap from 'gsap'
 import Loader from '../plugins/loader'
 
 export default {
-  components: { ViewerProject },
+  components: { Viewer },
 
   mounted() {
     let imagesloaded = imagesLoaded('#gallery-work .grid')
@@ -37,7 +37,7 @@ export default {
       this.isShowingProject = true
     })
 
-    this.$nuxt.$on('closeProject', () => {
+    this.$nuxt.$on('close-project', () => {
       this.isShowingProject = false
     })
 
@@ -83,7 +83,7 @@ export default {
       this.$nuxt.$emit('showProject')
       this.projects.forEach((project, i) => {
         if (project.nombre == name) {
-          this.setCurrentProject(i)
+          this.setCurrentProject(project)
           return
         }
       })

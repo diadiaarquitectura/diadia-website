@@ -7,11 +7,11 @@
         img.image(:src='base.galería[0].url')
         .hover {{ base.nombre.toUpperCase() }}
   transition(name='fade')
-    viewer-base(v-if='isShowingBase')
+    viewer(v-if='isShowingProject')
 </template>
 
 <script>
-import ViewerBase from '../components/ViewerBase'
+import Viewer from '../components/Viewer'
 import { mapGetters } from 'vuex'
 import { mapMutations } from 'vuex'
 import imagesLoaded from 'imagesloaded'
@@ -19,7 +19,7 @@ import gsap from 'gsap'
 import Loader from '../plugins/loader'
 
 export default {
-  components: { ViewerBase },
+  components: { Viewer },
 
   mounted() {
     let imagesloaded = imagesLoaded('#gallery-bases .grid')
@@ -34,12 +34,12 @@ export default {
       }
     })
 
-    this.$nuxt.$on('show-base', () => {
-      this.isShowingBase = true
+    this.$nuxt.$on('show-project', () => {
+      this.isShowingProject = true
     })
 
-    this.$nuxt.$on('close-base', () => {
-      this.isShowingBase = false
+    this.$nuxt.$on('close-project', () => {
+      this.isShowingProject = false
     })
 
     this.timer = setInterval(() => {
@@ -68,13 +68,13 @@ export default {
   },
 
   methods: {
-    ...mapMutations({ setCurrentBase: 'setCurrentBase' }),
+    ...mapMutations({ setCurrentProject: 'setCurrentProject' }),
 
     showBase(name) {
-      this.$nuxt.$emit('show-base')
+      this.$nuxt.$emit('show-project')
       this.bases.forEach((base, i) => {
         if (base.nombre == name) {
-          this.setCurrentBase(i)
+          this.setCurrentProject(base)
           return
         }
       })
@@ -83,7 +83,7 @@ export default {
 
   data() {
     return {
-      isShowingBase: false,
+      isShowingProject: false,
       isLoaded: false,
       timer: 0,
       masonry: null,
