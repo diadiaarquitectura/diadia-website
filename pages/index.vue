@@ -39,7 +39,6 @@ export default {
             this.setContactInfo(response.data)
             axios.get('content/bases.json').then((response) => {
               this.setBasesInfo(response.data.bases)
-
               urls = [
                 '/images/icons/icon-uso.svg',
                 '/images/icons/icon-archivo.svg',
