@@ -67,7 +67,7 @@ export default {
 
     .column {
       text-align: left;
-      padding-left: 20px;
+      padding-left: 25px;
       padding-right: 10px;
     }
   }

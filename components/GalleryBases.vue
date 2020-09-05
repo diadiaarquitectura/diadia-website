@@ -60,7 +60,7 @@ export default {
   },
 
   computed: {
-    ...mapGetters({ bases: 'getBasesInfo', currentSection: 'getCurrentSection' }),
+    ...mapGetters({ bases: 'getBasesInfo' }),
   },
 
   methods: {

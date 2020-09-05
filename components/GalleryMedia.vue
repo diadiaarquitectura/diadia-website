@@ -60,7 +60,7 @@ export default {
   },
 
   computed: {
-    ...mapGetters({ projects: 'getProjects', currentSection: 'getCurrentSection' }),
+    ...mapGetters({ projects: 'getProjects' }),
 
     orderedImages: {
       get() {

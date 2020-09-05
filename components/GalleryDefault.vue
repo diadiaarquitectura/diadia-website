@@ -61,7 +61,6 @@ export default {
   computed: {
     ...mapGetters({
       projects: 'getProjects',
-      currentSection: 'getCurrentSection',
       bases: 'getBasesInfo',
     }),
 
