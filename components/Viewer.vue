@@ -5,8 +5,6 @@
       .content
         img
         #name {{ currentProject.nombre.toUpperCase() }}
-        //- #name(v-if='currentProject.descargable') {{ currentProject.descargable.toUpperCase() }}
-
         #footer
           .right {{ currentImage + 1 + "/" + currentProject.galería.length }}
     #arrow-left
@@ -18,16 +16,46 @@
     #close
       a(href='#')
         img(src='images/close.svg', @click='closeProject()', width='100%')
+    #download(v-if='currentProject.descargable')
+      a(href='currentProject.descargable', target='__blank')
+        img(src='images/download.svg', width='100%')
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
+import tippy from 'tippy.js'
+import 'tippy.js/dist/tippy.css'
+import imagesloaded from 'imagesloaded'
+import gsap from 'gsap'
 
 export default {
   mounted() {
     let image = document.querySelector('#image img')
     image.style.opacity = 1
     image.src = this.currentProject.galería[0].url
+
+    let animation = gsap.timeline()
+
+    let close = document.querySelector('#viewer #close')
+    let download = document.querySelector('#viewer #download')
+    let arrowLeft = document.querySelector('#viewer #arrow-left')
+    let arrowRight = document.querySelector('#viewer #arrow-right')
+
+    animation.set(close, { opacity: 0, scale: 0.6 }, 0)
+    animation.set(download, { opacity: 0, scale: 0.6 }, 0)
+    animation.set(arrowLeft, { opacity: 0, scale: 0.6 }, 0)
+    animation.set(arrowRight, { opacity: 0, scale: 0.6 }, 0)
+
+    imagesloaded('#viewer-inner', () => {
+      animation.to(close, { opacity: 1, scale: 1, duration: 0.2 }, 0)
+      animation.to(download, { opacity: 1, scale: 1, duration: 0.2 }, 0)
+      animation.to(arrowLeft, { opacity: 1, scale: 1, duration: 0.2 }, 0)
+      animation.to(arrowRight, { opacity: 1, scale: 1, duration: 0.2 }, 0)
+    })
+
+    tippy('#download', {
+      content: 'descargar',
+    })
   },
 
   methods: {
@@ -169,28 +197,29 @@ export default {
       transform: scale(1.5)
       transition: all 0.2s
 
-  #close
+  #close, #download
     position: fixed
     right: 20px
     top: 20px
+    width: 35px
     transform: scale(0.9)
     transition: all 0.2s
 
     &:hover
       transform: scale(1)
-      transition: all 0.2s
+
+  #download
+    right: 60px
 
 @media (max-width: 768px)
   #viewer
     #arrow-left
       left: 5px
-
       img
         width: 40px
 
     #arrow-right
       right: 5px
-
       img
         width: 40px
 </style>

@@ -76,6 +76,7 @@ export default {
 
     gotoHome() {
       gsap.to('#main', { top: 0, duration: 0.8, ease: 'power2.out' })
+      this.$nuxt.$emit('reload-home')
     },
 
     onVeilClick(e) {

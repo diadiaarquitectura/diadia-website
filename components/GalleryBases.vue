@@ -1,11 +1,10 @@
 <template lang="pug">
 #gallery-bases
   #loading-bases(v-if='!isLoaded')
-  transition(name='fade')
-    .grid(v-show='isLoaded')
-      .grid-item(@click='showBase(base.nombre)', v-for='base in bases')
-        img.image(:src='base.galería[0].url')
-        .hover {{ base.nombre.toUpperCase() }}
+  .grid(:style='{ opacity: isLoaded ? 1 : 0 }')
+    .grid-item(@click='showBase(base.nombre)', v-for='base in bases')
+      img.image(:src='base.galería[0].url')
+      .hover {{ base.nombre.toUpperCase() }}
   transition(name='fade')
     viewer(v-if='isShowingProject')
 </template>
@@ -22,28 +21,29 @@ export default {
   components: { Viewer },
 
   mounted() {
-    this.masonry = new Masonry('#gallery-bases .grid', {
-      itemSelector: '#gallery-bases .grid-item',
-      horizontalOrder: true,
-      gutter: 12,
-    })
+    let grid = document.querySelector('#gallery-bases .grid')
 
-    this.timer = setInterval(() => {
-      this.masonry.layout()
-    }, 100)
-
-    let imagesloaded = imagesLoaded('#gallery-bases .grid')
+    this.imagesloaded = imagesLoaded(grid)
     let counter = 0
-    let loader = new Loader('loading-bases')
+    let loader = new Loader('loading-media')
 
-    imagesloaded.on('progress', (instance, image) => {
-      counter++
-      loader.t = counter / imagesloaded.images.length
+    this.imagesloaded.on('done', () => {
+      this.masonry = new Masonry(grid, {
+        itemSelector: '#gallery-bases .grid-item',
+        horizontalOrder: true,
+        gutter: 12,
+      })
+
+      this.masonry.on('layoutComplete', () => {
+        this.isLoaded = true
+      })
+      this.masonry.layout()
+      // window.dispatchEvent(new Event('resize'))
     })
 
-    imagesloaded.on('done', () => {
-      console.log('complete')
-      this.isLoaded = true
+    this.imagesloaded.on('progress', () => {
+      counter++
+      loader.t = counter / this.imagesloaded.images.length
     })
 
     this.$nuxt.$on('show-project', () => {
@@ -56,7 +56,8 @@ export default {
   },
 
   beforeDestroy() {
-    clearInterval(this.timer)
+    this.imagesloaded.off('progress')
+    this.masonry.off('layoutComplete')
   },
 
   computed: {
@@ -81,8 +82,8 @@ export default {
     return {
       isShowingProject: false,
       isLoaded: false,
-      timer: 0,
       masonry: null,
+      imagesloaded: null,
     }
   },
 }
@@ -121,6 +122,9 @@ export default {
   }
 
   .grid {
+    opacity: 0;
+    transition: opacity 0.6s;
+
     .grid-item {
       width: calc((100% - 24px) / 3);
       margin-bottom: 12px;

@@ -1,7 +1,7 @@
 <template lang="pug">
 #gallery-work
   #loading-work(v-if='!isLoaded')
-  .grid(v-show='isLoaded')
+  .grid(:style='{ opacity: isLoaded ? 1 : 0 }')
     .grid-item(@click='showProject(project.nombre)', v-for='project in orderedProjects')
       img.image(:src='project.galería[0].url')
       .hover {{ project.nombre.toUpperCase() }}
@@ -21,32 +21,30 @@ export default {
   components: { Viewer },
 
   mounted() {
-    this.masonry = new Masonry('#gallery-work .grid', {
-      itemSelector: '#gallery-work .grid-item',
-      horizontalOrder: true,
-      gutter: 12,
-    })
+    let grid = document.querySelector('#gallery-work .grid')
 
-    this.timer = setInterval(() => {
-      this.masonry.layout()
-    }, 100)
-
-    let imagesloaded = imagesLoaded('#gallery-work .grid')
+    this.imagesloaded = imagesLoaded(grid)
     let counter = 0
     let loader = new Loader('loading-media')
 
-    imagesloaded.on('progress', (instance, image) => {
+    this.imagesloaded.on('done', () => {
+      this.masonry = new Masonry(grid, {
+        itemSelector: '#gallery-work .grid-item',
+        horizontalOrder: true,
+        gutter: 12,
+      })
+
+      this.masonry.on('layoutComplete', () => {
+        this.isLoaded = true
+        console.log('layut complete')
+      })
+      this.masonry.layout()
+      window.dispatchEvent(new Event('resize'))
+    })
+
+    this.imagesloaded.on('progress', () => {
       counter++
-      loader.t = counter / imagesloaded.images.length
-    })
-
-    imagesloaded.on('done', () => {
-      console.log('complete')
-      this.isLoaded = true
-    })
-
-    this.$nuxt.$on('show-project', () => {
-      this.isShowingProject = true
+      loader.t = counter / this.imagesloaded.images.length
     })
 
     this.$nuxt.$on('close-project', () => {
@@ -55,7 +53,8 @@ export default {
   },
 
   beforeDestroy() {
-    clearInterval(this.timer)
+    this.imagesloaded.off('progress')
+    this.masonry.off('layoutComplete')
   },
 
   computed: {
@@ -92,7 +91,7 @@ export default {
     ...mapMutations({ setProjects: 'setProjects', setCurrentProject: 'setCurrentProject' }),
 
     showProject(name) {
-      this.$nuxt.$emit('show-project')
+      this.isShowingProject = true
       this.projects.forEach((project, i) => {
         if (project.nombre == name) {
           this.setCurrentProject(project)
@@ -108,6 +107,7 @@ export default {
       isLoaded: false,
       timer: 0,
       masonry: null,
+      imagesloaded: null,
     }
   },
 }
@@ -146,6 +146,9 @@ export default {
   }
 
   .grid {
+    opacity: 0;
+    transition: opacity 0.6s;
+
     .grid-item {
       width: calc((100% - 24px) / 3);
       margin-bottom: 12px;

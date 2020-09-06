@@ -20,7 +20,7 @@ export default {
 
   mounted() {
     window.addEventListener('resize', this.onWindowResize)
-    window.addEventListener('onorientationchange', this.onWindowResize)
+    window.addEventListener('onorientationchange', this.onOrientationChange)
 
     document.ontouchmove = function (event) {
       event.preventDefault()
@@ -102,6 +102,10 @@ export default {
     },
 
     onWindowResize() {
+      this.gotoHome()
+    },
+
+    onOrientationChange() {
       if (!this.isDataLoaded) return
       this.gotoHome()
     },

@@ -1,7 +1,7 @@
 <template lang="pug">
 #gallery-default
   #loading-work(v-if='!isLoaded')
-  .grid(v-show='isLoaded')
+  .grid(:style='{ opacity: isLoaded ? 1 : 0 }')
     .grid-item(@click='showProject(item.nombre)', v-for='item in allItems')
       img.image(:src='item.galería[0].url')
       .hover {{ item.nombre.toUpperCase() }}
@@ -21,28 +21,29 @@ export default {
   components: { Viewer },
 
   mounted() {
-    this.masonry = new Masonry('#gallery-default .grid', {
-      itemSelector: '#gallery-default .grid-item',
-      horizontalOrder: true,
-      gutter: 12,
-    })
+    let grid = document.querySelector('#gallery-default .grid')
 
-    this.timer = setInterval(() => {
-      this.masonry.layout()
-    }, 100)
-
-    let imagesloaded = imagesLoaded('#gallery-default .grid')
+    this.imagesloaded = imagesLoaded(grid)
     let counter = 0
     let loader = new Loader('loading-media')
 
-    imagesloaded.on('progress', (instance, image) => {
-      counter++
-      loader.t = counter / imagesloaded.images.length
+    this.imagesloaded.on('done', () => {
+      this.masonry = new Masonry(grid, {
+        itemSelector: '#gallery-default .grid-item',
+        horizontalOrder: true,
+        gutter: 12,
+      })
+
+      this.masonry.on('layoutComplete', () => {
+        this.isLoaded = true
+      })
+      this.masonry.layout()
+      // window.dispatchEvent(new Event('resize'))
     })
 
-    imagesloaded.on('done', () => {
-      console.log('complete')
-      this.isLoaded = true
+    this.imagesloaded.on('progress', () => {
+      counter++
+      loader.t = counter / this.imagesloaded.images.length
     })
 
     this.$nuxt.$on('show-project', () => {
@@ -55,7 +56,8 @@ export default {
   },
 
   beforeDestroy() {
-    clearInterval(this.timer)
+    this.imagesloaded.off('progress')
+    this.masonry.off('layoutComplete')
   },
 
   computed: {
@@ -119,8 +121,8 @@ export default {
     return {
       isShowingProject: false,
       isLoaded: false,
-      timer: 0,
       masonry: null,
+      imagesloaded: null,
     }
   },
 }
@@ -159,6 +161,9 @@ export default {
   }
 
   .grid {
+    opacity: 0;
+    transition: opacity 0.6s;
+
     .grid-item {
       width: calc((100% - 24px) / 3);
       margin-bottom: 12px;

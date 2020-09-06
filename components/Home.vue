@@ -1,14 +1,14 @@
 <template lang="pug">
-#hero
+#home
   transition(name='fade')
-    .inner(v-if='isLoaded')
+    .inner(v-show='isLoaded')
       .content
         .icons
           img(src='images/icons/icon-tiempo.svg')
           img(src='images/icons/icon-archivo.svg')
           img(src='images/icons/icon-uso.svg')
-        .title(v-html="homeInfo.titulo")
-        .text(v-html="homeInfo.texto")
+        .title(v-html='homeInfo.titulo')
+        .text(v-html='homeInfo.texto')
       #arrow-down
         a(href='#', @click='gotoHome()')
           img(src='images/arrow-down.svg')
@@ -21,8 +21,13 @@ import { mapGetters } from 'vuex'
 
 export default {
   mounted() {
-    imagesLoaded('#hero', () => {
+    imagesLoaded('#home', () => {
       this.isLoaded = true
+      this.animateUp()
+    })
+
+    this.$nuxt.$on('reload-home', () => {
+      this.animateDown()
     })
   },
 
@@ -30,6 +35,38 @@ export default {
     gotoHome() {
       let height = document.getElementById('container').offsetTop
       gsap.to('#main', { top: -height, duration: 1, ease: 'power2.out' })
+    },
+
+    animateUp() {
+      let animation = gsap.timeline()
+
+      let icons = document.querySelector('#home .icons')
+      let title = document.querySelector('#home .title')
+      let text = document.querySelector('#home .text')
+
+      animation.set(icons, { opacity: 0 }, 0)
+      animation.set(title, { opacity: 0 }, 0)
+      animation.set(text, { opacity: 0 }, 0)
+
+      animation.to(icons, { y: '-=50', opacity: 1, duration: 0.6 }, 0)
+      animation.to(title, { y: '-=50', opacity: 1, duration: 0.6 }, 0.1)
+      animation.to(text, { y: '-=50', opacity: 1, duration: 0.6 }, 0.2)
+    },
+
+    animateDown() {
+      let animation = gsap.timeline()
+
+      let icons = document.querySelector('#home .icons')
+      let title = document.querySelector('#home .title')
+      let text = document.querySelector('#home .text')
+
+      animation.set(icons, { opacity: 0 }, 0)
+      animation.set(title, { opacity: 0 }, 0)
+      animation.set(text, { opacity: 0 }, 0)
+
+      animation.to(icons, { y: '+=50', opacity: 1, duration: 0.6 }, 0.4)
+      animation.to(title, { y: '+=50', opacity: 1, duration: 0.6 }, 0.3)
+      animation.to(text, { y: '+=50', opacity: 1, duration: 0.6 }, 0.2)
     },
   },
 
@@ -62,7 +99,7 @@ export default {
 .fade-leave-to
   opacity: 0
 
-#hero
+#home
   position: relative
   width: 100%
   height: 100vh
@@ -85,19 +122,22 @@ export default {
     font-size: 1.6rem
 
     .icons
+      opacity: 0
       img
         margin: 0 20px
 
     .title
+      opacity: 0
       margin-top: 50px
       margin-bottom: 30px
       letter-spacing: 4px
 
     .text
+      opacity: 0
       font-weight: 100
 
 @media (max-width: 640px)
-  #hero
+  #home
     width: 250px
 
     .content
