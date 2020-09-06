@@ -44,13 +44,13 @@ export default {
       let title = document.querySelector('#home .title')
       let text = document.querySelector('#home .text')
 
-      animation.set(icons, { opacity: 0 }, 0)
-      animation.set(title, { opacity: 0 }, 0)
-      animation.set(text, { opacity: 0 }, 0)
+      animation.set(icons, { y: '+=50', opacity: 0 }, 0)
+      animation.set(title, { y: '+=50', opacity: 0 }, 0)
+      animation.set(text, { y: '+=50', opacity: 0 }, 0)
 
-      animation.to(icons, { y: '-=50', opacity: 1, duration: 0.6 }, 0)
-      animation.to(title, { y: '-=50', opacity: 1, duration: 0.6 }, 0.1)
-      animation.to(text, { y: '-=50', opacity: 1, duration: 0.6 }, 0.2)
+      animation.to(icons, { y: 0, opacity: 1, duration: 0.8 }, 0)
+      animation.to(title, { y: 0, opacity: 1, duration: 0.8 }, 0.1)
+      animation.to(text, { y: 0, opacity: 1, duration: 0.8 }, 0.2)
     },
 
     animateDown() {
@@ -60,13 +60,13 @@ export default {
       let title = document.querySelector('#home .title')
       let text = document.querySelector('#home .text')
 
-      animation.set(icons, { opacity: 0 }, 0)
-      animation.set(title, { opacity: 0 }, 0)
-      animation.set(text, { opacity: 0 }, 0)
+      animation.set(icons, { y: '-=50', opacity: 0 }, 0)
+      animation.set(title, { y: '-=50', opacity: 0 }, 0)
+      animation.set(text, { y: '-=50', opacity: 0 }, 0)
 
-      animation.to(icons, { y: '+=50', opacity: 1, duration: 0.6 }, 0.4)
-      animation.to(title, { y: '+=50', opacity: 1, duration: 0.6 }, 0.3)
-      animation.to(text, { y: '+=50', opacity: 1, duration: 0.6 }, 0.2)
+      animation.to(icons, { y: 0, opacity: 1, duration: 0.8 }, 0.5)
+      animation.to(title, { y: 0, opacity: 1, duration: 0.8 }, 0.4)
+      animation.to(text, { y: 0, opacity: 1, duration: 0.8 }, 0.3)
     },
   },
 
