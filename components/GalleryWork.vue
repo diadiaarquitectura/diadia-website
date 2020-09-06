@@ -36,10 +36,9 @@ export default {
 
       this.masonry.on('layoutComplete', () => {
         this.isLoaded = true
-        console.log('layut complete')
       })
       this.masonry.layout()
-      window.dispatchEvent(new Event('resize'))
+      // window.dispatchEvent(new Event('resize'))
     })
 
     this.imagesloaded.on('progress', () => {
