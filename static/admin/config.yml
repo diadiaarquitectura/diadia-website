@@ -66,6 +66,7 @@ collections:
                       - { label: Vistas 3D, value: vista3d }
                       - { label: Foto Obra, value: fotoObra }
                       - { label: Foto Uso, value: fotoUso }
+                      - { label: Base, value: base }
       - label: Estudio
         name: estudio
         file: static/content/estudio.json
