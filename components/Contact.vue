@@ -57,12 +57,12 @@ export default {
   align-items: center
 
   .content
-    max-width: 1200px
+    max-width: 980px
     width: 100%
     margin: 0 auto
     background-color: white
     overflow: scroll
-    font-size: 1.2rem
+    font-size: 1.1rem
     overflow-x: hidden
 
     .title

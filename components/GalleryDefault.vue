@@ -92,6 +92,7 @@ export default {
 
       // agregar bases
       this.bases.forEach((base) => {
+        console.log(base)
         items.push({
           nombre: base.nombre,
           galería: base.galería,
@@ -99,6 +100,7 @@ export default {
         })
       })
 
+      console.log(items)
       return items
     },
   },
@@ -107,13 +109,13 @@ export default {
     ...mapMutations({ setProjects: 'setProjects', setCurrentProject: 'setCurrentProject' }),
 
     showProject(name) {
-      this.$nuxt.$emit('show-project')
-      this.projects.forEach((project, i) => {
-        if (project.nombre == name) {
-          this.setCurrentProject(project)
+      this.allItems.forEach((item, i) => {
+        if (item.nombre == name) {
+          this.setCurrentProject(item)
           return
         }
       })
+      this.$nuxt.$emit('show-project')
     },
   },
 

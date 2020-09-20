@@ -44,6 +44,7 @@ collections:
                 options:
                   - { label: Vivienda, value: vivienda }
                   - { label: Educación, value: educación }
+                  - { label: Base, value: base }
               - { label: Descargable, name: descargable, required: false, widget: text }
               - { label: Ubicacion, name: ubicacion, required: false, widget: text }
               - { label: Involucrados, name: involucrados, required: false, widget: text }
