@@ -66,22 +66,6 @@ collections:
                       - { label: Vistas 3D, value: vista3d }
                       - { label: Foto Obra, value: fotoObra }
                       - { label: Foto Uso, value: fotoUso }
-      - label: Bases
-        name: bases
-        file: static/content/bases.json
-        fields:
-          - label: Bases
-            name: bases 
-            widget: list
-            fields:
-              - { label: Nombre, name: nombre, required: true, widget: text }
-              - { label: Descargable, name: descargable, required: false, widget: text }
-              - label: Fotos
-                name: galería
-                required: false
-                widget: list
-                fields:
-                  - { label: Imagen, name: url, widget: image, required: false, allow_multiple: false }
       - label: Estudio
         name: estudio
         file: static/content/estudio.json
