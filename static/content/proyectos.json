@@ -236,6 +236,27 @@
           "tipo": "base"
         }
       ]
+    },
+    {
+      "fecha": "03 09 2020",
+      "estado": "noRealizado",
+      "nombre": "Base 2",
+      "tipologia": "base",
+      "descargable": "https://ejemplo.com/base2.pdf",
+      "galería": [
+        {
+          "url": "/images/uploads/foto-1.png",
+          "tipo": "base"
+        },
+        {
+          "url": "/images/uploads/foto-2.png",
+          "tipo": "base"
+        },
+        {
+          "url": "/images/uploads/foto-4.png",
+          "tipo": "base"
+        }
+      ]
     }
   ]
 }
