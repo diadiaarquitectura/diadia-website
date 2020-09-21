@@ -216,6 +216,26 @@
         }
       ],
       "estado": "realizado"
+    },
+    {
+      "fecha": "01 09 2020",
+      "estado": "noRealizado",
+      "nombre": "Base 1",
+      "tipologia": "base",
+      "galería": [
+        {
+          "url": "/images/uploads/foto-1.png",
+          "tipo": "base"
+        },
+        {
+          "url": "/images/uploads/foto-2.png",
+          "tipo": "base"
+        },
+        {
+          "url": "/images/uploads/foto-3.png",
+          "tipo": "base"
+        }
+      ]
     }
   ]
 }
