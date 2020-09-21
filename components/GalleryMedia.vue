@@ -38,7 +38,6 @@ export default {
         this.isLoaded = true
       })
       this.masonry.layout()
-      // window.dispatchEvent(new Event('resize'))
     })
 
     this.imagesloaded.on('progress', () => {

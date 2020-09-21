@@ -2,7 +2,7 @@
 #gallery-bases
   #loading-bases(v-if='!isLoaded')
   .grid(:style='{ opacity: isLoaded ? 1 : 0 }')
-    .grid-item(@click='showBase(base.nombre)', v-for='base in bases')
+    .grid-item(@click='showBase(base.nombre)', v-for='base in getBases')
       img.image(:src='base.galería[0].url')
       .hover {{ base.nombre.toUpperCase() }}
   transition(name='fade')
@@ -61,7 +61,14 @@ export default {
   },
 
   computed: {
-    ...mapGetters({ bases: 'getBasesInfo' }),
+    ...mapGetters({ bases: 'getProjects' }),
+
+    getBases() {
+      return this.bases.filter(base => {
+        console.log(base)
+        return base.tipologia == 'base'
+      })
+    }
   },
 
   methods: {
