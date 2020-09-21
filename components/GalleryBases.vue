@@ -64,11 +64,11 @@ export default {
     ...mapGetters({ bases: 'getProjects' }),
 
     getBases() {
-      return this.bases.filter(base => {
+      return this.bases.filter((base) => {
         console.log(base)
         return base.tipologia == 'base'
       })
-    }
+    },
   },
 
   methods: {
@@ -152,7 +152,7 @@ export default {
         justify-content: center;
         align-items: center;
         transition: all 0.3s;
-        border: solid 1px rgba(0, 0, 0, 0);
+        border: solid 1px rgba(0, 0, 0, 0.05);
 
         &:hover {
           background-color: rgba(255, 255, 255, 0.85);
@@ -188,10 +188,15 @@ export default {
           text-align: left;
           top: 0;
           left: 0;
+          border: solid 1px rgba(0, 0, 0, 0);
 
           &:hover {
             background-color: white;
           }
+        }
+
+        img {
+          border: solid 1px rgba(0, 0, 0, 0.05);
         }
       }
     }
