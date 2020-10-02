@@ -1,6 +1,26 @@
 {
   "proyectos": [
     {
+      "fecha": "01 09 2020",
+      "estado": "noRealizado",
+      "nombre": "Base 1",
+      "tipologia": "base",
+      "galería": [
+        {
+          "url": "/images/uploads/foto-1.png",
+          "tipo": "base"
+        },
+        {
+          "url": "/images/uploads/foto-2.png",
+          "tipo": "base"
+        },
+        {
+          "url": "/images/uploads/foto-3.png",
+          "tipo": "base"
+        }
+      ]
+    },
+    {
       "fecha": "01 01 2016",
       "nombre": "Casa AO",
       "tipologia": "vivienda",
@@ -126,26 +146,6 @@
       ],
       "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "estado": "noRealizado"
-    },
-    {
-      "fecha": "01 09 2020",
-      "estado": "noRealizado",
-      "nombre": "Base 1",
-      "tipologia": "base",
-      "galería": [
-        {
-          "url": "/images/uploads/foto-1.png",
-          "tipo": "base"
-        },
-        {
-          "url": "/images/uploads/foto-2.png",
-          "tipo": "base"
-        },
-        {
-          "url": "/images/uploads/foto-3.png",
-          "tipo": "base"
-        }
-      ]
     },
     {
       "fecha": "03 09 2020",
