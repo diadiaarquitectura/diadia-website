@@ -1,6 +1,43 @@
 {
   "proyectos": [
     {
+      "fecha": "01 01 2018",
+      "nombre": "Atelier IE Cahuide",
+      "tipologia": "educación",
+      "galería": [
+        {
+          "url": "/images/uploads/cahuide-2.jpg",
+          "tipo": "fotoUso"
+        },
+        {
+          "url": "/images/uploads/cahuide-1.jpg",
+          "tipo": "fotoObra"
+        },
+        {
+          "url": "/images/uploads/cahuide-3.jpg",
+          "tipo": "fotoObra"
+        },
+        {
+          "url": "/images/uploads/atelier-cahuide-planta.png",
+          "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/atelier-cahuide-corte.png",
+          "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/atelier-cahuide-iso.png",
+          "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/atelier-cahuide-comunicación.png",
+          "tipo": "planimetrias"
+        }
+      ],
+      "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "estado": "noRealizado"
+    },
+    {
       "fecha": "01 09 2020",
       "estado": "base",
       "nombre": "Base 1",
@@ -109,43 +146,6 @@
       "fecha": "01 01 2019",
       "ubicacion": "Villa Rica, Cerro de Pasco, Perú",
       "descargable": "https://diadiaarquitectura.com/descargables/atiycuy.pdf"
-    },
-    {
-      "fecha": "01 01 2018",
-      "nombre": "Atelier IE Cahuide",
-      "tipologia": "educación",
-      "galería": [
-        {
-          "url": "/images/uploads/cahuide-2.jpg",
-          "tipo": "fotoUso"
-        },
-        {
-          "url": "/images/uploads/cahuide-1.jpg",
-          "tipo": "fotoObra"
-        },
-        {
-          "url": "/images/uploads/cahuide-3.jpg",
-          "tipo": "fotoObra"
-        },
-        {
-          "url": "/images/uploads/atelier-cahuide-planta.png",
-          "tipo": "diagramas"
-        },
-        {
-          "url": "/images/uploads/atelier-cahuide-corte.png",
-          "tipo": "diagramas"
-        },
-        {
-          "url": "/images/uploads/atelier-cahuide-iso.png",
-          "tipo": "diagramas"
-        },
-        {
-          "url": "/images/uploads/atelier-cahuide-comunicación.png",
-          "tipo": "planimetrias"
-        }
-      ],
-      "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "estado": "noRealizado"
     },
     {
       "fecha": "03 09 2020",
