@@ -70,35 +70,11 @@ export default {
       let items = []
       // agragar proyectos no terminados:
       this.projects.forEach((project) => {
-        if (project.estado == 'noRealizado') {
           items.push({
             nombre: project.nombre,
             galería: project.galería,
             descargable: project.descargable,
           })
-        }
-      })
-
-      // agragar proyectos terminados:
-      this.projects.forEach((project) => {
-        if (project.estado == 'realizado') {
-          items.push({
-            nombre: project.nombre,
-            galería: project.galería,
-            descargable: project.descargable,
-          })
-        }
-      })
-
-      // agragar bases:
-      this.projects.forEach((project) => {
-        if (project.estado == 'base') {
-          items.push({
-            nombre: project.nombre,
-            galería: project.galería,
-            descargable: project.descargable,
-          })
-        }
       })
 
       return items
