@@ -27,7 +27,6 @@ collections:
             widget: list
             fields:
               - { label: Nombre, name: nombre, required: true, widget: text }
-              - { label: Descripción, name: descripcion, required: false, widget: text }
               - { label: Fecha, name: fecha, widget: date, default: '', format: 'DD MM YYYY' }
               - label: Estado
                 name: estado
