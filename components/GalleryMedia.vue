@@ -62,20 +62,9 @@ export default {
       get() {
         let images = []
 
-        // agragar proyectos terminados:
+        // agragar sketch:
         this.projects.forEach((project, index) => {
-          if (project.estado == 'realizado') {
-            project.galería.forEach((image) => {
-              image.nombreProyecto = project.nombre
-              image.indiceProyecto = index
-              images.push(image)
-            })
-          }
-        })
-
-        // agragar proyectos no terminados:
-        this.projects.forEach((project, index) => {
-          if (project.estado == 'noRealizado') {
+          if (project.estado != 'base') {
             project.galería.forEach((image) => {
               image.nombreProyecto = project.nombre
               image.indiceProyecto = index
