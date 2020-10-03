@@ -1,6 +1,88 @@
 {
   "proyectos": [
     {
+      "estado": "realizado",
+      "tipologia": "vivienda",
+      "nombre": "Atiycuy",
+      "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "galería": [
+        {
+          "url": "/images/uploads/002_context.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/002_plan1.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/002_plan2.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/002_section.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/002_sectionaliso.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/002_detail.png",
+          "tipo": "planimetrias"
+        }
+      ],
+      "involucrados": "",
+      "fecha": "01 01 2019",
+      "ubicacion": "",
+      "descargable": ""
+    },
+    {
+      "fecha": "01 01 2016",
+      "nombre": "Casa AO",
+      "tipologia": "vivienda",
+      "ubicacion": "Lima, Perú",
+      "galería": [
+        {
+          "url": "/images/uploads/200827-casa-ao-carátula.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/casa-ao-comunicaión2.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "tipo": "planimetrias",
+          "url": "/images/uploads/casa-ao-comunicaión3.png"
+        },
+        {
+          "url": "/images/uploads/001-casa-ao-2-.jpg",
+          "tipo": "maquetas"
+        },
+        {
+          "url": "/images/uploads/001-casa-ao-3-.jpg",
+          "tipo": "fotoUso"
+        },
+        {
+          "url": "/images/uploads/001-casa-ao-7-.jpg",
+          "tipo": "fotoUso"
+        },
+        {
+          "url": "/images/uploads/casa-ao-planta.png",
+          "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/casa-ao-corte.png",
+          "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/casa-ao-iso.png",
+          "tipo": "diagramas"
+        }
+      ],
+      "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "estado": "realizado"
+    },
+    {
       "fecha": "01 01 2018",
       "nombre": "Atelier IE Cahuide",
       "tipologia": "educación",
@@ -56,96 +138,6 @@
           "tipo": "base"
         }
       ]
-    },
-    {
-      "fecha": "01 01 2016",
-      "nombre": "Casa AO",
-      "tipologia": "vivienda",
-      "ubicacion": "Lima, Perú",
-      "galería": [
-        {
-          "url": "/images/uploads/200827-casa-ao-carátula.png",
-          "tipo": "planimetrias"
-        },
-        {
-          "url": "/images/uploads/casa-ao-comunicaión2.png",
-          "tipo": "planimetrias"
-        },
-        {
-          "tipo": "planimetrias",
-          "url": "/images/uploads/casa-ao-comunicaión3.png"
-        },
-        {
-          "url": "/images/uploads/001-casa-ao-2-.jpg",
-          "tipo": "maquetas"
-        },
-        {
-          "url": "/images/uploads/001-casa-ao-3-.jpg",
-          "tipo": "fotoUso"
-        },
-        {
-          "url": "/images/uploads/001-casa-ao-7-.jpg",
-          "tipo": "fotoUso"
-        },
-        {
-          "url": "/images/uploads/casa-ao-planta.png",
-          "tipo": "diagramas"
-        },
-        {
-          "url": "/images/uploads/casa-ao-corte.png",
-          "tipo": "diagramas"
-        },
-        {
-          "url": "/images/uploads/casa-ao-iso.png",
-          "tipo": "diagramas"
-        }
-      ],
-      "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "estado": "realizado"
-    },
-    {
-      "estado": "realizado",
-      "tipologia": "vivienda",
-      "nombre": "Atiycuy",
-      "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "galería": [
-        {
-          "url": "/images/uploads/casa-atícuy-planta.png",
-          "tipo": "diagramas"
-        },
-        {
-          "url": "/images/uploads/200824-casa-atícuy-carátula.png",
-          "tipo": "planimetrias"
-        },
-        {
-          "url": "/images/uploads/casa-atícuy-comunicación2.png",
-          "tipo": "planimetrias"
-        },
-        {
-          "url": "/images/uploads/002-atiycuy-1-.jpg",
-          "tipo": "planimetrias"
-        },
-        {
-          "url": "/images/uploads/002-atiycuy-2-.jpg",
-          "tipo": "fotoObra"
-        },
-        {
-          "url": "/images/uploads/002-atiycuy-3-.jpg",
-          "tipo": "fotoObra"
-        },
-        {
-          "url": "/images/uploads/casa-atícuy-cortes.png",
-          "tipo": "diagramas"
-        },
-        {
-          "url": "/images/uploads/casa-atícuy-iso.png",
-          "tipo": "diagramas"
-        }
-      ],
-      "involucrados": "Persona 1, Persona 2",
-      "fecha": "01 01 2019",
-      "ubicacion": "Villa Rica, Cerro de Pasco, Perú",
-      "descargable": "https://diadiaarquitectura.com/descargables/atiycuy.pdf"
     },
     {
       "fecha": "03 09 2020",
