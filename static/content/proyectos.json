@@ -2,7 +2,7 @@
   "proyectos": [
     {
       "fecha": "01 09 2020",
-      "estado": "noRealizado",
+      "estado": "base",
       "nombre": "Base 1",
       "tipologia": "base",
       "galería": [
@@ -149,7 +149,7 @@
     },
     {
       "fecha": "03 09 2020",
-      "estado": "noRealizado",
+      "estado": "base",
       "nombre": "Base 2",
       "tipologia": "base",
       "descargable": "https://ejemplo.com/base2.pdf",
