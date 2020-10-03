@@ -70,7 +70,7 @@ export default {
       let items = []
       // agragar proyectos no terminados:
       this.projects.forEach((project) => {
-        if (project.estado == 'noRealizado' && project.tipologia != 'base') {
+        if (project.estado == 'noRealizado') {
           items.push({
             nombre: project.nombre,
             galería: project.galería,
@@ -81,7 +81,7 @@ export default {
 
       // agragar proyectos terminados:
       this.projects.forEach((project) => {
-        if (project.estado == 'realizado' && project.tipologia != 'base') {
+        if (project.estado == 'realizado') {
           items.push({
             nombre: project.nombre,
             galería: project.galería,
@@ -92,7 +92,7 @@ export default {
 
       // agragar bases:
       this.projects.forEach((project) => {
-        if (project.tipologia == 'base') {
+        if (project.estado == 'base') {
           items.push({
             nombre: project.nombre,
             galería: project.galería,
@@ -101,17 +101,6 @@ export default {
         }
       })
 
-      // // agregar bases
-      // this.bases.forEach((base) => {
-      //   console.log(base)
-      //   items.push({
-      //     nombre: base.nombre,
-      //     galería: base.galería,
-      //     descargable: base.descargable,
-      //   })
-      // })
-
-      console.log(items)
       return items
     },
   },

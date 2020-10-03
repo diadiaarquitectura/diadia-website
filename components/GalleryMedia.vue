@@ -62,7 +62,7 @@ export default {
       get() {
         let images = []
         this.projects.forEach((project, index) => {
-          if (project.tipologia != 'base') {
+          if (project.estado != 'base') {
             project.galería.forEach((image) => {
               image.nombreProyecto = project.nombre
               image.indiceProyecto = index

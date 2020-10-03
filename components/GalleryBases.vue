@@ -2,9 +2,9 @@
 #gallery-bases
   #loading-bases(v-if='!isLoaded')
   .grid(:style='{ opacity: isLoaded ? 1 : 0 }')
-    .grid-item(@click='showBase(base.nombre)', v-for='base in getBases')
-      img.image(:src='base.galería[0].url')
-      .hover {{ base.nombre.toUpperCase() }}
+    .grid-item(@click='showBase(project.nombre)', v-for='project in getBases')
+      img.image(:src='project.galería[0].url')
+      .hover {{ project.nombre.toUpperCase() }}
   transition(name='fade')
     viewer(v-if='isShowingProject')
 </template>
@@ -37,8 +37,8 @@ export default {
       this.masonry.on('layoutComplete', () => {
         this.isLoaded = true
       })
+
       this.masonry.layout()
-      // window.dispatchEvent(new Event('resize'))
     })
 
     this.imagesloaded.on('progress', () => {
@@ -61,12 +61,11 @@ export default {
   },
 
   computed: {
-    ...mapGetters({ bases: 'getProjects' }),
+    ...mapGetters({ projects: 'getProjects' }),
 
     getBases() {
-      return this.bases.filter((base) => {
-        console.log(base)
-        return base.tipologia == 'base'
+      return this.projects.filter((project) => {
+        return project.estado == 'base'
       })
     },
   },
@@ -76,9 +75,9 @@ export default {
 
     showBase(name) {
       this.$nuxt.$emit('show-project')
-      this.bases.forEach((base, i) => {
-        if (base.nombre == name) {
-          this.setCurrentProject(base)
+      this.projects.forEach((project, i) => {
+        if (project.nombre == name) {
+          this.setCurrentProject(project)
           return
         }
       })

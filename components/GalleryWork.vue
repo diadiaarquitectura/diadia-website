@@ -64,9 +64,7 @@ export default {
 
       // agragar proyectos terminados:
       this.projects.forEach((project) => {
-        console.log('project')
-        console.log(project)
-        if (project.estado == 'realizado' && project.tipologia != 'base') {
+        if (project.estado == 'realizado') {
           items.push({
             nombre: project.nombre,
             galería: project.galería,
@@ -76,7 +74,7 @@ export default {
 
       // agragar proyectos no terminados:
       this.projects.forEach((project) => {
-        if (project.estado == 'noRealizado' && project.tipologia != 'base') {
+        if (project.estado == 'noRealizado') {
           items.push({
             nombre: project.nombre,
             galería: project.galería,
