@@ -49,6 +49,18 @@
         {
           "url": "/images/uploads/002_maqueta.jpg",
           "tipo": "maquetas"
+        },
+        {
+          "url": "/images/uploads/002_in02.jpg",
+          "tipo": "fotoObra"
+        },
+        {
+          "url": "/images/uploads/002-out-04.jpg",
+          "tipo": "fotoObra"
+        },
+        {
+          "url": "/images/uploads/002-out-03.jpg",
+          "tipo": "fotoObra"
         }
       ],
       "involucrados": "",
