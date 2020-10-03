@@ -37,13 +37,6 @@ collections:
                 options:
                   - { label: Realizado, value: realizado }
                   - { label: No Realizado, value: noRealizado }
-              - label: Tipología
-                name: tipologia
-                required: true
-                widget: select
-                options:
-                  - { label: Vivienda, value: vivienda }
-                  - { label: Educación, value: educación }
                   - { label: Base, value: base }
               - { label: Descargable, name: descargable, required: false, widget: text }
               - { label: Ubicacion, name: ubicacion, required: false, widget: text }
