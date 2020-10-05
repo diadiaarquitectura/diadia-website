@@ -1,41 +1,6 @@
 {
   "proyectos": [
     {
-      "fecha": "01 01 2020",
-      "estado": "realizado",
-      "nombre": "Patio 4 Patios",
-      "galería": [
-        {
-          "url": "/images/uploads/047_03.jpg",
-          "tipo": "fotoObra"
-        },
-        {
-          "url": "/images/uploads/047_00.jpg",
-          "tipo": "fotoObra"
-        },
-        {
-          "url": "/images/uploads/047_01.jpg",
-          "tipo": "fotoObra"
-        },
-        {
-          "url": "/images/uploads/047_02.jpg",
-          "tipo": "fotoObra"
-        },
-        {
-          "url": "/images/uploads/047_plan.png",
-          "tipo": "planimetrias"
-        },
-        {
-          "url": "/images/uploads/047_iso.png",
-          "tipo": "planimetrias"
-        },
-        {
-          "url": "/images/uploads/047_iso2.png",
-          "tipo": "planimetrias"
-        }
-      ]
-    },
-    {
       "fecha": "01 01 2018",
       "nombre": "Atelier Cahuide",
       "tipologia": "educación",
@@ -91,6 +56,41 @@
       ],
       "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "estado": "realizado"
+    },
+    {
+      "fecha": "01 01 2020",
+      "estado": "realizado",
+      "nombre": "Patio 4 Patios",
+      "galería": [
+        {
+          "url": "/images/uploads/047_00.jpg",
+          "tipo": "fotoObra"
+        },
+        {
+          "url": "/images/uploads/047_03.jpg",
+          "tipo": "fotoObra"
+        },
+        {
+          "url": "/images/uploads/047_01.jpg",
+          "tipo": "fotoObra"
+        },
+        {
+          "url": "/images/uploads/047_02.jpg",
+          "tipo": "fotoObra"
+        },
+        {
+          "url": "/images/uploads/047_plan.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/047_iso.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/047_iso2.png",
+          "tipo": "planimetrias"
+        }
+      ]
     },
     {
       "estado": "realizado",
