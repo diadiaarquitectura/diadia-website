@@ -209,22 +209,27 @@
     {
       "fecha": "01 09 2020",
       "estado": "base",
-      "nombre": "Base 1",
+      "nombre": "LETTERS TO THE MAYOR LIMA",
       "tipologia": "base",
       "galería": [
         {
-          "url": "/images/uploads/foto-1.png",
-          "tipo": "base"
+          "url": "/images/uploads/028_imagen00.png",
+          "tipo": "diagramas"
         },
         {
-          "url": "/images/uploads/foto-2.png",
-          "tipo": "base"
+          "url": "/images/uploads/028_imagen.png",
+          "tipo": "diagramas"
         },
         {
-          "url": "/images/uploads/foto-3.png",
-          "tipo": "base"
+          "url": "/images/uploads/028_foto.jpg",
+          "tipo": "fotoUso"
+        },
+        {
+          "url": "/images/uploads/028_foto2.jpg",
+          "tipo": "fotoUso"
         }
-      ]
+      ],
+      "descargable": "file:///G:/PROYECTOS/028%20Letters%20to%20the%20Mayor_Lima%20-%20Exhibicion/Entrega/Revision/Albanelli%20Omonte%20-%20Texto%20LTTM.pdf"
     },
     {
       "fecha": "03 09 2020",
