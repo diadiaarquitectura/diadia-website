@@ -2,7 +2,7 @@
   "proyectos": [
     {
       "fecha": "01 01 2018",
-      "nombre": "Atelier Cahuide",
+      "nombre": "ATELIER CAHUIDE",
       "tipologia": "educación",
       "galería": [
         {
@@ -60,7 +60,7 @@
     {
       "fecha": "01 01 2020",
       "estado": "realizado",
-      "nombre": "Patio 4 Patios",
+      "nombre": "PATIO 4 PATIOS",
       "galería": [
         {
           "url": "/images/uploads/047_00.jpg",
@@ -93,9 +93,30 @@
       ]
     },
     {
+      "fecha": "01 09 2020",
+      "estado": "base",
+      "nombre": "LETTERS TO THE MAYOR LIMA",
+      "tipologia": "base",
+      "galería": [
+        {
+          "url": "/images/uploads/028_imagen00.png",
+          "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/028_imagen.png",
+          "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/028_foto2.jpg",
+          "tipo": "fotoUso"
+        }
+      ],
+      "descargable": "file:///G:/PROYECTOS/028%20Letters%20to%20the%20Mayor_Lima%20-%20Exhibicion/Entrega/Revision/Albanelli%20Omonte%20-%20Texto%20LTTM.pdf"
+    },
+    {
       "estado": "realizado",
       "tipologia": "vivienda",
-      "nombre": "Atiycuy",
+      "nombre": "ATIYCUY",
       "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "galería": [
         {
@@ -205,26 +226,6 @@
       ],
       "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "estado": "realizado"
-    },
-    {
-      "fecha": "01 09 2020",
-      "estado": "base",
-      "nombre": "Base 1",
-      "tipologia": "base",
-      "galería": [
-        {
-          "url": "/images/uploads/foto-1.png",
-          "tipo": "base"
-        },
-        {
-          "url": "/images/uploads/foto-2.png",
-          "tipo": "base"
-        },
-        {
-          "url": "/images/uploads/foto-3.png",
-          "tipo": "base"
-        }
-      ]
     },
     {
       "fecha": "03 09 2020",
