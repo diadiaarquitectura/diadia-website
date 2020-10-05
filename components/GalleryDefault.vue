@@ -162,13 +162,11 @@ export default {
         justify-content: center;
         align-items: center;
         transition: all 0.3s;
-        // border: solid 1px rgba(0, 0, 0, 0.05);
 
         &:hover {
           background-color: rgba(255, 255, 255, 0.85);
           color: rgba(0, 0, 0, 1);
           transition: all 0.3s;
-          // border: solid 1px rgba(0, 0, 0, 0.08);
         }
       }
 
@@ -198,15 +196,10 @@ export default {
           text-align: left;
           top: 0;
           left: 0;
-          border: solid 1px rgba(0, 0, 0, 0);
 
           &:hover {
             background-color: white;
           }
-        }
-
-        img {
-          border: solid 1px rgba(0, 0, 0, 0.05);
         }
       }
     }
