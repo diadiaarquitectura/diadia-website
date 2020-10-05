@@ -93,6 +93,31 @@
       ]
     },
     {
+      "fecha": "01 09 2020",
+      "estado": "base",
+      "nombre": "LETTERS TO THE MAYOR LIMA",
+      "tipologia": "base",
+      "galería": [
+        {
+          "url": "/images/uploads/028_imagen00.png",
+          "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/028_imagen.png",
+          "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/028_foto.jpg",
+          "tipo": "fotoUso"
+        },
+        {
+          "url": "/images/uploads/028_foto2.jpg",
+          "tipo": "fotoUso"
+        }
+      ],
+      "descargable": "file:///G:/PROYECTOS/028%20Letters%20to%20the%20Mayor_Lima%20-%20Exhibicion/Entrega/Revision/Albanelli%20Omonte%20-%20Texto%20LTTM.pdf"
+    },
+    {
       "estado": "realizado",
       "tipologia": "vivienda",
       "nombre": "Atiycuy",
@@ -205,31 +230,6 @@
       ],
       "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "estado": "realizado"
-    },
-    {
-      "fecha": "01 09 2020",
-      "estado": "base",
-      "nombre": "LETTERS TO THE MAYOR LIMA",
-      "tipologia": "base",
-      "galería": [
-        {
-          "url": "/images/uploads/028_imagen00.png",
-          "tipo": "diagramas"
-        },
-        {
-          "url": "/images/uploads/028_imagen.png",
-          "tipo": "diagramas"
-        },
-        {
-          "url": "/images/uploads/028_foto.jpg",
-          "tipo": "fotoUso"
-        },
-        {
-          "url": "/images/uploads/028_foto2.jpg",
-          "tipo": "fotoUso"
-        }
-      ],
-      "descargable": "file:///G:/PROYECTOS/028%20Letters%20to%20the%20Mayor_Lima%20-%20Exhibicion/Entrega/Revision/Albanelli%20Omonte%20-%20Texto%20LTTM.pdf"
     },
     {
       "fecha": "03 09 2020",
