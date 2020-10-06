@@ -98,6 +98,10 @@
       "nombre": "DOMENICA",
       "galería": [
         {
+          "url": "/images/uploads/043_isosectional.png",
+          "tipo": "planimetrias"
+        },
+        {
           "url": "/images/uploads/043_04.jpg",
           "tipo": "fotoUso"
         },
@@ -123,10 +127,6 @@
         },
         {
           "url": "/images/uploads/043_iso.png",
-          "tipo": "planimetrias"
-        },
-        {
-          "url": "/images/uploads/043_isosectional.png",
           "tipo": "planimetrias"
         }
       ]
