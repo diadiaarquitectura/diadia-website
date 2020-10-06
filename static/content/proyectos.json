@@ -6,10 +6,6 @@
       "nombre": "PATIO 4 PATIOS",
       "galería": [
         {
-          "url": "/images/uploads/047_iso22.png",
-          "tipo": "planimetrias"
-        },
-        {
           "url": "/images/uploads/047_00.jpg",
           "tipo": "fotoObra"
         },
@@ -31,6 +27,10 @@
         },
         {
           "url": "/images/uploads/047_iso.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/047_iso22.png",
           "tipo": "planimetrias"
         }
       ]
@@ -80,11 +80,11 @@
       "nombre": "ESTRUCTURAS DE OCIO",
       "galería": [
         {
-          "url": "/images/uploads/035_00.jpg",
+          "url": "/images/uploads/035_01.jpg",
           "tipo": "diagramas"
         },
         {
-          "url": "/images/uploads/035_01.jpg",
+          "url": "/images/uploads/035_00.jpg",
           "tipo": "diagramas"
         },
         {
