@@ -93,25 +93,27 @@
       ]
     },
     {
-      "fecha": "01 09 2020",
-      "estado": "base",
-      "nombre": "LETTERS TO THE MAYOR LIMA",
-      "tipologia": "base",
+      "fecha": "01 11 2019",
+      "estado": "realizado",
+      "nombre": "DOMENICA",
       "galería": [
         {
-          "url": "/images/uploads/028_imagen00.png",
-          "tipo": "diagramas"
+          "url": "/images/uploads/043_00.jpg",
+          "tipo": "fotoObra"
         },
         {
-          "url": "/images/uploads/028_imagen.png",
-          "tipo": "diagramas"
+          "url": "/images/uploads/043_plan.png",
+          "tipo": "planimetrias"
         },
         {
-          "url": "/images/uploads/028_foto2.jpg",
-          "tipo": "fotoUso"
+          "url": "/images/uploads/043_iso.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/043_isosectional.png",
+          "tipo": "planimetrias"
         }
-      ],
-      "descargable": "file:///G:/PROYECTOS/028%20Letters%20to%20the%20Mayor_Lima%20-%20Exhibicion/Entrega/Revision/Albanelli%20Omonte%20-%20Texto%20LTTM.pdf"
+      ]
     },
     {
       "estado": "realizado",
@@ -182,50 +184,25 @@
       "descargable": ""
     },
     {
-      "fecha": "01 01 2016",
-      "nombre": "Casa AO",
-      "tipologia": "vivienda",
-      "ubicacion": "Lima, Perú",
+      "fecha": "01 09 2020",
+      "estado": "base",
+      "nombre": "LETTERS TO THE MAYOR LIMA",
+      "tipologia": "base",
       "galería": [
         {
-          "url": "/images/uploads/200827-casa-ao-carátula.png",
-          "tipo": "planimetrias"
+          "url": "/images/uploads/028_imagen00.png",
+          "tipo": "diagramas"
         },
         {
-          "url": "/images/uploads/casa-ao-comunicaión2.png",
-          "tipo": "planimetrias"
+          "url": "/images/uploads/028_imagen.png",
+          "tipo": "diagramas"
         },
         {
-          "tipo": "planimetrias",
-          "url": "/images/uploads/casa-ao-comunicaión3.png"
-        },
-        {
-          "url": "/images/uploads/001-casa-ao-2-.jpg",
-          "tipo": "maquetas"
-        },
-        {
-          "url": "/images/uploads/001-casa-ao-3-.jpg",
+          "url": "/images/uploads/028_foto2.jpg",
           "tipo": "fotoUso"
-        },
-        {
-          "url": "/images/uploads/001-casa-ao-7-.jpg",
-          "tipo": "fotoUso"
-        },
-        {
-          "url": "/images/uploads/casa-ao-planta.png",
-          "tipo": "diagramas"
-        },
-        {
-          "url": "/images/uploads/casa-ao-corte.png",
-          "tipo": "diagramas"
-        },
-        {
-          "url": "/images/uploads/casa-ao-iso.png",
-          "tipo": "diagramas"
         }
       ],
-      "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "estado": "realizado"
+      "descargable": "https://drive.google.com/file/d/1OYlb7lLWzpWsDVNmk4kFuCyq7YskKBtE/view?usp=sharing"
     },
     {
       "fecha": "03 09 2020",
