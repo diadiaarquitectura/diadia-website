@@ -63,6 +63,10 @@
       "nombre": "PATIO 4 PATIOS",
       "galería": [
         {
+          "url": "/images/uploads/047_iso22.png",
+          "tipo": "planimetrias"
+        },
+        {
           "url": "/images/uploads/047_00.jpg",
           "tipo": "fotoObra"
         },
@@ -84,10 +88,6 @@
         },
         {
           "url": "/images/uploads/047_iso.png",
-          "tipo": "planimetrias"
-        },
-        {
-          "url": "/images/uploads/047_iso22.png",
           "tipo": "planimetrias"
         }
       ]
@@ -219,6 +219,33 @@
         }
       ],
       "descargable": "https://drive.google.com/file/d/1OYlb7lLWzpWsDVNmk4kFuCyq7YskKBtE/view?usp=sharing"
+    },
+    {
+      "fecha": "12 08 2019",
+      "estado": "base",
+      "nombre": "ESTRUCTURAS DE OCIO",
+      "galería": [
+        {
+          "url": "/images/uploads/035_00.jpg",
+          "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/035_01.jpg",
+          "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/035_02.jpg",
+          "tipo": "maquetas"
+        },
+        {
+          "url": "/images/uploads/035_03.jpg",
+          "tipo": "maquetas"
+        },
+        {
+          "url": "/images/uploads/035_iso.png",
+          "tipo": "planimetrias"
+        }
+      ]
     }
   ]
 }
