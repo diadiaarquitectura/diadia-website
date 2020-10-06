@@ -98,6 +98,10 @@
       "nombre": "DOMENICA",
       "galería": [
         {
+          "url": "/images/uploads/043_isosectional.png",
+          "tipo": "planimetrias"
+        },
+        {
           "url": "/images/uploads/043_00.jpg",
           "tipo": "fotoObra"
         },
@@ -107,10 +111,6 @@
         },
         {
           "url": "/images/uploads/043_iso.png",
-          "tipo": "planimetrias"
-        },
-        {
-          "url": "/images/uploads/043_isosectional.png",
           "tipo": "planimetrias"
         }
       ]
@@ -203,27 +203,6 @@
         }
       ],
       "descargable": "https://drive.google.com/file/d/1OYlb7lLWzpWsDVNmk4kFuCyq7YskKBtE/view?usp=sharing"
-    },
-    {
-      "fecha": "03 09 2020",
-      "estado": "base",
-      "nombre": "Base 2",
-      "tipologia": "base",
-      "descargable": "https://ejemplo.com/base2.pdf",
-      "galería": [
-        {
-          "url": "/images/uploads/foto-1.png",
-          "tipo": "base"
-        },
-        {
-          "url": "/images/uploads/foto-2.png",
-          "tipo": "base"
-        },
-        {
-          "url": "/images/uploads/foto-4.png",
-          "tipo": "base"
-        }
-      ]
     }
   ]
 }
