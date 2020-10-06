@@ -98,6 +98,22 @@
       "nombre": "DOMENICA",
       "galería": [
         {
+          "url": "/images/uploads/043_01.jpg",
+          "tipo": "fotoUso"
+        },
+        {
+          "url": "/images/uploads/043_02.jpg",
+          "tipo": "fotoUso"
+        },
+        {
+          "url": "/images/uploads/043_03.jpg",
+          "tipo": "fotoUso"
+        },
+        {
+          "url": "/images/uploads/043_04.jpg",
+          "tipo": "fotoUso"
+        },
+        {
           "url": "/images/uploads/043_00.jpg",
           "tipo": "fotoObra"
         },
