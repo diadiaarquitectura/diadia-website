@@ -80,6 +80,10 @@
       "nombre": "PATIO LINEAL",
       "galería": [
         {
+          "url": "/images/uploads/031_01.jpg",
+          "tipo": "fotoUso"
+        },
+        {
           "url": "/images/uploads/031_00.jpg",
           "tipo": "diagramas"
         },
@@ -90,10 +94,6 @@
         {
           "url": "/images/uploads/031_det.png",
           "tipo": "planimetrias"
-        },
-        {
-          "url": "/images/uploads/031_01.jpg",
-          "tipo": "fotoUso"
         },
         {
           "url": "/images/uploads/031_01b.jpg",
