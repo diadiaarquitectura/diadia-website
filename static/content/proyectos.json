@@ -161,6 +161,49 @@
       ]
     },
     {
+      "fecha": "12 08 2018",
+      "estado": "noRealizado",
+      "nombre": "BARRIO ESCUELA",
+      "galería": [
+        {
+          "url": "/images/uploads/024_corte.jpg",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/024_caf00.png",
+          "tipo": "sketch"
+        },
+        {
+          "url": "/images/uploads/024_caf01b.png",
+          "tipo": "sketch"
+        },
+        {
+          "url": "/images/uploads/024_caf02.jpg",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/024_caf03.jpg",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/024_mapa.jpg",
+          "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/024_iso-urbana.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/024_plan.jpg",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/024_iso.jpg",
+          "tipo": "planimetrias"
+        }
+      ]
+    },
+    {
       "fecha": "01 01 2018",
       "nombre": "ATELIER CAHUIDE",
       "tipologia": "educación",
