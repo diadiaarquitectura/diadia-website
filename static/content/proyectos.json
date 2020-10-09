@@ -218,6 +218,33 @@
       "estado": "realizado"
     },
     {
+      "fecha": "01 09 2017",
+      "estado": "noRealizado",
+      "nombre": "SUELO COMUN",
+      "galería": [
+        {
+          "url": "/images/uploads/019_iso.png",
+          "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/019_000.jpg",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/019_01.jpg",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/019_plan.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/019_diagram2.png",
+          "tipo": "diagramas"
+        }
+      ]
+    },
+    {
       "estado": "realizado",
       "tipologia": "vivienda",
       "nombre": "ATIYCUY",
