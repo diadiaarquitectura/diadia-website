@@ -402,6 +402,37 @@
           "tipo": "planimetrias"
         }
       ]
+    },
+    {
+      "fecha": "09 10 2020",
+      "estado": "realizado",
+      "nombre": "UNIVERSIDAD CIENTIFICA DEL SUR",
+      "galería": [
+        {
+          "url": "/images/uploads/045_01.jpg",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/045_02.jpg",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/045_03.jpg",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/045_obra.jpg",
+          "tipo": "fotoObra"
+        },
+        {
+          "url": "/images/uploads/045_obra2.jpg",
+          "tipo": "fotoObra"
+        },
+        {
+          "url": "/images/uploads/045_00.jpg",
+          "tipo": "sketch"
+        }
+      ]
     }
   ]
 }
