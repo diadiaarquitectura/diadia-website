@@ -166,10 +166,6 @@
       "nombre": "BARRIO ESCUELA",
       "galería": [
         {
-          "url": "/images/uploads/024_corte.jpg",
-          "tipo": "planimetrias"
-        },
-        {
           "url": "/images/uploads/024_caf00.png",
           "tipo": "sketch"
         },
@@ -195,6 +191,10 @@
         },
         {
           "url": "/images/uploads/024_plan.jpg",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/024_corte.jpg",
           "tipo": "planimetrias"
         },
         {
