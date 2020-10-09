@@ -305,6 +305,33 @@
         }
       ],
       "descargable": "https://drive.google.com/file/d/1OYlb7lLWzpWsDVNmk4kFuCyq7YskKBtE/view?usp=sharing"
+    },
+    {
+      "fecha": "12 08 2010",
+      "estado": "realizado",
+      "nombre": "361 GRADI",
+      "galería": [
+        {
+          "url": "/images/uploads/001_361_00.jpg",
+          "tipo": "fotoUso"
+        },
+        {
+          "url": "/images/uploads/001_361_01.jpg",
+          "tipo": "fotoUso"
+        },
+        {
+          "url": "/images/uploads/001_361_02.jpg",
+          "tipo": "fotoUso"
+        },
+        {
+          "url": "/images/uploads/0001_361_plan.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/0001_361_iso.png",
+          "tipo": "planimetrias"
+        }
+      ]
     }
   ]
 }
