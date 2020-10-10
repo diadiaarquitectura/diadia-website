@@ -59,6 +59,21 @@
       ]
     },
     {
+      "fecha": "16 07 2020",
+      "estado": "base",
+      "nombre": "YAKUMAMA",
+      "galería": [
+        {
+          "url": "/images/uploads/044_00.jpg",
+          "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/044_01.jpg",
+          "tipo": "sketch"
+        }
+      ]
+    },
+    {
       "fecha": "01 11 2019",
       "estado": "realizado",
       "nombre": "DOMENICA",
