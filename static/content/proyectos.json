@@ -462,6 +462,33 @@
       ]
     },
     {
+      "fecha": "08 12 2016",
+      "estado": "noRealizado",
+      "nombre": "NUOVA PIAZZA COMUNITÁ EUROPEA",
+      "galería": [
+        {
+          "url": "/images/uploads/010_diagrama.png",
+          "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/010_planta.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/010_iso.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/010_vista.jpg",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/010_iso-explotada.png",
+          "tipo": "planimetrias"
+        }
+      ]
+    },
+    {
       "fecha": "12 08 2010",
       "estado": "realizado",
       "nombre": "361 GRADI",
