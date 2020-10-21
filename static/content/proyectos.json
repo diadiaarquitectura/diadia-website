@@ -29,6 +29,10 @@
       "nombre": "PATIO 4 PATIOS",
       "galería": [
         {
+          "url": "/images/uploads/047_iso22.png",
+          "tipo": "planimetrias"
+        },
+        {
           "url": "/images/uploads/047_00.jpg",
           "tipo": "fotoObra"
         },
@@ -50,10 +54,6 @@
         },
         {
           "url": "/images/uploads/047_iso.png",
-          "tipo": "planimetrias"
-        },
-        {
-          "url": "/images/uploads/047_iso22.png",
           "tipo": "planimetrias"
         }
       ]
@@ -79,6 +79,10 @@
       "nombre": "DOMENICA",
       "galería": [
         {
+          "url": "/images/uploads/043_isosectional.png",
+          "tipo": "planimetrias"
+        },
+        {
           "url": "/images/uploads/043_04.jpg",
           "tipo": "fotoUso"
         },
@@ -103,10 +107,6 @@
           "tipo": "planimetrias"
         },
         {
-          "url": "/images/uploads/043_isosectional.png",
-          "tipo": "planimetrias"
-        },
-        {
           "url": "/images/uploads/043_iso.png",
           "tipo": "planimetrias"
         }
@@ -118,6 +118,10 @@
       "nombre": "PATIO LINEAL",
       "galería": [
         {
+          "url": "/images/uploads/031_det.png",
+          "tipo": "planimetrias"
+        },
+        {
           "url": "/images/uploads/031_01.jpg",
           "tipo": "fotoUso"
         },
@@ -128,10 +132,6 @@
         {
           "url": "/images/uploads/031_00b.jpg",
           "tipo": "diagramas"
-        },
-        {
-          "url": "/images/uploads/031_det.png",
-          "tipo": "planimetrias"
         },
         {
           "url": "/images/uploads/031_01b.jpg",
@@ -247,6 +247,10 @@
       "tipologia": "educación",
       "galería": [
         {
+          "url": "/images/uploads/018_isoglass.jpg",
+          "tipo": "diagramas"
+        },
+        {
           "url": "/images/uploads/018_00.jpg",
           "tipo": "fotoUso"
         },
@@ -289,10 +293,6 @@
         {
           "url": "/images/uploads/018_isoexplotada.jpg",
           "tipo": "diagramas"
-        },
-        {
-          "url": "/images/uploads/018_isoglass.jpg",
-          "tipo": "diagramas"
         }
       ],
       "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -331,6 +331,10 @@
       "nombre": "ATIYCUY",
       "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "galería": [
+        {
+          "url": "/images/uploads/002_sectionaliso.png",
+          "tipo": "planimetrias"
+        },
         {
           "url": "/images/uploads/002-00.jpg",
           "tipo": "fotoObra"
@@ -376,10 +380,6 @@
           "tipo": "planimetrias"
         },
         {
-          "url": "/images/uploads/002_sectionaliso.png",
-          "tipo": "planimetrias"
-        },
-        {
           "url": "/images/uploads/002_detail.png",
           "tipo": "planimetrias"
         },
@@ -420,6 +420,10 @@
       "nombre": "CASA AO",
       "galería": [
         {
+          "url": "/images/uploads/001_iso.png",
+          "tipo": "planimetrias"
+        },
+        {
           "url": "/images/uploads/001_01.jpg",
           "tipo": "fotoUso"
         },
@@ -433,10 +437,6 @@
         },
         {
           "url": "/images/uploads/001_site.png",
-          "tipo": "planimetrias"
-        },
-        {
-          "url": "/images/uploads/001_iso.png",
           "tipo": "planimetrias"
         },
         {
@@ -467,6 +467,10 @@
       "nombre": "361 GRADI",
       "galería": [
         {
+          "url": "/images/uploads/0001_361_plan.png",
+          "tipo": "planimetrias"
+        },
+        {
           "url": "/images/uploads/001_361_00.jpg",
           "tipo": "fotoUso"
         },
@@ -477,10 +481,6 @@
         {
           "url": "/images/uploads/001_361_02.jpg",
           "tipo": "fotoUso"
-        },
-        {
-          "url": "/images/uploads/0001_361_plan.png",
-          "tipo": "planimetrias"
         },
         {
           "url": "/images/uploads/0001_361_iso.png",
