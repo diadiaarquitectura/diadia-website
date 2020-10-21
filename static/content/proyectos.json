@@ -113,6 +113,45 @@
       ]
     },
     {
+      "fecha": "24 12 2019",
+      "estado": "noRealizado",
+      "nombre": "CASA DOS MITADES",
+      "galería": [
+        {
+          "url": "/images/uploads/039_cortefugado.jpg",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/039_planta1.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/039_planta2.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/039_planta3.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/039_corte.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/039_isocortada.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/039_iso.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/039_frente.jpg",
+          "tipo": "vista3d"
+        }
+      ]
+    },
+    {
       "fecha": "01 01 2019",
       "estado": "realizado",
       "nombre": "PATIO LINEAL",
