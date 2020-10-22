@@ -454,6 +454,41 @@
       "descargable": "https://drive.google.com/file/d/1OYlb7lLWzpWsDVNmk4kFuCyq7YskKBtE/view?usp=sharing"
     },
     {
+      "fecha": "22 10 2020",
+      "estado": "noRealizado",
+      "nombre": "MASTERPLAN SAN FRANCISCO",
+      "galería": [
+        {
+          "url": "/images/uploads/025_v0a.png",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/025_v0b.png",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/025_v3.png",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/025_v1.png",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/025_v2.png",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/025_corteb.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/025_cortec.png",
+          "tipo": "planimetrias"
+        }
+      ]
+    },
+    {
       "fecha": "20 03 2015",
       "estado": "realizado",
       "nombre": "CASA AO",
@@ -551,17 +586,6 @@
         {
           "url": "/images/uploads/0001_361_iso.png",
           "tipo": "planimetrias"
-        }
-      ]
-    },
-    {
-      "fecha": "22 10 2020",
-      "estado": "noRealizado",
-      "nombre": "MASTERPLAN SAN FRANCISCO",
-      "galería": [
-        {
-          "url": "/images/uploads/025_v0a.png",
-          "tipo": "vista3d"
         }
       ]
     }
