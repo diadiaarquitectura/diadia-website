@@ -553,6 +553,17 @@
           "tipo": "planimetrias"
         }
       ]
+    },
+    {
+      "fecha": "22 10 2020",
+      "estado": "noRealizado",
+      "nombre": "MASTERPLAN SAN FRANCISCO",
+      "galería": [
+        {
+          "url": "/images/uploads/025_v0a.png",
+          "tipo": "vista3d"
+        }
+      ]
     }
   ]
 }
