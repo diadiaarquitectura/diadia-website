@@ -118,6 +118,10 @@
       "nombre": "CASA DOS MITADES",
       "galería": [
         {
+          "url": "/images/uploads/039_frente.jpg",
+          "tipo": "vista3d"
+        },
+        {
           "url": "/images/uploads/039_cortefugado.jpg",
           "tipo": "vista3d"
         },
@@ -144,10 +148,6 @@
         {
           "url": "/images/uploads/039_iso.png",
           "tipo": "planimetrias"
-        },
-        {
-          "url": "/images/uploads/039_frente.jpg",
-          "tipo": "vista3d"
         }
       ]
     },
