@@ -444,6 +444,17 @@
       "descargable": ""
     },
     {
+      "fecha": "23 10 2020",
+      "estado": "noRealizado",
+      "nombre": "PAZ SOLDAN",
+      "galería": [
+        {
+          "tipo": "diagramas",
+          "url": "/images/uploads/022_d1.png"
+        }
+      ]
+    },
+    {
       "fecha": "01 09 2020",
       "estado": "base",
       "nombre": "LETTERS TO THE MAYOR LIMA",
@@ -601,17 +612,6 @@
         {
           "url": "/images/uploads/0001_361_iso.png",
           "tipo": "planimetrias"
-        }
-      ]
-    },
-    {
-      "fecha": "23 10 2020",
-      "estado": "noRealizado",
-      "nombre": "PAZ SOLDAN",
-      "galería": [
-        {
-          "tipo": "diagramas",
-          "url": "/images/uploads/022_d1.png"
         }
       ]
     }
