@@ -338,6 +338,17 @@
       "estado": "realizado"
     },
     {
+      "fecha": "16 07 2019",
+      "estado": "base",
+      "nombre": "PUCU",
+      "galería": [
+        {
+          "url": "/images/uploads/038_dibujo.png",
+          "tipo": "sketch"
+        }
+      ]
+    },
+    {
       "fecha": "01 09 2017",
       "estado": "noRealizado",
       "nombre": "SUELO COMUN",
@@ -590,17 +601,6 @@
         {
           "url": "/images/uploads/0001_361_iso.png",
           "tipo": "planimetrias"
-        }
-      ]
-    },
-    {
-      "fecha": "16 07 2019",
-      "estado": "base",
-      "nombre": "PUCU",
-      "galería": [
-        {
-          "url": "/images/uploads/038_dibujo.png",
-          "tipo": "sketch"
         }
       ]
     }
