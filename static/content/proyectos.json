@@ -463,6 +463,10 @@
           "tipo": "planimetrias"
         },
         {
+          "url": "/images/uploads/025_v0b.png",
+          "tipo": "vista3d"
+        },
+        {
           "url": "/images/uploads/025_v0c.png",
           "tipo": "vista3d"
         },
