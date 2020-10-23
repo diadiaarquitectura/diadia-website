@@ -459,6 +459,10 @@
       "nombre": "MASTERPLAN SAN FRANCISCO",
       "galería": [
         {
+          "url": "/images/uploads/025_corteb2.png",
+          "tipo": "planimetrias"
+        },
+        {
           "url": "/images/uploads/025_v0c.png",
           "tipo": "vista3d"
         },
