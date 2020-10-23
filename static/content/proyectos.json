@@ -451,6 +451,14 @@
         {
           "tipo": "diagramas",
           "url": "/images/uploads/022_d1.png"
+        },
+        {
+          "url": "/images/uploads/022_v1.png",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/022_v2.png",
+          "tipo": "vista3d"
         }
       ]
     },
