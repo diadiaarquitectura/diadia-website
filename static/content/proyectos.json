@@ -449,15 +449,15 @@
       "nombre": "PAZ SOLDAN",
       "galería": [
         {
+          "url": "/images/uploads/022_planonegro.png",
+          "tipo": "planimetrias"
+        },
+        {
           "tipo": "diagramas",
           "url": "/images/uploads/022_d1.png"
         },
         {
           "url": "/images/uploads/022_iso.png",
-          "tipo": "planimetrias"
-        },
-        {
-          "url": "/images/uploads/022_planonegro.png",
           "tipo": "planimetrias"
         },
         {
@@ -470,6 +470,10 @@
         },
         {
           "url": "/images/uploads/022_plano200.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/022_corte.png",
           "tipo": "planimetrias"
         },
         {
