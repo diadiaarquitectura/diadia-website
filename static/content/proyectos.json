@@ -603,6 +603,17 @@
           "tipo": "planimetrias"
         }
       ]
+    },
+    {
+      "fecha": "23 10 2020",
+      "estado": "noRealizado",
+      "nombre": "PAZ SOLDAN",
+      "galería": [
+        {
+          "tipo": "diagramas",
+          "url": "/images/uploads/022_d1.png"
+        }
+      ]
     }
   ]
 }
