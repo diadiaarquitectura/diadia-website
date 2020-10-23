@@ -592,6 +592,17 @@
           "tipo": "planimetrias"
         }
       ]
+    },
+    {
+      "fecha": "16 07 2019",
+      "estado": "base",
+      "nombre": "PUCU",
+      "galería": [
+        {
+          "url": "/images/uploads/038_dibujo.png",
+          "tipo": "sketch"
+        }
+      ]
     }
   ]
 }
