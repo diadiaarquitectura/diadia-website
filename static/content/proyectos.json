@@ -623,10 +623,6 @@
           "tipo": "diagramas"
         },
         {
-          "url": "/images/uploads/012_v01.png",
-          "tipo": "diagramas"
-        },
-        {
           "url": "/images/uploads/012_iso1.png",
           "tipo": "diagramas"
         },
@@ -636,6 +632,10 @@
         },
         {
           "url": "/images/uploads/012_iso3.png",
+          "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/012_v01.png",
           "tipo": "diagramas"
         }
       ]
