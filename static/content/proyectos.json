@@ -594,6 +594,25 @@
       ]
     },
     {
+      "fecha": "24 10 2017",
+      "estado": "noRealizado",
+      "nombre": "CIUDAD HORIZONTE",
+      "galería": [
+        {
+          "url": "/images/uploads/012_v00.png",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/012_plan1.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/012_v01.png",
+          "tipo": "diagramas"
+        }
+      ]
+    },
+    {
       "fecha": "08 12 2016",
       "estado": "noRealizado",
       "nombre": "NUOVA PIAZZA COMUNITÁ EUROPEA",
