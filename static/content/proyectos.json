@@ -710,6 +710,14 @@
         {
           "url": "/images/uploads/027_iso4.png",
           "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/027_esquema.png",
+          "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/027_esquema2.png",
+          "tipo": "diagramas"
         }
       ]
     }
