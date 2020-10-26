@@ -594,6 +594,41 @@
       ]
     },
     {
+      "fecha": "26 10 2017",
+      "estado": "base",
+      "nombre": "LINEAMIENTOS ESPACIOS ABIERTOS INFRAESTRUCTURAS EDUCATIVAS\n",
+      "galería": [
+        {
+          "url": "/images/uploads/027_iso4.png",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/027_esquema.png",
+          "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/027_esquema2.png",
+          "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/027_p.png",
+          "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/027_s.png",
+          "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/027_iso2.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/027_iso3.png",
+          "tipo": "planimetrias"
+        }
+      ]
+    },
+    {
       "fecha": "24 10 2017",
       "estado": "noRealizado",
       "nombre": "CIUDAD HORIZONTE",
@@ -698,41 +733,6 @@
         },
         {
           "url": "/images/uploads/0001_361_iso.png",
-          "tipo": "planimetrias"
-        }
-      ]
-    },
-    {
-      "fecha": "26 10 2017",
-      "estado": "base",
-      "nombre": "LINEAMIENTOS ESPACIOS ABIERTOS INFRAESTRUCTURAS EDUCATIVAS\n",
-      "galería": [
-        {
-          "url": "/images/uploads/027_iso4.png",
-          "tipo": "vista3d"
-        },
-        {
-          "url": "/images/uploads/027_esquema.png",
-          "tipo": "diagramas"
-        },
-        {
-          "url": "/images/uploads/027_esquema2.png",
-          "tipo": "diagramas"
-        },
-        {
-          "url": "/images/uploads/027_p.png",
-          "tipo": "diagramas"
-        },
-        {
-          "url": "/images/uploads/027_s.png",
-          "tipo": "diagramas"
-        },
-        {
-          "url": "/images/uploads/027_iso2.png",
-          "tipo": "planimetrias"
-        },
-        {
-          "url": "/images/uploads/027_iso3.png",
           "tipo": "planimetrias"
         }
       ]
