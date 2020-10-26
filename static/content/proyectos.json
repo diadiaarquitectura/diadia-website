@@ -701,6 +701,17 @@
           "tipo": "planimetrias"
         }
       ]
+    },
+    {
+      "fecha": "26 10 2017",
+      "estado": "base",
+      "nombre": "LINEAMIENTOS ESPACIOS ABIERTOS INFRAESTRUCTURAS EDUCATIVAS\n",
+      "galería": [
+        {
+          "url": "/images/uploads/027_iso4.png",
+          "tipo": "vista3d"
+        }
+      ]
     }
   ]
 }
