@@ -599,10 +599,6 @@
       "nombre": "CIUDAD HORIZONTE",
       "galería": [
         {
-          "url": "/images/uploads/012_plan1.png",
-          "tipo": "planimetrias"
-        },
-        {
           "url": "/images/uploads/012_v00.png",
           "tipo": "vista3d"
         },
@@ -633,6 +629,10 @@
         {
           "url": "/images/uploads/012_iso3.png",
           "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/012_plan1.png",
+          "tipo": "planimetrias"
         },
         {
           "url": "/images/uploads/012_v01.png",
