@@ -345,6 +345,18 @@
         {
           "url": "/images/uploads/038_dibujo.png",
           "tipo": "sketch"
+        },
+        {
+          "url": "/images/uploads/038_plotplan.png",
+          "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/038_plotplan2.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/038_indicadores.png",
+          "tipo": "diagramas"
         }
       ]
     },
