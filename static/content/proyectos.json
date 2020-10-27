@@ -707,6 +707,10 @@
         {
           "url": "/images/uploads/016_sec.png",
           "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/016_maq.png",
+          "tipo": "maquetas"
         }
       ]
     },
