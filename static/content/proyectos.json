@@ -689,15 +689,23 @@
       "nombre": "ESCUELA DEL PATIO CIRCULAR",
       "galería": [
         {
-          "url": "/images/uploads/016_plotplan.png",
-          "tipo": "diagramas"
-        },
-        {
           "url": "/images/uploads/016_plotplan1.png",
           "tipo": "diagramas"
         },
         {
+          "url": "/images/uploads/016_plotplan.png",
+          "tipo": "diagramas"
+        },
+        {
           "url": "/images/uploads/016_iso.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/016_plan.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/016_sec.png",
           "tipo": "planimetrias"
         }
       ]
