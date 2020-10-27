@@ -357,6 +357,18 @@
         {
           "url": "/images/uploads/038_indicadores.png",
           "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/038_diagram.png",
+          "tipo": "sketch"
+        },
+        {
+          "url": "/images/uploads/038_diagram1.png",
+          "tipo": "sketch"
+        },
+        {
+          "url": "/images/uploads/038_foto.png",
+          "tipo": "base"
         }
       ]
     },
