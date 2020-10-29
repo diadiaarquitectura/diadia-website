@@ -59,6 +59,17 @@
       ]
     },
     {
+      "fecha": "29 09 2019",
+      "estado": "noRealizado",
+      "nombre": "UNIVERSIDAD CIENTIFICA DEL SUR E1",
+      "galería": [
+        {
+          "url": "/images/uploads/041_v01.png",
+          "tipo": "vista3d"
+        }
+      ]
+    },
+    {
       "fecha": "16 07 2020",
       "estado": "base",
       "nombre": "YAKUMAMA",
