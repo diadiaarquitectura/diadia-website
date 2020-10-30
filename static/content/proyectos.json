@@ -3,8 +3,12 @@
     {
       "fecha": "09 10 2020",
       "estado": "realizado",
-      "nombre": "UNIVERSIDAD CIENTIFICA DEL SUR",
+      "nombre": "UNIVERSIDAD CIENTIFICA DEL SUR\nETAPA 0",
       "galería": [
+        {
+          "url": "/images/uploads/045_f01.png",
+          "tipo": "fotoObra"
+        },
         {
           "url": "/images/uploads/045_01.jpg",
           "tipo": "vista3d"
