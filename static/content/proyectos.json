@@ -86,6 +86,14 @@
         {
           "url": "/images/uploads/041_v05.png",
           "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/041_plot-plan.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/041_diagramaetapas.png",
+          "tipo": "diagramas"
         }
       ]
     },
