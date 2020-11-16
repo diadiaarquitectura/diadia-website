@@ -851,6 +851,14 @@
         {
           "url": "/images/uploads/0001_361_iso.png",
           "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/0001_techo.png",
+          "tipo": "fotoObra"
+        },
+        {
+          "url": "/images/uploads/0001_f.png",
+          "tipo": "base"
         }
       ]
     }
