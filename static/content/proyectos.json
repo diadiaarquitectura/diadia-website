@@ -824,6 +824,14 @@
         {
           "url": "/images/uploads/005_iso.png",
           "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/005_plantasesquema.png",
+          "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/005_plotplan.png",
+          "tipo": "planimetrias"
         }
       ]
     },
