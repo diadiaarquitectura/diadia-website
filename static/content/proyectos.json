@@ -832,6 +832,14 @@
         {
           "url": "/images/uploads/005_plotplan.png",
           "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/005_cortelongitudinal.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/005_v00.png",
+          "tipo": "vista3d"
         }
       ]
     },
