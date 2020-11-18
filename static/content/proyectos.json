@@ -811,6 +811,10 @@
       "nombre": "NUOVA PIAZZA COMUNITÁ EUROPEA",
       "galería": [
         {
+          "url": "/images/uploads/010_diagrama2.png",
+          "tipo": "diagramas"
+        },
+        {
           "url": "/images/uploads/010_diagrama.png",
           "tipo": "diagramas"
         },
