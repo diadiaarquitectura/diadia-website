@@ -119,8 +119,20 @@
           "tipo": "diagramas"
         },
         {
+          "url": "/images/uploads/044_lagunas.png",
+          "tipo": "fotoObra"
+        },
+        {
           "url": "/images/uploads/044_01.jpg",
           "tipo": "sketch"
+        },
+        {
+          "url": "/images/uploads/044_02.png",
+          "tipo": "sketch"
+        },
+        {
+          "url": "/images/uploads/044_arquitectura.png",
+          "tipo": "fotoObra"
         }
       ]
     },
