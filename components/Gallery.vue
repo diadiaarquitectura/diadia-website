@@ -1,6 +1,6 @@
 <template lang="pug">
 #gallery
-  #loading(v-if='!isLoaded')
+  #loading(v-if='!isLoaded') cargando...
   #grid(:style='{ opacity: isLoaded ? 1 : 0 }')
     .grid-item.default(@click='showItem(item.nombre)', v-for='item in itemsDefault')
       img.image(:src='item.galería[0].url')
@@ -45,12 +45,6 @@ export default {
       filter: '.base',
     })
 
-    // this.masonry.on('arrangeComplete', () => {
-    //   console.log('hola')
-    //   this.masonry.layout()
-    //   document.getElementById('grid').style.top = 0
-    // })
-
     // images loaded
     this.imagesloaded = imagesLoaded(grid)
     this.imagesloaded.on('done', () => {
@@ -77,25 +71,31 @@ export default {
         filter: '.default',
       })
 
-      console.log('default')
+      setTimeout(() => {
+        this.masonry.layout()
+        this.reload()
+      }, 100)
     })
 
     this.$nuxt.$on('bases-selected', () => {
       this.masonry.arrange({
         filter: '.bases',
       })
+      this.reload()
     })
 
     this.$nuxt.$on('work-selected', () => {
       this.masonry.arrange({
         filter: '.work',
       })
+      this.reload()
     })
 
     this.$nuxt.$on('media-selected', () => {
       this.masonry.arrange({
         filter: '.media',
       })
+      this.reload()
     })
   },
 
@@ -190,6 +190,13 @@ export default {
   methods: {
     ...mapMutations({ setCurrentProject: 'setCurrentProject' }),
 
+    reload() {
+      // document.querySelector('#grid').style.display = 'none'
+      // setTimeout(() => {
+      //   document.querySelector('#grid').style.display = 'block'
+      // }, 10)
+    },
+
     showItem(name) {
       for (let i = 0; i < this.items.length; i++) {
         let item = this.items[i]
@@ -236,6 +243,10 @@ export default {
   scrollbar-width: thin;
 
   #loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
     width: 100%;
     height: 100%;
     display: flex;
