@@ -2,13 +2,7 @@
 #container
   #container-inner
     transition(name='fade')
-      gallery-default(v-if='currentSection == "gallery-default"')
-    transition(name='fade')
-      gallery-work(v-if='currentSection == "gallery-work"')
-    transition(name='fade')
-      gallery-media(v-if='currentSection == "gallery-media"')
-    transition(name='fade')
-      gallery-bases(v-if='currentSection == "gallery-bases"')
+      gallery(v-show='currentSection.includes("gallery")')
     transition(name='fade')
       studio(v-if='currentSection == "studio"')
     transition(name='fade')
@@ -18,10 +12,7 @@
 
 <script>
 import TopBar from '~/components/TopBar'
-import GalleryDefault from '~/components/GalleryDefault'
-import GalleryWork from '~/components/GalleryWork'
-import GalleryMedia from '~/components/GalleryMedia'
-import GalleryBases from '~/components/GalleryBases'
+import Gallery from '~/components/Gallery'
 import Studio from '~/components/Studio'
 import Contact from '~/components/Contact'
 import { mapGetters } from 'vuex'
@@ -29,10 +20,7 @@ import { mapGetters } from 'vuex'
 export default {
   components: {
     TopBar,
-    GalleryDefault,
-    GalleryWork,
-    GalleryMedia,
-    GalleryBases,
+    Gallery,
     Studio,
     Contact,
   },

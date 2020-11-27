@@ -27,7 +27,7 @@ export default {
     }
 
     let urls
-    let projects, studio, contact, bases
+    let projects, studio, contact
 
     axios.get('content/home.json').then((response) => {
       this.setHomeInfo(response.data)
@@ -37,28 +37,25 @@ export default {
           this.setStudioInfo(response.data)
           axios.get('content/contacto.json').then((response) => {
             this.setContactInfo(response.data)
-            axios.get('content/bases.json').then((response) => {
-              this.setBasesInfo(response.data.bases)
-              urls = [
-                '/images/icons/icon-uso.svg',
-                '/images/icons/icon-archivo.svg',
-                '/images/icons/icon-tiempo.svg',
-                '/images/arrow-down.svg',
-                '/images/arrow-left.svg',
-                '/images/arrow-right.svg',
-                '/images/close.svg',
-                '/images/diadia-logo-300.svg',
-                '/images/hamburger.svg',
-                '/images/logo-diadia.svg',
-              ]
+            urls = [
+              '/images/icons/icon-uso.svg',
+              '/images/icons/icon-archivo.svg',
+              '/images/icons/icon-tiempo.svg',
+              '/images/arrow-down.svg',
+              '/images/arrow-left.svg',
+              '/images/arrow-right.svg',
+              '/images/close.svg',
+              '/images/diadia-logo-300.svg',
+              '/images/hamburger.svg',
+              '/images/logo-diadia.svg',
+            ]
 
-              this.loader = new Loader('loading-canvas')
+            this.loader = new Loader('loading-canvas')
 
-              this.preloadImages(urls, () => {
-                setTimeout(() => {
-                  this.isDataLoaded = true
-                }, 1000)
-              })
+            this.preloadImages(urls, () => {
+              setTimeout(() => {
+                this.isDataLoaded = true
+              }, 1000)
             })
           })
         })
@@ -71,7 +68,6 @@ export default {
       setProjects: 'setProjects',
       setStudioInfo: 'setStudioInfo',
       setContactInfo: 'setContactInfo',
-      setBasesInfo: 'setBasesInfo',
       setHomeInfo: 'setHomeInfo',
     }),
 
@@ -97,6 +93,7 @@ export default {
 
     gotoHome() {
       if (!this.isDataLoaded) return
+      this.$nuxt.$emit('default-selected')
       let height = document.getElementById('container').offsetTop
       gsap.to('#main', { top: -height, duration: 1, ease: 'power2.out' })
     },

@@ -11,13 +11,14 @@
         .text(v-html='homeInfo.texto')
       #arrow-down
         a(href='#', @click='gotoHome()')
-          img(src='images/arrow-down.svg')
+          img(src='images/arrow-home-down.svg')
 </template>
 
 <script>
 import gsap from 'gsap'
 import imagesLoaded from 'imagesloaded'
 import { mapGetters } from 'vuex'
+import { WheelGestures } from 'wheel-gestures'
 
 export default {
   mounted() {
@@ -29,12 +30,23 @@ export default {
     this.$nuxt.$on('reload-home', () => {
       this.animateDown()
     })
+
+    const wheelGestures = WheelGestures()
+    const element = window.document.querySelector('#home')
+    wheelGestures.observe(element)
+
+    wheelGestures.on('wheel', (wheelEventState) => {
+      if (wheelEventState.isStart) {
+        this.gotoHome()
+      }
+    })
   },
 
   methods: {
     gotoHome() {
       let height = document.getElementById('container').offsetTop
       gsap.to('#main', { top: -height, duration: 1, ease: 'power2.out' })
+      this.$nuxt.$emit('default-selected')
     },
 
     animateUp() {

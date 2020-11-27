@@ -1,6 +1,6 @@
 <template lang="pug">
 #studio
-  #loading-bases(v-if='!isLoaded')
+  #loading(v-if='!isLoaded')
   .grid(:style='{ opacity: isLoaded ? 1 : 0 }')
     .grid-item(v-for='image in studio.galería')
       img.image(:src='image.url')
@@ -37,7 +37,6 @@ export default {
         this.isLoaded = true
       })
       this.masonry.layout()
-      // window.dispatchEvent(new Event('resize'))
     })
 
     this.imagesloaded.on('progress', () => {
@@ -97,7 +96,7 @@ export default {
   scrollbar-color: #ddd #f0f0f0;
   scrollbar-width: thin;
 
-  #loading-bases {
+  #loading {
     width: 100%;
     height: 100%;
     display: flex;

@@ -7,7 +7,7 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   sodipodi:docname="arrow-down.svg"
+   sodipodi:docname="arrow-up.svg"
    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
    id="svg3895"
    version="1.1"
@@ -54,7 +54,7 @@
      inkscape:groupmode="layer"
      inkscape:label="Capa 1">
     <g
-       transform="matrix(0.40144986,0,0,1.0372449,3.4311348,-28.229584)"
+       transform="matrix(-0.40144986,0,0,-1.0372449,13.905521,612.83388)"
        style="opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
        id="g862">
       <path

@@ -89,18 +89,23 @@ export default {
     onProjectsClick() {
       this.hideMobileMenu()
       this.setCurrentSection('gallery-default')
+      this.$nuxt.$emit('default-selected')
+      console.log('click pro')
     },
 
     onGalleryWorkClick() {
       this.setCurrentSection('gallery-work')
+      this.$nuxt.$emit('work-selected')
     },
 
     onGalleryMediaClick() {
       this.setCurrentSection('gallery-media')
+      this.$nuxt.$emit('media-selected')
     },
 
     onGalleryBasesClick() {
       this.setCurrentSection('gallery-bases')
+      this.$nuxt.$emit('bases-selected')
     },
 
     showMobileMenu() {
@@ -190,6 +195,7 @@ export default {
   #logo
     position: absolute
     top: 45px
+    margin-left: 1%
     width: 170px
 
   #filters
@@ -225,6 +231,7 @@ export default {
     position: absolute
     right: 0px
     top: 70px
+    margin-right: 1%
 
     ul
       list-style: none
