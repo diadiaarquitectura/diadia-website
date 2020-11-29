@@ -27,7 +27,7 @@ export default {
 			}
 		]
 	},
-	loading: { color: '#fff' },
+	loading: false,
 	css: [],
 	plugins: [],
 	buildModules: [],

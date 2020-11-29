@@ -19,7 +19,7 @@ export default class {
 				msk.fill('white')
 				msk.circle(25, 25, 25)
 
-				let h = p.lerp(13, 37, p.sqrt(this.t))
+				let h = p.lerp(13, 37, this.t)
 
 				bg.background('white')
 				bg.noStroke()
@@ -31,10 +31,6 @@ export default class {
 				p.image(clone, 0, 0)
 				p.noFill()
 				p.circle(25, 25, 25)
-			}
-
-			function ease(t) {
-				return t < 0.5 ? 4 * p.pow(t, 3) : 1 - p.pow(-2 * t + 2, 3) / 2
 			}
 		}
 

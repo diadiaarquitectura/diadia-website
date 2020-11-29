@@ -17,16 +17,12 @@
     "gsap": "^3.3.1",
     "image-preloader": "^1.1.1",
     "imagesloaded": "^4.1.4",
-    "in-view": "^0.6.1",
     "isotope-layout": "^3.0.6",
-    "lazy-load-images": "^1.0.1",
-    "magic-grid": "^3.2.4",
     "node-sass": "^4.13.0",
     "pug": "^2.0.4",
     "pug-plain-loader": "^1.0.0",
     "sass-loader": "^8.0.0",
     "tippy.js": "^6.2.6",
-    "vue-masonry-wall": "^0.2.5",
     "wheel-gestures": "^2.2.3"
   },
   "devDependencies": {
