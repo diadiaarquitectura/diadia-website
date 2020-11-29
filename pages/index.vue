@@ -22,10 +22,6 @@ export default {
     window.addEventListener('resize', this.onWindowResize)
     window.addEventListener('onorientationchange', this.onOrientationChange)
 
-    // document.ontouchmove = function (event) {
-    //   event.preventDefault()
-    // }
-
     let urls
     let projects, studio, contact
 
@@ -93,7 +89,6 @@ export default {
 
     gotoHome() {
       if (!this.isDataLoaded) return
-      // this.$nuxt.$emit('default-selected')
       let height = document.getElementById('container').offsetTop
       gsap.to('#main', { top: -height, duration: 1, ease: 'power2.out' })
     },
