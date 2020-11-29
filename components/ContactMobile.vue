@@ -1,9 +1,9 @@
 <template lang="pug">
-#contact
+#contact-mobile
   transition(name='fade')
-    .content.row(v-show='isLoaded')
-      .pic.col-md-8(:style='{ backgroundImage: "url(" + contactInfo.imagen + ")" }')
-      .column.col-md-4
+    .content(v-show='isLoaded')
+      .pic(:style='{ backgroundImage: "url(" + contactInfo.imagen + ")" }')
+      .column
         .text(v-html='contactInfo.mensaje')
         .title Estudio
         .text(v-html='contactInfo.direccion')
@@ -21,7 +21,7 @@ import imagesloaded from 'imagesloaded'
 
 export default {
   mounted() {
-    imagesloaded('#contact .content .pic', { background: true }, () => {
+    imagesloaded('#contact-mobile .content .pic', { background: true }, () => {
       this.isLoaded = true
     })
   },
@@ -47,14 +47,16 @@ export default {
 .fade-leave-to
   opacity: 0
 
-#contact
+#contact-mobile
   position: absolute
-  top: 30px
+  top: 130px
   width: 100%
   height: 100%
   display: flex
   text-align: center
   align-items: center
+  display: inline-block
+  overflow-y: scroll
 
   .content
     max-width: 980px
@@ -64,6 +66,8 @@ export default {
     overflow: scroll
     font-size: 1.1rem
     overflow-x: hidden
+    margin-bottom: 50px
+    padding-bottom: 80px
 
     .title
       font-weight: bold
@@ -79,6 +83,13 @@ export default {
 
     .column
       text-align: left
-      padding-left: 25px
       padding-right: 10px
+      padding-left: 0
+      margin-bottom: 50px
+      margin-top: 20px
+
+    .pic
+      height: 40vh
+      img
+        max-width: 600px
 </style>

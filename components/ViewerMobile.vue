@@ -1,6 +1,6 @@
 <template lang="pug">
-#viewer(v-if='currentProject')
-  #viewer-inner
+#viewer-mobile(v-if='currentProject')
+  #viewer-mobile-inner
     #image
       .content
         img
@@ -36,30 +36,30 @@ export default {
     console.log('show viewer')
     window.addEventListener('keydown', this.onKeydown)
 
-    let image = document.querySelector('#image img')
+    let image = document.querySelector('#viewer-mobile #image img')
     image.style.opacity = 1
     image.src = this.currentProject.galería[0].url
 
     let animation = gsap.timeline()
 
-    let close = document.querySelector('#viewer #close')
-    let download = document.querySelector('#viewer #download')
-    let arrowLeft = document.querySelector('#viewer #arrow-left')
-    let arrowRight = document.querySelector('#viewer #arrow-right')
+    let close = document.querySelector('#viewer-mobile #close')
+    let download = document.querySelector('#viewer-mobile #download')
+    let arrowLeft = document.querySelector('#viewer-mobile #arrow-left')
+    let arrowRight = document.querySelector('#viewer-mobile #arrow-right')
 
     animation.set(close, { opacity: 0, scale: 0.6 }, 0)
     animation.set(download, { opacity: 0, scale: 0.6 }, 0)
     animation.set(arrowLeft, { opacity: 0, scale: 0.6 }, 0)
     animation.set(arrowRight, { opacity: 0, scale: 0.6 }, 0)
 
-    imagesloaded('#viewer #viewer-inner', () => {
+    imagesloaded('#viewer-mobile #viewer-mobile-inner', () => {
       animation.to(close, { opacity: 1, scale: 1, duration: 0.2 }, 0)
       animation.to(download, { opacity: 1, scale: 1, duration: 0.2 }, 0)
       animation.to(arrowLeft, { opacity: 1, scale: 1, duration: 0.2 }, 0)
       animation.to(arrowRight, { opacity: 1, scale: 1, duration: 0.2 }, 0)
     })
 
-    tippy('#viewer #download', {
+    tippy('#viewer-mobile #download', {
       content: 'descargar',
     })
   },
@@ -106,7 +106,7 @@ export default {
     },
 
     loadImage() {
-      let image = document.querySelector('#viewer #image img')
+      let image = document.querySelector('#viewer-mobile #image img')
       image.style.opacity = 0.3
 
       let timer = setTimeout(() => {
@@ -145,7 +145,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-#viewer
+#viewer-mobile
   position: fixed
   left: 0
   top: 0
@@ -157,7 +157,7 @@ export default {
   justify-content: center
   align-items: center
 
-  #viewer-inner
+  #viewer-mobile-inner
     position: relative
     display: flex
     justify-content: center
@@ -240,7 +240,7 @@ export default {
     right: 60px
 
 @media (max-width: 768px)
-  #viewer
+  #viewer-mobile
     #arrow-left
       left: 5px
       img

@@ -1,12 +1,8 @@
 <template lang="pug">
-#gallery
+#gallery-mobile
   #loading(v-if='!isLoaded')
-    #loading-gallery
+    #loading-gallery-mobile
     .message cargando {{ parseInt(loader.t * 100) }}%
-  #arrow-up(@click='onUp()')
-    img(src='/images/arrow-up.svg')
-  #arrow-down(@click='onDown()')
-    img(src='/images/arrow-down.svg')
   .grid(:style='{ opacity: isLoaded ? 1 : 0 }')
     .grid-item.default(@click='showItem(item.nombre)', v-for='item in itemsDefault')
       img.image(:src='item.galería[0].url')
@@ -21,11 +17,11 @@
       img.image(:src='item.galería[0].url')
       .hover {{ item.nombre.toUpperCase() }}
   transition(name='fade')
-    viewer(v-if='isShowingItem')
+    viewer-mobile(v-if='isShowingItem')
 </template>
 
 <script>
-import Viewer from '../components/Viewer'
+import ViewerMobile from '../components/ViewerMobile'
 import { mapGetters } from 'vuex'
 import { mapMutations } from 'vuex'
 import imagesLoaded from 'imagesloaded'
@@ -35,26 +31,16 @@ import Isotope from 'isotope-layout'
 import { WheelGestures } from 'wheel-gestures'
 
 export default {
-  components: { Viewer },
+  components: { ViewerMobile },
 
   props: ['type'],
 
   mounted() {
     let counter = 0
-    this.loader = new Loader('loading-gallery')
-    let grid = document.querySelector('#gallery .grid')
+    this.loader = new Loader('loading-gallery-mobile')
+    let grid = document.querySelector('#gallery-mobile .grid')
 
     requestAnimationFrame(this.update)
-
-    grid.addEventListener('wheel', (e) => {
-      if (e.deltaY > 0) {
-        this.scrollTop -= 40
-      }
-
-      if (e.deltaY < 0) {
-        this.scrollTop += 40
-      }
-    })
 
     this.imagesloaded = imagesLoaded(grid)
 
@@ -68,7 +54,6 @@ export default {
     // images loaded
     this.imagesloaded.on('done', () => {
       this.isLoaded = true
-      console.log('LOADED!')
     })
 
     this.imagesloaded.on('progress', () => {
@@ -228,32 +213,16 @@ export default {
     ...mapMutations({ setCurrentProject: 'setCurrentProject' }),
 
     relocate() {
-      this.scrollTop = 0
-    },
+      let grid = document.querySelector('#gallery-mobile .grid')
+      if (!grid) return
 
-    onUp() {
-      gsap.to(this, { scrollTop: '+=100' })
-    },
-
-    onDown() {
-      gsap.to(this, { scrollTop: '-=100' })
+      grid.style.display = 'none'
+      setTimeout(() => {
+        grid.style.display = 'block'
+      }, 50)
     },
 
     update() {
-      let grid = document.querySelector('#gallery .grid')
-      if (!grid) return
-
-      let gridHeight = grid.getBoundingClientRect().height + 140
-
-      if (this.scrollTop < window.innerHeight - gridHeight) {
-        this.scrollTop = window.innerHeight - gridHeight
-      }
-
-      if (this.scrollTop > 0) {
-        this.scrollTop = 0
-      }
-
-      grid.style.top = this.scrollTop + 'px'
       requestAnimationFrame(this.update)
     },
 
@@ -276,7 +245,6 @@ export default {
       isLoaded: false,
       masonry: null,
       imagesloaded: null,
-      scrollTop: 0,
       loader: { t: 0 },
     }
   },
@@ -293,37 +261,16 @@ export default {
   opacity: 0;
 }
 
-#gallery {
+#gallery-mobile {
   position: absolute;
-  top: 150px;
-  height: calc(100% - 170px);
   width: 100%;
   padding: 0 3%;
-  overflow-y: hidden;
+  overflow-y: scroll;
   overflow-x: hidden;
   scrollbar-color: #ddd #f0f0f0;
   scrollbar-width: thin;
-
-  #arrow-up,
-  #arrow-down {
-    position: absolute;
-    right: 1%;
-    width: 1%;
-    height: 1%;
-    cursor: pointer;
-
-    img {
-      width: 100%;
-    }
-  }
-
-  #arrow-up {
-    top: calc(45% - 3%);
-  }
-
-  #arrow-down {
-    top: calc(45% + 3%);
-  }
+  top: 162px;
+  height: calc(100% - 200px);
 
   #loading {
     width: 100%;
@@ -333,7 +280,7 @@ export default {
     flex-direction: column;
     align-items: center;
 
-    #loading-gallery {
+    #loading-gallery-mobile {
       display: block;
       height: 50px;
     }
@@ -346,10 +293,12 @@ export default {
 
   .grid {
     opacity: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
     transition: opacity 0.6s;
 
     .grid-item {
-      width: 31.9%;
+      width: 100%;
       margin-left: 0.7%;
       margin-right: 0.7%;
       margin-top: 0;
@@ -359,28 +308,26 @@ export default {
       position: relative;
 
       .hover {
-        position: absolute;
-        background-color: rgba(255, 255, 255, 0);
-        color: rgba(0, 0, 0, 0);
         width: 100%;
         height: 100%;
-        top: 0;
-        left: 0;
         font-size: 0.9rem;
         letter-spacing: 1px;
-        display: flex;
         justify-content: center;
         align-items: center;
         transition: all 0.3s;
-
-        &:hover {
-          background-color: rgba(255, 255, 255, 0.85);
-          color: rgba(0, 0, 0, 1);
-          transition: all 0.3s;
-        }
+        position: relative;
+        background-color: rgba(255, 255, 255, 0);
+        color: black;
+        display: block;
+        padding: 7px 0;
+        text-align: left;
+        top: 0;
+        left: 0;
       }
 
       img {
+        position: relative;
+        display: block;
         width: 100% !important;
         height: auto !important;
       }

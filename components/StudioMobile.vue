@@ -1,12 +1,8 @@
 <template lang="pug">
-#studio
+#studio-mobile
   #loading(v-if='!isLoaded')
     #loading-studio
     .message cargando {{ parseInt(loader.t * 100) }}%
-  #arrow-up(@click='onUp()', v-if='studio.galería.length > 6')
-    img(src='/images/arrow-up.svg')
-  #arrow-down(@click='onDown()', v-if='studio.galería.length > 6')
-    img(src='/images/arrow-down.svg')
   .grid(:style='{ opacity: isLoaded ? 1 : 0 }')
     .grid-item(v-for='image in studio.galería')
       img.image(:src='image.url')
@@ -28,19 +24,9 @@ export default {
   mounted() {
     let counter = 0
     this.loader = new Loader('loading-studio')
-    let grid = document.querySelector('#studio .grid')
+    let grid = document.querySelector('#studio-mobile .grid')
 
     requestAnimationFrame(this.update)
-
-    grid.addEventListener('wheel', (e) => {
-      if (e.deltaY > 0) {
-        this.scrollTop -= 40
-      }
-
-      if (e.deltaY < 0) {
-        this.scrollTop += 40
-      }
-    })
 
     this.imagesloaded = imagesLoaded(grid)
 
@@ -84,29 +70,7 @@ export default {
   methods: {
     ...mapMutations({ setCurrentProject: 'setCurrentProject' }),
 
-    onUp() {
-      gsap.to(this, { scrollTop: '+=100' })
-    },
-
-    onDown() {
-      gsap.to(this, { scrollTop: '-=100' })
-    },
-
     update() {
-      let grid = document.querySelector('#studio .grid')
-      if (!grid) return
-
-      let gridHeight = grid.getBoundingClientRect().height + 140
-
-      if (this.scrollTop < window.innerHeight - gridHeight) {
-        this.scrollTop = window.innerHeight - gridHeight
-      }
-
-      if (this.scrollTop > 0) {
-        this.scrollTop = 0
-      }
-
-      grid.style.top = this.scrollTop + 'px'
       requestAnimationFrame(this.update)
     },
   },
@@ -133,37 +97,16 @@ export default {
   opacity: 0;
 }
 
-#studio {
+#studio-mobile {
   position: absolute;
-  top: 150px;
-  height: calc(100% - 170px);
   width: 100%;
   padding: 0 3%;
-  overflow-y: hidden;
+  overflow-y: scroll;
   overflow-x: hidden;
   scrollbar-color: #ddd #f0f0f0;
   scrollbar-width: thin;
-
-  #arrow-up,
-  #arrow-down {
-    position: absolute;
-    right: 1%;
-    width: 1%;
-    height: 1%;
-    cursor: pointer;
-
-    img {
-      width: 100%;
-    }
-  }
-
-  #arrow-up {
-    top: calc(45% - 3%);
-  }
-
-  #arrow-down {
-    top: calc(45% + 3%);
-  }
+  top: 162px;
+  height: calc(100% - 200px);
 
   #loading {
     width: 100%;
@@ -187,46 +130,30 @@ export default {
   .grid {
     opacity: 0;
     transition: opacity 0.6s;
-
+    overflow-x: hidden;
+    overflow-y: hidden;
     .grid-item {
-      width: 31.9%;
       margin-left: 0.7%;
       margin-right: 0.7%;
       margin-top: 0;
       margin-bottom: 1.4%;
       float: left;
       position: relative;
+      width: 100%;
+
+      .hover {
+        position: relative;
+        background-color: white;
+        color: black;
+        display: inline-block;
+        padding: 7px 0;
+        text-align: left;
+        top: 0;
+        left: 0;
+      }
 
       img {
         width: 100% !important;
-      }
-    }
-  }
-}
-
-@media (max-width: 1200px) {
-  #studio {
-    top: 162px;
-    height: calc(100% - 200px);
-    .grid {
-      .grid-item {
-        width: 100%;
-        position: relative;
-
-        .hover {
-          position: relative;
-          background-color: white;
-          color: black;
-          display: inline-block;
-          padding: 7px 0;
-          text-align: left;
-          top: 0;
-          left: 0;
-
-          &:hover {
-            background-color: white;
-          }
-        }
       }
     }
   }

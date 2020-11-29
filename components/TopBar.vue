@@ -36,7 +36,7 @@
       li(:class='{ bold: currentSection.includes("gallery") }')
         a(href='#', @click='onProjectsClick()') PROYECTOS
       li(:class='{ bold: currentSection == "studio" }')
-        a(href='#', @click='setCurrentSection("studio")') ESTUDIO
+        a(href='#', @click='setCurrentSection("studio"); onStudio()') ESTUDIO
       li(:class='{ bold: currentSection == "contact" }')
         a(href='#', @click='setCurrentSection("contact")') CONTACTO
 
@@ -50,7 +50,7 @@
         li(:class='{ bold: currentSection.includes("gallery") }')
           a(href='#', @click='onProjectsClick()') PROYECTOS
         li(:class='{ bold: currentSection == "studio" }')
-          a(href='#', @click='setCurrentSection("studio"); hideMobileMenu()') ESTUDIO
+          a(href='#', @click='setCurrentSection("studio"); hideMobileMenu(); onStudio()') ESTUDIO
         li(:class='{ bold: currentSection == "contact" }')
           a(href='#', @click='setCurrentSection("contact"); hideMobileMenu()') CONTACTO
 </template>
@@ -79,6 +79,10 @@ export default {
       this.$nuxt.$emit('reload-home')
     },
 
+    onStudio() {
+      this.$nuxt.$emit('studio-selected')
+    },
+
     onVeilClick(e) {
       if (e.clientX < window.innerWidth - 250) {
         this.isMobileMenuActive = false
@@ -90,7 +94,6 @@ export default {
       this.hideMobileMenu()
       this.setCurrentSection('gallery-default')
       this.$nuxt.$emit('default-selected')
-      console.log('click pro')
     },
 
     onGalleryWorkClick() {
@@ -120,7 +123,6 @@ export default {
     },
 
     hideMobileMenu() {
-      // this.isMobileMenuActive = false
       let animation = gsap.timeline()
       animation
         .to('#menu-mobile .veil', { backgroundColor: 'rgba(0, 0, 0, 0)', duration: 0.2 }, 0)
@@ -195,7 +197,7 @@ export default {
   #logo
     position: absolute
     top: 45px
-    margin-left: 1%
+    margin-left: 4%
     width: 170px
 
   #filters
@@ -229,7 +231,7 @@ export default {
 
   #menu-desktop
     position: absolute
-    right: 0px
+    right: 3%
     top: 70px
     margin-right: 1%
 
@@ -256,6 +258,7 @@ export default {
 
   #menu-mobile
     display: none
+
     .veil
       position: fixed
       left: 0px
@@ -309,6 +312,7 @@ export default {
     #logo
       position: absolute
       top: 30px
+      margin: 0
       left: calc(50% - 85px)
 
     #filters
