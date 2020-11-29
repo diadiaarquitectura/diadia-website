@@ -6,7 +6,7 @@
       "nombre": "UNIVERSIDAD CIENTIFICA DEL SUR\nETAPA 0",
       "galería": [
         {
-          "url": "/images/uploads/045_f01.png",
+          "url": "/images/uploads/045_f01.jpg",
           "tipo": "fotoObra"
         },
         {
@@ -68,15 +68,15 @@
       "nombre": "UNIVERSIDAD CIENTIFICA DEL SUR E1",
       "galería": [
         {
-          "url": "/images/uploads/041_v01.png",
+          "url": "/images/uploads/041_v01.jpg",
           "tipo": "vista3d"
         },
         {
-          "url": "/images/uploads/041_v02.png",
+          "url": "/images/uploads/041_v02.jpg",
           "tipo": "vista3d"
         },
         {
-          "url": "/images/uploads/041_v03.png",
+          "url": "/images/uploads/041_v03.jpg",
           "tipo": "vista3d"
         },
         {
@@ -84,7 +84,7 @@
           "tipo": "vista3d"
         },
         {
-          "url": "/images/uploads/041_v05.png",
+          "url": "/images/uploads/041_v05.jpg",
           "tipo": "vista3d"
         },
         {
@@ -119,11 +119,11 @@
           "tipo": "diagramas"
         },
         {
-          "url": "/images/uploads/044_lagunas.png",
+          "url": "/images/uploads/044_lagunas.jpg",
           "tipo": "fotoObra"
         },
         {
-          "url": "/images/uploads/044_camino.png",
+          "url": "/images/uploads/044_camino.jpg",
           "tipo": "fotoObra"
         },
         {
@@ -135,7 +135,7 @@
           "tipo": "sketch"
         },
         {
-          "url": "/images/uploads/044_arquitectura.png",
+          "url": "/images/uploads/044_arquitectura.jpg",
           "tipo": "fotoObra"
         }
       ]
@@ -434,7 +434,7 @@
           "tipo": "sketch"
         },
         {
-          "url": "/images/uploads/038_foto.png",
+          "url": "/images/uploads/038_foto.jpg",
           "tipo": "base"
         }
       ]
@@ -608,23 +608,23 @@
           "tipo": "planimetrias"
         },
         {
-          "url": "/images/uploads/025_v0b.png",
+          "url": "/images/uploads/025_v0b.jpg",
           "tipo": "vista3d"
         },
         {
-          "url": "/images/uploads/025_v0c.png",
+          "url": "/images/uploads/025_v0c.jpg",
           "tipo": "vista3d"
         },
         {
-          "url": "/images/uploads/025_v3.png",
+          "url": "/images/uploads/025_v3.jpg",
           "tipo": "vista3d"
         },
         {
-          "url": "/images/uploads/025_v1.png",
+          "url": "/images/uploads/025_v1.jpg",
           "tipo": "vista3d"
         },
         {
-          "url": "/images/uploads/025_v2.png",
+          "url": "/images/uploads/025_v2.jpg",
           "tipo": "vista3d"
         },
         {
@@ -725,7 +725,7 @@
       "nombre": "CIUDAD HORIZONTE",
       "galería": [
         {
-          "url": "/images/uploads/012_v00.png",
+          "url": "/images/uploads/012_v00.jpg",
           "tipo": "vista3d"
         },
         {
@@ -858,7 +858,7 @@
           "tipo": "planimetrias"
         },
         {
-          "url": "/images/uploads/005_v00.png",
+          "url": "/images/uploads/005_v00.jpg",
           "tipo": "vista3d"
         }
       ]
@@ -889,7 +889,7 @@
           "tipo": "planimetrias"
         },
         {
-          "url": "/images/uploads/0001_techo.png",
+          "url": "/images/uploads/0001_techo.jpg",
           "tipo": "fotoObra"
         },
         {
