@@ -3,9 +3,9 @@
   #loading(v-if='!isLoaded')
     #loading-gallery
     .message cargando {{ parseInt(loader.t * 100) }}%
-  #arrow-up(@click='onUp()')
+  #arrow-up(@click='onUp()', v-if='isLoaded')
     img(src='/images/arrow-up.svg')
-  #arrow-down(@click='onDown()')
+  #arrow-down(@click='onDown()', v-if='isLoaded')
     img(src='/images/arrow-down.svg')
   .grid(:style='{ opacity: isLoaded ? 1 : 0 }')
     .grid-item.default(@click='showItem(item.nombre)', v-for='item in itemsDefault')
