@@ -77,7 +77,7 @@ export default {
   background-color: white;
   width: 100%;
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 0 2vw;
 
   #container-inner {
     position: relative;

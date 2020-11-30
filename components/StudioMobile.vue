@@ -25,6 +25,7 @@ export default {
     let counter = 0
     this.loader = new Loader('loading-studio')
     let grid = document.querySelector('#studio-mobile .grid')
+    document.querySelector('#studio-mobile').style.overflowY = 'hidden'
 
     requestAnimationFrame(this.update)
 
@@ -36,13 +37,17 @@ export default {
     })
 
     this.imagesloaded.on('done', () => {
+      document.querySelector('#studio-mobile').style.overflowY = 'scroll'
       this.isLoaded = true
     })
 
     this.imagesloaded.on('progress', () => {
       counter++
       this.loader.t = counter / this.imagesloaded.images.length
-      if (this.loader.t >= 1) this.isLoaded = true
+      if (this.loader.t >= 1) {
+        this.isLoaded = true
+        document.querySelector('#studio-mobile').style.overflowY = 'scroll'
+      }
       this.masonry.layout()
     })
 
@@ -100,7 +105,7 @@ export default {
 #studio-mobile {
   position: absolute;
   width: 100%;
-  padding: 0 3%;
+  padding: 0 3% 15vh 3%;
   overflow-y: scroll;
   overflow-x: hidden;
   scrollbar-color: #ddd #f0f0f0;

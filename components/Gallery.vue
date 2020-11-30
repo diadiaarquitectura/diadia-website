@@ -68,13 +68,16 @@ export default {
     // images loaded
     this.imagesloaded.on('done', () => {
       this.isLoaded = true
-      console.log('LOADED!')
+      this.$nuxt.$emit('page-loaded')
     })
 
     this.imagesloaded.on('progress', () => {
       counter++
       this.loader.t = counter / this.imagesloaded.images.length
-      if (this.loader.t >= 1) this.isLoaded = true
+      if (this.loader.t >= 1) {
+        this.isLoaded = true
+        this.$nuxt.$emit('page-loaded')
+      }
       this.masonry.layout()
     })
 

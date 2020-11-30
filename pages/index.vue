@@ -1,8 +1,8 @@
 <template lang="pug">
-#main
+#main.noselect
   #loading-canvas(v-if='!isDataLoaded')
   transition(name='fade')
-    .noselect(v-if='isDataLoaded')
+    .inner(v-if='isDataLoaded')
       home
       container
 </template>
@@ -131,6 +131,10 @@ export default {
   height: 100%;
   overflow: hidden;
 
+  .inner {
+    height: 100%;
+  }
+
   #loading-canvas {
     position: fixed;
     display: flex;
@@ -139,7 +143,7 @@ export default {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
   }
 }
 </style>

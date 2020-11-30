@@ -40,6 +40,7 @@ export default {
     this.loader = new Loader('loading-gallery-mobile')
     let grid = document.querySelector('#gallery-mobile .grid')
 
+    document.querySelector('#gallery-mobile').style.overflowY = 'hidden'
     requestAnimationFrame(this.update)
 
     this.imagesloaded = imagesLoaded(grid)
@@ -54,12 +55,19 @@ export default {
     // images loaded
     this.imagesloaded.on('done', () => {
       this.isLoaded = true
+      this.$nuxt.$emit('page-loaded')
+      document.querySelector('#gallery-mobile').style.overflowY = 'scroll'
     })
 
     this.imagesloaded.on('progress', () => {
       counter++
       this.loader.t = counter / this.imagesloaded.images.length
-      if (this.loader.t >= 1) this.isLoaded = true
+      if (this.loader.t >= 1) {
+        this.isLoaded = true
+        this.$nuxt.$emit('page-loaded')
+        document.querySelector('#gallery-mobile').style.overflowY = 'scroll'
+      }
+
       this.masonry.layout()
     })
 
@@ -264,7 +272,7 @@ export default {
 #gallery-mobile {
   position: absolute;
   width: 100%;
-  padding: 0 3%;
+  padding: 0 3% 15vh 3%;
   overflow-y: scroll;
   overflow-x: hidden;
   scrollbar-color: #ddd #f0f0f0;

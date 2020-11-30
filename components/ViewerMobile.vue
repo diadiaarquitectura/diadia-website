@@ -166,8 +166,9 @@ export default {
     #name
       position: absolute
       left: 0
-      top: -25px
+      top: 0
       letter-spacing: 1px
+      transform: translate(0, -100%);
 
     #image
       position: relative

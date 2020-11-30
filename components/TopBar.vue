@@ -3,7 +3,7 @@
   #logo
     a(href='#', @click='gotoHome()') 
       img(src='images/logo-diadia.svg', alt='diadia', width='100%')
-  #filters(:style='{ opacity: currentSection.includes("gallery") ? 1 : 0 }')
+  #filters(v-if="isLoaded" :style='{ opacity: currentSection.includes("gallery") ? 1 : 0 }')
     .filter
       a(
         href='#',
@@ -31,7 +31,7 @@
       ) 
         .label(:style='{ opacity: galleryWorkOpacity }') obra
         img(src='images/icons/icon-uso.svg', width='100%')
-  #menu-desktop(v-if='!isMobileMenu')
+  #menu-desktop(v-if='!isMobileMenu && isLoaded')
     ul
       li(:class='{ bold: currentSection.includes("gallery") }')
         a(href='#', @click='onProjectsClick()') PROYECTOS
@@ -40,10 +40,10 @@
       li(:class='{ bold: currentSection == "contact" }')
         a(href='#', @click='setCurrentSection("contact")') CONTACTO
 
-  #hamburger(v-if='isMobileMenu', @click='showMobileMenu()')
+  #hamburger(v-if='isMobileMenu && isLoaded', @click='showMobileMenu()')
     img(src='images/hamburger.svg')
 
-  #menu-mobile
+  #menu-mobile(v-if='isLoaded')
     .veil(@click='onVeilClick($event)')
     .content
       ul
@@ -69,6 +69,10 @@ export default {
         this.isMobileMenu = false
       }
     }, 100)
+
+    this.$nuxt.$on('page-loaded', () => {
+      this.isLoaded = true
+    })
   },
 
   methods: {
@@ -169,6 +173,7 @@ export default {
       isMouseOverWork: false,
       isMouseOverMedia: false,
       isMouseOverBases: false,
+      isLoaded: false
     }
   },
 }
@@ -190,7 +195,7 @@ export default {
 
   #hamburger
     position: absolute
-    right: 4px
+    right: 2.5vw
     top: 27px
     cursor: pointer
 

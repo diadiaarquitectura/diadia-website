@@ -60,14 +60,14 @@ export default {
 
   .content
     max-width: 980px
-    width: 100%
+    width: 90%
     margin: 0 auto
     background-color: white
     overflow: scroll
     font-size: 1.1rem
     overflow-x: hidden
     margin-bottom: 50px
-    padding-bottom: 80px
+    padding-bottom: 150px
 
     .title
       font-weight: bold

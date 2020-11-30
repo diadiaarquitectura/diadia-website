@@ -24,6 +24,11 @@ html {
   position: fixed;
 }
 
+/* #__nuxt, */
+#__layout {
+  height: 100%;
+}
+
 .noselect {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
