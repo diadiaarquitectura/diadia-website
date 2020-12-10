@@ -1,6 +1,7 @@
 <template lang="pug">
 #container
   #container-inner
+    top-bar
     transition(name='fade')
       gallery(v-show='!isMobile && currentSection.includes("gallery")')
     transition(name='fade')
@@ -13,7 +14,6 @@
       contact(v-show='!isMobile && currentSection == "contact"')
     transition(name='fade')
       contact-mobile(v-show='isMobile && currentSection == "contact"')
-    top-bar
 </template>
 
 <script>
@@ -43,7 +43,7 @@ export default {
 
   methods: {
     update() {
-      this.isMobile = window.innerWidth < 1200
+      this.isMobile = window.innerWidth < 768
       requestAnimationFrame(this.update)
     },
   },

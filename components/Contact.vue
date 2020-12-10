@@ -58,7 +58,7 @@ export default {
 
   .content
     max-width: 980px
-    width: 100%
+    width: 80%
     margin: 0 auto
     background-color: white
     overflow: scroll

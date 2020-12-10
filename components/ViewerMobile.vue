@@ -149,13 +149,13 @@ export default {
   position: fixed
   left: 0
   top: 0
-  z-index: 10
   width: 100vw
   height: 100vh
   background-color: rgba(255, 255, 255, 1)
   display: flex
   justify-content: center
   align-items: center
+  z-index: 5000
 
   #viewer-mobile-inner
     position: relative

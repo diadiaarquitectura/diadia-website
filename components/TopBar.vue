@@ -2,8 +2,8 @@
 #topbar
   #logo
     a(href='#', @click='gotoHome()') 
-      img(src='images/logo-diadia.svg', alt='diadia', width='100%')
-  #filters(v-if="isLoaded" :style='{ opacity: currentSection.includes("gallery") ? 1 : 0 }')
+      img(src='/images/logo-diadia.svg', width='100%')
+  #filters(v-if='isLoaded', :style='{ opacity: currentSection.includes("gallery") ? 1 : 0 }')
     .filter
       a(
         href='#',
@@ -12,7 +12,7 @@
         @click='onGalleryBasesClick()'
       )
         .label(:style='{ opacity: galleryBasesOpacity }') bases
-        img(src='images/icons/icon-tiempo.svg', width='100%')
+        img(src='/images/icons/icon-tiempo.svg', width='100%')
     .filter
       a(
         href='#',
@@ -173,7 +173,7 @@ export default {
       isMouseOverWork: false,
       isMouseOverMedia: false,
       isMouseOverBases: false,
-      isLoaded: false
+      isLoaded: false,
     }
   },
 }
@@ -192,6 +192,7 @@ export default {
   width: 100%
   height: 100px
   background-color: #00000000
+  z-index: 4000
 
   #hamburger
     position: absolute

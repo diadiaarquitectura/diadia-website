@@ -124,11 +124,13 @@ export default {
     #loading-studio {
       display: block;
       height: 50px;
+      transform: translate(0, -50px);
     }
 
     .message {
       display: block;
       color: black;
+      transform: translate(0, -50px);
     }
   }
 
@@ -137,6 +139,8 @@ export default {
     transition: opacity 0.6s;
     overflow-x: hidden;
     overflow-y: hidden;
+    margin-bottom: 100px;
+
     .grid-item {
       margin-left: 0.7%;
       margin-right: 0.7%;

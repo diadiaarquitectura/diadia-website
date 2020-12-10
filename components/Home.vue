@@ -132,6 +132,7 @@ export default {
   .content
     text-align: center
     font-size: 1.6rem
+    transform: translate(0, -3vh)
 
     .icons
       opacity: 0
