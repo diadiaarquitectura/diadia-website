@@ -17,7 +17,7 @@
       a(href='#')
         img(src='images/close.svg', @click='closeProject()', width='100%')
     #download(v-if='currentProject.descargable')
-      a(href='currentProject.descargable', target='__blank')
+      a(:href="currentProject.descargable", target='__blank')
         img(src='images/download.svg', width='100%')
 </template>
 
