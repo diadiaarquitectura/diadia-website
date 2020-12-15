@@ -65,7 +65,7 @@ export default {
     this.masonry = new Isotope(grid, {
       itemSelector: '.grid-item',
       filter: '.base',
-      layoutMode: 'fitColumns',
+      layoutMode: 'masonry',
     })
 
     // images loaded
