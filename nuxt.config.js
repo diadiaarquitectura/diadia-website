@@ -1,7 +1,7 @@
 export default {
   mode: 'spa',
   head: {
-    title: 'DiaDia',
+    title: 'DIADIA',
     meta: [
       { charset: 'utf-8' },
       {
@@ -27,6 +27,7 @@ export default {
       }
     ]
   },
+
   loadingIndicator: false,
   css: [],
   plugins: [],
