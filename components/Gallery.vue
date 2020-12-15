@@ -31,7 +31,6 @@ import { mapMutations } from 'vuex'
 import imagesLoaded from 'imagesloaded'
 import gsap from 'gsap'
 import Loader from '../plugins/loader'
-import Isotope from 'isotope-layout'
 import { WheelGestures } from 'wheel-gestures'
 
 export default {
@@ -65,7 +64,9 @@ export default {
     this.masonry = new Isotope(grid, {
       itemSelector: '.grid-item',
       filter: '.base',
-      layoutMode: 'masonry',
+      masonry: {
+        horizontalOrder: true
+      }
     })
 
     // images loaded

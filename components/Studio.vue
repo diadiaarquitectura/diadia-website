@@ -20,7 +20,6 @@ import { mapGetters } from 'vuex'
 import { mapMutations } from 'vuex'
 import gsap from 'gsap'
 import Loader from '../plugins/loader'
-import Isotope from 'isotope-layout'
 
 export default {
   components: { Viewer },
@@ -54,7 +53,9 @@ export default {
 
     this.masonry = new Isotope(grid, {
       itemSelector: '.grid-item',
-      layoutMode: 'masonry',
+      masonry: {
+        horizontalOrder: true
+      }
     })
 
     this.imagesloaded.on('done', () => {

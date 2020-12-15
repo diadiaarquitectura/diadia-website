@@ -16,7 +16,6 @@ import { mapGetters } from 'vuex'
 import { mapMutations } from 'vuex'
 import gsap from 'gsap'
 import Loader from '../plugins/loader'
-import Isotope from 'isotope-layout'
 
 export default {
   components: { Viewer },
@@ -27,13 +26,13 @@ export default {
     let grid = document.querySelector('#studio-mobile .grid')
     document.querySelector('#studio-mobile').style.overflowY = 'hidden'
 
-    requestAnimationFrame(this.update)
-
     this.imagesloaded = imagesLoaded(grid)
 
     this.masonry = new Isotope(grid, {
       itemSelector: '.grid-item',
-      layoutMode: 'masonry',
+      masonry: {
+        horizontalOrder: true,
+      },
     })
 
     this.imagesloaded.on('done', () => {
@@ -74,10 +73,6 @@ export default {
 
   methods: {
     ...mapMutations({ setCurrentProject: 'setCurrentProject' }),
-
-    update() {
-      requestAnimationFrame(this.update)
-    },
   },
 
   data() {

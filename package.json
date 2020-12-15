@@ -17,7 +17,6 @@
     "gsap": "^3.3.1",
     "image-preloader": "^1.1.1",
     "imagesloaded": "^4.1.4",
-    "isotope-layout": "^3.0.6",
     "node-sass": "^4.13.0",
     "pug": "^2.0.4",
     "pug-plain-loader": "^1.0.0",

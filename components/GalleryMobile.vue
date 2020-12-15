@@ -27,7 +27,6 @@ import { mapMutations } from 'vuex'
 import imagesLoaded from 'imagesloaded'
 import gsap from 'gsap'
 import Loader from '../plugins/loader'
-import Isotope from 'isotope-layout'
 import { WheelGestures } from 'wheel-gestures'
 
 export default {
@@ -47,15 +46,16 @@ export default {
     }
 
     document.querySelector('#gallery-mobile').style.overflowY = 'hidden'
-    requestAnimationFrame(this.update)
 
     this.imagesloaded = imagesLoaded(grid)
 
     // masonry
     this.masonry = new Isotope(grid, {
       itemSelector: '.grid-item',
-      layoutMode: 'masonry',
       filter: '.base',
+      masonry: {
+        horizontalOrder: true
+      }
     })
 
     // images loaded
@@ -250,10 +250,6 @@ export default {
       setTimeout(() => {
         grid.style.display = 'block'
       }, 50)
-    },
-
-    update() {
-      requestAnimationFrame(this.update)
     },
 
     showItem(name) {
