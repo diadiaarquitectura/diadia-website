@@ -826,6 +826,10 @@
         {
           "url": "/images/uploads/016_maq.png",
           "tipo": "maquetas"
+        },
+        {
+          "url": "/images/uploads/016_d2.png",
+          "tipo": "sketch"
         }
       ]
     },
@@ -857,6 +861,10 @@
         {
           "url": "/images/uploads/010_iso-explotada.png",
           "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/010_d1.png",
+          "tipo": "sketch"
         }
       ]
     },
