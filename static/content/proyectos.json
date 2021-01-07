@@ -705,6 +705,18 @@
         {
           "url": "/images/uploads/001_section2.png",
           "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/001_m1.png",
+          "tipo": "maquetas"
+        },
+        {
+          "url": "/images/uploads/001_m2.png",
+          "tipo": "maquetas"
+        },
+        {
+          "url": "/images/uploads/001_d2.png",
+          "tipo": "sketch"
         }
       ]
     },
