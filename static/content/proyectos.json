@@ -59,6 +59,14 @@
         {
           "url": "/images/uploads/047_iso22.png",
           "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/047_d1.png",
+          "tipo": "sketch"
+        },
+        {
+          "url": "/images/uploads/047_d2.png",
+          "tipo": "sketch"
         }
       ]
     },
