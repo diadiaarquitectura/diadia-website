@@ -223,6 +223,10 @@
         {
           "url": "/images/uploads/039_iso.png",
           "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/039_d2.png",
+          "tipo": "sketch"
         }
       ]
     },
@@ -664,7 +668,7 @@
     {
       "fecha": "20 03 2015",
       "estado": "realizado",
-      "nombre": "CASA AO",
+      "nombre": "CASA TRES ESQUINAS",
       "galería": [
         {
           "url": "/images/uploads/001_01.jpg",
@@ -904,6 +908,10 @@
         {
           "url": "/images/uploads/005_v00.jpg",
           "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/005_d1.png",
+          "tipo": "sketch"
         }
       ]
     },
