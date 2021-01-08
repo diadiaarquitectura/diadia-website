@@ -910,6 +910,10 @@
           "tipo": "vista3d"
         },
         {
+          "url": "/images/uploads/005_m2.png",
+          "tipo": "maquetas"
+        },
+        {
           "url": "/images/uploads/005_d1.png",
           "tipo": "sketch"
         }
