@@ -57,12 +57,20 @@
           "tipo": "vista3d"
         },
         {
-          "url": "/images/uploads/048_m1.png",
-          "tipo": "maquetas"
-        },
-        {
           "url": "/images/uploads/048_d1.png",
           "tipo": "sketch"
+        },
+        {
+          "url": "/images/uploads/048_p0.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/048_p1.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/048_m1.png",
+          "tipo": "maquetas"
         }
       ]
     },
