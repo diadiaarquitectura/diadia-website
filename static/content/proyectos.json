@@ -55,6 +55,14 @@
         {
           "url": "/images/uploads/048_i5.png",
           "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/048_m1.png",
+          "tipo": "maquetas"
+        },
+        {
+          "url": "/images/uploads/048_d1.png",
+          "tipo": "sketch"
         }
       ]
     },
