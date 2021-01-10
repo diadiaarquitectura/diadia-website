@@ -1,33 +1,6 @@
 {
   "proyectos": [
     {
-      "fecha": "09 10 2020",
-      "estado": "realizado",
-      "nombre": "UNIVERSIDAD CIENTIFICA DEL SUR\nETAPA 0",
-      "galería": [
-        {
-          "url": "/images/uploads/045_f01.jpg",
-          "tipo": "fotoObra"
-        },
-        {
-          "url": "/images/uploads/045_01.jpg",
-          "tipo": "vista3d"
-        },
-        {
-          "url": "/images/uploads/045_02.jpg",
-          "tipo": "vista3d"
-        },
-        {
-          "url": "/images/uploads/045_03.jpg",
-          "tipo": "vista3d"
-        },
-        {
-          "url": "/images/uploads/045_00.jpg",
-          "tipo": "sketch"
-        }
-      ]
-    },
-    {
       "fecha": "01 05 2020",
       "estado": "noRealizado",
       "nombre": "YAKUWAWA",
@@ -73,12 +46,16 @@
           "tipo": "planimetrias"
         },
         {
-          "url": "/images/uploads/048_m1.png",
-          "tipo": "maquetas"
-        },
-        {
           "url": "/images/uploads/048_p3.png",
           "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/048_p4.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/048_m1.png",
+          "tipo": "maquetas"
         }
       ]
     },
