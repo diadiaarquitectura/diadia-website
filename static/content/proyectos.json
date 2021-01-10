@@ -69,8 +69,16 @@
           "tipo": "planimetrias"
         },
         {
+          "url": "/images/uploads/048_p2.png",
+          "tipo": "planimetrias"
+        },
+        {
           "url": "/images/uploads/048_m1.png",
           "tipo": "maquetas"
+        },
+        {
+          "url": "/images/uploads/048_p3.png",
+          "tipo": "planimetrias"
         }
       ]
     },
