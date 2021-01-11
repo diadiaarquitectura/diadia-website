@@ -108,16 +108,16 @@
       "nombre": "UNIVERSIDAD CIENTIFICA DEL SUR E1",
       "galería": [
         {
+          "url": "/images/uploads/041_v01.jpg",
+          "tipo": "vista3d"
+        },
+        {
           "url": "/images/uploads/045_m3.png",
           "tipo": "maquetas"
         },
         {
           "url": "/images/uploads/045_d1.png",
           "tipo": "sketch"
-        },
-        {
-          "url": "/images/uploads/041_v01.jpg",
-          "tipo": "vista3d"
         },
         {
           "url": "/images/uploads/041_v02.jpg",
