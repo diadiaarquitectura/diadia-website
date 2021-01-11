@@ -6,12 +6,12 @@
       "nombre": "YAKUWAWA",
       "galería": [
         {
-          "url": "/images/uploads/048_m2.png",
-          "tipo": "maquetas"
-        },
-        {
           "url": "/images/uploads/048_i0.png",
           "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/048_m2.png",
+          "tipo": "maquetas"
         },
         {
           "url": "/images/uploads/048_i3.png",
