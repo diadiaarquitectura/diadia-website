@@ -6,12 +6,12 @@
       "nombre": "YAKUWAWA",
       "galería": [
         {
-          "url": "/images/uploads/048_i0.png",
-          "tipo": "vista3d"
-        },
-        {
           "url": "/images/uploads/048_m2.png",
           "tipo": "maquetas"
+        },
+        {
+          "url": "/images/uploads/048_i0.png",
+          "tipo": "vista3d"
         },
         {
           "url": "/images/uploads/048_i3.png",
@@ -56,49 +56,6 @@
         {
           "url": "/images/uploads/048_m1.png",
           "tipo": "maquetas"
-        }
-      ]
-    },
-    {
-      "fecha": "01 01 2020",
-      "estado": "realizado",
-      "nombre": "PATIO 4 PATIOS",
-      "galería": [
-        {
-          "url": "/images/uploads/047_00.jpg",
-          "tipo": "fotoObra"
-        },
-        {
-          "url": "/images/uploads/047_03.jpg",
-          "tipo": "fotoObra"
-        },
-        {
-          "url": "/images/uploads/047_01.jpg",
-          "tipo": "fotoObra"
-        },
-        {
-          "url": "/images/uploads/047_02.jpg",
-          "tipo": "fotoObra"
-        },
-        {
-          "url": "/images/uploads/047_plan.png",
-          "tipo": "planimetrias"
-        },
-        {
-          "url": "/images/uploads/047_iso.png",
-          "tipo": "planimetrias"
-        },
-        {
-          "url": "/images/uploads/047_iso22.png",
-          "tipo": "planimetrias"
-        },
-        {
-          "url": "/images/uploads/047_d1.png",
-          "tipo": "sketch"
-        },
-        {
-          "url": "/images/uploads/047_d2.png",
-          "tipo": "sketch"
         }
       ]
     },
@@ -154,6 +111,49 @@
         {
           "url": "/images/uploads/041_iso03.png",
           "tipo": "diagramas"
+        }
+      ]
+    },
+    {
+      "fecha": "01 01 2020",
+      "estado": "realizado",
+      "nombre": "PATIO 4 PATIOS",
+      "galería": [
+        {
+          "url": "/images/uploads/047_00.jpg",
+          "tipo": "fotoObra"
+        },
+        {
+          "url": "/images/uploads/047_03.jpg",
+          "tipo": "fotoObra"
+        },
+        {
+          "url": "/images/uploads/047_01.jpg",
+          "tipo": "fotoObra"
+        },
+        {
+          "url": "/images/uploads/047_02.jpg",
+          "tipo": "fotoObra"
+        },
+        {
+          "url": "/images/uploads/047_plan.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/047_iso.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/047_iso22.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/047_d1.png",
+          "tipo": "sketch"
+        },
+        {
+          "url": "/images/uploads/047_d2.png",
+          "tipo": "sketch"
         }
       ]
     },
