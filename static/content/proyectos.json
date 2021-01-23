@@ -148,12 +148,28 @@
           "tipo": "planimetrias"
         },
         {
+          "url": "/images/uploads/047_m1.png",
+          "tipo": "maquetas"
+        },
+        {
           "url": "/images/uploads/047_d1.png",
           "tipo": "sketch"
         },
         {
           "url": "/images/uploads/047_d2.png",
           "tipo": "sketch"
+        },
+        {
+          "url": "/images/uploads/047_m2.png",
+          "tipo": "maquetas"
+        },
+        {
+          "url": "/images/uploads/047_m3.png",
+          "tipo": "maquetas"
+        },
+        {
+          "url": "/images/uploads/047_m5.png",
+          "tipo": "maquetas"
         }
       ]
     },
