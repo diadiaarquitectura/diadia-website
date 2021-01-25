@@ -739,6 +739,22 @@
           "tipo": "fotoUso"
         },
         {
+          "tipo": "fotoUso",
+          "url": "/images/uploads/001_f2.png"
+        },
+        {
+          "url": "/images/uploads/001_f3b.png",
+          "tipo": "fotoUso"
+        },
+        {
+          "url": "/images/uploads/001_f4.png",
+          "tipo": "fotoUso"
+        },
+        {
+          "url": "/images/uploads/001_f6.png",
+          "tipo": "fotoUso"
+        },
+        {
           "url": "/images/uploads/001_site.png",
           "tipo": "planimetrias"
         },
