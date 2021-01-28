@@ -10,14 +10,6 @@
           "tipo": "vista3d"
         },
         {
-          "url": "/images/uploads/045_m3.png",
-          "tipo": "maquetas"
-        },
-        {
-          "url": "/images/uploads/045_d1.png",
-          "tipo": "sketch"
-        },
-        {
           "url": "/images/uploads/041_v02.jpg",
           "tipo": "vista3d"
         },
@@ -52,6 +44,14 @@
         {
           "url": "/images/uploads/041_iso03.png",
           "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/045_m3.png",
+          "tipo": "maquetas"
+        },
+        {
+          "url": "/images/uploads/045_d1.png",
+          "tipo": "sketch"
         }
       ]
     },
