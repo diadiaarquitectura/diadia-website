@@ -739,11 +739,15 @@
       "nombre": "CASA TRES ESQUINAS",
       "galería": [
         {
-          "url": "/images/uploads/001_01.jpg",
+          "url": "/images/uploads/001_05.jpg",
           "tipo": "fotoUso"
         },
         {
-          "url": "/images/uploads/001_02.jpg",
+          "url": "/images/uploads/001_06.jpg",
+          "tipo": "fotoUso"
+        },
+        {
+          "url": "/images/uploads/001_04.jpg",
           "tipo": "fotoUso"
         },
         {
