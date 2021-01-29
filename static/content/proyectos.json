@@ -433,6 +433,10 @@
           "tipo": "fotoObra"
         },
         {
+          "url": "/images/uploads/018_04b.jpg",
+          "tipo": "fotoObra"
+        },
+        {
           "url": "/images/uploads/018_04.jpg",
           "tipo": "fotoObra"
         },
@@ -449,7 +453,15 @@
           "tipo": "fotoObra"
         },
         {
+          "url": "/images/uploads/018_05b.jpg",
+          "tipo": "diagramas"
+        },
+        {
           "url": "/images/uploads/018_07.jpg",
+          "tipo": "fotoObra"
+        },
+        {
+          "url": "/images/uploads/018_07b.jpg",
           "tipo": "fotoObra"
         },
         {
@@ -471,6 +483,10 @@
         {
           "url": "/images/uploads/018_isoglass.jpg",
           "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/018_08.jpg",
+          "tipo": "fotoObra"
         },
         {
           "url": "/images/uploads/018_d1.png",
