@@ -479,6 +479,41 @@
       ]
     },
     {
+      "fecha": "16 07 2019",
+      "estado": "base",
+      "nombre": "PUCU",
+      "galería": [
+        {
+          "url": "/images/uploads/038_dibujo.png",
+          "tipo": "sketch"
+        },
+        {
+          "url": "/images/uploads/038_plotplan.png",
+          "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/038_plotplan2.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/038_indicadores.png",
+          "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/038_diagram.png",
+          "tipo": "sketch"
+        },
+        {
+          "url": "/images/uploads/038_diagram1.png",
+          "tipo": "sketch"
+        },
+        {
+          "url": "/images/uploads/038_foto.jpg",
+          "tipo": "base"
+        }
+      ]
+    },
+    {
       "fecha": "01 01 2020",
       "estado": "realizado",
       "nombre": "PATIO 4 PATIOS",
@@ -534,41 +569,6 @@
         {
           "url": "/images/uploads/047_d2.png",
           "tipo": "sketch"
-        }
-      ]
-    },
-    {
-      "fecha": "16 07 2019",
-      "estado": "base",
-      "nombre": "PUCU",
-      "galería": [
-        {
-          "url": "/images/uploads/038_dibujo.png",
-          "tipo": "sketch"
-        },
-        {
-          "url": "/images/uploads/038_plotplan.png",
-          "tipo": "diagramas"
-        },
-        {
-          "url": "/images/uploads/038_plotplan2.png",
-          "tipo": "planimetrias"
-        },
-        {
-          "url": "/images/uploads/038_indicadores.png",
-          "tipo": "diagramas"
-        },
-        {
-          "url": "/images/uploads/038_diagram.png",
-          "tipo": "sketch"
-        },
-        {
-          "url": "/images/uploads/038_diagram1.png",
-          "tipo": "sketch"
-        },
-        {
-          "url": "/images/uploads/038_foto.jpg",
-          "tipo": "base"
         }
       ]
     },
