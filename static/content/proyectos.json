@@ -926,6 +926,14 @@
         {
           "url": "/images/uploads/016_d2.png",
           "tipo": "sketch"
+        },
+        {
+          "url": "/images/uploads/016_d3.jpg",
+          "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/016_f.png",
+          "tipo": "base"
         }
       ]
     },
