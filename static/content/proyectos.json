@@ -127,63 +127,81 @@
       ]
     },
     {
-      "fecha": "01 01 2020",
-      "estado": "realizado",
-      "nombre": "PATIO 4 PATIOS",
+      "fecha": "01 01 2018",
+      "nombre": "ATELIER CAHUIDE",
+      "tipologia": "educación",
       "galería": [
         {
-          "url": "/images/uploads/047_00.jpg",
+          "url": "/images/uploads/018_00.jpg",
+          "tipo": "fotoUso"
+        },
+        {
+          "url": "/images/uploads/018_03.jpg",
           "tipo": "fotoObra"
         },
         {
-          "url": "/images/uploads/047_03.jpg",
+          "url": "/images/uploads/018_04b.jpg",
           "tipo": "fotoObra"
         },
         {
-          "url": "/images/uploads/047_01.jpg",
+          "url": "/images/uploads/018_04.jpg",
           "tipo": "fotoObra"
         },
         {
-          "url": "/images/uploads/047_02.jpg",
+          "url": "/images/uploads/018_01.jpg",
+          "tipo": "fotoUso"
+        },
+        {
+          "url": "/images/uploads/018_02.jpg",
           "tipo": "fotoObra"
         },
         {
-          "url": "/images/uploads/047_plan.png",
+          "url": "/images/uploads/018_05.jpg",
+          "tipo": "fotoObra"
+        },
+        {
+          "url": "/images/uploads/018_05b.jpg",
+          "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/018_07.jpg",
+          "tipo": "fotoObra"
+        },
+        {
+          "url": "/images/uploads/018_07b.jpg",
+          "tipo": "fotoObra"
+        },
+        {
+          "url": "/images/uploads/018_06.jpg",
+          "tipo": "fotoUso"
+        },
+        {
+          "url": "/images/uploads/018_planta.png",
           "tipo": "planimetrias"
         },
         {
-          "url": "/images/uploads/047_iso.png",
+          "url": "/images/uploads/018_iso.png",
           "tipo": "planimetrias"
         },
         {
-          "url": "/images/uploads/047_iso22.png",
-          "tipo": "planimetrias"
+          "url": "/images/uploads/018_isoexplotada.jpg",
+          "tipo": "diagramas"
         },
         {
-          "url": "/images/uploads/047_m1.png",
-          "tipo": "maquetas"
+          "url": "/images/uploads/018_isoglass.jpg",
+          "tipo": "diagramas"
         },
         {
-          "url": "/images/uploads/047_m2.png",
-          "tipo": "maquetas"
+          "url": "/images/uploads/018_08.jpg",
+          "tipo": "fotoObra"
         },
         {
-          "url": "/images/uploads/047_m3.png",
-          "tipo": "maquetas"
-        },
-        {
-          "url": "/images/uploads/047_m5.png",
-          "tipo": "maquetas"
-        },
-        {
-          "url": "/images/uploads/047_d1.png",
-          "tipo": "sketch"
-        },
-        {
-          "url": "/images/uploads/047_d2.png",
+          "url": "/images/uploads/018_d1.png",
           "tipo": "sketch"
         }
-      ]
+      ],
+      "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "estado": "realizado"
     },
     {
       "fecha": "16 07 2020",
@@ -217,43 +235,84 @@
       ]
     },
     {
-      "fecha": "01 11 2019",
       "estado": "realizado",
-      "nombre": "DOMENICA",
+      "tipologia": "vivienda",
+      "nombre": "ATIYCUY",
+      "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "galería": [
         {
-          "url": "/images/uploads/043_04.jpg",
-          "tipo": "fotoUso"
-        },
-        {
-          "url": "/images/uploads/043_00.jpg",
+          "url": "/images/uploads/002-00.jpg",
           "tipo": "fotoObra"
         },
         {
-          "url": "/images/uploads/043_01.jpg",
-          "tipo": "fotoUso"
+          "url": "/images/uploads/002-out-01.jpg",
+          "tipo": "fotoObra"
         },
         {
-          "url": "/images/uploads/043_02.jpg",
-          "tipo": "fotoUso"
+          "url": "/images/uploads/002-out-02.jpg",
+          "tipo": "fotoObra"
         },
         {
-          "url": "/images/uploads/043_03.jpg",
-          "tipo": "fotoUso"
+          "url": "/images/uploads/002_in02.jpg",
+          "tipo": "fotoObra"
         },
         {
-          "url": "/images/uploads/043_plan.png",
+          "url": "/images/uploads/002_in01.jpg",
+          "tipo": "fotoObra"
+        },
+        {
+          "url": "/images/uploads/002-out-03.jpg",
+          "tipo": "fotoObra"
+        },
+        {
+          "url": "/images/uploads/002-out-04.jpg",
+          "tipo": "fotoObra"
+        },
+        {
+          "url": "/images/uploads/002_context.png",
           "tipo": "planimetrias"
         },
         {
-          "url": "/images/uploads/043_isosectional.png",
+          "url": "/images/uploads/002_plan1.png",
           "tipo": "planimetrias"
         },
         {
-          "url": "/images/uploads/043_iso.png",
+          "url": "/images/uploads/002_plan2.png",
           "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/002_section.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/002_sectionaliso.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/002_detail.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/002_m3.png",
+          "tipo": "maquetas"
+        },
+        {
+          "url": "/images/uploads/002_m2.png",
+          "tipo": "maquetas"
+        },
+        {
+          "url": "/images/uploads/002_d1.png",
+          "tipo": "sketch"
+        },
+        {
+          "url": "/images/uploads/002_m1.png",
+          "tipo": "maquetas"
         }
-      ]
+      ],
+      "involucrados": "",
+      "fecha": "01 01 2019",
+      "ubicacion": "",
+      "descargable": ""
     },
     {
       "fecha": "24 12 2019",
@@ -420,81 +479,63 @@
       ]
     },
     {
-      "fecha": "01 01 2018",
-      "nombre": "ATELIER CAHUIDE",
-      "tipologia": "educación",
+      "fecha": "01 01 2020",
+      "estado": "realizado",
+      "nombre": "PATIO 4 PATIOS",
       "galería": [
         {
-          "url": "/images/uploads/018_00.jpg",
-          "tipo": "fotoUso"
-        },
-        {
-          "url": "/images/uploads/018_03.jpg",
+          "url": "/images/uploads/047_00.jpg",
           "tipo": "fotoObra"
         },
         {
-          "url": "/images/uploads/018_04b.jpg",
+          "url": "/images/uploads/047_03.jpg",
           "tipo": "fotoObra"
         },
         {
-          "url": "/images/uploads/018_04.jpg",
+          "url": "/images/uploads/047_01.jpg",
           "tipo": "fotoObra"
         },
         {
-          "url": "/images/uploads/018_01.jpg",
-          "tipo": "fotoUso"
-        },
-        {
-          "url": "/images/uploads/018_02.jpg",
+          "url": "/images/uploads/047_02.jpg",
           "tipo": "fotoObra"
         },
         {
-          "url": "/images/uploads/018_05.jpg",
-          "tipo": "fotoObra"
-        },
-        {
-          "url": "/images/uploads/018_05b.jpg",
-          "tipo": "diagramas"
-        },
-        {
-          "url": "/images/uploads/018_07.jpg",
-          "tipo": "fotoObra"
-        },
-        {
-          "url": "/images/uploads/018_07b.jpg",
-          "tipo": "fotoObra"
-        },
-        {
-          "url": "/images/uploads/018_06.jpg",
-          "tipo": "fotoUso"
-        },
-        {
-          "url": "/images/uploads/018_planta.png",
+          "url": "/images/uploads/047_plan.png",
           "tipo": "planimetrias"
         },
         {
-          "url": "/images/uploads/018_iso.png",
+          "url": "/images/uploads/047_iso.png",
           "tipo": "planimetrias"
         },
         {
-          "url": "/images/uploads/018_isoexplotada.jpg",
-          "tipo": "diagramas"
+          "url": "/images/uploads/047_iso22.png",
+          "tipo": "planimetrias"
         },
         {
-          "url": "/images/uploads/018_isoglass.jpg",
-          "tipo": "diagramas"
+          "url": "/images/uploads/047_m1.png",
+          "tipo": "maquetas"
         },
         {
-          "url": "/images/uploads/018_08.jpg",
-          "tipo": "fotoObra"
+          "url": "/images/uploads/047_m2.png",
+          "tipo": "maquetas"
         },
         {
-          "url": "/images/uploads/018_d1.png",
+          "url": "/images/uploads/047_m3.png",
+          "tipo": "maquetas"
+        },
+        {
+          "url": "/images/uploads/047_m5.png",
+          "tipo": "maquetas"
+        },
+        {
+          "url": "/images/uploads/047_d1.png",
+          "tipo": "sketch"
+        },
+        {
+          "url": "/images/uploads/047_d2.png",
           "tipo": "sketch"
         }
-      ],
-      "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "estado": "realizado"
+      ]
     },
     {
       "fecha": "16 07 2019",
@@ -559,84 +600,43 @@
       ]
     },
     {
+      "fecha": "01 11 2019",
       "estado": "realizado",
-      "tipologia": "vivienda",
-      "nombre": "ATIYCUY",
-      "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "nombre": "DOMENICA",
       "galería": [
         {
-          "url": "/images/uploads/002-00.jpg",
+          "url": "/images/uploads/043_04.jpg",
+          "tipo": "fotoUso"
+        },
+        {
+          "url": "/images/uploads/043_00.jpg",
           "tipo": "fotoObra"
         },
         {
-          "url": "/images/uploads/002-out-01.jpg",
-          "tipo": "fotoObra"
+          "url": "/images/uploads/043_01.jpg",
+          "tipo": "fotoUso"
         },
         {
-          "url": "/images/uploads/002-out-02.jpg",
-          "tipo": "fotoObra"
+          "url": "/images/uploads/043_02.jpg",
+          "tipo": "fotoUso"
         },
         {
-          "url": "/images/uploads/002_in02.jpg",
-          "tipo": "fotoObra"
+          "url": "/images/uploads/043_03.jpg",
+          "tipo": "fotoUso"
         },
         {
-          "url": "/images/uploads/002_in01.jpg",
-          "tipo": "fotoObra"
-        },
-        {
-          "url": "/images/uploads/002-out-03.jpg",
-          "tipo": "fotoObra"
-        },
-        {
-          "url": "/images/uploads/002-out-04.jpg",
-          "tipo": "fotoObra"
-        },
-        {
-          "url": "/images/uploads/002_context.png",
+          "url": "/images/uploads/043_plan.png",
           "tipo": "planimetrias"
         },
         {
-          "url": "/images/uploads/002_plan1.png",
+          "url": "/images/uploads/043_isosectional.png",
           "tipo": "planimetrias"
         },
         {
-          "url": "/images/uploads/002_plan2.png",
+          "url": "/images/uploads/043_iso.png",
           "tipo": "planimetrias"
-        },
-        {
-          "url": "/images/uploads/002_section.png",
-          "tipo": "planimetrias"
-        },
-        {
-          "url": "/images/uploads/002_sectionaliso.png",
-          "tipo": "planimetrias"
-        },
-        {
-          "url": "/images/uploads/002_detail.png",
-          "tipo": "planimetrias"
-        },
-        {
-          "url": "/images/uploads/002_m3.png",
-          "tipo": "maquetas"
-        },
-        {
-          "url": "/images/uploads/002_m2.png",
-          "tipo": "maquetas"
-        },
-        {
-          "url": "/images/uploads/002_d1.png",
-          "tipo": "sketch"
-        },
-        {
-          "url": "/images/uploads/002_m1.png",
-          "tipo": "maquetas"
         }
-      ],
-      "involucrados": "",
-      "fecha": "01 01 2019",
-      "ubicacion": "",
-      "descargable": ""
+      ]
     },
     {
       "fecha": "23 10 2020",
