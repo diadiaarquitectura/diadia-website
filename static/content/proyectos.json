@@ -965,6 +965,10 @@
         {
           "url": "/images/uploads/010_d1.png",
           "tipo": "sketch"
+        },
+        {
+          "url": "/images/uploads/010_f.png",
+          "tipo": "base"
         }
       ]
     },
@@ -1000,6 +1004,10 @@
         {
           "url": "/images/uploads/005_d1.png",
           "tipo": "sketch"
+        },
+        {
+          "url": "/images/uploads/005_f.png",
+          "tipo": "base"
         }
       ]
     },
@@ -1033,7 +1041,7 @@
           "tipo": "fotoObra"
         },
         {
-          "url": "/images/uploads/0001_f.png",
+          "url": "/images/uploads/0001_f2.png",
           "tipo": "base"
         }
       ]
