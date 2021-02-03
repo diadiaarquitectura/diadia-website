@@ -10,7 +10,15 @@
           "url": "/images/uploads/045_o02.jpg"
         },
         {
+          "url": "/images/uploads/045_o01.jpg",
+          "tipo": "fotoObra"
+        },
+        {
           "url": "/images/uploads/045_o00.jpg",
+          "tipo": "fotoObra"
+        },
+        {
+          "url": "/images/uploads/045_o03.jpg",
           "tipo": "fotoObra"
         }
       ]
