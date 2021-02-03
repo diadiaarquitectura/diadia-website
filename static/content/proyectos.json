@@ -6,12 +6,12 @@
       "nombre": "UCSUR E0",
       "galería": [
         {
-          "url": "/images/uploads/045_o00.jpg",
-          "tipo": "fotoObra"
-        },
-        {
           "tipo": "fotoObra",
           "url": "/images/uploads/045_o02.jpg"
+        },
+        {
+          "url": "/images/uploads/045_o00.jpg",
+          "tipo": "fotoObra"
         }
       ]
     },
