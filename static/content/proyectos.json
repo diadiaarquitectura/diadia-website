@@ -1,6 +1,21 @@
 {
   "proyectos": [
     {
+      "fecha": "10 02 2021",
+      "estado": "realizado",
+      "nombre": "UCSUR E0",
+      "galería": [
+        {
+          "url": "/images/uploads/045_o00.jpg",
+          "tipo": "fotoObra"
+        },
+        {
+          "tipo": "fotoObra",
+          "url": "/images/uploads/045_o02.jpg"
+        }
+      ]
+    },
+    {
       "fecha": "29 09 2019",
       "estado": "noRealizado",
       "nombre": "UNIVERSIDAD CIENTIFICA DEL SUR E1",
@@ -1051,21 +1066,6 @@
         {
           "url": "/images/uploads/0001_f2.png",
           "tipo": "base"
-        }
-      ]
-    },
-    {
-      "fecha": "10 02 2021",
-      "estado": "realizado",
-      "nombre": "UCSUR E0",
-      "galería": [
-        {
-          "url": "/images/uploads/045_o00.jpg",
-          "tipo": "fotoObra"
-        },
-        {
-          "tipo": "fotoObra",
-          "url": "/images/uploads/045_o02.jpg"
         }
       ]
     }
