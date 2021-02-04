@@ -20,6 +20,14 @@
         {
           "url": "/images/uploads/045_o03.jpg",
           "tipo": "fotoObra"
+        },
+        {
+          "url": "/images/uploads/045_p0.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/045_p1.png",
+          "tipo": "planimetrias"
         }
       ]
     },
