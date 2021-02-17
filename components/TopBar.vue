@@ -98,21 +98,25 @@ export default {
       this.hideMobileMenu()
       this.setCurrentSection('gallery-default')
       this.$nuxt.$emit('default-selected')
+      gsap.to('#gallery', { scrollTop: '0', duration: 0.5 })
     },
 
     onGalleryWorkClick() {
       this.setCurrentSection('gallery-work')
       this.$nuxt.$emit('work-selected')
+      gsap.to('#gallery', { scrollTop: '0', duration: 0.5 })
     },
 
     onGalleryMediaClick() {
       this.setCurrentSection('gallery-media')
       this.$nuxt.$emit('media-selected')
+      gsap.to('#gallery', { scrollTop: '0', duration: 0.5 })
     },
 
     onGalleryBasesClick() {
       this.setCurrentSection('gallery-bases')
       this.$nuxt.$emit('bases-selected')
+      gsap.to('#gallery', { scrollTop: '0', duration: 0.5 })
     },
 
     showMobileMenu() {

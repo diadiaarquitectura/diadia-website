@@ -3,10 +3,11 @@
   #loading(v-if='!isLoaded')
     #loading-gallery
     .message cargando {{ parseInt(loader.t * 100) }}%
-  #arrow-up(@click='onUp()', v-if='isLoaded && !isMobile()')
-    img(src='/images/arrow-up.svg')
-  #arrow-down(@click='onDown()', v-if='isLoaded && !isMobile()')
-    img(src='/images/arrow-down.svg')
+  #arrows
+    #arrow-up(@click='onUp()', v-if='isLoaded && !isMobile()')
+      img(src='/images/arrow-up.svg')
+    #arrow-down(@click='onDown()', v-if='isLoaded && !isMobile()')
+      img(src='/images/arrow-down.svg')
   .grid(:style='{ opacity: isLoaded ? 1 : 0 }')
     .grid-item.default(@click='showItem(item.nombre)', v-for='item in itemsDefault')
       img.image(:src='item.galería[0].url')
@@ -31,7 +32,7 @@ import { mapMutations } from 'vuex'
 import imagesLoaded from 'imagesloaded'
 import gsap from 'gsap'
 import Loader from '../plugins/loader'
-import { WheelGestures } from 'wheel-gestures'
+// import { WheelGestures } from 'wheel-gestures'
 
 export default {
   components: { Viewer },
@@ -42,21 +43,6 @@ export default {
     let counter = 0
     this.loader = new Loader('loading-gallery')
     let grid = document.querySelector('#gallery .grid')
-    document.querySelector('#gallery').style.overflowY = 'hidden'
-
-    requestAnimationFrame(this.update)
-
-    grid.addEventListener('wheel', (e) => {
-      if (this.isMobile()) return
-
-      if (e.deltaY > 0) {
-        this.scrollTop -= 40
-      }
-
-      if (e.deltaY < 0) {
-        this.scrollTop += 40
-      }
-    })
 
     this.imagesloaded = imagesLoaded(grid)
 
@@ -65,15 +51,15 @@ export default {
       itemSelector: '.grid-item',
       filter: '.base',
       masonry: {
-        horizontalOrder: true
-      }
+        horizontalOrder: true,
+      },
     })
 
     // images loaded
     this.imagesloaded.on('done', () => {
       this.isLoaded = true
       this.$nuxt.$emit('page-loaded')
-      if (this.isMobile()) document.querySelector('#gallery').style.overflowY = 'scroll'
+      // if (this.isMobile()) document.querySelector('#gallery').style.overflowY = 'scroll'
     })
 
     this.imagesloaded.on('progress', () => {
@@ -82,7 +68,7 @@ export default {
       if (this.loader.t >= 1) {
         this.isLoaded = true
         this.$nuxt.$emit('page-loaded')
-        if (this.isMobile()) document.querySelector('#gallery').style.overflowY = 'scroll'
+        // if (this.isMobile()) document.querySelector('#gallery').style.overflowY = 'scroll'
       }
       this.masonry.layout()
     })
@@ -146,7 +132,7 @@ export default {
   },
 
   computed: {
-    ...mapGetters({ projects: 'getProjects' }),
+    ...mapGetters({ projects: 'getProjects', currentSection: 'getCurrentSection' }),
 
     items() {
       return [...this.itemsBases, ...this.itemsWork, ...this.itemsDefault, ...this.itemsMedia]
@@ -266,30 +252,13 @@ export default {
     },
 
     onUp() {
-      gsap.to(this, { scrollTop: '+=150' })
+      let gallery = document.querySelector('#gallery')
+      gsap.to('#gallery', { scrollTop: gallery.scrollTop - 200, duration: 0.5 })
     },
 
     onDown() {
-      gsap.to(this, { scrollTop: '-=150' })
-    },
-
-    update() {
-      let grid = document.querySelector('#gallery .grid')
-      if (!grid) return
-
-      let gridHeight = grid.getBoundingClientRect().height + 240
-
-      if (this.scrollTop < window.innerHeight - gridHeight) {
-        this.scrollTop = window.innerHeight - gridHeight
-      }
-
-      if (this.scrollTop > 0) {
-        this.scrollTop = 0
-      }
-
-      grid.style.top = this.scrollTop + 'px'
-
-      requestAnimationFrame(this.update)
+      let gallery = document.querySelector('#gallery')
+      gsap.to('#gallery', { scrollTop: gallery.scrollTop + 200, duration: 0.5 })
     },
 
     showItem(name) {
@@ -334,15 +303,15 @@ export default {
   height: calc(100% - 170px);
   width: 100%;
   padding: 0 3%;
-  overflow-y: hidden;
+  // overflow-y: hidden;
   overflow-x: hidden;
   scrollbar-color: #ddd #f0f0f0;
   scrollbar-width: thin;
 
   #arrow-up,
   #arrow-down {
-    position: absolute;
-    right: 1%;
+    position: fixed;
+    right: 2.5%;
     width: 1%;
     height: 1%;
     cursor: pointer;
@@ -353,11 +322,11 @@ export default {
   }
 
   #arrow-up {
-    top: calc(45% - 3%);
+    top: calc(50% - 2.5%);
   }
 
   #arrow-down {
-    top: calc(45% + 3%);
+    top: calc(50% + 2.5%);
   }
 
   #loading {

@@ -42,10 +42,10 @@ export default {
     if (this.isMobile()) {
       document.querySelector('#gallery-mobile').style.overflowY = 'scroll'
     } else {
-      document.querySelector('#gallery-mobile').style.overflowY = 'hidden'
+      // document.querySelector('#gallery-mobile').style.overflowY = 'hidden'
     }
 
-    document.querySelector('#gallery-mobile').style.overflowY = 'hidden'
+    // document.querySelector('#gallery-mobile').style.overflowY = 'hidden'
 
     this.imagesloaded = imagesLoaded(grid)
 
@@ -322,7 +322,7 @@ export default {
   .grid {
     opacity: 0;
     overflow-x: hidden;
-    overflow-y: hidden;
+    // overflow-y: hidden;
     transition: opacity 0.6s;
     margin-bottom: 100px;
 
