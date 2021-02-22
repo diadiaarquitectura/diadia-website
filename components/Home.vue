@@ -4,9 +4,9 @@
     .inner(v-show='isLoaded')
       .content
         .icons
-          img(src='images/icons/icon-tiempo.svg')
-          img(src='images/icons/icon-archivo.svg')
-          img(src='images/icons/icon-uso.svg')
+          img(src='~/assets/icons/icon-tiempo.svg')
+          img(src='~/assets/icons/icon-archivo.svg')
+          img(src='~/assets/icons/icon-uso.svg')
         .title(v-html='homeInfo.titulo')
         .text(v-html='homeInfo.texto')
       #arrow-down
@@ -47,6 +47,7 @@ export default {
       let height = document.getElementById('container').offsetTop
       gsap.to('#main', { top: -height, duration: 1, ease: 'power2.out' })
       this.$nuxt.$emit('default-selected')
+      this.$nuxt.$emit('show-arrows')
     },
 
     animateUp() {
