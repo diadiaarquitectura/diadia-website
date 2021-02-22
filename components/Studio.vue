@@ -1,80 +1,38 @@
 <template lang="pug">
 #studio
-  #loading(v-if='!isLoaded')
-    #loading-studio
-    .message cargando {{ parseInt(loader.t * 100) }}%
-  #arrow-up(@click='onUp()', v-if='studio.galería.length > 6 && !isMobile()')
-    img(src='/images/arrow-up.svg')
-  #arrow-down(@click='onDown()', v-if='studio.galería.length > 6 && !isMobile()')
-    img(src='/images/arrow-down.svg')
-  .grid(:style='{ opacity: isLoaded ? 1 : 0 }')
+  #arrows-studio(v-if="isArrowsVisible")
+    #arrow-up(@click='onUp()', v-if='studio.galería.length > 6 && !isMobile()')
+      img(src='/images/arrow-up.svg')
+    #arrow-down(@click='onDown()', v-if='studio.galería.length > 6 && !isMobile()')
+      img(src='/images/arrow-down.svg')
+  .grid
     .grid-item(v-for='image in studio.galería')
       img.image(:src='image.url')
-  transition(name='fade')
-    viewer(v-if='isShowingProject')
 </template>
 
 <script>
 import Viewer from '../components/Viewer'
-import { mapGetters } from 'vuex'
-import { mapMutations } from 'vuex'
+import { mapGetters, mapMutations } from 'vuex'
 import gsap from 'gsap'
-import Loader from '../plugins/loader'
 
 export default {
   components: { Viewer },
 
   mounted() {
-    let counter = 0
-    this.loader = new Loader('loading-studio')
     let grid = document.querySelector('#studio .grid')
-
-    if (this.isMobile()) {
-      document.querySelector('#studio').style.overflowY = 'scroll'
-    } else {
-      document.querySelector('#studio').style.overflowY = 'hidden'
-    }
-
-    requestAnimationFrame(this.update)
-
-    grid.addEventListener('wheel', (e) => {
-      if (this.isMobile()) return
-
-      if (e.deltaY > 0) {
-        this.scrollTop -= 40
-      }
-
-      if (e.deltaY < 0) {
-        this.scrollTop += 40
-      }
-    })
 
     this.imagesloaded = imagesLoaded(grid)
 
+    // masonry
     this.masonry = new Isotope(grid, {
       itemSelector: '.grid-item',
       masonry: {
-        horizontalOrder: true
-      }
-    })
-
-    this.imagesloaded.on('done', () => {
-      this.isLoaded = true
+        horizontalOrder: true,
+      },
     })
 
     this.imagesloaded.on('progress', () => {
-      counter++
-      this.loader.t = counter / this.imagesloaded.images.length
-      if (this.loader.t >= 1) this.isLoaded = true
       this.masonry.layout()
-    })
-
-    this.$nuxt.$on('show-project', () => {
-      this.isShowingProject = true
-    })
-
-    this.$nuxt.$on('close-project', () => {
-      this.isShowingProject = false
     })
 
     this.$nuxt.$on('studio-selected', () => {
@@ -83,6 +41,15 @@ export default {
       setTimeout(() => {
         this.masonry.layout()
       }, 100)
+    })
+
+    // arrows
+    this.$nuxt.$on('show-arrows', () => {
+      this.isArrowsVisible = true
+    })
+
+    this.$nuxt.$on('hide-arrows', () => {
+      this.isArrowsVisible = false
     })
   },
 
@@ -110,29 +77,13 @@ export default {
     },
 
     onUp() {
-      gsap.to(this, { scrollTop: '+=100' })
+      let studio = document.querySelector('#studio')
+      gsap.to('#studio', { scrollTop: studio.scrollTop - 200, duration: 0.5 })
     },
 
     onDown() {
-      gsap.to(this, { scrollTop: '-=100' })
-    },
-
-    update() {
-      let grid = document.querySelector('#studio .grid')
-      if (!grid) return
-
-      let gridHeight = grid.getBoundingClientRect().height + 240
-
-      if (this.scrollTop < window.innerHeight - gridHeight) {
-        this.scrollTop = window.innerHeight - gridHeight
-      }
-
-      if (this.scrollTop > 0) {
-        this.scrollTop = 0
-      }
-
-      grid.style.top = this.scrollTop + 'px'
-      requestAnimationFrame(this.update)
+      let studio = document.querySelector('#studio')
+      gsap.to('#studio', { scrollTop: studio.scrollTop + 200, duration: 0.5 })
     },
   },
 
@@ -142,7 +93,7 @@ export default {
       isLoaded: false,
       masonry: null,
       scrollTop: 0,
-      loader: { t: 0 },
+      isArrowsVisible: false,
     }
   },
 }
@@ -164,15 +115,15 @@ export default {
   height: calc(100% - 170px);
   width: 100%;
   padding: 0 3%;
-  overflow-y: hidden;
+  // overflow-y: hidden;
   overflow-x: hidden;
   scrollbar-color: #ddd #f0f0f0;
   scrollbar-width: thin;
 
   #arrow-up,
   #arrow-down {
-    position: absolute;
-    right: 1%;
+    position: fixed;
+    right: 2.5%;
     width: 1%;
     height: 1%;
     cursor: pointer;
@@ -183,38 +134,16 @@ export default {
   }
 
   #arrow-up {
-    top: calc(45% - 3%);
+    top: calc(50% - 2.5%);
   }
 
   #arrow-down {
-    top: calc(45% + 3%);
-  }
-
-  #loading {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-
-    #loading-studio {
-      display: block;
-      height: 50px;
-      transform: translate(0, -50px);
-    }
-
-    .message {
-      display: block;
-      color: black;
-      transform: translate(0, -50px);
-    }
+    top: calc(50% + 2.5%);
   }
 
   .grid {
-    opacity: 0;
     transition: opacity 0.6s;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 
     .grid-item {
       width: 31.9%;

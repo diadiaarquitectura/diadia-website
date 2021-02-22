@@ -1,25 +1,22 @@
 <template lang="pug">
 #gallery
-  #loading(v-if='!isLoaded')
-    #loading-gallery
-    .message cargando {{ parseInt(loader.t * 100) }}%
-  #arrows
-    #arrow-up(@click='onUp()', v-if='isLoaded && !isMobile()')
+  #arrows(v-if='isArrowsVisible')
+    #arrow-up(@click='onUp()')
       img(src='/images/arrow-up.svg')
-    #arrow-down(@click='onDown()', v-if='isLoaded && !isMobile()')
+    #arrow-down(@click='onDown()')
       img(src='/images/arrow-down.svg')
-  .grid(:style='{ opacity: isLoaded ? 1 : 0 }')
+  .grid
     .grid-item.default(@click='showItem(item.nombre)', v-for='item in itemsDefault')
-      img.image(:src='item.galería[0].url')
+      img.image(:src='item.galería[0].url', loading='lazy')
       .hover {{ item.nombre.toUpperCase() }}
     .grid-item.bases(@click='showItem(item.nombre)', v-for='item in itemsBases')
-      img.image(:src='item.galería[0].url')
+      img.image(:src='item.galería[0].url', loading='lazy')
       .hover {{ item.nombre.toUpperCase() }}
     .grid-item.medias(@click='showItem(item.nombre)', v-for='item in itemsMedia')
-      img.image(:src='item.galería[0].url')
+      img.image(:src='item.galería[0].url', loading='lazy')
       .hover {{ item.nombre.toUpperCase() }}
     .grid-item.work(@click='showItem(item.nombre)', v-for='item in itemsWork')
-      img.image(:src='item.galería[0].url')
+      img.image(:src='item.galería[0].url', loading='lazy')
       .hover {{ item.nombre.toUpperCase() }}
   transition(name='fade')
     viewer(v-if='isShowingItem')
@@ -27,12 +24,9 @@
 
 <script>
 import Viewer from '../components/Viewer'
-import { mapGetters } from 'vuex'
-import { mapMutations } from 'vuex'
+import { mapGetters, mapMutations } from 'vuex'
 import imagesLoaded from 'imagesloaded'
 import gsap from 'gsap'
-import Loader from '../plugins/loader'
-// import { WheelGestures } from 'wheel-gestures'
 
 export default {
   components: { Viewer },
@@ -40,8 +34,6 @@ export default {
   props: ['type'],
 
   mounted() {
-    let counter = 0
-    this.loader = new Loader('loading-gallery')
     let grid = document.querySelector('#gallery .grid')
 
     this.imagesloaded = imagesLoaded(grid)
@@ -55,25 +47,11 @@ export default {
       },
     })
 
-    // images loaded
-    this.imagesloaded.on('done', () => {
-      this.isLoaded = true
-      this.$nuxt.$emit('page-loaded')
-      // if (this.isMobile()) document.querySelector('#gallery').style.overflowY = 'scroll'
-    })
-
     this.imagesloaded.on('progress', () => {
-      counter++
-      this.loader.t = counter / this.imagesloaded.images.length
-      if (this.loader.t >= 1) {
-        this.isLoaded = true
-        this.$nuxt.$emit('page-loaded')
-        // if (this.isMobile()) document.querySelector('#gallery').style.overflowY = 'scroll'
-      }
       this.masonry.layout()
     })
 
-    // events
+    // content
     this.$nuxt.$on('show-project', () => {
       this.isShowingItem = true
     })
@@ -128,6 +106,15 @@ export default {
       }, 100)
 
       this.relocate()
+    })
+
+    // arrows
+    this.$nuxt.$on('show-arrows', () => {
+      this.isArrowsVisible = true
+    })
+
+    this.$nuxt.$on('hide-arrows', () => {
+      this.isArrowsVisible = false
     })
   },
 
@@ -277,11 +264,11 @@ export default {
   data() {
     return {
       isShowingItem: false,
-      isLoaded: false,
       masonry: null,
       imagesloaded: null,
       scrollTop: 0,
       loader: { t: 0 },
+      isArrowsVisible: false,
     }
   },
 }
@@ -329,31 +316,9 @@ export default {
     top: calc(50% + 2.5%);
   }
 
-  #loading {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-
-    #loading-gallery {
-      display: block;
-      height: 50px;
-      transform: translate(0, -50px);
-    }
-
-    .message {
-      display: block;
-      color: black;
-      transform: translate(0, -50px);
-    }
-  }
-
   .grid {
-    opacity: 0;
     transition: opacity 0.6s;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 
     .grid-item {
       width: 31.9%;

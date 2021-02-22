@@ -1,9 +1,6 @@
 <template lang="pug">
 #gallery-mobile
-  #loading(v-if='!isLoaded')
-    #loading-gallery-mobile
-    .message cargando {{ parseInt(loader.t * 100) }}%
-  .grid(:style='{ opacity: isLoaded ? 1 : 0 }')
+  .grid
     .grid-item.default(@click='showItem(item.nombre)', v-for='item in itemsDefault')
       img.image(:src='item.galería[0].url')
       .hover {{ item.nombre.toUpperCase() }}
@@ -22,12 +19,8 @@
 
 <script>
 import ViewerMobile from '../components/ViewerMobile'
-import { mapGetters } from 'vuex'
-import { mapMutations } from 'vuex'
+import { mapGetters, mapMutations } from 'vuex'
 import imagesLoaded from 'imagesloaded'
-import gsap from 'gsap'
-import Loader from '../plugins/loader'
-import { WheelGestures } from 'wheel-gestures'
 
 export default {
   components: { ViewerMobile },
@@ -35,17 +28,7 @@ export default {
   props: ['type'],
 
   mounted() {
-    let counter = 0
-    this.loader = new Loader('loading-gallery-mobile')
     let grid = document.querySelector('#gallery-mobile .grid')
-
-    if (this.isMobile()) {
-      document.querySelector('#gallery-mobile').style.overflowY = 'scroll'
-    } else {
-      // document.querySelector('#gallery-mobile').style.overflowY = 'hidden'
-    }
-
-    // document.querySelector('#gallery-mobile').style.overflowY = 'hidden'
 
     this.imagesloaded = imagesLoaded(grid)
 
@@ -54,26 +37,12 @@ export default {
       itemSelector: '.grid-item',
       filter: '.base',
       masonry: {
-        horizontalOrder: true
-      }
+        horizontalOrder: true,
+      },
     })
 
     // images loaded
-    this.imagesloaded.on('done', () => {
-      this.isLoaded = true
-      this.$nuxt.$emit('page-loaded')
-      if (this.isMobile())  document.querySelector('#gallery-mobile').style.overflowY = 'scroll'
-    })
-
     this.imagesloaded.on('progress', () => {
-      counter++
-      this.loader.t = counter / this.imagesloaded.images.length
-      if (this.loader.t >= 1) {
-        this.isLoaded = true
-        this.$nuxt.$emit('page-loaded')
-        if (this.isMobile())  document.querySelector('#gallery-mobile').style.overflowY = 'scroll'
-      }
-
       this.masonry.layout()
     })
 
@@ -271,7 +240,6 @@ export default {
       isLoaded: false,
       masonry: null,
       imagesloaded: null,
-      loader: { t: 0 },
     }
   },
 }
@@ -290,7 +258,7 @@ export default {
 #gallery-mobile {
   position: absolute;
   width: 100%;
-  padding: 0 3% 15vh 3%;
+  padding: 0 3% 100px 3%;
   overflow-y: scroll;
   overflow-x: hidden;
   scrollbar-color: #ddd #f0f0f0;
@@ -320,11 +288,11 @@ export default {
   }
 
   .grid {
-    opacity: 0;
+    // opacity: 0;
     overflow-x: hidden;
-    // overflow-y: hidden;
+    overflow-y: hidden;
     transition: opacity 0.6s;
-    margin-bottom: 100px;
+    // margin-bottom: 100px;
 
     .grid-item {
       width: 100%;
