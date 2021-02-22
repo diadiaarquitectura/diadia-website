@@ -4,3 +4,4 @@ yarn.lock
 .nuxt
 diadia.todo
 .gitignore
+.todo
