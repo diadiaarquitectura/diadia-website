@@ -3,7 +3,7 @@
   #logo
     a(href='#', @click='gotoHome()') 
       img(src='/images/logo-diadia.svg', width='100%')
-  #filters(v-if='isLoaded', :style='{ opacity: currentSection.includes("gallery") ? 1 : 0 }')
+  #filters(:style='{ opacity: currentSection.includes("gallery") ? 1 : 0 }')
     .filter
       a(
         href='#',
@@ -12,7 +12,7 @@
         @click='onGalleryBasesClick()'
       )
         .label(:style='{ opacity: galleryBasesOpacity }') bases
-        img(src='/images/icons/icon-tiempo.svg', width='100%')
+        img(src='~/assets/icons/icon-tiempo.svg', width='100%')
     .filter
       a(
         href='#',
@@ -21,7 +21,7 @@
         @click='onGalleryMediaClick()'
       ) 
         .label(:style='{ opacity: galleryMediaOpacity }') medios
-        img(src='images/icons/icon-archivo.svg', width='100%')
+        img(src='~/assets/icons/icon-archivo.svg', width='100%')
     .filter
       a(
         href='#',
@@ -30,20 +30,20 @@
         @click='onGalleryWorkClick()'
       ) 
         .label(:style='{ opacity: galleryWorkOpacity }') obra
-        img(src='images/icons/icon-uso.svg', width='100%')
-  #menu-desktop(v-if='!isMobileMenu && isLoaded')
+        img(src='~/assets/icons/icon-uso.svg', width='100%')
+  #menu-desktop(v-if='!isMobileMenu')
     ul
       li(:class='{ bold: currentSection.includes("gallery") }')
         a(href='#', @click='onProjectsClick()') PROYECTOS
       li(:class='{ bold: currentSection == "studio" }')
         a(href='#', @click='setCurrentSection("studio"); onStudio()') ESTUDIO
       li(:class='{ bold: currentSection == "contact" }')
-        a(href='#', @click='setCurrentSection("contact")') CONTACTO
+        a(href='#', @click='setCurrentSection("contact"); onContact()') CONTACTO
 
-  #hamburger(v-if='isMobileMenu && isLoaded', @click='showMobileMenu()')
+  #hamburger(v-if='isMobileMenu', @click='showMobileMenu()')
     img(src='images/hamburger.svg')
 
-  #menu-mobile(v-if='isLoaded')
+  #menu-mobile
     .veil(@click='onVeilClick($event)')
     .content
       ul
@@ -52,7 +52,7 @@
         li(:class='{ bold: currentSection == "studio" }')
           a(href='#', @click='setCurrentSection("studio"); hideMobileMenu(); onStudio()') ESTUDIO
         li(:class='{ bold: currentSection == "contact" }')
-          a(href='#', @click='setCurrentSection("contact"); hideMobileMenu()') CONTACTO
+          a(href='#', @click='setCurrentSection("contact"); hideMobileMenu(); onContact()') CONTACTO
 </template>
 
 <script>
@@ -69,10 +69,6 @@ export default {
         this.isMobileMenu = false
       }
     }, 100)
-
-    this.$nuxt.$on('page-loaded', () => {
-      this.isLoaded = true
-    })
   },
 
   methods: {
@@ -81,10 +77,16 @@ export default {
     gotoHome() {
       gsap.to('#main', { top: 0, duration: 0.8, ease: 'power2.out' })
       this.$nuxt.$emit('reload-home')
+      this.$nuxt.$emit('hide-arrows')
     },
 
     onStudio() {
       this.$nuxt.$emit('studio-selected')
+      this.$nuxt.$emit('show-arrows')
+    },
+
+    onContact() {
+      this.$nuxt.$emit('hide-arrows')
     },
 
     onVeilClick(e) {
@@ -99,24 +101,28 @@ export default {
       this.setCurrentSection('gallery-default')
       this.$nuxt.$emit('default-selected')
       gsap.to('#gallery', { scrollTop: '0', duration: 0.5 })
+      this.$nuxt.$emit('show-arrows')
     },
 
     onGalleryWorkClick() {
       this.setCurrentSection('gallery-work')
       this.$nuxt.$emit('work-selected')
       gsap.to('#gallery', { scrollTop: '0', duration: 0.5 })
+      this.$nuxt.$emit('show-arrows')
     },
 
     onGalleryMediaClick() {
       this.setCurrentSection('gallery-media')
       this.$nuxt.$emit('media-selected')
       gsap.to('#gallery', { scrollTop: '0', duration: 0.5 })
+      this.$nuxt.$emit('show-arrows')
     },
 
     onGalleryBasesClick() {
       this.setCurrentSection('gallery-bases')
       this.$nuxt.$emit('bases-selected')
       gsap.to('#gallery', { scrollTop: '0', duration: 0.5 })
+      this.$nuxt.$emit('show-arrows')
     },
 
     showMobileMenu() {
@@ -177,7 +183,6 @@ export default {
       isMouseOverWork: false,
       isMouseOverMedia: false,
       isMouseOverBases: false,
-      isLoaded: false,
     }
   },
 }
