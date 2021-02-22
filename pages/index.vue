@@ -34,9 +34,6 @@ export default {
           axios.get('content/contacto.json').then((response) => {
             this.setContactInfo(response.data)
             urls = [
-              '/images/icons/icon-uso.svg',
-              '/images/icons/icon-archivo.svg',
-              '/images/icons/icon-tiempo.svg',
               '/images/arrow-down.svg',
               '/images/arrow-left.svg',
               '/images/arrow-right.svg',
