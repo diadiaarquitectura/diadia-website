@@ -3,9 +3,7 @@
   #container-inner
     top-bar
     transition(name='fade')
-      gallery(v-show='!isMobile && currentSection.includes("gallery")')
-    transition(name='fade')
-      gallery-mobile(v-show='isMobile && currentSection.includes("gallery") && isMobile')
+      gallery(v-show='currentSection.includes("gallery")')
     transition(name='fade')
       studio(v-show='!isMobile && currentSection == "studio"')
     transition(name='fade')
@@ -19,7 +17,6 @@
 <script>
 import TopBar from '~/components/TopBar'
 import Gallery from '~/components/Gallery'
-import GalleryMobile from '~/components/GalleryMobile'
 import Studio from '~/components/Studio'
 import StudioMobile from '~/components/StudioMobile'
 import Contact from '~/components/Contact'
@@ -30,7 +27,6 @@ export default {
   components: {
     TopBar,
     Gallery,
-    GalleryMobile,
     Studio,
     StudioMobile,
     Contact,

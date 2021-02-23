@@ -7,16 +7,37 @@
       img(src='/images/arrow-down.svg')
   .grid
     .grid-item.default(@click='showItem(item.nombre)', v-for='item in itemsDefault')
-      img.image.lazy(width='30%', height='30%', :data-src='item.galería[0].url', loading='lazy')
+      img.image.lozad(
+        width='30%',
+        height='100',
+        src='~/assets/images/placeholder.svg',
+        :data-src='item.galería[0].url'
+      )
       .hover {{ item.nombre.toUpperCase() }}
     .grid-item.bases(@click='showItem(item.nombre)', v-for='item in itemsBases')
-      img.image.lazy(width='30%', height='30%', :data-src='item.galería[0].url', loading='lazy')
+      img.image.lozad(
+        width='30%',
+        height='100',
+        src='~/assets/images/placeholder.svg',
+        :data-src='item.galería[0].url'
+      )
       .hover {{ item.nombre.toUpperCase() }}
     .grid-item.medias(@click='showItem(item.nombre)', v-for='item in itemsMedia')
-      img.image.lazy(width='30%', height='30%', :data-src='item.galería[0].url', loading='lazy')
+      img.image.lozad(
+        width='30%',
+        height='100',
+        src='~/assets/images/placeholder.svg',
+        :data-src='item.galería[0].url'
+      )
       .hover {{ item.nombre.toUpperCase() }}
     .grid-item.work(@click='showItem(item.nombre)', v-for='item in itemsWork')
-      img.image.lazy(width='30%', height='30%', :data-src='item.galería[0].url', loading='lazy')
+      img.image.lozad(
+        width='30%',
+        height='100',
+        src='~/assets/images/placeholder.svg',
+        :data-src='item.galería[0].url',
+        loading='lazy'
+      )
       .hover {{ item.nombre.toUpperCase() }}
   transition(name='fade')
     viewer(v-if='isShowingItem')
@@ -27,6 +48,7 @@ import Viewer from '../components/Viewer'
 import { mapGetters, mapMutations } from 'vuex'
 import imagesLoaded from 'imagesloaded'
 import gsap from 'gsap'
+import lozad from 'lozad'
 
 export default {
   components: { Viewer },
@@ -47,10 +69,14 @@ export default {
       },
     })
 
-    let lazyLoadInstance = new LazyLoad({
-      container: grid,
-      callback_finish: this.onImageEnter(),
-      threshold: 0,
+    const observer = lozad('#gallery .lozad', {
+      loaded: function (el) {
+        console.log('cargado')
+      },
+    })
+
+    this.masonry.on('arrangeComplete', () => {
+      observer.observe()
     })
 
     setInterval(() => {
@@ -59,7 +85,6 @@ export default {
 
     this.imagesloaded.on('progress', () => {
       this.masonry.layout()
-      lazyLoadInstance.update()
     })
 
     // content
@@ -76,9 +101,9 @@ export default {
         filter: '.default',
       })
 
-      // setTimeout(() => {
-      //   this.masonry.layout()
-      // }, 100)
+      setTimeout(() => {
+        this.masonry.layout()
+      }, 100)
 
       this.relocate()
     })
@@ -375,7 +400,66 @@ img.loaded {
       img {
         width: 100% !important;
         height: auto !important;
-        // background-color: red;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #arrows {
+    display: none;
+  }
+
+  #gallery {
+    position: absolute;
+    width: 100%;
+    padding: 0 3% 100px 3%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-color: #ddd #f0f0f0;
+    scrollbar-width: thin;
+    top: 162px;
+    height: calc(100% - 200px);
+
+    .grid {
+      overflow-x: hidden;
+      overflow-y: hidden;
+      transition: opacity 0.6s;
+
+      .grid-item {
+        width: 100%;
+        margin-left: 0.7%;
+        margin-right: 0.7%;
+        margin-top: 0;
+        margin-bottom: 1.4%;
+        float: left;
+        cursor: pointer;
+        position: relative;
+
+        .hover {
+          width: 100%;
+          height: 100%;
+          font-size: 0.9rem;
+          letter-spacing: 1px;
+          justify-content: center;
+          align-items: center;
+          transition: all 0.3s;
+          position: relative;
+          background-color: rgba(255, 255, 255, 0);
+          color: black;
+          display: block;
+          padding: 7px 0;
+          text-align: left;
+          top: 0;
+          left: 0;
+        }
+
+        img {
+          position: relative;
+          display: block;
+          width: 100% !important;
+          height: auto !important;
+        }
       }
     }
   }

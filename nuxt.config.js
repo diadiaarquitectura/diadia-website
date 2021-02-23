@@ -22,11 +22,6 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
-      {
-        rel: 'stylesheet',
-        type: 'image/x-icon',
-        href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap'
-      }
     ]
   },
 
