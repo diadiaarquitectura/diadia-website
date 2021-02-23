@@ -42,14 +42,14 @@
         img(src='images/download.svg', width='100%')
     #text
       a(href='#')
-        img(src='images/description-off.svg', @click='viewDescription()', width='100%')
-    #close
-      a(href='#')
         img(
-          src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgaWQ9InN2ZzM4OTUiCiAgIHZlcnNpb249IjEuMSIKICAgdmlld0JveD0iMCAwIDEzLjIyOTE2NiAxMy4yMjkxNjciCiAgIGhlaWdodD0iNTAiCiAgIHdpZHRoPSI1MCI+CiAgPGRlZnMKICAgICBpZD0iZGVmczM4ODkiIC8+CiAgPG1ldGFkYXRhCiAgICAgaWQ9Im1ldGFkYXRhMzg5MiI+CiAgICA8cmRmOlJERj4KICAgICAgPGNjOldvcmsKICAgICAgICAgcmRmOmFib3V0PSIiPgogICAgICAgIDxkYzpmb3JtYXQ+aW1hZ2Uvc3ZnK3htbDwvZGM6Zm9ybWF0PgogICAgICAgIDxkYzp0eXBlCiAgICAgICAgICAgcmRmOnJlc291cmNlPSJodHRwOi8vcHVybC5vcmcvZGMvZGNtaXR5cGUvU3RpbGxJbWFnZSIgLz4KICAgICAgICA8ZGM6dGl0bGU+PC9kYzp0aXRsZT4KICAgICAgPC9jYzpXb3JrPgogICAgPC9yZGY6UkRGPgogIDwvbWV0YWRhdGE+CiAgPGcKICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLC0yODUuNjIyOSkiCiAgICAgaWQ9ImxheWVyMSI+CiAgICA8cmVjdAogICAgICAgdHJhbnNmb3JtPSJyb3RhdGUoLTQ1KSIKICAgICAgIHk9IjIwNS45MDE0NyIKICAgICAgIHg9Ii0yMDIuODk1MzkiCiAgICAgICBoZWlnaHQ9IjEwLjgzNzY5NSIKICAgICAgIHdpZHRoPSIxLjg1ODk4MTMiCiAgICAgICBpZD0icmVjdDgzMiIKICAgICAgIHN0eWxlPSJmaWxsOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjEuNDQ0MjI7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1vcGFjaXR5OjAuNzcyMzk7cGFpbnQtb3JkZXI6bWFya2VycyBzdHJva2UgZmlsbCIgLz4KICAgIDxyZWN0CiAgICAgICB0cmFuc2Zvcm09InJvdGF0ZSg0NSkiCiAgICAgICBzdHlsZT0iZmlsbDojMDAwMDAwO3N0cm9rZS13aWR0aDoxLjQ0NDIyO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utb3BhY2l0eTowLjc3MjM5O3BhaW50LW9yZGVyOm1hcmtlcnMgc3Ryb2tlIGZpbGwiCiAgICAgICBpZD0icmVjdDgzMi0zIgogICAgICAgd2lkdGg9IjEuODU4OTgxMyIKICAgICAgIGhlaWdodD0iMTAuODM3Njk1IgogICAgICAgeD0iMjEwLjM5MDg0IgogICAgICAgeT0iMTk2LjU0NzA0IiAvPgogIDwvZz4KPC9zdmc+Cg==',
-          @click='closeProject()',
+          :src='isText ? "images/description-on.svg" : "images/description-off.svg"',
+          @click='viewDescription()',
           width='100%'
         )
+    #close
+      a(href='#')
+        img(src='images/close.svg', @click='closeProject()', width='100%')
 </template>
 
 <script>
@@ -61,9 +61,6 @@ import gsap from 'gsap'
 
 export default {
   mounted() {
-    console.log(this.currentProject)
-    // if (!this.currentProject) return
-
     this.$nuxt.$on('show-project', () => {
       this.currentImage = 0
       let image = document.querySelector('#image img')
