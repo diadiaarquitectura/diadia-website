@@ -1,6 +1,30 @@
 <template lang="pug">
 #viewer(v-if='currentProject')
-  #viewer-inner
+  #description(v-show='isText')
+    div
+      //- .date 2017
+      .container
+        .title Ubicación
+        .text Comunidad Yagua Las Palmeras, Perú
+      .container
+        .title Área
+        .text Terreno 4,500 m2
+        .text Techada 950 m2
+      .container
+        .title Cliente
+        .text FADV Fondazione l'Albero delta Vita
+      .container
+        .title Equipo
+        .text Michele Albaneli, Carmen Omonte con Alonso Melgar
+      .container
+        .title Colaboración
+        .text -
+      .container
+        .title Fotografía
+        .text -
+      .container
+        .text Contener la selva <br> El proyecto busca crear una nueva centralidad educativa y cívica, que permita el encuentro de toda la comunidad. Propiciando una condición íntima en el extenso entorno de la selva. Se busca "asignar escala" a la selva, medirla, contenerla a través de la arquitectura de la escuela.<br>El sistema circular de organización y distribución de las estructuras propone una variante al tradicional sistema lineal de organicación de los palafitos, y permite la constante relación entre los usuarios de la escuela y el entorno.<br>Se usan técnicas constructivas, materiales, tipologías típicas de la comunidad, generando así un vínculo simbólico e identitario con la misma.
+  #viewer-inner(v-show='!isText')
     #image
       .content
         img
@@ -13,12 +37,17 @@
     #arrow-right
       a(href='#')
         img(src='images/arrow-right.svg', @click='nextImage()')
+  //- #download(v-if='currentProject.descargable')
+  #viewer-buttons
+    #download(v-if='true')
+      a(:href='currentProject.descargable', target='__blank')
+        img(src='images/download.svg', width='100%')
+    #text
+      a(href='#')
+        img(src='images/description-off.svg', @click='viewDescription()', width='100%')
     #close
       a(href='#')
         img(src='images/close.svg', @click='closeProject()', width='100%')
-    #download(v-if='currentProject.descargable')
-      a(:href="currentProject.descargable", target='__blank')
-        img(src='images/download.svg', width='100%')
 </template>
 
 <script>
@@ -42,17 +71,20 @@ export default {
 
     let animation = gsap.timeline()
 
+    let text = document.querySelector('#viewer #text')
     let close = document.querySelector('#viewer #close')
     let download = document.querySelector('#viewer #download')
     let arrowLeft = document.querySelector('#viewer #arrow-left')
     let arrowRight = document.querySelector('#viewer #arrow-right')
 
+    animation.set(text, { opacity: 0, scale: 0.6 }, 0)
     animation.set(close, { opacity: 0, scale: 0.6 }, 0)
     animation.set(download, { opacity: 0, scale: 0.6 }, 0)
     animation.set(arrowLeft, { opacity: 0, scale: 0.6 }, 0)
     animation.set(arrowRight, { opacity: 0, scale: 0.6 }, 0)
 
     imagesloaded('#viewer #viewer-inner', () => {
+      animation.to(text, { opacity: 1, scale: 1, duration: 0.2 }, 0)
       animation.to(close, { opacity: 1, scale: 1, duration: 0.2 }, 0)
       animation.to(download, { opacity: 1, scale: 1, duration: 0.2 }, 0)
       animation.to(arrowLeft, { opacity: 1, scale: 1, duration: 0.2 }, 0)
@@ -61,6 +93,14 @@ export default {
 
     tippy('#viewer #download', {
       content: 'descargar',
+    })
+
+    tippy('#viewer #text', {
+      content: 'ver descripción',
+    })
+
+    tippy('#viewer #close', {
+      content: 'cerrar',
     })
   },
 
@@ -121,12 +161,8 @@ export default {
       this.$nuxt.$emit('close-project')
     },
 
-    selectGallery() {
-      this.isText = false
-    },
-
-    selectText() {
-      this.isText = true
+    viewDescription() {
+      this.isText = !this.isText
     },
   },
 
@@ -156,6 +192,29 @@ export default {
   justify-content: center
   align-items: center
   z-index: 5000
+
+  #description
+    background-color: white
+    width: 100%
+    height: 100%
+    max-width: 760px
+    display: grid
+    justify-content: center
+    align-items: center
+    padding: 2vw 0
+    position: relative
+
+    .date
+      position: absolute
+      right: 10vw
+      top: 10vw
+      font-weight: bold
+      font-size: 16px
+
+    .container
+      margin-bottom: 10px
+      .title
+        font-weight: bold
 
   #viewer-inner
     position: relative
@@ -225,19 +284,21 @@ export default {
       transform: scale(1.5)
       transition: all 0.2s
 
-  #close, #download
-    position: fixed
-    right: 20px
+  #viewer-buttons
+    position: absolute
     top: 20px
-    width: 35px
-    transform: scale(0.9)
-    transition: all 0.2s
+    right: 20px
 
-    &:hover
-      transform: scale(1)
+    #close, #download, #text
+      width: 30px
+      margin-left: 3px
+      // transform: scale(0.9)
+      // transition: all 0.2s
+      cursor: pointer
+      display: inline-block
 
-  #download
-    right: 60px
+      // &:hover
+      //   transform: scale(1)
 
 @media (max-width: 768px)
   #viewer
