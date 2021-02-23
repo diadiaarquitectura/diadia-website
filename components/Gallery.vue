@@ -39,7 +39,7 @@
       )
       .hover {{ item.nombre.toUpperCase() }}
   transition(name='fade')
-    viewer(v-show='isShowingItem')
+    viewer(v-if='isShowingItem')
 </template>
 
 <script>
@@ -249,11 +249,10 @@ export default {
         let item = this.items[i]
         if (item.nombre == name) {
           this.setCurrentProject(item)
+          this.$nuxt.$emit('show-project', item)
           break
         }
       }
-
-      this.$nuxt.$emit('show-project')
     },
   },
 

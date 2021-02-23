@@ -63,8 +63,17 @@ export default {
   mounted() {
     if (!this.currentProject) return
 
+    this.$nuxt.$on('show-project', (item) => {
+      // this.currentProject = item
+      // this.currentImage = 0
+      // let image = document.querySelector('#image img')
+      // image.style.opacity = 1
+      // image.src = this.currentProject.galería[0].url
+
+      // console.log(image.src)
+    })
+
     this.currentImage = 0
-    console.log('show viewer')
     window.addEventListener('keydown', this.onKeydown)
 
     let image = document.querySelector('#image img')
@@ -239,7 +248,7 @@ export default {
         left: 0
         min-width: 20vh
         min-height: 20vh
-        border: none;
+        border: none
         max-height: 65vh
         max-width: 65vw
         transition: all 0.2s
