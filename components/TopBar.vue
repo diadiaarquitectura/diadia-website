@@ -331,8 +331,13 @@ export default {
       left: calc(50% - 85px)
 
     #filters
-      top: 92px
+      top: 88px
 
     #hamburger
       top: 27px
+
+@media (max-width: 767px)
+  #topbar
+    #filters
+      top: 92px
 </style>
