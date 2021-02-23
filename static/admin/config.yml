@@ -40,6 +40,10 @@ collections:
               - { label: Descargable, name: descargable, required: false, widget: text }
               - { label: Ubicacion, name: ubicacion, required: false, widget: text }
               - { label: Involucrados, name: involucrados, required: false, widget: text }
+              - { label: Área, name: area, required: false, widget: text }
+              - { label: Cliente, name: cliente, required: false, widget: text }
+              - { label: Colaboración, name: colaboracion, required: false, widget: text }
+              - { label: Fotografía, name: fotografia, required: false, widget: text }
               - label: Galería de Fotos
                 name: galería
                 required: false
