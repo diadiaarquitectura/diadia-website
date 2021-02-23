@@ -1,6 +1,6 @@
 <template lang="pug">
 #studio
-  #arrows-studio(v-if="isArrowsVisible")
+  #arrows-studio(v-if='isArrowsVisible')
     #arrow-up(@click='onUp()', v-if='studio.galería.length > 6 && !isMobile()')
       img(src='/images/arrow-up.svg')
     #arrow-down(@click='onDown()', v-if='studio.galería.length > 6 && !isMobile()')
@@ -152,6 +152,7 @@ export default {
       margin-bottom: 1.4%;
       float: left;
       position: relative;
+      background-color: #eee;
 
       img {
         width: 100% !important;
