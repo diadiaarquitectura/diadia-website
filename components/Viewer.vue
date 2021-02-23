@@ -237,8 +237,8 @@ export default {
       img
         top: 0
         left: 0
-        min-width: 10vh
-        min-height: 10vh
+        min-width: 20vh
+        min-height: 20vh
         border: none;
         max-height: 65vh
         max-width: 65vw
