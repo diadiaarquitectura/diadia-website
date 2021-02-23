@@ -36,9 +36,8 @@
     #arrow-right
       a(href='#')
         img(src='images/arrow-right.svg', @click='nextImage()')
-  //- #download(v-if='currentProject.descargable')
   #viewer-buttons
-    #download(v-if='true')
+    #download(v-if='currentProject.descargable')
       a(:href='currentProject.descargable', target='__blank')
         img(src='images/download.svg', width='100%')
     #text
