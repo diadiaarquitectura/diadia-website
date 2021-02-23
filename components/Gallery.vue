@@ -35,8 +35,7 @@
         width='30%',
         height='100',
         src='~/assets/images/placeholder.svg',
-        :data-src='item.galería[0].url',
-        loading='lazy'
+        :data-src='item.galería[0].url'
       )
       .hover {{ item.nombre.toUpperCase() }}
   transition(name='fade')
@@ -69,14 +68,10 @@ export default {
       },
     })
 
-    const observer = lozad('#gallery .lozad', {
-      loaded: function (el) {
-        console.log('cargado')
-      },
-    })
+    let observer = lozad('#gallery .lozad')
 
     this.masonry.on('arrangeComplete', () => {
-      observer.observe()
+        observer.observe()
     })
 
     setInterval(() => {

@@ -7,7 +7,12 @@
       img(src='/images/arrow-down.svg')
   .grid
     .grid-item(v-for='image in studio.galería')
-      img.image(:src='image.url')
+      img.image.lozad(
+        width='30%',
+        height='auto',
+        src='~/assets/images/placeholder.svg',
+        :data-src='image.url'
+      )
 </template>
 
 <script>
@@ -15,6 +20,7 @@ import Viewer from '../components/Viewer'
 import { mapGetters, mapMutations } from 'vuex'
 import gsap from 'gsap'
 import imagesLoaded from 'imagesloaded'
+import lozad from 'lozad'
 
 export default {
   components: { Viewer },
@@ -31,6 +37,16 @@ export default {
         horizontalOrder: true,
       },
     })
+
+    const observer = lozad('#studio .lozad')
+
+    this.masonry.on('arrangeComplete', () => {
+      observer.observe()
+    })
+
+    // setInterval(() => {
+    //   this.masonry.layout()
+    // }, 100)
 
     this.imagesloaded.on('progress', () => {
       this.masonry.layout()
@@ -154,7 +170,6 @@ export default {
       float: left;
       position: relative;
       background-color: #eee;
-      min-height: 200px;
 
       img {
         width: 100% !important;

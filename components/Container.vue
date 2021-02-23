@@ -5,9 +5,7 @@
     transition(name='fade')
       gallery(v-show='currentSection.includes("gallery")')
     transition(name='fade')
-      studio(v-show='!isMobile && currentSection == "studio"')
-    transition(name='fade')
-      studio-mobile(v-show='isMobile && currentSection == "studio"')
+      studio(v-show='currentSection == "studio"')
     transition(name='fade')
       contact(v-show='!isMobile && currentSection == "contact"')
     transition(name='fade')
@@ -18,7 +16,6 @@
 import TopBar from '~/components/TopBar'
 import Gallery from '~/components/Gallery'
 import Studio from '~/components/Studio'
-import StudioMobile from '~/components/StudioMobile'
 import Contact from '~/components/Contact'
 import ContactMobile from '~/components/ContactMobile'
 import { mapGetters } from 'vuex'
@@ -28,7 +25,6 @@ export default {
     TopBar,
     Gallery,
     Studio,
-    StudioMobile,
     Contact,
     ContactMobile
   },
