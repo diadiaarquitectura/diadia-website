@@ -1,7 +1,6 @@
 <template lang="pug">
 #contact
   transition(name='fade')
-    //- .content.row(v-show='isLoaded')
     .content.row
       .pic.col-md-8(:style='{ backgroundImage: "url(" + contactInfo.imagen + ")" }')
       .column.col-md-4
@@ -21,12 +20,6 @@ import { mapGetters } from 'vuex'
 import imagesloaded from 'imagesloaded'
 
 export default {
-  mounted() {
-    // imagesloaded('#contact .content .pic', { background: true }, () => {
-    //   this.isLoaded = true
-    // })
-  },
-
   computed: {
     ...mapGetters({ contactInfo: 'getContactInfo' }),
   },
@@ -75,7 +68,7 @@ export default {
 
     .pic
       width: 100%
-      background-color: #eee
+      background-color: #f1f1f1
       background-position: center
       background-size: cover
 
