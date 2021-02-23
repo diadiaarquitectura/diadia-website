@@ -63,6 +63,7 @@ export default {
   mounted() {
     this.$nuxt.$on('show-project', () => {
       this.currentImage = 0
+      this.isText = false
       let image = document.querySelector('#image img')
       image.style.opacity = 1
       image.src = this.currentProject.galería[0].url
