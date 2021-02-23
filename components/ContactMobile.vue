@@ -56,6 +56,7 @@ export default {
   text-align: center
   align-items: center
   display: inline-block
+  overflow-x: hidden
   overflow-y: scroll
 
   .content
@@ -63,7 +64,6 @@ export default {
     width: 90%
     margin: 0 auto
     background-color: white
-    overflow: scroll
     font-size: 1.1rem
     overflow-x: hidden
     margin-bottom: 50px
