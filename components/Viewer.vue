@@ -5,17 +5,16 @@
       //- .date 2017
       .container
         .title Ubicación
-        .text Comunidad Yagua Las Palmeras, Perú
+        .text -
       .container
         .title Área
-        .text Terreno 4,500 m2
-        .text Techada 950 m2
+        .text -
       .container
         .title Cliente
-        .text FADV Fondazione l'Albero delta Vita
+        .text -
       .container
         .title Equipo
-        .text Michele Albaneli, Carmen Omonte con Alonso Melgar
+        .text -
       .container
         .title Colaboración
         .text -
@@ -23,7 +22,7 @@
         .title Fotografía
         .text -
       .container
-        .text Contener la selva <br> El proyecto busca crear una nueva centralidad educativa y cívica, que permita el encuentro de toda la comunidad. Propiciando una condición íntima en el extenso entorno de la selva. Se busca "asignar escala" a la selva, medirla, contenerla a través de la arquitectura de la escuela.<br>El sistema circular de organización y distribución de las estructuras propone una variante al tradicional sistema lineal de organicación de los palafitos, y permite la constante relación entre los usuarios de la escuela y el entorno.<br>Se usan técnicas constructivas, materiales, tipologías típicas de la comunidad, generando así un vínculo simbólico e identitario con la misma.
+        .text -
   #viewer-inner(v-show='!isText')
     #image
       .content
