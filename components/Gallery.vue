@@ -7,7 +7,7 @@
       img(src='/images/arrow-down.svg')
   .grid
     .grid-item.default(@click='showItem(item.nombre)', v-for='item in itemsDefault')
-      img.image.lozad(
+      img.image.lozad.default(
         width='30%',
         height='100',
         src='~/assets/images/placeholder.svg',
@@ -15,7 +15,7 @@
       )
       .hover {{ item.nombre.toUpperCase() }}
     .grid-item.bases(@click='showItem(item.nombre)', v-for='item in itemsBases')
-      img.image.lozad(
+      img.image.lozad.bases(
         width='30%',
         height='100',
         src='~/assets/images/placeholder.svg',
@@ -23,7 +23,7 @@
       )
       .hover {{ item.nombre.toUpperCase() }}
     .grid-item.medias(@click='showItem(item.nombre)', v-for='item in itemsMedia')
-      img.image.lozad(
+      img.image.lozad.medias(
         width='30%',
         height='100',
         src='~/assets/images/placeholder.svg',
@@ -31,7 +31,7 @@
       )
       .hover {{ item.nombre.toUpperCase() }}
     .grid-item.work(@click='showItem(item.nombre)', v-for='item in itemsWork')
-      img.image.lozad(
+      img.image.lozad.work(
         width='30%',
         height='100',
         src='~/assets/images/placeholder.svg',
@@ -68,12 +68,6 @@ export default {
       },
     })
 
-    let observer = lozad('#gallery .lozad')
-
-    this.masonry.on('arrangeComplete', () => {
-        observer.observe()
-    })
-
     setInterval(() => {
       this.masonry.layout()
     }, 100)
@@ -96,6 +90,12 @@ export default {
         filter: '.default',
       })
 
+      let observer = lozad('#gallery .lozad.default')
+
+      this.masonry.on('arrangeComplete', () => {
+        observer.observe()
+      })
+
       setTimeout(() => {
         this.masonry.layout()
       }, 100)
@@ -106,6 +106,12 @@ export default {
     this.$nuxt.$on('bases-selected', () => {
       this.masonry.arrange({
         filter: '.bases',
+      })
+
+      let observer = lozad('#gallery .lozad.bases')
+
+      this.masonry.on('arrangeComplete', () => {
+        observer.observe()
       })
 
       setTimeout(() => {
@@ -120,6 +126,12 @@ export default {
         filter: '.work',
       })
 
+      let observer = lozad('#gallery .lozad.work')
+
+      this.masonry.on('arrangeComplete', () => {
+        observer.observe()
+      })
+
       setTimeout(() => {
         this.masonry.layout()
       }, 100)
@@ -130,6 +142,12 @@ export default {
     this.$nuxt.$on('media-selected', () => {
       this.masonry.arrange({
         filter: '.medias',
+      })
+
+      let observer = lozad('#gallery .lozad.medias')
+
+      this.masonry.on('arrangeComplete', () => {
+        observer.observe()
       })
 
       setTimeout(() => {
