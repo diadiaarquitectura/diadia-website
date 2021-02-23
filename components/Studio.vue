@@ -90,7 +90,6 @@ export default {
   data() {
     return {
       isShowingProject: false,
-      isLoaded: false,
       masonry: null,
       scrollTop: 0,
       isArrowsVisible: false,

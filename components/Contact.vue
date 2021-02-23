@@ -1,7 +1,8 @@
 <template lang="pug">
 #contact
   transition(name='fade')
-    .content.row(v-show='isLoaded')
+    //- .content.row(v-show='isLoaded')
+    .content.row
       .pic.col-md-8(:style='{ backgroundImage: "url(" + contactInfo.imagen + ")" }')
       .column.col-md-4
         .text(v-html='contactInfo.mensaje')
@@ -21,9 +22,9 @@ import imagesloaded from 'imagesloaded'
 
 export default {
   mounted() {
-    imagesloaded('#contact .content .pic', { background: true }, () => {
-      this.isLoaded = true
-    })
+    // imagesloaded('#contact .content .pic', { background: true }, () => {
+    //   this.isLoaded = true
+    // })
   },
 
   computed: {
@@ -74,6 +75,7 @@ export default {
 
     .pic
       width: 100%
+      background-color: #eee
       background-position: center
       background-size: cover
 
