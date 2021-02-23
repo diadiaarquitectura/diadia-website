@@ -115,8 +115,8 @@ export default {
   height: calc(100% - 170px);
   width: 100%;
   padding: 0 3%;
-  // overflow-y: hidden;
   overflow-x: hidden;
+  overflow-y: scroll;
   scrollbar-color: #ddd #f0f0f0;
   scrollbar-width: thin;
 
@@ -154,6 +154,7 @@ export default {
       float: left;
       position: relative;
       background-color: #eee;
+      min-height: 200px;
 
       img {
         width: 100% !important;

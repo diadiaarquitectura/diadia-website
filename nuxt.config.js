@@ -18,6 +18,7 @@ export default {
       { src: 'https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js' },
       { src: 'https://npmcdn.com/isotope-fit-columns@1/fit-columns.js' },
       { src: 'https://rawgit.com/metafizzy/isotope-packery/master/packery-mode.pkgd.js' },
+      { src: 'https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },

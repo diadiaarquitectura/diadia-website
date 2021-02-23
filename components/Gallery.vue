@@ -7,16 +7,16 @@
       img(src='/images/arrow-down.svg')
   .grid
     .grid-item.default(@click='showItem(item.nombre)', v-for='item in itemsDefault')
-      img.image(:src='item.galería[0].url', loading='lazy')
+      img.image.lazy(width='30%', height='30%', :data-src='item.galería[0].url', loading='lazy')
       .hover {{ item.nombre.toUpperCase() }}
     .grid-item.bases(@click='showItem(item.nombre)', v-for='item in itemsBases')
-      img.image(:src='item.galería[0].url', loading='lazy')
+      img.image.lazy(width='30%', height='30%', :data-src='item.galería[0].url', loading='lazy')
       .hover {{ item.nombre.toUpperCase() }}
     .grid-item.medias(@click='showItem(item.nombre)', v-for='item in itemsMedia')
-      img.image(:src='item.galería[0].url', loading='lazy')
+      img.image.lazy(width='30%', height='30%', :data-src='item.galería[0].url', loading='lazy')
       .hover {{ item.nombre.toUpperCase() }}
     .grid-item.work(@click='showItem(item.nombre)', v-for='item in itemsWork')
-      img.image(:src='item.galería[0].url', loading='lazy')
+      img.image.lazy(width='30%', height='30%', :data-src='item.galería[0].url', loading='lazy')
       .hover {{ item.nombre.toUpperCase() }}
   transition(name='fade')
     viewer(v-if='isShowingItem')
@@ -40,15 +40,26 @@ export default {
 
     // masonry
     this.masonry = new Isotope(grid, {
-      itemSelector: '.grid-item',
+      itemSelector: '#gallery .grid-item',
       filter: '.base',
       masonry: {
         horizontalOrder: true,
       },
     })
 
+    let lazyLoadInstance = new LazyLoad({
+      container: grid,
+      callback_finish: this.onImageEnter(),
+      threshold: 0,
+    })
+
+    setInterval(() => {
+      this.masonry.layout()
+    }, 100)
+
     this.imagesloaded.on('progress', () => {
       this.masonry.layout()
+      lazyLoadInstance.update()
     })
 
     // content
@@ -65,9 +76,9 @@ export default {
         filter: '.default',
       })
 
-      setTimeout(() => {
-        this.masonry.layout()
-      }, 100)
+      // setTimeout(() => {
+      //   this.masonry.layout()
+      // }, 100)
 
       this.relocate()
     })
@@ -209,6 +220,11 @@ export default {
   methods: {
     ...mapMutations({ setCurrentProject: 'setCurrentProject' }),
 
+    onImageEnter() {
+      console.log('enter')
+      this.masonry.layout()
+    },
+
     isMobile() {
       let check = false
       ;(function (a) {
@@ -284,14 +300,18 @@ export default {
   opacity: 0;
 }
 
+img.loaded {
+  background-color: white;
+}
+
 #gallery {
   position: absolute;
   top: 150px;
   height: calc(100% - 170px);
   width: 100%;
   padding: 0 3%;
-  // overflow-y: hidden;
   overflow-x: hidden;
+  overflow-y: scroll;
   scrollbar-color: #ddd #f0f0f0;
   scrollbar-width: thin;
 
@@ -355,6 +375,7 @@ export default {
       img {
         width: 100% !important;
         height: auto !important;
+        // background-color: red;
       }
     }
   }

@@ -21,10 +21,8 @@ export default {
   components: { Viewer },
 
   mounted() {
-    let counter = 0
     this.loader = new Loader('loading-studio')
     let grid = document.querySelector('#studio-mobile .grid')
-    document.querySelector('#studio-mobile').style.overflowY = 'hidden'
 
     this.imagesloaded = imagesLoaded(grid)
 
@@ -94,8 +92,8 @@ export default {
   position: absolute;
   width: 100%;
   padding: 0 3% 15vh 3%;
-  overflow-y: scroll;
   overflow-x: hidden;
+  overflow-y: scroll;
   scrollbar-color: #ddd #f0f0f0;
   scrollbar-width: thin;
   top: 162px;

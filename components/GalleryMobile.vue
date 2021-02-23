@@ -259,8 +259,8 @@ export default {
   position: absolute;
   width: 100%;
   padding: 0 3% 100px 3%;
-  overflow-y: scroll;
   overflow-x: hidden;
+  overflow-y: scroll;
   scrollbar-color: #ddd #f0f0f0;
   scrollbar-width: thin;
   top: 162px;
