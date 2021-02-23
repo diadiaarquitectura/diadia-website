@@ -15,7 +15,6 @@ export default {
 
     script: [
       { src: 'https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js' },
-      { src: 'https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js' },
       { src: 'https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js' },
       { src: 'https://npmcdn.com/isotope-fit-columns@1/fit-columns.js' },
       { src: 'https://rawgit.com/metafizzy/isotope-packery/master/packery-mode.pkgd.js' },
