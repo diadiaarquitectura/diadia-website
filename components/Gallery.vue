@@ -345,6 +345,8 @@ img.loaded {
         justify-content: center;
         align-items: center;
         transition: all 0.3s;
+        text-align: center;
+        padding: 30px;
 
         &:hover {
           background-color: rgba(255, 255, 255, 0.85);
