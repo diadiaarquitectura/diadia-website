@@ -55,9 +55,8 @@ export default {
     width: 80%
     margin: 0 auto
     background-color: white
-    overflow: scroll
     font-size: 1.1rem
-    overflow-x: hidden
+    overflow: hidden
 
     .title
       font-weight: bold
