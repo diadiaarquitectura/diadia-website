@@ -155,6 +155,7 @@ export default {
         image.src = this.currentUrl
         image.onload = () => {
           image.style.opacity = 1
+          image.style.backgroundColor = 'white'
         }
       }, 100)
     },
@@ -236,9 +237,13 @@ export default {
       img
         top: 0
         left: 0
+        min-width: 10vh
+        min-height: 10vh
+        border: none;
         max-height: 65vh
         max-width: 65vw
         transition: all 0.2s
+        background-color: #eee
 
     #footer
       position: relative
@@ -294,13 +299,8 @@ export default {
     #close, #download, #text
       width: 30px
       margin-left: 3px
-      // transform: scale(0.9)
-      // transition: all 0.2s
       cursor: pointer
       display: inline-block
-
-      // &:hover
-      //   transform: scale(1)
 
 @media (max-width: 768px)
   #viewer

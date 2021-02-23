@@ -39,7 +39,7 @@
       )
       .hover {{ item.nombre.toUpperCase() }}
   transition(name='fade')
-    viewer(v-if='isShowingItem')
+    viewer(v-show='isShowingItem')
 </template>
 
 <script>

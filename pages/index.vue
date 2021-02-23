@@ -22,8 +22,9 @@ export default {
     window.addEventListener('resize', this.onWindowResize)
     window.addEventListener('onorientationchange', this.onOrientationChange)
 
+    this.loader = new Loader('loading-canvas')
+
     let urls
-    let projects, studio, contact
 
     axios.get('content/home.json').then((response) => {
       this.setHomeInfo(response.data)
@@ -42,8 +43,6 @@ export default {
               '/images/hamburger.svg',
               '/images/logo-diadia.svg',
             ]
-
-            this.loader = new Loader('loading-canvas')
 
             this.preloadImages(urls, () => {
               setTimeout(() => {
