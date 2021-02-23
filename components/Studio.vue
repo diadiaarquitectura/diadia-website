@@ -14,6 +14,7 @@
 import Viewer from '../components/Viewer'
 import { mapGetters, mapMutations } from 'vuex'
 import gsap from 'gsap'
+import imagesLoaded from 'imagesloaded'
 
 export default {
   components: { Viewer },

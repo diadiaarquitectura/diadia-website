@@ -14,8 +14,8 @@
 import Viewer from '../components/Viewer'
 import { mapGetters } from 'vuex'
 import { mapMutations } from 'vuex'
-import gsap from 'gsap'
 import Loader from '../plugins/loader'
+import imagesLoaded from 'imagesloaded'
 
 export default {
   components: { Viewer },
@@ -36,17 +36,10 @@ export default {
     })
 
     this.imagesloaded.on('done', () => {
-      document.querySelector('#studio-mobile').style.overflowY = 'scroll'
       this.isLoaded = true
     })
 
     this.imagesloaded.on('progress', () => {
-      counter++
-      this.loader.t = counter / this.imagesloaded.images.length
-      if (this.loader.t >= 1) {
-        this.isLoaded = true
-        document.querySelector('#studio-mobile').style.overflowY = 'scroll'
-      }
       this.masonry.layout()
     })
 
