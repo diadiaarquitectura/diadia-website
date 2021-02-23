@@ -61,16 +61,16 @@ import gsap from 'gsap'
 
 export default {
   mounted() {
-    if (!this.currentProject) return
+    console.log(this.currentProject)
+    // if (!this.currentProject) return
 
-    this.$nuxt.$on('show-project', (item) => {
-      // this.currentProject = item
-      // this.currentImage = 0
-      // let image = document.querySelector('#image img')
-      // image.style.opacity = 1
-      // image.src = this.currentProject.galería[0].url
+    this.$nuxt.$on('show-project', () => {
+      this.currentImage = 0
+      let image = document.querySelector('#image img')
+      image.style.opacity = 1
+      image.src = this.currentProject.galería[0].url
 
-      // console.log(image.src)
+      console.log('imagen: ' + image.src)
     })
 
     this.currentImage = 0
