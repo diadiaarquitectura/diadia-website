@@ -248,8 +248,6 @@ export default {
       for (let i = 0; i < this.items.length; i++) {
         let item = this.items[i]
         if (item.nombre == name) {
-          // this.setCurrentProject(item)
-          console.log(item)
           this.$store.commit('setCurrentProject', item)
           this.$nuxt.$emit('show-project')
           break

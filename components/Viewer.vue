@@ -67,8 +67,6 @@ export default {
       let image = document.querySelector('#image img')
       image.style.opacity = 1
       image.src = this.currentProject.galería[0].url
-
-      console.log('imagen: ' + image.src)
     })
 
     this.currentImage = 0
@@ -125,17 +123,14 @@ export default {
     onKeydown(e) {
       if (e.keyCode == 27) {
         this.closeProject()
-        console.log('close')
       }
 
       if (e.keyCode == 37) {
         this.prevImage()
-        console.log('prev', this.currentImage)
       }
 
       if (e.keyCode == 39) {
         this.nextImage()
-        console.log('next', this.currentImage)
       }
     },
 
