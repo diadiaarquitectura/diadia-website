@@ -730,9 +730,11 @@
       "descargable": "https://drive.google.com/file/d/1OYlb7lLWzpWsDVNmk4kFuCyq7YskKBtE/view?usp=sharing"
     },
     {
-      "fecha": "22 10 2020",
+      "colaboracion": "FD Arquitectos (Coordinación General)",
       "estado": "noRealizado",
       "nombre": "MASTERPLAN SAN FRANCISCO",
+      "area": "10 Ha.",
+      "descripcion": "Concurso Privado",
       "galería": [
         {
           "url": "/images/uploads/025_corteb2.png",
@@ -762,7 +764,11 @@
           "url": "/images/uploads/025_cortec.png",
           "tipo": "planimetrias"
         }
-      ]
+      ],
+      "cliente": "Privado",
+      "involucrados": "Michele Albanelli, Carmen Omonte con Alonso Melgar, Franco Ferraro",
+      "fecha": "22 10 2020",
+      "ubicacion": "Ancón, Perú"
     },
     {
       "fecha": "20 03 2015",
