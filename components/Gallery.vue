@@ -1,6 +1,6 @@
 <template lang="pug">
 #gallery
-  #arrows(v-if='isArrowsVisible')
+  #arrows(v-if='false')
     #arrow-up(@click='onUp()')
       img(src='/images/arrow-up.svg')
     #arrow-down(@click='onDown()')
