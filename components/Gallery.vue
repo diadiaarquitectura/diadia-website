@@ -162,9 +162,18 @@ export default {
       // agragar proyectos terminados:
       this.projects.forEach((project) => {
         if (project.estado == 'realizado') {
+          console.log(project)
           items.push({
             nombre: project.nombre,
             galería: project.galería,
+            descargable: project.descargable,
+            ubicacion: project.ubicacion,
+            area: project.area,
+            cliente: project.cliente,
+            involucrados: project.involucrados,
+            colaboracion: project.colaboracion,
+            fotografia: project.fotografia,
+            descripcion: project.descripcion,
           })
         }
       })
@@ -175,6 +184,14 @@ export default {
           items.push({
             nombre: project.nombre,
             galería: project.galería,
+            descargable: project.descargable,
+            ubicacion: project.ubicacion,
+            area: project.area,
+            cliente: project.cliente,
+            involucrados: project.involucrados,
+            colaboracion: project.colaboracion,
+            fotografia: project.fotografia,
+            descripcion: project.descripcion,
           })
         }
       })
@@ -190,6 +207,13 @@ export default {
           nombre: project.nombre,
           galería: project.galería,
           descargable: project.descargable,
+          ubicacion: project.ubicacion,
+          area: project.area,
+          cliente: project.cliente,
+          involucrados: project.involucrados,
+          colaboracion: project.colaboracion,
+          fotografia: project.fotografia,
+          descripcion: project.descripcion,
         })
       })
 
@@ -197,16 +221,25 @@ export default {
     },
 
     itemsMedia() {
-      let images = []
+      let items = []
 
       // agragar sketch:
       this.projects.forEach((project, index) => {
         if (project.estado != 'base') {
-          project.galería.forEach((image, i) => {
-            image.nombre = project.nombre
-            image.indiceProyecto = index
-            image.galería = [project.galería[i]]
-            images.push(image)
+          project.galería.forEach((item, i) => {
+            item.nombre = project.nombre
+            item.indiceProyecto = index
+            item.galería = [project.galería[i]]
+            item.descargable = project.descargable
+            item.ubicacion = project.ubicacion
+            item.area = project.area
+            item.cliente = project.cliente
+            item.involucrados = project.involucrados
+            item.colaboracion = project.colaboracion
+            item.fotografia = project.fotografia
+            item.descripcion = project.descripcion
+
+            items.push(item)
           })
         }
       })
@@ -221,13 +254,13 @@ export default {
         fotoUso: 6,
       }
 
-      images = images.sort((a, b) => {
+      items = items.sort((a, b) => {
         if (order[a.tipo] < order[b.tipo]) return -1
         if (order[a.tipo] > order[b.tipo]) return 1
         return 0
       })
 
-      return images
+      return items
     },
   },
 

@@ -2,27 +2,26 @@
 #viewer(v-if='currentProject')
   #description(v-show='isText')
     div
-      //- .date 2017
       .container
         .title Ubicación
-        .text -
+        .text {{ currentProject.ubicacion ? currentProject.ubicacion :  '-'}}
       .container
         .title Área
-        .text -
+        .text {{ currentProject.area ? currentProject.area :  '-'}}
       .container
         .title Cliente
-        .text -
+        .text {{ currentProject.cliente ? currentProject.cliente :  '-'}}
       .container
         .title Equipo
-        .text -
+        .text {{ currentProject.involucrados ? currentProject.involucrados :  '-'}}
       .container
         .title Colaboración
-        .text -
+        .text {{ currentProject.colaboracion ? currentProject.colaboracion :  '-'}}
       .container
         .title Fotografía
-        .text -
+        .text {{ currentProject.fotografia ? currentProject.fotografia :  '-'}}
       .container
-        .text -
+        .text {{ currentProject.descripcion ? currentProject.descripcion :  '-'}}
   #viewer-inner(v-show='!isText')
     #image
       .content
@@ -105,7 +104,7 @@ export default {
 
       tippy('#viewer #text', {
         interactive: true,
-        content: 'descripción',
+        content: 'leer',
       })
 
       tippy('#viewer #close', {
@@ -218,15 +217,16 @@ export default {
   z-index: 5000
 
   #description
-    background-color: white
+    // background-color: red;
     width: 100%
     height: 100%
     max-width: 760px
     display: grid
-    justify-content: center
+    justify-content: left
     align-items: center
-    padding: 2vw 0
+    padding: 2vw 5vw
     position: relative
+    overflow-y: scroll;
 
     .date
       position: absolute
