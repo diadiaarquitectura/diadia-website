@@ -1,40 +1,43 @@
 <template lang="pug">
 #viewer(v-if='currentProject')
-  #description(v-show='isText')
-    div
-      .container
-        .title Ubicación
-        .text {{ currentProject.ubicacion ? currentProject.ubicacion :  '-'}}
-      .container
-        .title Área
-        .text {{ currentProject.area ? currentProject.area :  '-'}}
-      .container
-        .title Cliente
-        .text {{ currentProject.cliente ? currentProject.cliente :  '-'}}
-      .container
-        .title Equipo
-        .text {{ currentProject.involucrados ? currentProject.involucrados :  '-'}}
-      .container
-        .title Colaboración
-        .text {{ currentProject.colaboracion ? currentProject.colaboracion :  '-'}}
-      .container
-        .title Fotografía
-        .text {{ currentProject.fotografia ? currentProject.fotografia :  '-'}}
-      .container
-        .text {{ currentProject.descripcion ? currentProject.descripcion :  '-'}}
-  #viewer-inner(v-show='!isText')
-    #image
-      .content
-        img
-        #name {{ currentProject.nombre.toUpperCase() }}
-        #footer
-          .right {{ currentImage + 1 + "/" + currentProject.galería.length }}
-    #arrow-left
-      a(href='#')
-        img(src='images/arrow-left.svg', @click='prevImage()')
-    #arrow-right
-      a(href='#')
-        img(src='images/arrow-right.svg', @click='nextImage()')
+  transition(name='fade')
+    #description(v-show='isText')
+      #description-inner
+        .container
+          .title Ubicación
+          .text {{ currentProject.ubicacion ? currentProject.ubicacion : "-" }}
+        .container
+          .title Área
+          .text {{ currentProject.area ? currentProject.area : "-" }}
+        .container
+          .title Cliente
+          .text {{ currentProject.cliente ? currentProject.cliente : "-" }}
+        .container
+          .title Equipo
+          .text {{ currentProject.involucrados ? currentProject.involucrados : "-" }}
+        .container
+          .title Colaboración
+          .text {{ currentProject.colaboracion ? currentProject.colaboracion : "-" }}
+        .container
+          .title Fotografía
+          .text {{ currentProject.fotografia ? currentProject.fotografia : "-" }}
+        .container
+          .text {{ currentProject.descripcion ? currentProject.descripcion : "-" }}
+  transition(name='fade')
+    #gallery(v-show='!isText')
+      #gallery-inner
+        #image
+          .content
+            img
+            #name {{ currentProject.nombre.toUpperCase() }}
+            #footer
+              .right {{ currentImage + 1 + "/" + currentProject.galería.length }}
+        #arrow-left
+          a(href='#')
+            img(src='images/arrow-left.svg', @click='prevImage()')
+        #arrow-right
+          a(href='#')
+            img(src='images/arrow-right.svg', @click='nextImage()')
   #viewer-buttons
     #download(v-if='currentProject.descargable')
       a(:href='currentProject.descargable', target='__blank')
@@ -89,7 +92,7 @@ export default {
     animation.set(arrowLeft, { opacity: 0, scale: 0.6 }, 0)
     animation.set(arrowRight, { opacity: 0, scale: 0.6 }, 0)
 
-    imagesloaded('#viewer #viewer-inner', () => {
+    imagesloaded('#viewer #gallery', () => {
       animation.to(text, { opacity: 1, scale: 1, duration: 0.2 }, 0)
       animation.to(close, { opacity: 1, scale: 1, duration: 0.2 }, 0)
       animation.to(download, { opacity: 1, scale: 1, duration: 0.2 }, 0)
@@ -204,85 +207,102 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.fade-enter-active,
+.fade-leave-active
+  transition: opacity 0.2s
+
+.fade-enter,
+.fade-leave-to
+  opacity: 0
+  transform: scale(0.9)
+
 #viewer
   position: fixed
   left: 0
   top: 0
   width: 100vw
   height: 100vh
-  background-color: rgba(255, 255, 255, 1)
-  display: flex
-  justify-content: center
-  align-items: center
+  background-color: white
   z-index: 5000
 
   #description
-    // background-color: red;
     width: 100%
     height: 100%
-    max-width: 760px
-    display: grid
-    justify-content: left
-    align-items: center
-    padding: 2vw 5vw
-    position: relative
-    overflow-y: scroll;
-
-    .date
-      position: absolute
-      right: 10vw
-      top: 10vw
-      font-weight: bold
-      font-size: 16px
-
-    .container
-      margin-bottom: 10px
-      .title
-        font-weight: bold
-
-  #viewer-inner
-    position: relative
     display: flex
     justify-content: center
     align-items: center
 
-    #name
-      position: absolute
-      left: 0
-      top: -25px
-      letter-spacing: 1px
-
-    #image
+    #description-inner
       position: relative
+      background-color: white
+      position: relative
+      max-width: 760px
+      display: grid
+      justify-content: left
+      align-items: center
+      padding: 2vw 5vw
+      overflow-y: scroll
 
-      img
-        top: 0
+      .date
+        position: absolute
+        right: 10vw
+        top: 10vw
+        font-weight: bold
+        font-size: 16px
+
+      .container
+        margin-bottom: 10px
+        .title
+          font-weight: bold
+
+  #gallery
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+    height: 100%
+    background-color: white
+
+    #gallery-inner
+
+      #name
+        position: absolute
         left: 0
-        min-width: 20vh
-        min-height: 20vh
-        border: none
-        max-height: 65vh
-        max-width: 65vw
-        transition: all 0.2s
-        background-color: #eee
+        top: -25px
+        letter-spacing: 1px
 
-    #footer
-      position: relative
-      top: 8px
-
-      .right
-        float: right
+      #image
+        position: relative
 
         img
-          transform: translate(0, -10px)
-          width: 20px
-          margin-left: 7px
-          margin-top: 9px
+          top: 0
+          left: 0
+          min-width: 20vh
+          min-height: 20vh
+          border: none
+          max-height: 65vh
+          max-width: 65vw
           transition: all 0.2s
+          background-color: #eee
 
-          &:hover
-            transform: translate(0, -10px) scale(1.1)
+      #footer
+        position: relative
+        top: 8px
+
+        .right
+          float: right
+
+          img
+            transform: translate(0, -10px)
+            width: 20px
+            margin-left: 7px
+            margin-top: 9px
             transition: all 0.2s
+
+            &:hover
+              transform: translate(0, -10px) scale(1.1)
+              transition: all 0.2s
 
   #arrow-left
     position: fixed
