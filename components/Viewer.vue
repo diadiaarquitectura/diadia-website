@@ -4,6 +4,8 @@
     #description(v-show='isText')
       #description-inner
         .container
+          .title {{ currentProject.fecha ? currentProject.fecha : "-" }}
+        .container
           .title Ubicación
           .text {{ currentProject.ubicacion ? currentProject.ubicacion : "-" }}
         .container
@@ -284,7 +286,7 @@ export default {
           max-height: 65vh
           max-width: 65vw
           transition: all 0.2s
-          background-color: #eee
+          background-color: white
 
       #footer
         position: relative
