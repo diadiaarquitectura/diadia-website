@@ -28,6 +28,13 @@ collections:
             fields:
               - { label: Nombre, name: nombre, required: true, widget: text }
               - { label: Fecha, name: fecha, widget: date, default: '', format: 'DD MM YYYY' }
+              - { label: Ubicacion, name: ubicacion, required: false, widget: text }
+              - { label: Área, name: area, required: false, widget: text }
+              - { label: Cliente, name: cliente, required: false, widget: text }
+              - { label: Involucrados, name: involucrados, required: false, widget: text }
+              - { label: Colaboración, name: colaboracion, required: false, widget: text }
+              - { label: Fotografía, name: fotografia, required: false, widget: text }
+              - { label: Descripción, name: descripcion, required: false, widget: text }
               - label: Estado
                 name: estado
                 required: true
@@ -38,13 +45,6 @@ collections:
                   - { label: No Realizado, value: noRealizado }
                   - { label: Base, value: base }
               - { label: Descargable, name: descargable, required: false, widget: text }
-              - { label: Ubicacion, name: ubicacion, required: false, widget: text }
-              - { label: Involucrados, name: involucrados, required: false, widget: text }
-              - { label: Área, name: area, required: false, widget: text }
-              - { label: Cliente, name: cliente, required: false, widget: text }
-              - { label: Colaboración, name: colaboracion, required: false, widget: text }
-              - { label: Fotografía, name: fotografia, required: false, widget: text }
-              - { label: Descripción, name: descripcion, required: false, widget: text }
               - label: Galería de Fotos
                 name: galería
                 required: false
