@@ -944,9 +944,10 @@
       ]
     },
     {
-      "fecha": "28 03 2017",
       "estado": "noRealizado",
       "nombre": "ESCUELA DEL PATIO CIRCULAR",
+      "area": "Terreno 4500 m2, Edificio 950 m2",
+      "descripcion": "CONTENER LA SELVA. El proyecto busca crear una nueva centralidad educativa y cívica, que permita el encuentro de toda la comunidad, propiciando una condición intima en el extenso entorno de la selva. Se busca asignar escala a la selva, medirla, contenerla a través de la arquitectura de la escuela. El sistema circular de organización y distribución de las estructuras propone una variante al tradicional sistema lineal de organización de los palafitos y permite la constante relación entre los usuarios de la escuela y el entorno. Se usan técnicas constructivas, materiales, tipologías típicas de la comunidad, generando así un vínculo simbólico e identitario con la misma. ",
       "galería": [
         {
           "url": "/images/uploads/016_plotplan.png",
@@ -975,12 +976,12 @@
         {
           "url": "/images/uploads/016_d3.jpg",
           "tipo": "diagramas"
-        },
-        {
-          "url": "/images/uploads/016_f.png",
-          "tipo": "base"
         }
-      ]
+      ],
+      "cliente": "FADV Fondazione l’Albero della Vita",
+      "involucrados": "Michele Albanelli, Carmen Omonte con Alonso Melgar",
+      "fecha": "28 03 2017",
+      "ubicacion": "Indiana, Perú"
     },
     {
       "fecha": "08 12 2016",
@@ -1010,10 +1011,6 @@
         {
           "url": "/images/uploads/010_d1.png",
           "tipo": "sketch"
-        },
-        {
-          "url": "/images/uploads/010_f.png",
-          "tipo": "base"
         }
       ]
     },
