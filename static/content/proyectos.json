@@ -984,9 +984,11 @@
       "ubicacion": "Indiana, Perú"
     },
     {
-      "fecha": "08 12 2016",
+      "colaboracion": "Rodrigo Garcia Sayan",
       "estado": "noRealizado",
       "nombre": "NUOVA PIAZZA COMUNITÁ EUROPEA",
+      "area": "5000 m2",
+      "descripcion": "El proyecto de la Nuova Piazza Comunitá Europea presenta la oportunidad para repensar el espacio público periférico, transformándolo en una nueva centralidad urbana fundada en la accesibilidad, la integración y la participación, la flexibilidad de usos y la sostenibilidad ambiental.",
       "galería": [
         {
           "url": "/images/uploads/010_diagrama2.png",
@@ -1012,14 +1014,18 @@
           "url": "/images/uploads/010_d1.png",
           "tipo": "sketch"
         }
-      ]
+      ],
+      "cliente": "MIBACT, Concurso Internacional de Ideas para la recalificación de 10 áreas urbanas periféricas",
+      "involucrados": "Michele Albanelli + Carmen Omonte",
+      "fecha": "08 12 2016",
+      "ubicacion": "Aprilia, Italia"
     },
     {
       "colaboracion": "NE-AR / Nixdorff Etchegorry – Architecture Research",
       "estado": "noRealizado",
       "nombre": "AMPLIACIÓN MUSEO MALI",
       "area": "6000 m2",
-      "descripcion": "CULTURA, INFRAESTRUCTURA SOCIAL. Ampliación del MALI Mueso de Arte de Lima, con espacio público y servicios anexos. Una arquitectura de carácter infraestructural, insertada en el entorno urbano y programático con la intención de generar un enlace, una relación de continuidad entre los varios agentes que influyen de forma directa e indirecta en el sitio: la estación del Metro, la ciudad, el MALI, el Parque de la Exposición. El proyecto busca integrar el arte y la cultura a las dinámicas urbanas: se difumina el carácter institucional del Museo, cuestionando y moldeando el borde físico y conceptual que lo contiene. <br> EL PATIO Y LA RAMPA son los dispositivos que implementamos para generar una relación de continuidad. Los patios, típicamente de carácter íntimo, se extienden y abren para obtener suficiente área de fachada, para asegurar relaciones visuales, luz y ventilación natural. Las rampas son infraestructuras que extienden los límites espaciales y temporales. La infraestructura hace los flujos evidentes, visibles, perceptibles. El proyecto se presenta como mimético con el suelo, sintético y atemporal.",
+      "descripcion": "CULTURA, INFRAESTRUCTURA SOCIAL. Ampliación del MALI Mueso de Arte de Lima, con espacio público y servicios anexos. Una arquitectura de carácter infraestructural, insertada en el entorno urbano y programático con la intención de generar un enlace, una relación de continuidad entre los varios agentes que influyen de forma directa e indirecta en el sitio: la estación del Metro, la ciudad, el MALI, el Parque de la Exposición. El proyecto busca integrar el arte y la cultura a las dinámicas urbanas: se difumina el carácter institucional del Museo, cuestionando y moldeando el borde físico y conceptual que lo contiene. EL PATIO Y LA RAMPA son los dispositivos que implementamos para generar una relación de continuidad. Los patios, típicamente de carácter íntimo, se extienden y abren para obtener suficiente área de fachada, para asegurar relaciones visuales, luz y ventilación natural. Las rampas son infraestructuras que extienden los límites espaciales y temporales. La infraestructura hace los flujos evidentes, visibles, perceptibles. El proyecto se presenta como mimético con el suelo, sintético y atemporal.",
       "galería": [
         {
           "url": "/images/uploads/005_iso.png",
