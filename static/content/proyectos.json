@@ -670,9 +670,11 @@
       ]
     },
     {
-      "fecha": "23 10 2020",
+      "colaboracion": "MalO Atelier",
       "estado": "noRealizado",
       "nombre": "PAZ SOLDAN",
+      "area": "Área extendida 8325 m2. Área de intervención directa 1021 m2",
+      "descripcion": "“Se Busca”. La Plaza Paz Soldán es un lugar de transito, de migraciones cotidianas en búsqueda de “algo” (trabajo, casa, comida, esparcimiento, dinero, tiempo...). El proyecto celebra el carácter del lugar con una estrategia de inserción en el tejido de la ciudad en dos escalas: La obra de arte de escala monumental que se identifique como hito y referencia en el caótico contexto de la Plaza y el proyecto urbano de suelo que sutilmente evoca y guía los flujos peatonales esquizofrénicos de la ciudad.",
       "galería": [
         {
           "tipo": "diagramas",
@@ -706,7 +708,11 @@
           "url": "/images/uploads/022_v2.png",
           "tipo": "vista3d"
         }
-      ]
+      ],
+      "cliente": "Municipalidad de San Isidro + Grupo Centenario, Concurso Nacional Plaza Paz Soldán\n",
+      "involucrados": "Michele Albanelli + Carmen Omonte con Alonso Melgar",
+      "fecha": "23 02 2018",
+      "ubicacion": "Lima, Perú"
     },
     {
       "estado": "base",
