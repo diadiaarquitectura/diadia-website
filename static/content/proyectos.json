@@ -725,8 +725,16 @@
           "tipo": "diagramas"
         },
         {
-          "url": "/images/uploads/028_foto2.jpg",
+          "tipo": "fotoUso",
+          "url": "/images/uploads/028_foto1.jpg"
+        },
+        {
+          "url": "/images/uploads/028_foto3.jpg",
           "tipo": "fotoUso"
+        },
+        {
+          "tipo": "fotoUso",
+          "url": "/images/uploads/028_foto4.jpg"
         }
       ],
       "cliente": "Letters to the Mayor Lima",
