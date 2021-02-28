@@ -854,9 +854,10 @@
       ]
     },
     {
-      "fecha": "26 10 2017",
       "estado": "base",
       "nombre": "LINEAMIENTOS ESPACIOS ABIERTOS INFRAESTRUCTURAS EDUCATIVAS\n",
+      "area": "Sistema Flexible",
+      "descripcion": "La estructura social de la escuela se puede considerar como una versión a escala menor de la sociedad y el espacio abierto escolar, en este sentido, es lugar de experiencias de mediación, integración e inclusión, experiencias que las/os niñas/os y adolescentes vivirán sucesivamente de forma autónoma en el contexto de la comunidad de pertenencia, sea urbana o rural. El espacio abierto escolar asume entonces un rol formativo y pedagógico fundamental en el marco de la experiencia escolar.\nEste documento procede como metodología, desde la revisión y análisis (directa e indirecta) de antecedentes, hacia la definición de estrategias integrales aplicables de manera sistemática a las diferentes realidades del país, hasta la proposición de acciones concretas que buscan promover la activación de los espacios abiertos de acuerdo a los principios planteados, como lugares de\nformación, inclusivos e integradores, sanos, sostenibles, confortables.",
       "galería": [
         {
           "url": "/images/uploads/027_iso4.png",
@@ -886,7 +887,11 @@
           "url": "/images/uploads/027_iso3.png",
           "tipo": "planimetrias"
         }
-      ]
+      ],
+      "cliente": "PRONIED ",
+      "involucrados": "Michele Albanelli + Carmen Omonte con Linda Velásquez, Alonso Melgar y Saúl Navarrete",
+      "fecha": "26 10 2017",
+      "ubicacion": "Perú"
     },
     {
       "colaboracion": "FD Arquitectos (Coordinación General), MalO Atelier, BOOM Arquitectos, UCAL",
