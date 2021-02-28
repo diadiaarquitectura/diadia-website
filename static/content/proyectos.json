@@ -889,9 +889,11 @@
       ]
     },
     {
-      "fecha": "24 10 2017",
+      "colaboracion": "FD Arquitectos (Coordinación General), MalO Atelier, BOOM Arquitectos, UCAL",
       "estado": "noRealizado",
       "nombre": "CIUDAD HORIZONTE",
+      "area": "Borde Costero 36 Km",
+      "descripcion": "SISTEMA COSTA. El proyecto de plan maestro tiene objetivos de diferente índole: Integrar la ciudad de Antofagasta a lo largo de su costa de 36Km y en dirección trasversal entre cerro, ciudad y océano; Proveer los servicios necesarios a la ciudad para alcanzar la calidad de vida propuesta. Servicios Puntuales y rutas; Rescatar y reforzar la identidad del lugar. Siendo el Sistema costa un sistema lineal, se asigna el Punto CERO – el origen, el centro - a la zona central de la ciudad, la ciudad de fundación, el puerto, y de ahí desarrollamos un sistema hacia Sur y hacia Norte que prevé el crecimiento de la ciudad y su conexión a lo largo de la costa. Antofagasta como línea/horizonte (respeto al mar) y como punto/centro y centralidad (respeto a Chile y el Mundo); Celebrar la Memoria de la tradición cultural astronómica en el desierto chileno, siendo este aspecto una caracterización única del proyecto; Consolidar Servicios urbanos y parque hacia la ciudad y preservar y reducir el impacto hacia el mar con piscinas naturales, playas de roca, decks y plataformas",
       "galería": [
         {
           "url": "/images/uploads/012_v00.jpg",
@@ -941,7 +943,11 @@
           "url": "/images/uploads/012_v01.png",
           "tipo": "diagramas"
         }
-      ]
+      ],
+      "cliente": "Fundación Chile y CREO Antofagasta, Concurso de Ideas Parque Metropolitano Borde Costero",
+      "involucrados": "Michele Albanelli + Carmen Omonte con equipo UCAL",
+      "fecha": "24 10 2017",
+      "ubicacion": "Antofagasta, Chile"
     },
     {
       "estado": "noRealizado",
