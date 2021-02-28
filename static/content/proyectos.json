@@ -1057,9 +1057,10 @@
       ]
     },
     {
-      "fecha": "12 08 2010",
       "estado": "realizado",
       "nombre": "361 GRADI",
+      "area": "200 m2",
+      "descripcion": "Centro Cultural y Biblioteca privada. El proyecto se inserta en el nivel enterrado de un edificio en el centro histórico de Roma.",
       "galería": [
         {
           "url": "/images/uploads/001_361_00.jpg",
@@ -1084,12 +1085,12 @@
         {
           "url": "/images/uploads/0001_techo.jpg",
           "tipo": "fotoObra"
-        },
-        {
-          "url": "/images/uploads/0001_f2.png",
-          "tipo": "base"
         }
-      ]
+      ],
+      "cliente": "Privado",
+      "involucrados": "Michele Albanelli, Carmen Omonte",
+      "fecha": "12 08 2010",
+      "ubicacion": "Roma, Italia"
     }
   ]
 }
