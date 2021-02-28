@@ -709,10 +709,12 @@
       ]
     },
     {
-      "fecha": "01 09 2020",
       "estado": "base",
-      "nombre": "LETTERS TO THE MAYOR LIMA",
       "tipologia": "base",
+      "nombre": "LETTERS TO THE MAYOR LIMA",
+      "fotografia": "Juan Pablo Murrugarra / Tres Mitades",
+      "area": "DIN A4",
+      "descripcion": "30 de cada 100 habitantes de Lima Metropolitana tienen entre 0 y 18 años. No votan, pero si se les escuchara, ¿Qué derechos exigirían?",
       "galería": [
         {
           "url": "/images/uploads/028_imagen00.png",
@@ -727,6 +729,10 @@
           "tipo": "fotoUso"
         }
       ],
+      "cliente": "Letters to the Mayor Lima",
+      "involucrados": "Michele Albanelli + Carmen Omonte",
+      "fecha": "16 07 2018",
+      "ubicacion": "Lima, Perú",
       "descargable": "https://drive.google.com/file/d/1OYlb7lLWzpWsDVNmk4kFuCyq7YskKBtE/view?usp=sharing"
     },
     {
