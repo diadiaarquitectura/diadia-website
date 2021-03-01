@@ -346,9 +346,10 @@
       "descargable": ""
     },
     {
-      "fecha": "24 12 2019",
+      "colaboracion": "Erick Bergelund",
       "estado": "noRealizado",
       "nombre": "CASA DOS MITADES",
+      "area": "320 m2",
       "galería": [
         {
           "url": "/images/uploads/039_frente000.jpg",
@@ -386,7 +387,11 @@
           "url": "/images/uploads/039_d2.png",
           "tipo": "sketch"
         }
-      ]
+      ],
+      "cliente": "Privado",
+      "involucrados": "Michele Albanelli + Carmen Omonte con Alonso Melgar y Lucero Robles",
+      "fecha": "24 12 2019",
+      "ubicacion": "Lima, Perú"
     },
     {
       "estado": "realizado",
