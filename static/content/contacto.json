@@ -6,6 +6,6 @@
   "emailProyectos": "proyectos@diadia.pe",
   "imagen": "/images/uploads/00_contacto.jpg",
   "web": "www.diadiaarquitectura.com",
-  "email": "Contáctanos para tus consultas <br>\ne intereses: <br>\n<a href=\"mailto:proyectos@diadiaarquitectura.pe\">Estudio</a><br>\n<a href=\"mailto:michele.albanelli@gmail.com\">Michele</a>\n<a href=\"mailto:comontemiraval@gmail.com\">Carmen</a>\n",
+  "email": "<a href=\"mailto:proyectos@diadiaarquitectura.pe\">proyectos@diadiaarquitectura.pe</a><br>\n<a href=\"mailto:michele.albanelli@gmail.com\">michele.albanelli@gmail.com</a><br>\n<a href=\"mailto:comontemiraval@gmail.com\">comontemiraval@gmail.com</a>\n",
   "mensaje": "Nos gustaría saber de ti."
 }
