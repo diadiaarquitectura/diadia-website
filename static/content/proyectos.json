@@ -631,9 +631,10 @@
       ]
     },
     {
-      "fecha": "01 11 2019",
       "estado": "realizado",
       "nombre": "DOMENICA",
+      "fotografia": "DIADIA Arquitectura",
+      "area": "250 m2",
       "galería": [
         {
           "url": "/images/uploads/043_01.jpg",
@@ -667,7 +668,11 @@
           "url": "/images/uploads/043_iso.png",
           "tipo": "planimetrias"
         }
-      ]
+      ],
+      "cliente": "Privado",
+      "involucrados": "Michele Albanelli + Carmen Omonte con Alonso Melgar y Olenka Ruiz",
+      "fecha": "01 11 2019",
+      "ubicacion": "Lima, Perú"
     },
     {
       "colaboracion": "MalO Atelier",
@@ -1101,6 +1106,7 @@
     {
       "estado": "realizado",
       "nombre": "361 GRADI",
+      "fotografia": "DIADIA Arquitectura",
       "area": "200 m2",
       "descripcion": "Centro Cultural y Biblioteca privada. El proyecto se inserta en el nivel enterrado de un edificio en el centro histórico de Roma.",
       "galería": [
