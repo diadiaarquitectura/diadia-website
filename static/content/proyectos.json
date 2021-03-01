@@ -604,9 +604,10 @@
       ]
     },
     {
-      "fecha": "01 09 2017",
+      "colaboracion": "MalO Atelier, Katia Santillán, Carolina Velasquez",
       "estado": "noRealizado",
       "nombre": "SUELO COMUN",
+      "area": "250 m2",
       "galería": [
         {
           "url": "/images/uploads/019_iso.png",
@@ -628,7 +629,11 @@
           "url": "/images/uploads/019_diagram2.png",
           "tipo": "diagramas"
         }
-      ]
+      ],
+      "cliente": "Patronato Cultural del Perú",
+      "involucrados": "Michele Albanelli + Carmen Omonte ",
+      "fecha": "01 09 2017",
+      "ubicacion": "Venecia, Italia"
     },
     {
       "estado": "realizado",
