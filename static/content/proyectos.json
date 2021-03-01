@@ -468,7 +468,7 @@
     },
     {
       "fecha": "12 08 2018",
-      "estado": "noRealizado",
+      "estado": "base",
       "nombre": "BARRIO ESCUELA",
       "galería": [
         {
@@ -507,7 +507,11 @@
           "url": "/images/uploads/024_iso.jpg",
           "tipo": "planimetrias"
         }
-      ]
+      ],
+      "ubicacion": "Lima, Perú",
+      "cliente": "CAF, Concurso Internacional",
+      "involucrados": "Michele Albanelli + Carmen Omonte con Alonso Melgar y Franco Ferraro",
+      "colaboracion": "Transforma ONG, Ocupa tu Calle, IEI Kumamoto"
     },
     {
       "colaboracion": "Impostergable, Coordinadora de la Ciudad (en construcción), ESCAPE, Sumbi",
