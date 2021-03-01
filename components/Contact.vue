@@ -9,10 +9,8 @@
         .text(v-html='contactInfo.direccion')
         .title Mail
         .text(v-html='contactInfo.email')
-        .title Instagram
+        .title Redes
         .text(v-html='contactInfo.enlaceInstagram')
-        .title Web
-        .text(v-html='contactInfo.web')
 </template>
 
 <script>
