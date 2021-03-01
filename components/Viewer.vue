@@ -4,7 +4,7 @@
     #description(v-show='isText')
       #description-inner
         .container
-          .title {{ currentProject.fecha ? currentProject.fecha : "-" }}
+          .title.year {{ currentProject.fecha ? currentProject.fecha.slice(-4) : "" }}
         .container
           .title Ubicación
           .text {{ currentProject.ubicacion ? currentProject.ubicacion : "-" }}
@@ -233,6 +233,7 @@ export default {
     display: flex
     justify-content: center
     align-items: center
+    font-size: 14px
 
     #description-inner
       position: relative
@@ -245,17 +246,13 @@ export default {
       padding: 2vw 5vw
       overflow-y: scroll
 
-      .date
-        position: absolute
-        right: 10vw
-        top: 10vw
-        font-weight: bold
-        font-size: 16px
-
       .container
         margin-bottom: 10px
         .title
           font-weight: bold
+
+        .year
+          font-size: 20px
 
   #gallery
     position: relative
@@ -356,4 +353,7 @@ export default {
       right: 5px
       img
         width: 40px
+
+    #description
+      font-size: 10px
 </style>
