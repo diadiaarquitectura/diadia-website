@@ -510,9 +510,11 @@
       ]
     },
     {
-      "fecha": "16 07 2019",
+      "colaboracion": "Impostergable, Coordinadora de la Ciudad (en construcción), ESCAPE, Sumbi",
       "estado": "base",
       "nombre": "PUCU",
+      "fotografia": "Eleazar Cuadros",
+      "area": "Sistema flexible",
       "galería": [
         {
           "url": "/images/uploads/038_dibujo.png",
@@ -542,7 +544,11 @@
           "url": "/images/uploads/038_foto.jpg",
           "tipo": "base"
         }
-      ]
+      ],
+      "cliente": "Bernard van Leer FOUNDATION, URBAN95, Municipalidad de Lima",
+      "involucrados": "Carmen Omonte",
+      "fecha": "16 07 2020",
+      "ubicacion": "Pucusana, Perú"
     },
     {
       "estado": "realizado",
