@@ -389,9 +389,10 @@
       ]
     },
     {
-      "fecha": "01 01 2019",
       "estado": "realizado",
       "nombre": "PATIO LINEAL",
+      "fotografia": "DIADIA Arquitectura",
+      "area": "250 m2",
       "galería": [
         {
           "url": "/images/uploads/031_01.jpg",
@@ -437,7 +438,11 @@
           "url": "/images/uploads/031_iso.png",
           "tipo": "planimetrias"
         }
-      ]
+      ],
+      "cliente": "Privado",
+      "involucrados": "Michele Albanelli + Carmen Omonte con Alonso Melgar y Olenka Ruiz",
+      "fecha": "01 01 2019",
+      "ubicacion": "Lima, Perú"
     },
     {
       "colaboracion": "Asiel Nuñez, Erick Bergelund, Javiera Infante, Gabriela Aquije",
