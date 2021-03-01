@@ -1,5 +1,5 @@
 <template lang="pug">
-#main.noselect
+#main
   #loading-canvas(v-if='!isDataLoaded')
   transition(name='fade')
     .inner(v-if='isDataLoaded')
