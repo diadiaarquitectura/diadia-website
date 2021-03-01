@@ -235,9 +235,10 @@
       "estado": "realizado"
     },
     {
-      "fecha": "16 07 2020",
       "estado": "base",
       "nombre": "YAKUMAMA",
+      "fotografia": "DIADIA Arquitectura",
+      "area": "Multiescalas",
       "galería": [
         {
           "url": "/images/uploads/044_00.jpg",
@@ -263,7 +264,11 @@
           "url": "/images/uploads/044_arquitectura.jpg",
           "tipo": "fotoObra"
         }
-      ]
+      ],
+      "cliente": "Pratec",
+      "involucrados": "Michele Albanelli + Carmen Omonte",
+      "fecha": "16 07 2020",
+      "ubicacion": "Quispillacta, Perú"
     },
     {
       "estado": "realizado",
