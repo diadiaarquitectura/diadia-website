@@ -545,9 +545,10 @@
       ]
     },
     {
-      "fecha": "01 01 2020",
       "estado": "realizado",
       "nombre": "PATIO 4 PATIOS",
+      "fotografia": "DIADIA Arquitectura",
+      "area": "250 m2",
       "galería": [
         {
           "url": "/images/uploads/047_00.jpg",
@@ -601,7 +602,11 @@
           "url": "/images/uploads/047_d2.png",
           "tipo": "sketch"
         }
-      ]
+      ],
+      "cliente": "Privado",
+      "involucrados": "Michele Albanelli + Carmen Omonte con Alonso Melgar",
+      "fecha": "01 01 2020",
+      "ubicacion": "Lima, Perú"
     },
     {
       "colaboracion": "MalO Atelier, Katia Santillán, Carolina Velasquez",
