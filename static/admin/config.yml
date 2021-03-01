@@ -35,7 +35,6 @@ collections:
               - { label: Colaboración, name: colaboracion, required: false, widget: text }
               - { label: Fotografía, name: fotografia, required: false, widget: text }
               - { label: Descripción, name: descripcion, required: false, widget: text }
-              - { label: Test, name: test, required: false, widget: markdown }
               - label: Estado
                 name: estado
                 required: true
