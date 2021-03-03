@@ -284,7 +284,7 @@
           "tipo": "fotoObra"
         }
       ],
-      "cliente": "Pratec",
+      "cliente": "PRATEC, Asociación Bartolomé Aripaylla ABA - Ayacucho\n",
       "involucrados": "Michele Albanelli + Carmen Omonte",
       "fecha": "16 07 2020",
       "ubicacion": "Quispillacta, Perú"
@@ -557,11 +557,12 @@
       "colaboracion": "Transforma ONG, Ocupa tu Calle, IEI Kumamoto"
     },
     {
-      "colaboracion": "Impostergable, Coordinadora de la Ciudad (en construcción), ESCAPE, Sumbi",
+      "colaboracion": "Equipo Urban 95 Pucusana :  Municipalidad de Pucusana, CCC- Coordinadora para la Ciudad (en Construcción),  Impostergable, ESCAPE",
       "estado": "base",
-      "nombre": "PUCU",
-      "fotografia": "Eleazar Cuadros",
-      "area": "Sistema flexible",
+      "nombre": "PUCU\n",
+      "fotografia": "Eleazar Cuadros, Impostergable, DIADIA Arquitectura",
+      "area": "Publicación",
+      "descripcion": "Link para revisar la publicación completa de <a href=\"https://issuu.com/bernardvanleerfoundation/docs/pucu_camino_de_encuentros_para_la_primera_infancia\"> PUCP. Caminos de Encuentro para la Primera Infancia de Pucusana </a> en issuu",
       "galería": [
         {
           "url": "/images/uploads/038_dibujo.png",
@@ -592,8 +593,8 @@
           "tipo": "base"
         }
       ],
-      "cliente": "Bernard van Leer FOUNDATION, URBAN95, Municipalidad de Lima",
-      "involucrados": "Carmen Omonte",
+      "cliente": "URBAN95, Municipalidad de Lima",
+      "involucrados": "Carmen Omonte (coordinación)",
       "fecha": "16 07 2020",
       "ubicacion": "Pucusana, Perú"
     },
