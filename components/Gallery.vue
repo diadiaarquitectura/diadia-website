@@ -164,6 +164,7 @@ export default {
         if (project.estado == 'realizado') {
           console.log(project)
           items.push({
+            fecha: project.fecha,
             nombre: project.nombre,
             galería: project.galería,
             descargable: project.descargable,
@@ -182,6 +183,7 @@ export default {
       this.projects.forEach((project) => {
         if (project.estado == 'noRealizado') {
           items.push({
+            fecha: project.fecha,
             nombre: project.nombre,
             galería: project.galería,
             descargable: project.descargable,
@@ -204,6 +206,7 @@ export default {
       // agragar proyectos no terminados:
       this.projects.forEach((project) => {
         items.push({
+          fecha: project.fecha,
           nombre: project.nombre,
           galería: project.galería,
           descargable: project.descargable,
@@ -227,7 +230,7 @@ export default {
       this.projects.forEach((project, index) => {
         if (project.estado != 'base') {
           project.galería.forEach((item, i) => {
-            item.nombre = project.nombre
+            ;(item.fecha = project.fecha), (item.nombre = project.nombre)
             item.indiceProyecto = index
             item.galería = [project.galería[i]]
             item.descargable = project.descargable

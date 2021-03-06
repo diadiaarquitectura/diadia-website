@@ -15,7 +15,6 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import imagesloaded from 'imagesloaded'
 
 export default {
   computed: {
