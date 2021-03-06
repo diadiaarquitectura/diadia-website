@@ -23,8 +23,7 @@
         .container
           .title Fotografía
           .text {{ currentProject.fotografia ? currentProject.fotografia : "-" }}
-        .container
-          .text {{ currentProject.descripcion ? currentProject.descripcion : "-" }}
+        .container(v-html="currentProject.descripcion")
   transition(name='fade')
     #gallery(v-show='!isText')
       #gallery-inner
