@@ -238,7 +238,7 @@ export default {
       position: relative
       background-color: white
       position: relative
-      max-width: 760px
+      max-width: 600px
       display: grid
       justify-content: left
       align-items: center
@@ -267,7 +267,8 @@ export default {
       #name
         position: absolute
         left: 0
-        top: -25px
+        top: 0px
+        transform: translate(0, calc(-100% - 4px))
         letter-spacing: 1px
 
       #image
@@ -341,7 +342,7 @@ export default {
       cursor: pointer
       display: inline-block
 
-@media (max-width: 768px)
+@media (max-width: 767px)
   #viewer
     #arrow-left
       left: 5px
@@ -354,5 +355,8 @@ export default {
         width: 40px
 
     #description
-      font-size: 10px
+      overflow-y: scroll
+      font-size: 14px
+      display: inline-block
+      padding: 9vh 0 8vh 0
 </style>
