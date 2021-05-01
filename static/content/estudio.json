@@ -1,13 +1,22 @@
 {
   "galería": [
     {
-      "url": "/images/uploads/estudio-1.png"
+      "url": "/images/uploads/estudio-02.jpg"
     },
     {
-      "url": "/images/uploads/estudio-2.png"
+      "url": "/images/uploads/estudio-03.jpg"
     },
     {
-      "url": "/images/uploads/estudio-3.png"
+      "url": "/images/uploads/estudio-07.jpg"
+    },
+    {
+      "url": "/images/uploads/estudio-06.jpg"
+    },
+    {
+      "url": "/images/uploads/estudio-01.jpg"
+    },
+    {
+      "url": "/images/uploads/estudio-05.jpg"
     }
   ]
 }
