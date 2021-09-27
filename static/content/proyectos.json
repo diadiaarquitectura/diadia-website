@@ -1227,6 +1227,22 @@
       "involucrados": "Michele Albanelli + Carmen Omonte",
       "fecha": "12 08 2010",
       "ubicacion": "Roma, Italia"
+    },
+    {
+      "estado": "realizado",
+      "nombre": "CARACOL, Aula Portatil",
+      "fotografia": "DIADIA Arquitectura",
+      "area": "60 cm * 60 cm * 120 cm",
+      "galería": [
+        {
+          "tipo": "fotoUso",
+          "url": "/images/uploads/gif-kit-de-juego-con-niños.gif"
+        }
+      ],
+      "cliente": "Urban 95 Lima",
+      "involucrados": "Michele Albanelli + Carmen Omonte",
+      "fecha": "16 07 2021",
+      "ubicacion": "Movil"
     }
   ]
 }
