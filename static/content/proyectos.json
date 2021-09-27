@@ -1237,6 +1237,18 @@
         {
           "tipo": "fotoUso",
           "url": "/images/uploads/gif-kit-de-juego-con-niños.gif"
+        },
+        {
+          "url": "/images/uploads/04_escenario-1.jpg",
+          "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/04_escenario-2.jpg",
+          "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/00_completo.jpg",
+          "tipo": "planimetrias"
         }
       ],
       "cliente": "Urban 95 Lima",
