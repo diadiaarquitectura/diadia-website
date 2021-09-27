@@ -1203,6 +1203,26 @@
       "involucrados": "Michele Albanelli + Carmen Omonte",
       "fecha": "12 08 2010",
       "ubicacion": "Roma, Italia"
+    },
+    {
+      "estado": "realizado",
+      "nombre": "GEMMA",
+      "fotografia": "DIADIA Arquitectura",
+      "area": "60 m2",
+      "galería": [
+        {
+          "url": "/images/uploads/040_003b.png",
+          "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/040_001.png",
+          "tipo": "planimetrias"
+        }
+      ],
+      "cliente": "Privado",
+      "involucrados": "Michele Albanelli + Carmen Omonte con Lucero Robles",
+      "fecha": "23 02 2021",
+      "ubicacion": "Lima, Perú"
     }
   ]
 }
