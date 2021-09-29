@@ -22,8 +22,20 @@
       "area": "60 cm * 60 cm * 120 cm",
       "galería": [
         {
+          "url": "/images/uploads/gif_kit-de-juego.gif",
+          "tipo": "fotoObra"
+        },
+        {
+          "url": "/images/uploads/secuencia.jpg",
+          "tipo": "fotoObra"
+        },
+        {
           "tipo": "fotoUso",
           "url": "/images/uploads/gif-kit-de-juego-con-niños.gif"
+        },
+        {
+          "url": "/images/uploads/caracol.jpg",
+          "tipo": "fotoUso"
         },
         {
           "url": "/images/uploads/04_escenario-1.jpg",
