@@ -107,20 +107,16 @@
       "area": "60 m2",
       "galería": [
         {
-          "url": "/images/uploads/040_00.jpg",
+          "url": "/images/uploads/040_000.jpg",
           "tipo": "fotoUso"
         },
         {
-          "url": "/images/uploads/040_000.jpg",
+          "url": "/images/uploads/040_00.jpg",
           "tipo": "fotoUso"
         },
         {
           "url": "/images/uploads/040_003b.png",
           "tipo": "diagramas"
-        },
-        {
-          "url": "/images/uploads/040_02.jpg",
-          "tipo": "fotoUso"
         },
         {
           "url": "/images/uploads/040_001.png",
