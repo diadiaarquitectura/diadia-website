@@ -255,6 +255,10 @@
       "descripcion": "",
       "galería": [
         {
+          "tipo": "fotoUso",
+          "url": "/images/uploads/gif-cahuide-niños.gif"
+        },
+        {
           "url": "/images/uploads/018_00.jpg",
           "tipo": "fotoUso"
         },
@@ -269,10 +273,6 @@
         {
           "url": "/images/uploads/018_04.jpg",
           "tipo": "fotoObra"
-        },
-        {
-          "tipo": "fotoUso",
-          "url": "/images/uploads/gif-cahuide-niños.gif"
         },
         {
           "url": "/images/uploads/018_01.jpg",
