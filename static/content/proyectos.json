@@ -443,7 +443,7 @@
       "area": "320 m2",
       "galería": [
         {
-          "url": "/images/uploads/039_frente000.jpg",
+          "url": "/images/uploads/039_vistafrontal.jpg",
           "tipo": "vista3d"
         },
         {
@@ -467,11 +467,19 @@
           "tipo": "planimetrias"
         },
         {
+          "url": "/images/uploads/039_vistainterios.jpg",
+          "tipo": "vista3d"
+        },
+        {
           "url": "/images/uploads/039_isocortada.png",
           "tipo": "planimetrias"
         },
         {
           "url": "/images/uploads/039_iso.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/039_isodetalle.png",
           "tipo": "planimetrias"
         },
         {
