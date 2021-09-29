@@ -1,6 +1,34 @@
 {
   "proyectos": [
     {
+      "estado": "realizado",
+      "nombre": "CARACOL, Aula Portatil",
+      "fotografia": "DIADIA Arquitectura",
+      "area": "60 cm * 60 cm * 120 cm",
+      "galería": [
+        {
+          "tipo": "fotoUso",
+          "url": "/images/uploads/gif-kit-de-juego-con-niños.gif"
+        },
+        {
+          "url": "/images/uploads/04_escenario-1.jpg",
+          "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/04_escenario-2.jpg",
+          "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/00_completo.jpg",
+          "tipo": "planimetrias"
+        }
+      ],
+      "cliente": "Urban 95 Lima",
+      "involucrados": "Michele Albanelli + Carmen Omonte",
+      "fecha": "16 07 2021",
+      "ubicacion": "Movil"
+    },
+    {
       "colaboracion": "Susana Lòpez (asesoría diseño urbano) y Milton Vicentelo (Rene Lagos Ingeniería, asesoría estructuras)",
       "estado": "noRealizado",
       "nombre": "UNIVERSIDAD CIENTIFICA DEL SUR E1",
@@ -71,34 +99,6 @@
       "involucrados": "DIADIA Arquitectura en  Plan A0100: Michele Albanelli, Jorge Losada, Marta Maccaglia, Mario Ricci, Carmen Omonte y Lola Rodríguez con Ana Lucía Díaz, Franco Ferraro, Jahir Velezmoro, Fabio Rodríguez, Akemi Cabrejos, Jocelyn Cueto, Susanna Olivieri, Giuliana Miglierina, Giulia Perri",
       "fecha": "28 03 2021",
       "ubicacion": "Lima, Perú"
-    },
-    {
-      "estado": "realizado",
-      "nombre": "CARACOL, Aula Portatil",
-      "fotografia": "DIADIA Arquitectura",
-      "area": "60 cm * 60 cm * 120 cm",
-      "galería": [
-        {
-          "tipo": "fotoUso",
-          "url": "/images/uploads/gif-kit-de-juego-con-niños.gif"
-        },
-        {
-          "url": "/images/uploads/04_escenario-1.jpg",
-          "tipo": "diagramas"
-        },
-        {
-          "url": "/images/uploads/04_escenario-2.jpg",
-          "tipo": "diagramas"
-        },
-        {
-          "url": "/images/uploads/00_completo.jpg",
-          "tipo": "planimetrias"
-        }
-      ],
-      "cliente": "Urban 95 Lima",
-      "involucrados": "Michele Albanelli + Carmen Omonte",
-      "fecha": "16 07 2021",
-      "ubicacion": "Movil"
     },
     {
       "estado": "realizado",
