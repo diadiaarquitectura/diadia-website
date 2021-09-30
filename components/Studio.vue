@@ -2,14 +2,14 @@
 #studio
   .content
     img(src='/images/uploads/035_02.jpg')
-    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis lobortis neque sit amet mattis. Proin pellentesque nunc ac sollicitudin molestie. Sed dapibus ligula risus, sed lacinia lacus pharetra non. Suspendisse volutpat interdum arcu eget finibus. Sed a placerat lectus. Vivamus imperdiet arcu neque, a pretium nisi faucibus sed. 
-    p Ut in elit ut urna lobortis pretium id non sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi porttitor sollicitudin fringilla. Morbi accumsan suscipit nulla, convallis imperdiet dolor scelerisque condimentum. Donec pharetra facilisis velit, nec placerat leo tristique accumsan. Integer dignissim porttitor sollicitudin. Morbi tempor nisi lorem, vel elementum leo hendrerit ut. In a dolor venenatis, vulputate nibh quis, porttitor nibh. Duis auctor laoreet lorem nec rutrum. Aenean suscipit quis ante id sollicitudin. Maecenas congue lobortis mi ac tempor. Proin efficitur mi a varius pulvinar. Quisque placerat odio sed elit consectetur, vitae aliquet risus egestas. Fusce ullamcorper, sem vitae ullamcorper feugiat, libero diam facilisis nunc, eu mattis dolor justo ut sem. 
-    p Sed volutpat imperdiet ante eget maximus. Cras semper, metus sed auctor sollicitudin, felis diam suscipit dui, gravida fermentum orci urna vel enim. Ut commodo ipsum magna, eget elementum odio pharetra ut. Nunc vulputate congue purus id congue. In nec lorem massa. Vivamus pharetra augue non lectus condimentum, venenatis ullamcorper mi cursus. Nunc quis augue rutrum, laoreet odio nec, semper mi. Aliquam aliquet sed arcu quis pretium. Praesent ac feugiat nibh. Vestibulum id nunc non massa ultrices interdum ut id risus. Duis quis lacus sit amet justo cursus sodales. Proin lacinia suscipit justo, sed efficitur leo. Proin maximus maximus erat ut consectetur. Donec felis nunc, dictum non mauris sed, finibus semper leo. Maecenas a purus molestie, consequat turpis at, vestibulum odio. 
+    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis lobortis neque sit amet mattis. Proin pellentesque nunc ac sollicitudin molestie. Sed dapibus ligula risus, sed lacinia lacus pharetra non. Suspendisse volutpat interdum arcu eget finibus. Sed a placerat lectus. Vivamus imperdiet arcu neque, a pretium nisi faucibus sed.
+    p Ut in elit ut urna lobortis pretium id non sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi porttitor sollicitudin fringilla. Morbi accumsan suscipit nulla, convallis imperdiet dolor scelerisque condimentum. Donec pharetra facilisis velit, nec placerat leo tristique accumsan. Integer dignissim porttitor sollicitudin. Morbi tempor nisi lorem, vel elementum leo hendrerit ut. In a dolor venenatis, vulputate nibh quis, porttitor nibh. Duis auctor laoreet lorem nec rutrum. Aenean suscipit quis ante id sollicitudin. Maecenas congue lobortis mi ac tempor. Proin efficitur mi a varius pulvinar. Quisque placerat odio sed elit consectetur, vitae aliquet risus egestas. Fusce ullamcorper, sem vitae ullamcorper feugiat, libero diam facilisis nunc, eu mattis dolor justo ut sem.
+    p Sed volutpat imperdiet ante eget maximus. Cras semper, metus sed auctor sollicitudin, felis diam suscipit dui, gravida fermentum orci urna vel enim. Ut commodo ipsum magna, eget elementum odio pharetra ut. Nunc vulputate congue purus id congue. In nec lorem massa. Vivamus pharetra augue non lectus condimentum, venenatis ullamcorper mi cursus. Nunc quis augue rutrum, laoreet odio nec, semper mi. Aliquam aliquet sed arcu quis pretium. Praesent ac feugiat nibh. Vestibulum id nunc non massa ultrices interdum ut id risus. Duis quis lacus sit amet justo cursus sodales. Proin lacinia suscipit justo, sed efficitur leo. Proin maximus maximus erat ut consectetur. Donec felis nunc, dictum non mauris sed, finibus semper leo. Maecenas a purus molestie, consequat turpis at, vestibulum odio.
     img(src='/images/uploads/035_02.jpg')
     p Suspendisse dignissim velit arcu, id iaculis ipsum pretium nec. Ut bibendum lacinia turpis in tincidunt. Donec sodales blandit libero, eget vestibulum nunc.
-    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis lobortis neque sit amet mattis. Proin pellentesque nunc ac sollicitudin molestie. Sed dapibus ligula risus, sed lacinia lacus pharetra non. Suspendisse volutpat interdum arcu eget finibus. Sed a placerat lectus. Vivamus imperdiet arcu neque, a pretium nisi faucibus sed. 
-    p Ut in elit ut urna lobortis pretium id non sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi porttitor sollicitudin fringilla. Morbi accumsan suscipit nulla, convallis imperdiet dolor scelerisque condimentum. Donec pharetra facilisis velit, nec placerat leo tristique accumsan. Integer dignissim porttitor sollicitudin. Morbi tempor nisi lorem, vel elementum leo hendrerit ut. In a dolor venenatis, vulputate nibh quis, porttitor nibh. Duis auctor laoreet lorem nec rutrum. Aenean suscipit quis ante id sollicitudin. Maecenas congue lobortis mi ac tempor. Proin efficitur mi a varius pulvinar. Quisque placerat odio sed elit consectetur, vitae aliquet risus egestas. Fusce ullamcorper, sem vitae ullamcorper feugiat, libero diam facilisis nunc, eu mattis dolor justo ut sem. 
-    p Sed volutpat imperdiet ante eget maximus. Cras semper, metus sed auctor sollicitudin, felis diam suscipit dui, gravida fermentum orci urna vel enim. Ut commodo ipsum magna, eget elementum odio pharetra ut. Nunc vulputate congue purus id congue. In nec lorem massa. Vivamus pharetra augue non lectus condimentum, venenatis ullamcorper mi cursus. Nunc quis augue rutrum, laoreet odio nec, semper mi. Aliquam aliquet sed arcu quis pretium. Praesent ac feugiat nibh. Vestibulum id nunc non massa ultrices interdum ut id risus. Duis quis lacus sit amet justo cursus sodales. Proin lacinia suscipit justo, sed efficitur leo. Proin maximus maximus erat ut consectetur. Donec felis nunc, dictum non mauris sed, finibus semper leo. Maecenas a purus molestie, consequat turpis at, vestibulum odio. 
+    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis lobortis neque sit amet mattis. Proin pellentesque nunc ac sollicitudin molestie. Sed dapibus ligula risus, sed lacinia lacus pharetra non. Suspendisse volutpat interdum arcu eget finibus. Sed a placerat lectus. Vivamus imperdiet arcu neque, a pretium nisi faucibus sed.
+    p Ut in elit ut urna lobortis pretium id non sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi porttitor sollicitudin fringilla. Morbi accumsan suscipit nulla, convallis imperdiet dolor scelerisque condimentum. Donec pharetra facilisis velit, nec placerat leo tristique accumsan. Integer dignissim porttitor sollicitudin. Morbi tempor nisi lorem, vel elementum leo hendrerit ut. In a dolor venenatis, vulputate nibh quis, porttitor nibh. Duis auctor laoreet lorem nec rutrum. Aenean suscipit quis ante id sollicitudin. Maecenas congue lobortis mi ac tempor. Proin efficitur mi a varius pulvinar. Quisque placerat odio sed elit consectetur, vitae aliquet risus egestas. Fusce ullamcorper, sem vitae ullamcorper feugiat, libero diam facilisis nunc, eu mattis dolor justo ut sem.
+    p Sed volutpat imperdiet ante eget maximus. Cras semper, metus sed auctor sollicitudin, felis diam suscipit dui, gravida fermentum orci urna vel enim. Ut commodo ipsum magna, eget elementum odio pharetra ut. Nunc vulputate congue purus id congue. In nec lorem massa. Vivamus pharetra augue non lectus condimentum, venenatis ullamcorper mi cursus. Nunc quis augue rutrum, laoreet odio nec, semper mi. Aliquam aliquet sed arcu quis pretium. Praesent ac feugiat nibh. Vestibulum id nunc non massa ultrices interdum ut id risus. Duis quis lacus sit amet justo cursus sodales. Proin lacinia suscipit justo, sed efficitur leo. Proin maximus maximus erat ut consectetur. Donec felis nunc, dictum non mauris sed, finibus semper leo. Maecenas a purus molestie, consequat turpis at, vestibulum odio.
     p Suspendisse dignissim velit arcu, id iaculis ipsum pretium nec. Ut bibendum lacinia turpis in tincidunt. Donec sodales blandit libero, eget vestibulum nunc.
     img(src='/images/uploads/035_02.jpg')
 </template>
@@ -21,8 +21,7 @@ import { mapGetters, mapMutations } from 'vuex'
 export default {
   components: { Viewer },
 
-  mounted() {
-  },
+  mounted() {},
 
   computed: {
     ...mapGetters({ studio: 'getStudioInfo' }),
@@ -49,8 +48,7 @@ export default {
   },
 
   data() {
-    return {
-    }
+    return {}
   },
 }
 </script>
@@ -88,6 +86,7 @@ export default {
 
     img {
       width: 100%;
+      margin: 4% 0;
     }
   }
 }
