@@ -71,8 +71,7 @@ collections:
           - label: Contenido
             name: content
             required: true
-            widget: code
-            language: markdown
+            widget: markdown
             
       - label: Contacto
         name: contacto
