@@ -71,7 +71,7 @@ collections:
           - label: Contenido
             name: content
             required: false
-            widget: test
+            widget: text
             
       - label: Contacto
         name: contacto
