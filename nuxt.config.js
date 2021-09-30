@@ -1,5 +1,6 @@
 export default {
-  mode: 'spa',
+  ssr: false,
+  target: 'static',
   head: {
     title: 'DIADIA',
     meta: [
