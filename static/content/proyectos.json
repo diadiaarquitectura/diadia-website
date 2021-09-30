@@ -1,21 +1,6 @@
 {
   "proyectos": [
     {
-      "fecha": "29 09 2021",
-      "estado": "base",
-      "nombre": "Plan Maestro UCSUR Villa",
-      "ubicacion": "Lima, Perú",
-      "area": "12 Ha.",
-      "cliente": "UCSUR",
-      "involucrados": "DIADIA Arquitectura en  Plan A0100: Michele Albanelli, Jorge Losada, Marta Maccaglia, Mario Ricci, Carmen Omonte y Lola Rodríguez con Juan Pereyra, Jahir Velezmoro, Akemi Cabrejos",
-      "galería": [
-        {
-          "tipo": "base",
-          "url": "/images/uploads/gif_libro-con-portada.gif"
-        }
-      ]
-    },
-    {
       "estado": "realizado",
       "nombre": "CARACOL, Aula Portatil",
       "fotografia": "DIADIA Arquitectura",
@@ -126,6 +111,21 @@
       "involucrados": "DIADIA Arquitectura en  Plan A0100: Michele Albanelli, Jorge Losada, Marta Maccaglia, Mario Ricci, Carmen Omonte y Lola Rodríguez con Ana Lucía Díaz, Franco Ferraro, Jahir Velezmoro, Fabio Rodríguez, Akemi Cabrejos, Jocelyn Cueto, Susanna Olivieri, Giuliana Miglierina, Giulia Perri",
       "fecha": "28 03 2021",
       "ubicacion": "Lima, Perú"
+    },
+    {
+      "fecha": "29 09 2021",
+      "estado": "base",
+      "nombre": "Plan Maestro UCSUR Villa",
+      "ubicacion": "Lima, Perú",
+      "area": "12 Ha.",
+      "cliente": "UCSUR",
+      "involucrados": "DIADIA Arquitectura en  Plan A0100: Michele Albanelli, Jorge Losada, Marta Maccaglia, Mario Ricci, Carmen Omonte y Lola Rodríguez con Juan Pereyra, Jahir Velezmoro, Akemi Cabrejos",
+      "galería": [
+        {
+          "tipo": "base",
+          "url": "/images/uploads/049_00-pliego.jpg"
+        }
+      ]
     },
     {
       "estado": "realizado",
@@ -1053,6 +1053,10 @@
       "area": "Sistema Flexible",
       "descripcion": "La estructura social de la escuela se puede considerar como una versión a escala menor de la sociedad y el espacio abierto escolar, en este sentido, es lugar de experiencias de mediación, integración e inclusión, experiencias que las/os niñas/os y adolescentes vivirán sucesivamente de forma autónoma en el contexto de la comunidad de pertenencia, sea urbana o rural. El espacio abierto escolar asume entonces un rol formativo y pedagógico fundamental en el marco de la experiencia escolar.\nEste documento procede como metodología, desde la revisión y análisis (directa e indirecta) de antecedentes, hacia la definición de estrategias integrales aplicables de manera sistemática a las diferentes realidades del país, hasta la proposición de acciones concretas que buscan promover la activación de los espacios abiertos de acuerdo a los principios planteados, como lugares de\nformación, inclusivos e integradores, sanos, sostenibles, confortables.",
       "galería": [
+        {
+          "url": "/images/uploads/027_gif.gif",
+          "tipo": "base"
+        },
         {
           "url": "/images/uploads/027_iso4.png",
           "tipo": "vista3d"
