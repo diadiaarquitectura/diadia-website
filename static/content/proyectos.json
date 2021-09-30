@@ -664,6 +664,10 @@
       "descripcion": "PUCU, Caminos de Encuentro para la Primera Infancia de Pucusana. Link para revisar la publicación completa de <a href=\"https://issuu.com/bernardvanleerfoundation/docs/pucu_camino_de_encuentros_para_la_primera_infancia\"> PUCU</a> en issuu",
       "galería": [
         {
+          "tipo": "base",
+          "url": "/images/uploads/038_gif.gif"
+        },
+        {
           "url": "/images/uploads/038_dibujo.png",
           "tipo": "sketch"
         },
