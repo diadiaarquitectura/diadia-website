@@ -5,7 +5,7 @@
     transition(name='fade')
       gallery(v-show='currentSection.includes("gallery")')
     transition(name='fade')
-      studio(v-show='currentSection == "studio"')
+      studio(v-if='currentSection == "studio"')
     transition(name='fade')
       contact(v-show='!isMobile && currentSection == "contact"')
     transition(name='fade')

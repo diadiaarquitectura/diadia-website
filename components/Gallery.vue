@@ -162,7 +162,6 @@ export default {
       // agragar proyectos terminados:
       this.projects.forEach((project) => {
         if (project.estado == 'realizado') {
-          console.log(project)
           items.push({
             fecha: project.fecha,
             nombre: project.nombre,
