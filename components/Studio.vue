@@ -66,7 +66,7 @@ export default {
 #studio {
   position: absolute;
   top: 150px;
-  height: calc(100% - 150px);
+  height: calc(100% - 190px);
   width: 100%;
   padding: 0 3%;
   overflow-x: hidden;
@@ -82,7 +82,7 @@ export default {
     font-weight: normal;
     text-align: justify;
     // margin-left: 2.5%;
-    margin-bottom: 10%;
+    margin-bottom: 1%;
 
     p {
       // margin: 0 2%;
