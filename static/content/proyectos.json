@@ -2,7 +2,7 @@
   "proyectos": [
     {
       "fecha": "29 09 2021",
-      "estado": "noRealizado",
+      "estado": "base",
       "nombre": "Plan Maestro UCSUR Villa",
       "ubicacion": "Lima, Perú",
       "area": "12 Ha.",
@@ -10,8 +10,8 @@
       "involucrados": "DIADIA Arquitectura en  Plan A0100: Michele Albanelli, Jorge Losada, Marta Maccaglia, Mario Ricci, Carmen Omonte y Lola Rodríguez con Juan Pereyra, Jahir Velezmoro, Akemi Cabrejos",
       "galería": [
         {
-          "tipo": "diagramas",
-          "url": "/images/uploads/pliego-planta-contexto.jpg"
+          "tipo": "base",
+          "url": "/images/uploads/gif_libro-con-portada.gif"
         }
       ]
     },
