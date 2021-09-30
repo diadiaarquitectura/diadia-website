@@ -68,12 +68,10 @@ collections:
         name: estudio
         file: static/content/estudio.json
         fields:
-          - label: Fotos
-            name: galería
+          - label: Contenido
+            name: content
             required: false
-            widget: list
-            fields:
-              - { label: Imagen, name: url, widget: image, required: false, allow_multiple: false }
+            widget: test
             
       - label: Contacto
         name: contacto
