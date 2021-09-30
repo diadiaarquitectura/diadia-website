@@ -70,8 +70,9 @@ collections:
         fields:
           - label: Contenido
             name: content
-            required: false
+            required: true
             widget: code
+            language: markdown
             
       - label: Contacto
         name: contacto
