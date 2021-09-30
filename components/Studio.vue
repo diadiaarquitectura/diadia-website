@@ -1,11 +1,12 @@
 <template lang="pug">
 #studio
-  .content(v-html="studio.content")
+  .content(v-html='markdown')
 </template>
 
 <script>
 import Viewer from '../components/Viewer'
 import { mapGetters, mapMutations } from 'vuex'
+import marked from 'marked'
 
 export default {
   components: { Viewer },
@@ -14,6 +15,9 @@ export default {
 
   computed: {
     ...mapGetters({ studio: 'getStudioInfo' }),
+    markdown() {
+      return marked(this.studio.content)
+    },
   },
 
   methods: {
@@ -42,7 +46,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.2s;
@@ -65,7 +69,7 @@ export default {
   margin-left: auto;
 
   .content {
-    margin-top: 0%;
+    margin-top: -2%;
     width: 98%;
     font-size: 1.1rem;
     font-weight: normal;
@@ -73,17 +77,9 @@ export default {
     margin-left: 1%;
     margin-bottom: 1%;
 
-    p {
-      // margin: 0 2%;
-    }
-
     img {
       width: 100%;
       margin: 2% 0;
-    }
-
-    img:first-child {
-      margin: 0 0 2% 0;
     }
   }
 }
