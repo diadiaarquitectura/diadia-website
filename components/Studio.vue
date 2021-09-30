@@ -77,11 +77,11 @@ export default {
 
   .content {
     margin-top: 0%;
-    // width: 95%;
+    width: 98%;
     font-size: 1.1rem;
     font-weight: normal;
     text-align: justify;
-    // margin-left: 2.5%;
+    margin-left: 1%;
     margin-bottom: 1%;
 
     p {
