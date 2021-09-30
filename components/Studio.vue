@@ -1,73 +1,27 @@
 <template lang="pug">
 #studio
-  #arrows-studio(v-if='false')
-    #arrow-up(@click='onUp()', v-if='studio.galería.length > 6 && !isMobile()')
-      img(src='/images/arrow-up.svg')
-    #arrow-down(@click='onDown()', v-if='studio.galería.length > 6 && !isMobile()')
-      img(src='/images/arrow-down.svg')
-  .grid
-    .grid-item(v-for='image in studio.galería')
-      img.image.lozad(
-        width='30%',
-        height='auto',
-        src='~/assets/images/placeholder.svg',
-        :data-src='image.url'
-      )
+  .content
+    img(src='/images/uploads/035_02.jpg')
+    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis lobortis neque sit amet mattis. Proin pellentesque nunc ac sollicitudin molestie. Sed dapibus ligula risus, sed lacinia lacus pharetra non. Suspendisse volutpat interdum arcu eget finibus. Sed a placerat lectus. Vivamus imperdiet arcu neque, a pretium nisi faucibus sed. 
+    p Ut in elit ut urna lobortis pretium id non sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi porttitor sollicitudin fringilla. Morbi accumsan suscipit nulla, convallis imperdiet dolor scelerisque condimentum. Donec pharetra facilisis velit, nec placerat leo tristique accumsan. Integer dignissim porttitor sollicitudin. Morbi tempor nisi lorem, vel elementum leo hendrerit ut. In a dolor venenatis, vulputate nibh quis, porttitor nibh. Duis auctor laoreet lorem nec rutrum. Aenean suscipit quis ante id sollicitudin. Maecenas congue lobortis mi ac tempor. Proin efficitur mi a varius pulvinar. Quisque placerat odio sed elit consectetur, vitae aliquet risus egestas. Fusce ullamcorper, sem vitae ullamcorper feugiat, libero diam facilisis nunc, eu mattis dolor justo ut sem. 
+    p Sed volutpat imperdiet ante eget maximus. Cras semper, metus sed auctor sollicitudin, felis diam suscipit dui, gravida fermentum orci urna vel enim. Ut commodo ipsum magna, eget elementum odio pharetra ut. Nunc vulputate congue purus id congue. In nec lorem massa. Vivamus pharetra augue non lectus condimentum, venenatis ullamcorper mi cursus. Nunc quis augue rutrum, laoreet odio nec, semper mi. Aliquam aliquet sed arcu quis pretium. Praesent ac feugiat nibh. Vestibulum id nunc non massa ultrices interdum ut id risus. Duis quis lacus sit amet justo cursus sodales. Proin lacinia suscipit justo, sed efficitur leo. Proin maximus maximus erat ut consectetur. Donec felis nunc, dictum non mauris sed, finibus semper leo. Maecenas a purus molestie, consequat turpis at, vestibulum odio. 
+    img(src='/images/uploads/035_02.jpg')
+    p Suspendisse dignissim velit arcu, id iaculis ipsum pretium nec. Ut bibendum lacinia turpis in tincidunt. Donec sodales blandit libero, eget vestibulum nunc.
+    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis lobortis neque sit amet mattis. Proin pellentesque nunc ac sollicitudin molestie. Sed dapibus ligula risus, sed lacinia lacus pharetra non. Suspendisse volutpat interdum arcu eget finibus. Sed a placerat lectus. Vivamus imperdiet arcu neque, a pretium nisi faucibus sed. 
+    p Ut in elit ut urna lobortis pretium id non sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi porttitor sollicitudin fringilla. Morbi accumsan suscipit nulla, convallis imperdiet dolor scelerisque condimentum. Donec pharetra facilisis velit, nec placerat leo tristique accumsan. Integer dignissim porttitor sollicitudin. Morbi tempor nisi lorem, vel elementum leo hendrerit ut. In a dolor venenatis, vulputate nibh quis, porttitor nibh. Duis auctor laoreet lorem nec rutrum. Aenean suscipit quis ante id sollicitudin. Maecenas congue lobortis mi ac tempor. Proin efficitur mi a varius pulvinar. Quisque placerat odio sed elit consectetur, vitae aliquet risus egestas. Fusce ullamcorper, sem vitae ullamcorper feugiat, libero diam facilisis nunc, eu mattis dolor justo ut sem. 
+    p Sed volutpat imperdiet ante eget maximus. Cras semper, metus sed auctor sollicitudin, felis diam suscipit dui, gravida fermentum orci urna vel enim. Ut commodo ipsum magna, eget elementum odio pharetra ut. Nunc vulputate congue purus id congue. In nec lorem massa. Vivamus pharetra augue non lectus condimentum, venenatis ullamcorper mi cursus. Nunc quis augue rutrum, laoreet odio nec, semper mi. Aliquam aliquet sed arcu quis pretium. Praesent ac feugiat nibh. Vestibulum id nunc non massa ultrices interdum ut id risus. Duis quis lacus sit amet justo cursus sodales. Proin lacinia suscipit justo, sed efficitur leo. Proin maximus maximus erat ut consectetur. Donec felis nunc, dictum non mauris sed, finibus semper leo. Maecenas a purus molestie, consequat turpis at, vestibulum odio. 
+    p Suspendisse dignissim velit arcu, id iaculis ipsum pretium nec. Ut bibendum lacinia turpis in tincidunt. Donec sodales blandit libero, eget vestibulum nunc.
+    img(src='/images/uploads/035_02.jpg')
 </template>
 
 <script>
 import Viewer from '../components/Viewer'
 import { mapGetters, mapMutations } from 'vuex'
-import gsap from 'gsap'
-import imagesLoaded from 'imagesloaded'
-import lozad from 'lozad'
 
 export default {
   components: { Viewer },
 
   mounted() {
-    let grid = document.querySelector('#studio .grid')
-
-    this.imagesloaded = imagesLoaded(grid)
-
-    // masonry
-    this.masonry = new Isotope(grid, {
-      itemSelector: '.grid-item',
-      masonry: {
-        horizontalOrder: true,
-      },
-    })
-
-    const observer = lozad('#studio .lozad')
-
-    this.masonry.on('arrangeComplete', () => {
-      observer.observe()
-    })
-
-    // setInterval(() => {
-    //   this.masonry.layout()
-    // }, 100)
-
-    this.imagesloaded.on('progress', () => {
-      this.masonry.layout()
-    })
-
-    this.$nuxt.$on('studio-selected', () => {
-      this.masonry.arrange()
-
-      setTimeout(() => {
-        this.masonry.layout()
-      }, 100)
-    })
-
-    // arrows
-    this.$nuxt.$on('show-arrows', () => {
-      this.isArrowsVisible = true
-    })
-
-    this.$nuxt.$on('hide-arrows', () => {
-      this.isArrowsVisible = false
-    })
   },
 
   computed: {
@@ -92,24 +46,10 @@ export default {
       })(navigator.userAgent || navigator.vendor || window.opera)
       return check
     },
-
-    onUp() {
-      let studio = document.querySelector('#studio')
-      gsap.to('#studio', { scrollTop: studio.scrollTop - 200, duration: 0.5 })
-    },
-
-    onDown() {
-      let studio = document.querySelector('#studio')
-      gsap.to('#studio', { scrollTop: studio.scrollTop + 200, duration: 0.5 })
-    },
   },
 
   data() {
     return {
-      isShowingProject: false,
-      masonry: null,
-      scrollTop: 0,
-      isArrowsVisible: false,
     }
   },
 }
@@ -135,45 +75,19 @@ export default {
   overflow-y: scroll;
   scrollbar-color: #ddd #f0f0f0;
   scrollbar-width: thin;
+  margin-left: auto;
 
-  #arrow-up,
-  #arrow-down {
-    position: fixed;
-    right: 2.5%;
-    width: 1%;
-    height: 1%;
-    cursor: pointer;
+  .content {
+    margin-top: 0%;
+    width: 80%;
+    font-size: 1.5rem;
+    font-weight: normal;
+    text-align: justify;
+    margin-left: 10%;
+    margin-bottom: 10%;
 
     img {
       width: 100%;
-    }
-  }
-
-  #arrow-up {
-    top: calc(50% - 2.5%);
-  }
-
-  #arrow-down {
-    top: calc(50% + 2.5%);
-  }
-
-  .grid {
-    transition: opacity 0.6s;
-    margin-bottom: 50px;
-
-    .grid-item {
-      width: 31.9%;
-      margin-left: 0.7%;
-      margin-right: 0.7%;
-      margin-top: 0;
-      margin-bottom: 1.4%;
-      float: left;
-      position: relative;
-      background-color: #eee;
-
-      img {
-        width: 100% !important;
-      }
     }
   }
 }
