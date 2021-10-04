@@ -113,13 +113,10 @@
       "ubicacion": "Lima, Perú"
     },
     {
-      "fecha": "29 09 2021",
       "estado": "base",
-      "nombre": "PlanA PLAN MAESTRO UCSUR VILLA ",
-      "ubicacion": "Lima, Perú",
+      "nombre": "Plan A0100 PLAN MAESTRO UCSUR VILLA ",
       "area": "12 Ha.",
-      "cliente": "UCSUR",
-      "involucrados": "DIADIA Arquitectura en Plan A0100: Michele Albanelli, Jorge Losada, Marta Maccaglia, Mario Ricci, Carmen Omonte y Lola Rodríguez con Juan Pereyra, Jahir Velezmoro, Akemi Cabrejos, Carlos Vasquez, Daysi La Madrid",
+      "descripcion": "El proyecto de los lineamientos para el Plan Maestro Estratégico Integrado para la sede Villa de la Universidad Científica del Sur se propone de sentar las bases para construir una visión futura, consensuada y compartida, de la infraestructura del campus, basada en los valores de la institución y en la vocación científico-humanista. En concordancia con los temas urgentes y emergentes en la agenda climática y social a nivel global, la Universidad Científica del Sur y en particular la sede Villa, presentan la oportunidad de establecer un proyecto modelo a nivel nacional e internacional, en mira de sensibilizar la ciudadanía a través de la educación, la investigación y el compromiso ambiental. El reconocimiento del contexto territorial inmediato, su evolución milenaria y características actuales, son el punto de partida para la construcción de un legado para las futuras generaciones, basado en la construcción de una relación renovada con el medioambiente y la celebración del ingenio y la creatividad humana.",
       "galería": [
         {
           "tipo": "base",
@@ -128,20 +125,12 @@
         {
           "url": "/images/uploads/049_gif-1-.gif",
           "tipo": "base"
-        },
-        {
-          "url": "/images/uploads/049_01.0-pliego.jpg",
-          "tipo": "base"
-        },
-        {
-          "url": "/images/uploads/049_01.1-pliego.jpg",
-          "tipo": "base"
-        },
-        {
-          "url": "/images/uploads/049_02-pliego.jpg",
-          "tipo": "base"
         }
-      ]
+      ],
+      "cliente": "UCSUR",
+      "involucrados": "DIADIA Arquitectura en Plan A0100: Michele Albanelli, Jorge Losada, Marta Maccaglia, Mario Ricci, Carmen Omonte y Lola Rodríguez con Juan Pereyra, Jahir Velezmoro, Akemi Cabrejos, Carlos Vasquez, Daysi La Madrid",
+      "fecha": "29 09 2021",
+      "ubicacion": "Lima, Perú"
     },
     {
       "estado": "realizado",
