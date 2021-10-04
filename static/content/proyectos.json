@@ -1069,34 +1069,6 @@
         {
           "url": "/images/uploads/027_gif.gif",
           "tipo": "base"
-        },
-        {
-          "url": "/images/uploads/027_iso4.png",
-          "tipo": "vista3d"
-        },
-        {
-          "url": "/images/uploads/027_esquema.png",
-          "tipo": "diagramas"
-        },
-        {
-          "url": "/images/uploads/027_esquema2.png",
-          "tipo": "diagramas"
-        },
-        {
-          "url": "/images/uploads/027_p.png",
-          "tipo": "diagramas"
-        },
-        {
-          "url": "/images/uploads/027_s.png",
-          "tipo": "diagramas"
-        },
-        {
-          "url": "/images/uploads/027_iso2.png",
-          "tipo": "planimetrias"
-        },
-        {
-          "url": "/images/uploads/027_iso3.png",
-          "tipo": "planimetrias"
         }
       ],
       "cliente": "PRONIED ",
