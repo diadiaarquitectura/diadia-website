@@ -526,6 +526,10 @@
       "area": "250 m2",
       "galería": [
         {
+          "url": "/images/uploads/031_gif.gif",
+          "tipo": "fotoUso"
+        },
+        {
           "url": "/images/uploads/031_01.jpg",
           "tipo": "fotoUso"
         },
