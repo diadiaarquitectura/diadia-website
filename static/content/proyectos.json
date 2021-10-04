@@ -165,42 +165,6 @@
       "ubicacion": "Lima, Perú"
     },
     {
-      "estado": "realizado",
-      "nombre": "UNIVERSIDAD CIENTIFICA DEL SUR E0",
-      "fotografia": "Plan A0100",
-      "area": "Terreno 10920 m2, Edificio 2300 m2",
-      "galería": [
-        {
-          "tipo": "fotoObra",
-          "url": "/images/uploads/045_o02.jpg"
-        },
-        {
-          "url": "/images/uploads/045_o01.jpg",
-          "tipo": "fotoObra"
-        },
-        {
-          "url": "/images/uploads/045_o00.jpg",
-          "tipo": "fotoObra"
-        },
-        {
-          "url": "/images/uploads/045_o03.jpg",
-          "tipo": "fotoObra"
-        },
-        {
-          "url": "/images/uploads/045_p0.png",
-          "tipo": "planimetrias"
-        },
-        {
-          "url": "/images/uploads/045_p1.png",
-          "tipo": "planimetrias"
-        }
-      ],
-      "cliente": "Universidad Científica del Sur, Concurso Privado Primer Premio",
-      "involucrados": "DIADIA Arquitectura en  Plan A0100: Michele Albanelli, Jorge Losada, Marta Maccaglia, Mario Ricci, Carmen Omonte y Lola Rodríguez con Ana Lucía Díaz, Franco Ferraro, Jahir Velezmoro, Fabio Rodríguez, Akemi Cabrejos, Jocelyn Cueto, Susanna Olivieri, Giuliana Miglierina, Giulia Perri",
-      "fecha": "10 02 2021",
-      "ubicacion": "Lima, Perú"
-    },
-    {
       "fecha": "01 05 2020",
       "estado": "noRealizado",
       "nombre": "YAKUWAWA",
@@ -261,6 +225,42 @@
       "ubicacion": "Lima, Perú",
       "cliente": "URBAN 95",
       "involucrados": "Michele Albanelli + Carmen Omonte con Alonso Melgar, Linda Velásquez, Olenka Ruiz y Franco Ferraro"
+    },
+    {
+      "estado": "realizado",
+      "nombre": "UNIVERSIDAD CIENTIFICA DEL SUR E0",
+      "fotografia": "Plan A0100",
+      "area": "Terreno 10920 m2, Edificio 2300 m2",
+      "galería": [
+        {
+          "tipo": "fotoObra",
+          "url": "/images/uploads/045_o02.jpg"
+        },
+        {
+          "url": "/images/uploads/045_o01.jpg",
+          "tipo": "fotoObra"
+        },
+        {
+          "url": "/images/uploads/045_o00.jpg",
+          "tipo": "fotoObra"
+        },
+        {
+          "url": "/images/uploads/045_o03.jpg",
+          "tipo": "fotoObra"
+        },
+        {
+          "url": "/images/uploads/045_p0.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/045_p1.png",
+          "tipo": "planimetrias"
+        }
+      ],
+      "cliente": "Universidad Científica del Sur, Concurso Privado Primer Premio",
+      "involucrados": "DIADIA Arquitectura en  Plan A0100: Michele Albanelli, Jorge Losada, Marta Maccaglia, Mario Ricci, Carmen Omonte y Lola Rodríguez con Ana Lucía Díaz, Franco Ferraro, Jahir Velezmoro, Fabio Rodríguez, Akemi Cabrejos, Jocelyn Cueto, Susanna Olivieri, Giuliana Miglierina, Giulia Perri",
+      "fecha": "10 02 2021",
+      "ubicacion": "Lima, Perú"
     },
     {
       "colaboracion": "Transforma ONG",
