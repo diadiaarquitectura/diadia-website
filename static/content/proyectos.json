@@ -24,6 +24,22 @@
         {
           "url": "/images/uploads/054_axonometria-piel-01.jpg",
           "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/054_vista04.jpg",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/054_vista06.jpg",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/054_vista07.jpg",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/054_vista03.jpg",
+          "tipo": "vista3d"
         }
       ]
     },
