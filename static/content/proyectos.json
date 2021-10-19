@@ -1,6 +1,33 @@
 {
   "proyectos": [
     {
+      "fecha": "20 10 2021",
+      "estado": "noRealizado",
+      "nombre": "PLAN A0100 / Ampliación Clínica de Simulación",
+      "ubicacion": "Lima, Perú",
+      "area": "Terreno m2, Edificio m2",
+      "cliente": "Universidad Científica del Sur, Concurso Privado Primer Premio",
+      "involucrados": "DIADIA Arquitectura en Plan A0100: Michele Albanelli, Jorge Losada, Marta Maccaglia, Mario Ricci, Carmen Omonte y Lola Rodríguez con Juan Pereyra, Jahir Velezmoro, Akemi Cabrejos, Carlos Vasquez, Daysi La Madrid",
+      "galería": [
+        {
+          "url": "/images/uploads/054_vistaportada.jpg",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/054_axonometria-propuesta-base-01.jpg",
+          "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/054_axonometria-piezas-01.jpg",
+          "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/054_axonometria-piel-01.jpg",
+          "tipo": "diagramas"
+        }
+      ]
+    },
+    {
       "estado": "realizado",
       "nombre": "CARACOL, Aula Portatil",
       "fotografia": "DIADIA Arquitectura",
