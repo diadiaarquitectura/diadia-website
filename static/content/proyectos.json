@@ -176,17 +176,6 @@
       "ubicacion": "Lima, Perú"
     },
     {
-      "fecha": "22 09 2021",
-      "estado": "noRealizado",
-      "nombre": "ENKO URBAN SCHOOL",
-      "galería": [
-        {
-          "url": "/images/uploads/055_i-01.jpg",
-          "tipo": "vista3d"
-        }
-      ]
-    },
-    {
       "fecha": "01 05 2020",
       "estado": "noRealizado",
       "nombre": "YAKUWAWA",
@@ -279,6 +268,17 @@
       "involucrados": "Michele Albanelli + Carmen Omonte con Lucero Robles",
       "fecha": "23 02 2021",
       "ubicacion": "Lima, Perú"
+    },
+    {
+      "fecha": "22 09 2021",
+      "estado": "noRealizado",
+      "nombre": "ENKO URBAN SCHOOL",
+      "galería": [
+        {
+          "url": "/images/uploads/055_i-01.jpg",
+          "tipo": "vista3d"
+        }
+      ]
     },
     {
       "estado": "realizado",
