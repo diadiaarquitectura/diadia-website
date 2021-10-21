@@ -277,8 +277,23 @@
         {
           "url": "/images/uploads/055_i-01.jpg",
           "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/055_-ei-5-.jpg",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/055_-ei-1-.jpg",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/055_planos-1-.png",
+          "tipo": "diagramas"
         }
-      ]
+      ],
+      "ubicacion": "Bamako, Mali",
+      "area": "Terreno 1600 m2 / Area Techada 3000 m2",
+      "cliente": "ENKO International School / International Open Competition"
     },
     {
       "estado": "realizado",
