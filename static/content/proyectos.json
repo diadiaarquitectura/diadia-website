@@ -176,6 +176,17 @@
       "ubicacion": "Lima, Perú"
     },
     {
+      "fecha": "22 09 2021",
+      "estado": "noRealizado",
+      "nombre": "ENKO URBAN SCHOOL",
+      "galería": [
+        {
+          "url": "/images/uploads/055_i-01.jpg",
+          "tipo": "vista3d"
+        }
+      ]
+    },
+    {
       "fecha": "01 05 2020",
       "estado": "noRealizado",
       "nombre": "YAKUWAWA",
@@ -1326,17 +1337,6 @@
       "involucrados": "Michele Albanelli + Carmen Omonte",
       "fecha": "12 08 2010",
       "ubicacion": "Roma, Italia"
-    },
-    {
-      "fecha": "22 09 2021",
-      "estado": "noRealizado",
-      "nombre": "ENKO URBAN SCHOOL",
-      "galería": [
-        {
-          "url": "/images/uploads/055_i-01.jpg",
-          "tipo": "vista3d"
-        }
-      ]
     }
   ]
 }
