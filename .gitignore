@@ -5,3 +5,4 @@ yarn.lock
 diadia.todo
 .gitignore
 .todo
+.DS_Store
