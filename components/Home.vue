@@ -150,11 +150,19 @@ export default {
       opacity: 0
       font-weight: 100
 
-@media (max-width: 640px)
+@media (max-width: 760px)
   #home
-    width: 250px
-
     .content
       text-align: center
       font-size: 1rem
+      transform: translate(0, -5vh)
+
+      .title
+        opacity: 0
+        margin-top: 30px
+        margin-bottom: 20px
+        letter-spacing: 4px
+
+    #arrow-down
+      transform: scale(0.6) translate(0, 7vh)
 </style>
