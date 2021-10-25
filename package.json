@@ -5,7 +5,7 @@
   "author": "Jerson La Torre",
   "private": true,
   "scripts": {
-    "start": "node_modules/.bin/nuxt",
+    "dev": "node_modules/.bin/nuxt",
     "generate": "node_modules/.bin/nuxt generate",
     "deploy": "yarn generate; surge dist https://diadia.surge.sh"
   },
@@ -16,6 +16,7 @@
     "bootstrap-vue": "^2.0.0",
     "gsap": "^3.3.1",
     "imagesloaded": "^4.1.4",
+    "inner-vh": "^2.1.1",
     "lozad": "^1.16.0",
     "marked": "^3.0.4",
     "node-sass": "^4.13.0",

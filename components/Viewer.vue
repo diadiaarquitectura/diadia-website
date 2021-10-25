@@ -23,7 +23,7 @@
         .container
           .title Fotografía
           .text {{ currentProject.fotografia ? currentProject.fotografia : "-" }}
-        .container(v-html="currentProject.descripcion")
+        .container(v-html='currentProject.descripcion')
   transition(name='fade')
     #gallery(v-show='!isText')
       #gallery-inner
@@ -223,6 +223,7 @@ export default {
   top: 0
   width: 100vw
   height: 100vh
+  height: calc(var(--innerVh, 1vh) * 100)
   background-color: white
   z-index: 5000
 
