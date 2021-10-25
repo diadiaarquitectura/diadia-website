@@ -34,11 +34,9 @@
             #footer
               .right {{ currentImage + 1 + "/" + currentProject.galería.length }}
         #arrow-left
-          a(href='#')
-            img(src='images/arrow-left.svg', @click='prevImage()')
+          img(src='images/arrow-left.svg', @click='prevImage()')
         #arrow-right
-          a(href='#')
-            img(src='images/arrow-right.svg', @click='nextImage()')
+          img(src='images/arrow-right.svg', @click='nextImage()')
   #viewer-buttons
     #download(v-if='currentProject.descargable')
       a(:href='currentProject.descargable', target='__blank')
@@ -223,7 +221,6 @@ export default {
   top: 0
   width: 100vw
   height: 100vh
-  height: calc(var(--innerVh, 1vh) * 100)
   background-color: white
   z-index: 5000
 
@@ -306,13 +303,18 @@ export default {
 
   #arrow-left
     position: fixed
-    left: 10px
-    top: calc(50% - 35px)
-    transform: scale(1.3)
-    transition: all 0.2s
+    left: 0
+    top: 0
+    height: 100%
+    width: 10vw
+    // background-color: red
+    display: flex
+    justify-content: center
+    align-items: center
 
     img
       width: 50px
+      cursor: pointer
 
     &:hover
       transform: scale(1.5)
@@ -320,13 +322,18 @@ export default {
 
   #arrow-right
     position: fixed
-    right: 10px
-    top: calc(50% - 35px)
-    transform: scale(1.3)
-    transition: all 0.2s
+    right: 0
+    top: 0
+    height: 100%
+    width: 10vw
+    // background-color: red
+    display: flex
+    justify-content: center
+    align-items: center
 
     img
       width: 50px
+      cursor: pointer
 
     &:hover
       transform: scale(1.5)
