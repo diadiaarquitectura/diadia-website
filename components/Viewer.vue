@@ -1,5 +1,5 @@
 <template lang="pug">
-#viewer(v-if='currentProject')
+#viewer.noselect(v-if='currentProject')
   transition(name='fade')
     #description(v-show='isText')
       #description-inner
