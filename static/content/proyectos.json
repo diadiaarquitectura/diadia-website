@@ -35,6 +35,22 @@
         {
           "url": "/images/uploads/12.jpg",
           "tipo": "base"
+        },
+        {
+          "url": "/images/uploads/13.jpg",
+          "tipo": "base"
+        },
+        {
+          "url": "/images/uploads/15.jpg",
+          "tipo": "base"
+        },
+        {
+          "url": "/images/uploads/18.jpg",
+          "tipo": "base"
+        },
+        {
+          "url": "/images/uploads/19.jpg",
+          "tipo": "base"
         }
       ],
       "cliente": "Fondo Editorial UPC (Universidad Peruana de Ciencias Aplicadas)",
