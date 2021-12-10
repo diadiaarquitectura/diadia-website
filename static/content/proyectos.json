@@ -320,6 +320,10 @@
         {
           "url": "/images/uploads/040_002.png",
           "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/040_01.jpg",
+          "tipo": "fotoUso"
         }
       ],
       "cliente": "Privado",
