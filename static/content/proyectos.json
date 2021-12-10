@@ -1369,6 +1369,31 @@
       "involucrados": "Michele Albanelli + Carmen Omonte",
       "fecha": "12 08 2010",
       "ubicacion": "Roma, Italia"
+    },
+    {
+      "estado": "base",
+      "nombre": "ESPACIOS DE APRENDIZAJE",
+      "fotografia": "Créditos en el libro",
+      "area": "-",
+      "descripcion": "El libro Espacios de Aprendizaje es al mismo tiempo el detonante y el resultado de un proceso de inmersión en los ejes temáticos de la educación, el aprendizaje y el juego, puestos en relación con los ámbitos del diseño, la arquitectura y la ciudad. El texto indaga en la posibilidad de comprender el espacio como maestro – concepto inspirado en la filosofía pedagógica Reggio Emilia –, a través de una secuencia temática y conceptual que transita desde la idea de INFANCIA, hacia el contexto de LIMA, pasando por los campos disciplinares del ESPACIO, el DISEÑO y la CIUDAD. En el ensayo, la reflexión teórica se sostiene en la lectura crítica de proyectos y viceversa, articulando así una constante reciprocidad entre texto y contexto; “como todo estudio que no busca sentar verdades, sino hallar conexiones y construir nuevas preguntas, el presente escrito queda inconcluso, en el sentido de que abre las puertas a una serie de intereses por seguir explorando.”",
+      "galería": [
+        {
+          "url": "/images/uploads/gif_libro-con-portada.gif",
+          "tipo": "base"
+        },
+        {
+          "url": "/images/uploads/portada.jpg",
+          "tipo": "base"
+        },
+        {
+          "url": "/images/uploads/1.jpg",
+          "tipo": "base"
+        }
+      ],
+      "cliente": "Fondo Editorial UPC (Universidad Peruana de Ciencias Aplicadas)",
+      "involucrados": "Michele Albanelli ",
+      "fecha": "04 11 2021",
+      "ubicacion": "-"
     }
   ]
 }
