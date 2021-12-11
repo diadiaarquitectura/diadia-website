@@ -1431,6 +1431,30 @@
       "involucrados": "Michele Albanelli + Carmen Omonte",
       "fecha": "12 08 2010",
       "ubicacion": "Roma, Italia"
+    },
+    {
+      "estado": "realizado",
+      "nombre": "AAAAAA",
+      "fotografia": "DIADIA Arquitectura + Asiel Nuñez",
+      "area": "-",
+      "galería": [
+        {
+          "url": "/images/uploads/053_06.jpg",
+          "tipo": "fotoUso"
+        },
+        {
+          "url": "/images/uploads/053_02.jpg",
+          "tipo": "fotoUso"
+        },
+        {
+          "url": "/images/uploads/053_03.jpg",
+          "tipo": "fotoUso"
+        }
+      ],
+      "cliente": "ERL Espacios Revelados Lima",
+      "involucrados": "Michele Albanelli + Carmen Omonte con Daniela Lecaros y Laura Saavedra",
+      "fecha": "12 11 2021",
+      "ubicacion": "Lima, Perú"
     }
   ]
 }
