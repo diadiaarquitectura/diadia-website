@@ -1449,6 +1449,18 @@
         {
           "url": "/images/uploads/053_03.jpg",
           "tipo": "fotoUso"
+        },
+        {
+          "url": "/images/uploads/053_04.jpg",
+          "tipo": "fotoUso"
+        },
+        {
+          "url": "/images/uploads/053_08.jpg",
+          "tipo": "fotoUso"
+        },
+        {
+          "url": "/images/uploads/053_ele.png",
+          "tipo": "planimetrias"
         }
       ],
       "cliente": "ERL Espacios Revelados Lima",
