@@ -197,6 +197,18 @@
       "area": "Terreno 10920 m2, Edificio 12350 m2",
       "galería": [
         {
+          "url": "/images/uploads/obra-2.jpg",
+          "tipo": "fotoObra"
+        },
+        {
+          "url": "/images/uploads/obra-3.jpg",
+          "tipo": "fotoObra"
+        },
+        {
+          "url": "/images/uploads/obra-1.jpg",
+          "tipo": "fotoObra"
+        },
+        {
           "tipo": "vista3d",
           "url": "/images/uploads/045_000.jpg"
         },
