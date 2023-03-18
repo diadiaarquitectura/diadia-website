@@ -505,6 +505,22 @@
       "ubicacion": "Lima, Perú"
     },
     {
+      "colaboracion": "MalO Design Atelier, FD Arquitectos (Coordinación General)",
+      "estado": "noRealizado",
+      "nombre": "Escuelas Bicentenario PRONIED",
+      "area": "Sistema modular",
+      "galería": [
+        {
+          "tipo": "vista3d",
+          "url": "/images/uploads/033-escuelasierra-4-.jpg"
+        }
+      ],
+      "cliente": "Programa Nacional de Infraestructura Educativa - PRONIED",
+      "involucrados": "Linda Velásquez, Olenka Ruiz, Claudia Narvasta, Alonso Melgar",
+      "fecha": "16 07 2020",
+      "ubicacion": "Perú, Región Sierra"
+    },
+    {
       "colaboracion": "Transforma ONG",
       "estado": "realizado",
       "tipologia": "educación",
