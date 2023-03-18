@@ -304,6 +304,18 @@
         {
           "url": "/images/uploads/042_05.jpg",
           "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/042_04.jpg",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/042_08.jpg",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/042_03.jpg",
+          "tipo": "vista3d"
         }
       ],
       "cliente": "Inversiones 4F",
