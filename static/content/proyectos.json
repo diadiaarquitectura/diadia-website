@@ -294,15 +294,15 @@
       "descripcion": "Escuela Inicial, Primaria y Secundaria",
       "galería": [
         {
+          "url": "/images/uploads/042_05-inicio.jpg",
+          "tipo": "vista3d"
+        },
+        {
           "url": "/images/uploads/042_07.jpg",
           "tipo": "vista3d"
         },
         {
           "url": "/images/uploads/042_06.jpg",
-          "tipo": "vista3d"
-        },
-        {
-          "url": "/images/uploads/042_05.jpg",
           "tipo": "vista3d"
         },
         {
@@ -328,6 +328,18 @@
         {
           "tipo": "planimetrias",
           "url": "/images/uploads/escuela-nova-terra-comunicación-02.jpg"
+        },
+        {
+          "url": "/images/uploads/escuela-nova-terra-comunicación-06.jpg",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/escuela-nova-terra-comunicación4.jpg",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/escuela-nova-terra-comunicación-08.jpg",
+          "tipo": "planimetrias"
         }
       ],
       "cliente": "Inversiones 4F",
