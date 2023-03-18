@@ -505,14 +505,34 @@
       "ubicacion": "Lima, Perú"
     },
     {
-      "colaboracion": "MalO Design Atelier, FD Arquitectos (Coordinación General)",
+      "colaboracion": "MalO Design Atelier, FD Arquitectos (Coordinación General), Karel Van Oordt y Alejandro Torero",
       "estado": "noRealizado",
-      "nombre": "Escuelas Bicentenario PRONIED",
+      "nombre": "Escuelas Bicentenario Sierra",
       "area": "Sistema modular",
       "galería": [
         {
           "tipo": "vista3d",
           "url": "/images/uploads/033-escuelasierra-4-.jpg"
+        },
+        {
+          "url": "/images/uploads/033-escuelasierra-12-.jpg",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/033-escuelasierra-16-.jpg",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/033-escuelasierra-10-.jpg",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/033-sección-bioclimática-dos.png",
+          "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/033-sección-bioclimática.png",
+          "tipo": "diagramas"
         }
       ],
       "cliente": "Programa Nacional de Infraestructura Educativa - PRONIED",
