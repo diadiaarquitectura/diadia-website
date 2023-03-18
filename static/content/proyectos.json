@@ -521,6 +521,7 @@
       "estado": "noRealizado",
       "nombre": "Escuelas Bicentenario Sierra",
       "area": "Sistema modular",
+      "descripcion": "Concurso Internacional, Primer Puesto y desarrollo del expediente de arquitectura para la región Sierra.",
       "galería": [
         {
           "tipo": "vista3d",
@@ -537,6 +538,14 @@
         {
           "url": "/images/uploads/033-escuelasierra-10-.jpg",
           "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/032-aula.png",
+          "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/032-esquema-de-estructura.png",
+          "tipo": "diagramas"
         },
         {
           "url": "/images/uploads/033-sección-bioclimática-dos.png",
