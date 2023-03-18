@@ -1484,6 +1484,31 @@
       "involucrados": "Michele Albanelli + Carmen Omonte",
       "fecha": "12 08 2010",
       "ubicacion": "Roma, Italia"
+    },
+    {
+      "colaboracion": "MalO Design Atelier\nEstructuras: Danilo Echenique\nEspecialidades: VITAL ingenieros consultores\nSeguridad en edificaciones: BRACO arquitectos\nVisualización: JRC",
+      "estado": "noRealizado",
+      "nombre": "Escuela NOVA TERRA",
+      "area": "Área Terreno 1465 m2, Área Edificio 3500 m2",
+      "descripcion": "Escuela Inicial, Primaria y Secundaria",
+      "galería": [
+        {
+          "url": "/images/uploads/042_07.jpg",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/042_06.jpg",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/042_05.jpg",
+          "tipo": "vista3d"
+        }
+      ],
+      "cliente": "Inversiones 4F",
+      "involucrados": "Michele Albanelli + Carmen Omonte con Alonso Melgar, Linda Velásquez, Olenka Ruiz y Claudia Narvasta",
+      "fecha": "01 04 2021",
+      "ubicacion": "Villa El Salvador, Lima, Perú"
     }
   ]
 }
