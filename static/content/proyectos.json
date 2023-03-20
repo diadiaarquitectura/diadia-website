@@ -191,11 +191,57 @@
       "ubicacion": "Movil"
     },
     {
-      "colaboracion": "Susana Lòpez (asesoría diseño urbano) y Milton Vicentelo (Rene Lagos Ingeniería, asesoría estructuras)",
+      "colaboracion": "Estructuras: Equilibrio 3\nEspecialidades: VITAL\nPaisajismo: Paisaje Vivo\nLighting Design: Claudia Paz\nConcurso: Susana Lòpez (asesoría diseño urbano) y Milton Vicentelo (Rene Lagos Ingeniería, asesoría estructuras)",
       "estado": "realizado",
       "nombre": "Plan A0100 / UNIVERSIDAD CIENTÍFICA DEL SUR, CAMPUS LIMA NORTE Etapa 1",
+      "fotografia": "Plan A0100\nRenzo Rebagliati",
       "area": "Terreno 10920 m2, Edificio 12350 m2",
+      "descripcion": "https://plana0100.com/",
       "galería": [
+        {
+          "url": "/images/uploads/045_rr0.jpg",
+          "tipo": "fotoUso"
+        },
+        {
+          "tipo": "fotoUso",
+          "url": "/images/uploads/045_rr1.jpg"
+        },
+        {
+          "tipo": "fotoUso",
+          "url": "/images/uploads/045_rr8.jpg"
+        },
+        {
+          "tipo": "fotoUso",
+          "url": "/images/uploads/045_rr6.jpg"
+        },
+        {
+          "url": "/images/uploads/045_rr7.jpg",
+          "tipo": "fotoUso"
+        },
+        {
+          "tipo": "fotoUso",
+          "url": "/images/uploads/045_rr5.jpg"
+        },
+        {
+          "tipo": "fotoUso",
+          "url": "/images/uploads/045_rr4.jpg"
+        },
+        {
+          "tipo": "fotoUso",
+          "url": "/images/uploads/045_rr3.jpg"
+        },
+        {
+          "tipo": "fotoUso",
+          "url": "/images/uploads/045_rr2.jpg"
+        },
+        {
+          "url": "/images/uploads/045_plano-1.jpg",
+          "tipo": "planimetrias"
+        },
+        {
+          "tipo": "planimetrias",
+          "url": "/images/uploads/045_plano-2.jpg"
+        },
         {
           "url": "/images/uploads/obra-2.jpg",
           "tipo": "fotoObra"
@@ -207,26 +253,6 @@
         {
           "url": "/images/uploads/obra-1.jpg",
           "tipo": "fotoObra"
-        },
-        {
-          "tipo": "vista3d",
-          "url": "/images/uploads/045_000.jpg"
-        },
-        {
-          "url": "/images/uploads/041_v01.jpg",
-          "tipo": "vista3d"
-        },
-        {
-          "url": "/images/uploads/041_v03.jpg",
-          "tipo": "vista3d"
-        },
-        {
-          "url": "/images/uploads/041_v04.jpg",
-          "tipo": "vista3d"
-        },
-        {
-          "url": "/images/uploads/041_plot-plan.png",
-          "tipo": "planimetrias"
         },
         {
           "url": "/images/uploads/041_diagramaetapas.png",
