@@ -8,8 +8,25 @@
         {
           "tipo": "vista3d",
           "url": "/images/uploads/068_i0.jpg"
+        },
+        {
+          "tipo": "vista3d",
+          "url": "/images/uploads/068_i2.jpg"
+        },
+        {
+          "url": "/images/uploads/068_i5.jpg",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/068_i4a.jpg",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/068_i8.jpg",
+          "tipo": "sketch"
         }
-      ]
+      ],
+      "ubicacion": "Benevento, Italia"
     },
     {
       "colaboracion": "-",
