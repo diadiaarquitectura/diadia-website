@@ -1,6 +1,17 @@
 {
   "proyectos": [
     {
+      "fecha": "12 10 2023",
+      "estado": "noRealizado",
+      "nombre": "COMPLESSO PARROCCHIALE DELLO SPIRITO SANTO",
+      "galería": [
+        {
+          "tipo": "vista3d",
+          "url": "/images/uploads/068_i0.jpg"
+        }
+      ]
+    },
+    {
       "colaboracion": "-",
       "estado": "realizado",
       "nombre": "ESCUELA QINTY \n(EN OBRA) ",
