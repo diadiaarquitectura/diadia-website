@@ -38,6 +38,34 @@
           "url": "/images/uploads/068_i3.jpg"
         },
         {
+          "url": "/images/uploads/068-iso.jpg",
+          "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/068-iso1.jpg",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/068-iso2.jpg",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/068-plan500.jpg",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/068-plan.jpg",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/068-ele.jpg",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/068-section.jpg",
+          "tipo": "planimetrias"
+        },
+        {
           "url": "/images/uploads/068_i8.jpg",
           "tipo": "sketch"
         }
