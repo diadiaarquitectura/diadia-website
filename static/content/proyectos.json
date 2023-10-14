@@ -1,6 +1,32 @@
 {
   "proyectos": [
     {
+      "colaboracion": "-",
+      "estado": "realizado",
+      "nombre": "ESCUELA QINTY \n(EN PROCESO) ",
+      "fotografia": "-",
+      "area": "Área Terreno 228 m2, Área Edificio 264 m2",
+      "descripcion": "Proyecto de Escuela Inicial, en proceso de Obra.",
+      "galería": [
+        {
+          "tipo": "fotoObra",
+          "url": "/images/uploads/046-1.jpg"
+        },
+        {
+          "tipo": "fotoObra",
+          "url": "/images/uploads/046-3.jpg"
+        },
+        {
+          "url": "/images/uploads/046-maqueta.jpg",
+          "tipo": "maquetas"
+        }
+      ],
+      "cliente": "Privado",
+      "involucrados": "Alonso Melgar, Olenka Ruiz, Laura Saavedra y Lucero Robles",
+      "fecha": "12 10 2023",
+      "ubicacion": "Carabayllo, Lima, Perú"
+    },
+    {
       "estado": "realizado",
       "nombre": "AAAAAA",
       "fotografia": "DIADIA Arquitectura + Asiel Nuñez",
