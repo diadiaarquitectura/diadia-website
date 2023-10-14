@@ -3,7 +3,7 @@
     {
       "colaboracion": "-",
       "estado": "realizado",
-      "nombre": "ESCUELA QINTY \n(EN PROCESO) ",
+      "nombre": "ESCUELA QINTY \n(EN OBRA) ",
       "fotografia": "-",
       "area": "Área Terreno 228 m2, Área Edificio 264 m2",
       "descripcion": "Proyecto de Escuela Inicial, en proceso de Obra.",
@@ -19,6 +19,18 @@
         {
           "url": "/images/uploads/046-maqueta.jpg",
           "tipo": "maquetas"
+        },
+        {
+          "url": "/images/uploads/046-plan-3-.png",
+          "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/046-plan-5-.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/corte-b.png",
+          "tipo": "planimetrias"
         }
       ],
       "cliente": "Privado",
