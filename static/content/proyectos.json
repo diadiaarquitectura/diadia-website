@@ -1,9 +1,12 @@
 {
   "proyectos": [
     {
-      "fecha": "12 10 2023",
+      "colaboracion": "OFL Architecture, Francesco Lipari. Artisti: Michele Canzoneri e Salvatore Rizzuti. Liturgista: Sergio Catalano",
       "estado": "noRealizado",
       "nombre": "COMPLESSO PARROCCHIALE DELLO SPIRITO SANTO",
+      "fotografia": "Voxel Pixel",
+      "area": "Áera Terreno 5000 m2, Área Edificio 1128 m2",
+      "descripcion": "Mención Especial en el \"Concorso nazionale per il nuovo complesso parrocchiale dello Spirito Santo a Benevento\".",
       "galería": [
         {
           "tipo": "vista3d",
@@ -70,6 +73,9 @@
           "tipo": "sketch"
         }
       ],
+      "cliente": "Conferenza Episcopale Italiana y Arcidiocesi di Benevento",
+      "involucrados": "Milena Chavez, Vanessa Ahumada",
+      "fecha": "12 10 2023",
       "ubicacion": "Benevento, Italia"
     },
     {
