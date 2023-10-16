@@ -79,9 +79,12 @@
       "ubicacion": "Benevento, Italia"
     },
     {
-      "fecha": "13 10 2023",
+      "colaboracion": "Javier Vera Cubas, Curador del  proyecto \"Extramuros\"",
       "estado": "realizado",
       "nombre": "AAAAAA Extramuros",
+      "fotografia": "Eleazar Cuadros y DIADIA",
+      "area": "30 m2",
+      "descripcion": "Instalación en el espacio público, se inserta en el proyecto de acondicionamiento de CCC.",
       "galería": [
         {
           "tipo": "fotoUso",
@@ -103,7 +106,11 @@
           "url": "/images/uploads/066-i3.jpg",
           "tipo": "fotoUso"
         }
-      ]
+      ],
+      "cliente": "La ESCUELA, Foundation Siemens Stiftung",
+      "involucrados": "Milena Chavez, Mary Hellen Rojas",
+      "fecha": "13 10 2023",
+      "ubicacion": "Lima, Perú"
     },
     {
       "colaboracion": "-",
