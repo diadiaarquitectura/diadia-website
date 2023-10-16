@@ -79,6 +79,17 @@
       "ubicacion": "Benevento, Italia"
     },
     {
+      "fecha": "13 10 2023",
+      "estado": "realizado",
+      "nombre": "AAAAAA Extramuros",
+      "galería": [
+        {
+          "tipo": "fotoUso",
+          "url": "/images/uploads/066-gif.gif"
+        }
+      ]
+    },
+    {
       "colaboracion": "-",
       "estado": "realizado",
       "nombre": "ESCUELA QINTY \n(EN OBRA) ",
@@ -115,55 +126,6 @@
       "involucrados": "Alonso Melgar, Olenka Ruiz, Laura Saavedra y Lucero Robles",
       "fecha": "12 10 2023",
       "ubicacion": "Carabayllo, Lima, Perú"
-    },
-    {
-      "estado": "realizado",
-      "nombre": "AAAAAA",
-      "fotografia": "DIADIA Arquitectura + Asiel Nuñez",
-      "area": "-",
-      "descripcion": "Un Aula de Arcos entre Amazonas y el Agua como Andamio para el Aprendizaje (AAAAAA), nace de la reflexión y crítica acerca de las metodologías y espacios para el aprendizaje tradicionales.\nTodavía en la mayoría de escuelas públicas regulares de nuestro país, existe la idea generalizada del aula como espacio hegemónico y de legitimación del aprendizaje. Sin embargo, en el Proyecto Educativo Nacional al 2036 -PEN 2036- se afirma que “la educación no solo requiere de instituciones educativas, sino también reposa en el trabajo colaborativo y en red en diferentes espacios y tiempos”. Con la semipresencialidad, se ha puesto en evidencia que para aprender el aula podría estar ubicada en cualquier lugar, siempre y cuando haya la voluntad de relacionarse con el conocimiento desde la experiencia. Las formas de aprender como andamio para el aprendizaje.\nEl aula, en nuestras vivencias, es el espacio de aprendizaje racional y letrado por excelencia, pero, además, es el espacio donde se ponen en juego ideologías de cómo se construyen nuestros cuerpos. Frases como “¡Párate derecho!\", \"¡Siéntate bonito! y “¡No te distraigas y mira hacia la pizarra!”, forman parte del catálogo de instrucciones más emblemáticas de las pedagogías de control del cuerpo, normalizadas por generaciones.",
-      "galería": [
-        {
-          "url": "/images/uploads/053_06.jpg",
-          "tipo": "fotoUso"
-        },
-        {
-          "url": "/images/uploads/053_02.jpg",
-          "tipo": "fotoUso"
-        },
-        {
-          "url": "/images/uploads/053_03.jpg",
-          "tipo": "fotoUso"
-        },
-        {
-          "url": "/images/uploads/053_04.jpg",
-          "tipo": "fotoUso"
-        },
-        {
-          "url": "/images/uploads/053_08.jpg",
-          "tipo": "fotoUso"
-        },
-        {
-          "url": "/images/uploads/053_10.jpg",
-          "tipo": "fotoUso"
-        },
-        {
-          "url": "/images/uploads/053_01.jpg",
-          "tipo": "fotoUso"
-        },
-        {
-          "url": "/images/uploads/053_11.jpg",
-          "tipo": "fotoUso"
-        },
-        {
-          "url": "/images/uploads/053_ele.png",
-          "tipo": "planimetrias"
-        }
-      ],
-      "cliente": "ERL Espacios Revelados Lima",
-      "involucrados": "Michele Albanelli + Carmen Omonte con Daniela Lecaros y Laura Saavedra",
-      "fecha": "12 11 2021",
-      "ubicacion": "Lima, Perú"
     },
     {
       "colaboracion": "-",
@@ -262,6 +224,55 @@
       "involucrados": "Michele Albanelli + Carmen Omonte",
       "fecha": "16 07 2021",
       "ubicacion": "Movil"
+    },
+    {
+      "estado": "realizado",
+      "nombre": "AAAAAA",
+      "fotografia": "DIADIA Arquitectura + Asiel Nuñez",
+      "area": "-",
+      "descripcion": "Un Aula de Arcos entre Amazonas y el Agua como Andamio para el Aprendizaje (AAAAAA), nace de la reflexión y crítica acerca de las metodologías y espacios para el aprendizaje tradicionales.\nTodavía en la mayoría de escuelas públicas regulares de nuestro país, existe la idea generalizada del aula como espacio hegemónico y de legitimación del aprendizaje. Sin embargo, en el Proyecto Educativo Nacional al 2036 -PEN 2036- se afirma que “la educación no solo requiere de instituciones educativas, sino también reposa en el trabajo colaborativo y en red en diferentes espacios y tiempos”. Con la semipresencialidad, se ha puesto en evidencia que para aprender el aula podría estar ubicada en cualquier lugar, siempre y cuando haya la voluntad de relacionarse con el conocimiento desde la experiencia. Las formas de aprender como andamio para el aprendizaje.\nEl aula, en nuestras vivencias, es el espacio de aprendizaje racional y letrado por excelencia, pero, además, es el espacio donde se ponen en juego ideologías de cómo se construyen nuestros cuerpos. Frases como “¡Párate derecho!\", \"¡Siéntate bonito! y “¡No te distraigas y mira hacia la pizarra!”, forman parte del catálogo de instrucciones más emblemáticas de las pedagogías de control del cuerpo, normalizadas por generaciones.",
+      "galería": [
+        {
+          "url": "/images/uploads/053_06.jpg",
+          "tipo": "fotoUso"
+        },
+        {
+          "url": "/images/uploads/053_02.jpg",
+          "tipo": "fotoUso"
+        },
+        {
+          "url": "/images/uploads/053_03.jpg",
+          "tipo": "fotoUso"
+        },
+        {
+          "url": "/images/uploads/053_04.jpg",
+          "tipo": "fotoUso"
+        },
+        {
+          "url": "/images/uploads/053_08.jpg",
+          "tipo": "fotoUso"
+        },
+        {
+          "url": "/images/uploads/053_10.jpg",
+          "tipo": "fotoUso"
+        },
+        {
+          "url": "/images/uploads/053_01.jpg",
+          "tipo": "fotoUso"
+        },
+        {
+          "url": "/images/uploads/053_11.jpg",
+          "tipo": "fotoUso"
+        },
+        {
+          "url": "/images/uploads/053_ele.png",
+          "tipo": "planimetrias"
+        }
+      ],
+      "cliente": "ERL Espacios Revelados Lima",
+      "involucrados": "Michele Albanelli + Carmen Omonte con Daniela Lecaros y Laura Saavedra",
+      "fecha": "12 11 2021",
+      "ubicacion": "Lima, Perú"
     },
     {
       "colaboracion": "MalO Design Atelier\nEstructuras: Danilo Echenique\nEspecialidades: VITAL ingenieros consultores\nSeguridad en edificaciones: BRACO arquitectos\nVisualización: JRC",
