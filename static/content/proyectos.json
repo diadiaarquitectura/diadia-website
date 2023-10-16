@@ -186,6 +186,67 @@
       "ubicacion": "-"
     },
     {
+      "colaboracion": "MalO Design Atelier\nEstructuras: Danilo Echenique\nEspecialidades: VITAL ingenieros consultores\nSeguridad en edificaciones: BRACO arquitectos\nVisualización: JRC",
+      "estado": "noRealizado",
+      "nombre": "Escuela NOVA TERRA",
+      "area": "Área Terreno 1465 m2, Área Edificio 3500 m2",
+      "descripcion": "Escuela Inicial, Primaria y Secundaria",
+      "galería": [
+        {
+          "url": "/images/uploads/042_05-inicio.jpg",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/042_07.jpg",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/042_06.jpg",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/042_04.jpg",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/042_08.jpg",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/042_03.jpg",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/escuela-nova-terra-comunicación-10.jpg",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/escuela-nova-terra-comunicación-05.jpg",
+          "tipo": "diagramas"
+        },
+        {
+          "tipo": "planimetrias",
+          "url": "/images/uploads/escuela-nova-terra-comunicación-02.jpg"
+        },
+        {
+          "url": "/images/uploads/escuela-nova-terra-comunicación-06.jpg",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/escuela-nova-terra-comunicación4.jpg",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/escuela-nova-terra-comunicación-08.jpg",
+          "tipo": "planimetrias"
+        }
+      ],
+      "cliente": "Inversiones 4F",
+      "involucrados": "Michele Albanelli + Carmen Omonte con Alonso Melgar, Linda Velásquez, Olenka Ruiz y Claudia Narvasta",
+      "fecha": "01 04 2021",
+      "ubicacion": "Villa El Salvador, Lima, Perú"
+    },
+    {
       "estado": "realizado",
       "nombre": "CARACOL, Aula Portatil",
       "fotografia": "DIADIA Arquitectura",
@@ -273,67 +334,6 @@
       "involucrados": "Michele Albanelli + Carmen Omonte con Daniela Lecaros y Laura Saavedra",
       "fecha": "12 11 2021",
       "ubicacion": "Lima, Perú"
-    },
-    {
-      "colaboracion": "MalO Design Atelier\nEstructuras: Danilo Echenique\nEspecialidades: VITAL ingenieros consultores\nSeguridad en edificaciones: BRACO arquitectos\nVisualización: JRC",
-      "estado": "noRealizado",
-      "nombre": "Escuela NOVA TERRA",
-      "area": "Área Terreno 1465 m2, Área Edificio 3500 m2",
-      "descripcion": "Escuela Inicial, Primaria y Secundaria",
-      "galería": [
-        {
-          "url": "/images/uploads/042_05-inicio.jpg",
-          "tipo": "vista3d"
-        },
-        {
-          "url": "/images/uploads/042_07.jpg",
-          "tipo": "vista3d"
-        },
-        {
-          "url": "/images/uploads/042_06.jpg",
-          "tipo": "vista3d"
-        },
-        {
-          "url": "/images/uploads/042_04.jpg",
-          "tipo": "vista3d"
-        },
-        {
-          "url": "/images/uploads/042_08.jpg",
-          "tipo": "vista3d"
-        },
-        {
-          "url": "/images/uploads/042_03.jpg",
-          "tipo": "vista3d"
-        },
-        {
-          "url": "/images/uploads/escuela-nova-terra-comunicación-10.jpg",
-          "tipo": "planimetrias"
-        },
-        {
-          "url": "/images/uploads/escuela-nova-terra-comunicación-05.jpg",
-          "tipo": "diagramas"
-        },
-        {
-          "tipo": "planimetrias",
-          "url": "/images/uploads/escuela-nova-terra-comunicación-02.jpg"
-        },
-        {
-          "url": "/images/uploads/escuela-nova-terra-comunicación-06.jpg",
-          "tipo": "planimetrias"
-        },
-        {
-          "url": "/images/uploads/escuela-nova-terra-comunicación4.jpg",
-          "tipo": "planimetrias"
-        },
-        {
-          "url": "/images/uploads/escuela-nova-terra-comunicación-08.jpg",
-          "tipo": "planimetrias"
-        }
-      ],
-      "cliente": "Inversiones 4F",
-      "involucrados": "Michele Albanelli + Carmen Omonte con Alonso Melgar, Linda Velásquez, Olenka Ruiz y Claudia Narvasta",
-      "fecha": "01 04 2021",
-      "ubicacion": "Villa El Salvador, Lima, Perú"
     },
     {
       "fecha": "01 05 2020",
