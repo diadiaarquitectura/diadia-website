@@ -6,7 +6,8 @@
 <script>
 import Viewer from '../components/Viewer'
 import { mapGetters, mapMutations } from 'vuex'
-import marked from 'marked'
+
+const md = require('markdown-it')()
 
 export default {
   components: { Viewer },
@@ -16,7 +17,7 @@ export default {
   computed: {
     ...mapGetters({ studio: 'getStudioInfo' }),
     markdown() {
-      return marked(this.studio.content)
+      return(md.render(this.studio.content))
     },
   },
 
@@ -53,7 +54,6 @@ export default {
   margin-left: auto;
 
   .content {
-    margin-top: -2%;
     width: 98%;
     font-size: 1.1rem;
     font-weight: normal;
