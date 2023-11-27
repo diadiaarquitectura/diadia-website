@@ -105,6 +105,10 @@
         {
           "url": "/images/uploads/066-i3.jpg",
           "tipo": "fotoUso"
+        },
+        {
+          "url": "/images/uploads/066_iso.jpg",
+          "tipo": "planimetrias"
         }
       ],
       "cliente": "La ESCUELA, Foundation Siemens Stiftung",
