@@ -87,6 +87,10 @@
       "descripcion": "Instalación en el espacio público, se inserta en el proyecto de acondicionamiento de CCC.",
       "galería": [
         {
+          "url": "/images/uploads/066-i1b.jpg",
+          "tipo": "fotoUso"
+        },
+        {
           "tipo": "fotoUso",
           "url": "/images/uploads/066-gif.gif"
         },
@@ -99,7 +103,15 @@
           "tipo": "fotoUso"
         },
         {
+          "tipo": "fotoUso",
+          "url": "/images/uploads/066-i8.jpg"
+        },
+        {
           "url": "/images/uploads/066-i4.jpg",
+          "tipo": "fotoUso"
+        },
+        {
+          "url": "/images/uploads/066-i9.jpg",
           "tipo": "fotoUso"
         },
         {
