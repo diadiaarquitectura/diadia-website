@@ -91,16 +91,12 @@
           "tipo": "fotoUso"
         },
         {
-          "tipo": "fotoUso",
-          "url": "/images/uploads/066-gif.gif"
-        },
-        {
-          "url": "/images/uploads/066-i1.jpg",
-          "tipo": "fotoUso"
-        },
-        {
           "url": "/images/uploads/066-i2.jpg",
           "tipo": "fotoUso"
+        },
+        {
+          "tipo": "fotoUso",
+          "url": "/images/uploads/066-gif.gif"
         },
         {
           "tipo": "fotoUso",
