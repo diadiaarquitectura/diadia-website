@@ -107,6 +107,18 @@
           "url": "/images/uploads/066-i8.jpg"
         },
         {
+          "tipo": "fotoUso",
+          "url": "/images/uploads/066-i10.jpg"
+        },
+        {
+          "tipo": "fotoUso",
+          "url": "/images/uploads/066-i7.jpg"
+        },
+        {
+          "url": "/images/uploads/066-i6.jpg",
+          "tipo": "fotoUso"
+        },
+        {
           "url": "/images/uploads/066-i4.jpg",
           "tipo": "fotoUso"
         },
