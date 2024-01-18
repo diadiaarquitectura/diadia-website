@@ -45,16 +45,16 @@
           "url": "/images/uploads/046_6.jpg"
         },
         {
-          "url": "/images/uploads/046_gif2.gif",
-          "tipo": "fotoUso"
-        },
-        {
           "tipo": "fotoObra",
           "url": "/images/uploads/046_7.jpg"
         },
         {
           "tipo": "fotoObra",
           "url": "/images/uploads/046_8.jpg"
+        },
+        {
+          "url": "/images/uploads/046_gif2.gif",
+          "tipo": "fotoUso"
         },
         {
           "tipo": "maquetas",
