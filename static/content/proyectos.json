@@ -1,6 +1,48 @@
 {
   "proyectos": [
     {
+      "colaboracion": "-",
+      "estado": "realizado",
+      "nombre": "Escuela QINTY \n ",
+      "fotografia": "Eleazar Cuadros",
+      "area": "Área Terreno 228 m2, Área Edificio 264 m2",
+      "descripcion": "Proyecto de Escuela Inicial, en proceso de Obra.",
+      "galería": [
+        {
+          "tipo": "fotoObra",
+          "url": "/images/uploads/046_2.jpg"
+        },
+        {
+          "tipo": "fotoObra",
+          "url": "/images/uploads/046_1.jpg"
+        },
+        {
+          "tipo": "fotoObra",
+          "url": "/images/uploads/046_3.jpg"
+        },
+        {
+          "url": "/images/uploads/046-maqueta.jpg",
+          "tipo": "maquetas"
+        },
+        {
+          "url": "/images/uploads/046-plan-3-.png",
+          "tipo": "diagramas"
+        },
+        {
+          "url": "/images/uploads/046-plan-5-.png",
+          "tipo": "planimetrias"
+        },
+        {
+          "url": "/images/uploads/corte-b.png",
+          "tipo": "planimetrias"
+        }
+      ],
+      "cliente": "Privado",
+      "involucrados": "Alonso Melgar, Olenka Ruiz, Laura Saavedra, Nicole Rivera y Lucero Robles",
+      "fecha": "12 10 2023",
+      "ubicacion": "Carabayllo, Lima, Perú"
+    },
+    {
       "colaboracion": "OFL Architecture, Francesco Lipari. Artisti: Michele Canzoneri e Salvatore Rizzuti. Liturgista: Sergio Catalano",
       "estado": "noRealizado",
       "nombre": "COMPLESSO PARROCCHIALE DELLO SPIRITO SANTO",
@@ -135,44 +177,6 @@
       "involucrados": "Milena Chavez, Mary Hellen Rojas",
       "fecha": "13 10 2023",
       "ubicacion": "Lima, Perú"
-    },
-    {
-      "colaboracion": "-",
-      "estado": "realizado",
-      "nombre": "ESCUELA QINTY \n(EN OBRA) ",
-      "fotografia": "-",
-      "area": "Área Terreno 228 m2, Área Edificio 264 m2",
-      "descripcion": "Proyecto de Escuela Inicial, en proceso de Obra.",
-      "galería": [
-        {
-          "tipo": "fotoObra",
-          "url": "/images/uploads/046-1.jpg"
-        },
-        {
-          "tipo": "fotoObra",
-          "url": "/images/uploads/046-3.jpg"
-        },
-        {
-          "url": "/images/uploads/046-maqueta.jpg",
-          "tipo": "maquetas"
-        },
-        {
-          "url": "/images/uploads/046-plan-3-.png",
-          "tipo": "diagramas"
-        },
-        {
-          "url": "/images/uploads/046-plan-5-.png",
-          "tipo": "planimetrias"
-        },
-        {
-          "url": "/images/uploads/corte-b.png",
-          "tipo": "planimetrias"
-        }
-      ],
-      "cliente": "Privado",
-      "involucrados": "Alonso Melgar, Olenka Ruiz, Laura Saavedra y Lucero Robles",
-      "fecha": "12 10 2023",
-      "ubicacion": "Carabayllo, Lima, Perú"
     },
     {
       "colaboracion": "-",
