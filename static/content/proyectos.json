@@ -21,6 +21,10 @@
           "url": "/images/uploads/046_9.jpg"
         },
         {
+          "tipo": "fotoUso",
+          "url": "/images/uploads/046_gif1.gif"
+        },
+        {
           "url": "/images/uploads/046_10.jpg",
           "tipo": "fotoObra"
         },
@@ -39,6 +43,10 @@
         {
           "tipo": "fotoObra",
           "url": "/images/uploads/046_6.jpg"
+        },
+        {
+          "url": "/images/uploads/046_gif2.gif",
+          "tipo": "fotoUso"
         },
         {
           "tipo": "fotoObra",
