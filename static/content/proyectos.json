@@ -21,6 +21,10 @@
           "url": "/images/uploads/046_9.jpg"
         },
         {
+          "url": "/images/uploads/046_10.jpg",
+          "tipo": "fotoObra"
+        },
+        {
           "tipo": "fotoObra",
           "url": "/images/uploads/046_5.jpg"
         },
@@ -43,6 +47,10 @@
         {
           "tipo": "fotoObra",
           "url": "/images/uploads/046_8.jpg"
+        },
+        {
+          "tipo": "maquetas",
+          "url": "/images/uploads/046_11.jpg"
         },
         {
           "url": "/images/uploads/046-maqueta.jpg",
