@@ -494,15 +494,15 @@
       "nombre": "ENKO URBAN SCHOOL",
       "galería": [
         {
+          "url": "/images/uploads/055_-ei-1-b.jpg",
+          "tipo": "vista3d"
+        },
+        {
           "url": "/images/uploads/055_i-01.jpg",
           "tipo": "vista3d"
         },
         {
           "url": "/images/uploads/055_-ei-5-.jpg",
-          "tipo": "vista3d"
-        },
-        {
-          "url": "/images/uploads/055_-ei-1-.jpg",
           "tipo": "vista3d"
         },
         {
