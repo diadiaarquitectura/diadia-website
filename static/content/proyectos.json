@@ -91,6 +91,18 @@
         {
           "tipo": "vista3d",
           "url": "/images/uploads/069_00.jpg"
+        },
+        {
+          "url": "/images/uploads/069_01.jpg",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/069_02.jpg",
+          "tipo": "vista3d"
+        },
+        {
+          "url": "/images/uploads/069_06.jpg",
+          "tipo": "diagramas"
         }
       ],
       "cliente": "Festival Concéntrico ",
