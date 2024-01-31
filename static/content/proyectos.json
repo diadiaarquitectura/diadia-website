@@ -83,6 +83,22 @@
       "ubicacion": "Carabayllo, Lima, Perú"
     },
     {
+      "estado": "noRealizado",
+      "nombre": "CORTEZA",
+      "fotografia": "Voxel Pixel",
+      "descripcion": "1. CORTEZA. La Memoria del Paisaje\nEl proyecto se define como un condensador del paisaje y de su tiempo, grabado en las cortezas de los árboles que la instalación evoca.\n\n2. TORRE. A la Orilla del Rio Ebro\nUbicado en un punto de frontera, orientado hacia los vestigios del puente romano y la ciudad de Logroño, el cuerpo vertical emerge sobre el horizonte del viñedo.\n\n3. APILAR. La Técnica \nEl apilamiento consiste en la operación principal para el montaje del proyecto, como botellas en una bodega.\n\n4. MADERAS. Entre Artesanía e Industria\nLos troncos y cables utilizados localmente en la viña se combinan con los tableros de madera procesada industrialmente.",
+      "galería": [
+        {
+          "tipo": "vista3d",
+          "url": "/images/uploads/069_00.jpg"
+        }
+      ],
+      "cliente": "Festival Concéntrico ",
+      "involucrados": "Alonso Melgar Delle Piane",
+      "fecha": "29 01 2024",
+      "ubicacion": "Logroño, España"
+    },
+    {
       "colaboracion": "OFL Architecture, Francesco Lipari. Artisti: Michele Canzoneri e Salvatore Rizzuti. Liturgista: Sergio Catalano",
       "estado": "noRealizado",
       "nombre": "COMPLESSO PARROCCHIALE DELLO SPIRITO SANTO",
